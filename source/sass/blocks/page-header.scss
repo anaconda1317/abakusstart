@@ -1,0 +1,33 @@
+.page-header {
+  text-align: center;
+
+  background-color: $white;
+}
+
+.page-header__logo {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  z-index: 5;
+
+  transform: translateX(-50%);
+}
+
+.page-header__logo-image {
+  width: 102px;
+  height: 83px;
+}
+
+@media (min-width: $tablet-width) {
+  .page-header__logo {
+    top: 0;
+  }
+}
+
+
+@media (min-width: $desktop-width) {
+  .page-header__logo-image {
+    width: 187px;
+    height: 96px;
+  }
+}

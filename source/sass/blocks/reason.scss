@@ -1,0 +1,143 @@
+.reason {
+  position: relative;
+
+  width: 100%;
+  min-height: 191px;
+  padding-top: 21px;
+
+  font-family: $page-font;
+  text-align: center;
+  text-transform: uppercase;
+  color: $white;
+
+  background-color: $main-blue;
+}
+
+.reason--first {
+  min-height: 211px;
+  padding-top: 57px;
+}
+
+.reason--first::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+
+  display: block;
+  width: 100%;
+  height: 37px;
+
+  background-image: url("../img/bg-triangle.svg");
+}
+
+
+.reason__title {
+  margin: 19px 0 10px 0;
+  padding: 0;
+
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.reason__number {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+}
+
+.reason__description {
+  width: 281px;
+  margin: 15px auto 0;
+  padding: 0 0 38px;
+
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+}
+
+.reason__image-wrapper {
+  // width: 100%;
+  height: 260px;
+
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.reason__img {
+  display: block;
+}
+
+@media (min-width: $tablet-width) {
+  .reason {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 0;
+
+    &--reverse {
+      flex-direction: row-reverse;
+    }
+  }
+
+  .reason__wrapper {
+    width: 256px;
+    padding-top: 48px;
+
+    text-align: center;
+  }
+
+  .reason__image-wrapper {
+    width: 512px;
+    height: 256px;
+  }
+
+  .reason__description {
+    width: 170px;
+    margin: 18px auto 0;
+    padding-bottom: 0;
+  }
+
+  .reason__title {
+    display: block;
+    width: 151px;
+    margin: 0 auto;
+    margin-bottom: 12px;
+
+    font-size: 21px;
+  }
+
+  .reason--first::before {
+    display: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .reason__wrapper {
+    width: 400px;
+    height: 256px;
+  }
+
+  .reason__image-wrapper {
+    width: 800px;
+    height: 256px;
+
+    overflow-y: hidden;
+  }
+
+  .reason__title {
+    padding-top: 6px;
+    margin-bottom: 10px;
+  }
+
+  .reason__description {
+    width: 290px;
+  }
+
+  .reason__img {
+    transform: translateY(-70px);
+  }
+
+  .reason__img--2 {
+    transform: translateY(-75px);
+  }
+}

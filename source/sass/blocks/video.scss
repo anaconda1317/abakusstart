@@ -1,0 +1,274 @@
+.video {
+  @include list-reset();
+
+  display: flex;
+  flex-direction: column;
+
+  padding-bottom: 39px;
+
+  text-transform: uppercase;
+  font-family: $page-font;
+  text-align: center;
+}
+
+.video__outline {
+  min-height: 193px;
+}
+
+.video__title {
+  display: block;
+  margin: 0;
+  padding: 0;
+  padding-top: 33px;
+
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.video__description {
+  width: 270px;
+  margin: 0 auto;
+  padding: 0;
+  padding-top: 27px;
+
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #333333;
+}
+
+.video__player {
+  width: 100%;
+  min-height: 201px;
+  background-color: #92acbd;
+}
+
+.video__control {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  width: 280px;
+  min-height: 111px;
+  margin: -49px auto 0 auto;
+
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.video__line {
+  position: relative;
+  width: 280px;
+  height: 45px;
+  margin: 0 auto;
+
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.video__runner {
+  position: absolute;
+  content: "";
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.9);
+  top: 19px;
+  left: 58px;
+  cursor: pointer;
+}
+
+.video__runner:hover,
+.video__runner:focus {
+  background-color: #333333;
+}
+
+.video__runner:active {
+  background-color: #c1c1c1;
+}
+
+.video__hr-line {
+  width: 235px;
+  height: 3px;
+  margin: 0 auto;
+  margin-top: 22px;
+  margin-left: 22px;
+
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.video__button {
+  padding: 0;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  background-color: #f2f2f2;
+  border: none;
+}
+
+.video__button--replay {
+  margin-left: 24px;
+
+  width: 16px;
+  height: 20px;
+}
+
+.video__button--cc {
+  margin-left: 133px;
+
+  width: 32px;
+  height: 20px;
+}
+
+.video__button--fullscreen {
+  margin-left: 31px;
+
+  width: 20px;
+  height: 20px;
+}
+
+@media (min-width: $tablet-width) {
+  .video {
+    width: 648px;
+    min-height: 784px;
+    margin: 0 auto;
+    padding-bottom: 41px;
+  }
+
+  .video__outline {
+    height: 244px;
+  }
+
+  .video__title {
+    padding-top: 67px;
+
+    font-size: 30px;
+  }
+
+  .video__description {
+    padding-top: 31px;
+    width: 425px;
+  }
+
+  .video__player {
+    width: 100%;
+    height: 499px;
+  }
+
+  .video__button {
+    background-color: transparent;
+
+    &:hover .video__button-svg,
+    &:focus .video__button-svg {
+      fill: #333333;
+    }
+
+    &:active .video__button-svg {
+      fill: #c1c1c1;
+    }
+  }
+
+  .video__button-svg {
+    fill: $white;
+
+    // path {
+    //   fill: $white;
+    // }
+  }
+
+  .video__button--replay {
+    order: 1;
+    margin-left: 35px;
+
+    width: 16px;
+    height: 20px;
+  }
+
+  .video__button--cc {
+    order: 3;
+    margin-left: 42px;
+
+    width: 32px;
+    height: 20px;
+  }
+
+  .video__button--fullscreen {
+    order: 4;
+    margin-left: 31px;
+
+    width: 20px;
+    height: 20px;
+  }
+
+  .video__control {
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 648px;
+    min-height: 93px;
+    margin: -97px auto 0 auto;
+
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  .video__line {
+    order: 2;
+
+    width: 389px;
+    height: 93px;
+    background-color: transparent;
+    margin-left: 42px;
+    margin-right: 0;
+  }
+
+  .video__hr-line {
+    width: 389px;
+    margin: 46px 0;
+  }
+
+  .video__runner {
+    top: 43px;
+    left: 113px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .video {
+    width: 800px;
+    margin: 0 auto;
+    padding-bottom: 81px;
+  }
+
+  .video__outline {
+    margin-bottom: 3px;
+  }
+
+  .video__title {
+    padding-top: 71px;
+
+    font-size: 30px;
+  }
+
+  .video__description {
+    width: 270px;
+    margin: 0 auto;
+    padding: 0;
+    padding-top: 27px;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: normal;
+    color: #333333;
+  }
+
+  .video__control {
+    width: 100%;
+  }
+
+  .video__line {
+    width: 540px;
+  }
+
+  .video__hr-line {
+    width: 540px;
+  }
+}

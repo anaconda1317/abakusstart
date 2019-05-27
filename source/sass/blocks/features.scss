@@ -1,0 +1,172 @@
+.features {
+  font-family: $page-font;
+  text-transform: uppercase;
+}
+
+.features__list {
+  @include list-reset();
+
+  display: flex;
+  flex-direction: column;
+  min-height: 416px;
+
+  text-align: left;
+  padding-top: 19px;
+  padding-bottom: 27px;
+}
+
+.features__item {
+  position: relative;
+
+  width: 290px;
+  height: auto;
+  padding: 19px 0 0 70px;
+  margin: 0 0 8px 0;
+
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 36px 36px;
+  }
+}
+
+.features__item--house::before {
+  top: 9px;
+  left: 21px;
+  width: 37px;
+  height: 36px;
+  background-image: url("../img/icon-house.svg");
+}
+
+.features__item--gift::before {
+  top: 9px;
+  left: 21px;
+  width: 37px;
+  height: 36px;
+  background-image: url("../img/icon-gift.svg");
+}
+
+.features__item--food::before {
+  top: 13px;
+  left: 19px;
+  width: 37px;
+  height: 36px;
+  background-image: url("../img/icon-burger.svg");
+}
+
+
+.features__title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 15px;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  color: $main-text-color;
+}
+
+.features__description {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: normal;
+  color: #333333;
+}
+
+
+@media (min-width: $tablet-width) {
+  .features__list {
+    @include list-reset();
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-height: 330px;
+
+    text-align: center;
+    padding-bottom: 60px;
+  }
+
+  .features__item {
+    padding: 160px 0 0;
+    margin: 0;
+    text-align: center;
+    width: 256px;
+
+    &--gift {
+      order: 2;
+    }
+  }
+
+  .features__item--house::before {
+    width: 75px;
+    height: 72px;
+    background-size: 75px 72px;
+    top: 60px;
+    left: 89px;
+  }
+
+  .features__item--food::before {
+    width: 77px;
+    height: 68px;
+    background-size: 77px 68px;
+    top: 62px;
+    left: 88px;
+  }
+
+  .features__item--gift::before {
+    width: 64px;
+    height: 75px;
+    background-size: 64px 75px;
+    top: 57px;
+    left: 94px;
+  }
+
+  .features__title {
+    font-size: 21px;
+  }
+
+  .features__description {
+    width: 158px;
+    margin: 0 auto;
+    padding-top: 7px;
+  }
+
+  .features__item--gift .features__description {
+    width: 170px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .features__list {
+    padding-bottom: 81px;
+  }
+
+  .features__item {
+    width: 400px;
+
+    &--house::before {
+      left: 161px;
+    }
+
+    &--gift::before {
+      left: 167px;
+    }
+
+    &--food::before {
+      left: 161px;
+    }
+  }
+
+  .features__description {
+    width: 300px;
+  }
+
+  .features__item--gift .features__description {
+    width: 300px;
+  }
+}
