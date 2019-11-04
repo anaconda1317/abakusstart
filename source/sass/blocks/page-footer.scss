@@ -10,12 +10,12 @@
   color: $main-text-color;
 }
 
-.page-footer__hash-wrapper {
+.page-footer__adress-wrapper {
   margin: 0 0 37px 0;
   padding: 35px 0 0 0;
 }
 
-.page-footer__hash {
+.page-footer__adress {
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
@@ -29,15 +29,21 @@
     height: 120px;
   }
 
-  .page-footer__hash-wrapper {
-    margin: 0 0 0 60px;
+  .page-footer__adress-wrapper {
+    margin: 0 0 0 50px;
     padding: 0;
+  }
+
+  .page-footer__adress {
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: 700;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .page-footer__hash-wrapper {
-    margin: 0 0 0 121px;
+  .page-footer__adress-wrapper {
+    margin: 0 0 0 111px;
     padding: 0;
   }
 }
