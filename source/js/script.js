@@ -23,6 +23,22 @@ mainNavToggle.addEventListener("click", function(evt) {
   logoToggle.classList.toggle("page-header__logo--mobile");
 });
 
+// кнопка наверх в мобилке при скроле окна на 800px появляется, а если меньше - исчезает, таблетке и десктопе не исчезает
+var button = document.querySelector(".button-up");
+
+window.addEventListener("scroll", function(){
+  if (window.pageYOffset > 800) {
+    button.classList.add( 'button-up--visible' );
+    button.classList.remove('button-up--hiden');
+  } else if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    button.classList.add('button-up--hiden');
+    button.classList.remove( 'button-up--visible' );
+  }
+});
+
+
+
+
 // Ищем поля, чб фокус устанавливался автоматически
 
 var form = document.querySelector("#feedback-form");
