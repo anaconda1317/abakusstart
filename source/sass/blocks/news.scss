@@ -205,10 +205,10 @@
     margin: 0 auto;
     padding-top: 48px;
     padding-bottom: 48px;
-  }
 
-  .news__wrapper::before {
-    display: none;
+    &::before {
+      display: none;
+    }
   }
 
   .news__title {
