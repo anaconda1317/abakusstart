@@ -1,6 +1,6 @@
 .news {
-  background-color: $background;
-  border-bottom: 1px solid #e5ddd5;
+  background-color: #ffffff;
+  // border-bottom: 1px solid #e5ddd5;
   text-align: center;
 }
 
@@ -9,7 +9,7 @@
   // padding-top: 30px;
   width: auto;
   // padding-top: 70px;
-  padding-bottom: 28px;
+  // padding-bottom: 28px;
 }
 
 .news__wrapper::before {
@@ -73,7 +73,7 @@
   padding-bottom: 20px;
   padding-left: 20px;
 
-  border-bottom: 1px solid #e5ddd5;
+  border-bottom: 1px solid #ffde03;
 
   &:nth-child(2) {
     margin-bottom: 0;
@@ -98,25 +98,26 @@
   outline: none;
   &:hover p,
   &:focus p {
-    color: #826550;
+    color: #0033ff;
     text-decoration: underline;
   }
   &:hover time,
   &:focus time {
-    background-color: #826550;
+    color: #ffde03;
+    background-color: #0033ff;
     &::after {
-      border-top-color: #826550;
+      border-top-color: #0033ff;
     }
   }
   &:active p {
-    color: #6a4d38;
+    color: #0033ff;
   }
   &:active time {
-    color: rgba(255, 255, 255, 0.3);
+    color: #ffde03;
 
-    background-color: #6a4d38;
+    background-color: #0033ff;
     &::after {
-      border-top-color: #6a4d38;
+      border-top-color: #0033ff;
     }
   }
 }
@@ -135,12 +136,13 @@
   font-weight: normal;
   font-size: 16px;
   line-height: 16px;
-  color: #ffffff;
+  color: #0033ff;
   text-transform: lowercase;
 
-  background-color: #000000;
+  background-color: #ffde03;
 
   transition: background-color 0.1s linear, color 0.2s linear;
+
   &::after {
     content: "";
     position: absolute;
@@ -152,7 +154,7 @@
     height: 0;
 
     border: 10px solid transparent;
-    border-top-color: #000000;
+    border-top-color: #ffde03;
     border-right-width: 25px;
     border-bottom: none;
     border-left-width: 25px;
@@ -185,16 +187,25 @@
 }
 
 .news__to-all {
-  // display: block;
-  // margin-right: 20px;
-  // margin-left: 20px;
-  // padding: 13px 45px 13px 45px;
-
-  // font-size: 18px;
-  // line-height: 24px;
-
-  // outline: none;
   width: 280px;
+
+  color: #0033ff;
+
+  background-color: #ffffff;
+  border: 1px solid #0033ff;
+
+  &:focus,
+  &:hover {
+    color: rgba(255, 255, 255, 0.3);
+
+    outline: 0;
+    background-color: #0033ff;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: #0033ff;
+  }
 }
 
 @media (min-width: $tablet-width) {
