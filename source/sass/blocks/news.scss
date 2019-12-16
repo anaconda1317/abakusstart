@@ -73,7 +73,7 @@
   padding-bottom: 20px;
   padding-left: 20px;
 
-  border-bottom: 1px solid #ffde03;
+  border-bottom: 1px solid #0033ff;
 
   &:nth-child(2) {
     margin-bottom: 0;
@@ -98,22 +98,22 @@
   outline: none;
   &:hover p,
   &:focus p {
-    color: #0033ff;
-    text-decoration: underline;
+    color: #0e39e3;
+    text-decoration: none;
   }
   &:hover time,
   &:focus time {
-    color: #ffde03;
-    background-color: #0033ff;
+    color: rgba(255, 222, 3, 0.4);
+    background-color: #0e39e3;
     &::after {
-      border-top-color: #0033ff;
+      border-top-color: #0e39e3;
     }
   }
   &:active p {
     color: #0033ff;
   }
   &:active time {
-    color: #ffde03;
+    color: rgba(255, 222, 3, 0.7);
 
     background-color: #0033ff;
     &::after {
@@ -199,11 +199,11 @@
     color: rgba(255, 255, 255, 0.3);
 
     outline: 0;
-    background-color: #0033ff;
+    background-color: #0e39e3;
   }
 
   &:active {
-    color: rgba(255, 255, 255, 0.3);
+    color: rgba(255, 255, 255, 0.7);
     background-color: #0033ff;
   }
 }

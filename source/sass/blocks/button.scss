@@ -25,13 +25,13 @@
   &:hover,
   &:focus {
     outline: none;
-    background-color: #669ec0;
+    background-color: #0e39e3;
   }
 
   &:active {
-    color: rgba(255, 255, 255, 0.3);
+    color: rgba(255, 255, 255, 0.7);
 
-    background-color: #5496bd;
+    background-color: #0230eb;
   }
 
   &:disabled {
