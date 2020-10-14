@@ -1,6 +1,6 @@
 .block-info {
   height: calc(100vh - 208px);
-  padding: 60px 20px ;
+  padding: 60px 20px;
   background-color: #ffffff;
   text-align: center;
   display: flex;
@@ -15,21 +15,16 @@
 
 @media (min-width: $tablet-width) {
   .block-info {
-
     &__text {
       font-size: 32px;
     }
   }
-
 }
-
 
 @media (min-width: $desktop-width) {
   .block-info {
-
     &__text {
       font-size: 48px;
     }
   }
-
 }
