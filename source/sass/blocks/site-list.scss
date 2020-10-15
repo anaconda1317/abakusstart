@@ -7,8 +7,8 @@
 
   background-color: $main-blue;
 
-  border-top: 1px solid #9ac2db;
-  border-bottom: 1px solid #678fa8;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 
 
   &:last-child {
@@ -30,18 +30,17 @@
 
   &:focus {
     color: rgba(255, 255, 255, 0.3);
-
-    background-color: #669ec1;
+    background-color: #0e39e3;
   }
 
   &:hover {
-    background-color: #669ec0;
+    color: $main-blue;
+    background-color: #ffde03;
   }
 
   &:active {
     color: rgba(255, 255, 255, 0.3);
-
-    background-color: #5496bd;
+    background-color: #0230eb;
   }
 }
 
