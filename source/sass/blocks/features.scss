@@ -41,6 +41,10 @@
   background-image: url("../img/icon-reading.svg");
 }
 
+.features__item--reading:hover::before {
+  background-image: url("../img/icon-reading-hover.svg");
+}
+
 .features__item--abacus::before {
   top: 9px;
   left: 21px;
@@ -49,12 +53,20 @@
   background-image: url("../img/icon-abacus.svg");
 }
 
+.features__item--abacus:hover::before {
+  background-image: url("../img/icon-abacus-hover.svg");
+}
+
 .features__item--robot::before {
   top: 13px;
   left: 19px;
   width: 37px;
   height: 36px;
   background-image: url("../img/icon-robot.svg");
+}
+
+.features__item--robot:hover::before {
+  background-image: url("../img/icon-robot-hover.svg");
 }
 
 
