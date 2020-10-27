@@ -23,8 +23,15 @@
   padding: 19px 0 0 70px;
   margin: 0 0 8px 0;
 
+  transition: transform 0.5s;
+
+  &:hover{
+    transform: scale(1.07);
+  }
+
 
   &::before {
+    transition: transform 0.5s;
     position: absolute;
     content: "";
     background-position: center;

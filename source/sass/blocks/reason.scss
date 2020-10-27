@@ -59,10 +59,37 @@
 .reason__image-wrapper {
   // width: 100%;
   height: 260px;
+  position: relative;
 
   background-position: center;
   background-repeat: no-repeat;
+
+  &:hover .reason__details{
+    display: block;
+    // transition: ;
+  }
 }
+
+.reason__details {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 60px;
+  width: 800px;
+  height: 256px;
+  background-color: rgba(75, 90, 120, 0.9);
+  color: #ffffff;
+  z-index: 5;
+}
+
+// .reason__details-header {
+
+// }
+
+// .reason__details-text{
+
+// }
 
 .reason__img {
   display: block;
