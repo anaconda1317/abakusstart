@@ -66,7 +66,7 @@
 
   &:hover .reason__details{
     display: block;
-    // transition: ;
+    transition: .5s ;
   }
 }
 
@@ -78,18 +78,22 @@
   padding-top: 60px;
   width: 800px;
   height: 256px;
-  background-color: rgba(75, 90, 120, 0.9);
+  background-color: rgba(255,255,255,.8);
   color: #ffffff;
   z-index: 5;
+  // transition: .5s;
 }
 
-// .reason__details-header {
+.reason__details-header {
+  color: #000000;
+}
 
-// }
-
-// .reason__details-text{
-
-// }
+.reason__details-text{
+  text-transform: none;
+  font-size: 18px;
+  padding: 0 15px;
+  color: #000000;
+}
 
 .reason__img {
   display: block;
