@@ -2,26 +2,24 @@
   position: relative;
 
   background-color: #ffffff;
-  &::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    bottom: -35px;
-    left: 0;
-    z-index: 3;
+  // &::after {
+  //   content: "";
+  //   position: absolute;
+  //   right: 0;
+  //   bottom: -35px;
+  //   left: 0;
+  //   z-index: 3;
 
-    height: 35px;
+  //   height: 35px;
 
-    background-image: url("../img/corner-light.svg");
-    background-repeat: no-repeat;
-    transform: rotate(180deg);
-  }
+    // background-image: url("../img/corner-light.svg");
+    // background-repeat: no-repeat;
+    // transform: rotate(180deg);
+  // }
 }
 
 .reviews__wrapper {
   padding-top: 25px;
-
-  .container-fluid();
 }
 
 .reviews__title {
@@ -54,11 +52,12 @@
   left: 0;
 
   box-sizing: border-box;
-  width: 50px;
-  height: 48px;
+  width: 60px;
+  height: 60px;
   overflow: hidden;
 
-  border: 1px solid #e9e2db;
+  border: 1px solid $main-blue;
+  border-radius: 6px;
 }
 
 .reviews__author-photo img {
@@ -79,7 +78,7 @@
   font-weight: bold;
   font-size: 24px;
   line-height: 27px;
-  color: #000000;
+  color: $main-blue;
   font-style: normal;
 }
 
@@ -88,7 +87,7 @@
 
   font-size: 18px;
   line-height: 27px;
-  color: #000000;
+  color: rgba( #000000, 0.8);
 }
 
 .reviews__next {
@@ -119,13 +118,13 @@
 }
 
 .reviews__toggle {
-  border: 1px solid rgba(0, 0, 0, 1) !important;
+  border: 1px solid $main-blue!important;
 }
 
 #reviews-input-1:checked ~ .reviews__toggles label[for="reviews-input-1"],
 #reviews-input-2:checked ~ .reviews__toggles label[for="reviews-input-2"],
 #reviews-input-3:checked ~ .reviews__toggles label[for="reviews-input-3"] {
-  background-color: rgba(0, 0, 0, 1) ;
+  background-color: $main-blue;
 }
 
 #reviews-input-1:checked ~ .reviews__items .reviews__item:nth-child(1),
@@ -134,12 +133,12 @@
   display: block;
 }
 
-@media @tablet-widths {
+  @media (min-width: $tablet-width) {
   .reviews {
     position: relative;
-    &::after {
-      display: none;
-    }
+    // &::after {
+    //   display: none;
+    // }
   }
 
   .reviews__wrapper {
@@ -269,14 +268,14 @@
   .reviews__toggles {
     bottom: 66px;
 
-    padding-right: 25px;
-    padding-left: 25px;
+    // padding-right: 25px;
+    // padding-left: 25px;
 
-    background-color: #f8f5f2;
+    // background-color: #f8f5f2;
   }
 }
 
-@media @desktop-widths {
+  @media (min-width: $desktop-width) {
   .reviews__wrapper {
     padding-bottom: 98px;
   }

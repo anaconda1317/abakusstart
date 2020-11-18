@@ -64,9 +64,17 @@
   background-position: center;
   background-repeat: no-repeat;
 
+  // transition: all 0.5s ease-in-out;
+
   &:hover .reason__details{
     display: block;
-    transition: .5s ;
+    // transition: .5s;
+    // transition: background-color .5s ease-out;
+    // transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    transition-delay: 0.2s;
+
   }
 }
 
