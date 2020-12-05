@@ -1,16 +1,18 @@
 .news {
   background-color: #ffffff;
-  // border-bottom: 1px solid #e5ddd5;
+
   text-align: center;
+
+  border-bottom: 1px solid #0033ff;
 }
 
 .news__wrapper {
   position: relative;
-  // padding-top: 30px;
+
   width: auto;
-  // padding-top: 70px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #0033ff;
+
+  padding-bottom: 28px;
+  // border-bottom: 1px solid #0033ff;
 }
 
 .news__wrapper::before {
@@ -52,7 +54,7 @@
   // text-transform: uppercase;
   display: block;
   margin: 0 0 20px;
-  padding: 46px 0 0;
+  padding: 56px 0 0;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
