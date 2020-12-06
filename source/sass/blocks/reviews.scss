@@ -131,6 +131,8 @@
   width: 76px;
   height: 10px;
 
+  background: #ffffff;
+
   transform: translateX(-50%);
 }
 
@@ -187,7 +189,7 @@
     padding-bottom: 35px;
     padding-left: 140px;
 
-    border: 1px solid #e5ddd5;
+    border: 1px solid $main-blue;
     border-right: none;
     border-left: none;
   }
@@ -231,17 +233,17 @@
     font-size: 0;
 
     background-color: transparent;
-    border: 1px solid #e5ddd5;
+    border: 1px solid $main-blue;
     outline: none;
     cursor: pointer;
 
     transition: border-color 0.2s linear, background-color 0.2s linear;
     &:hover,
     &:focus {
-      border-color: #d5c9bd;
+      border-color: $main-blue;
     }
     &:active {
-      background-color: #d5c9bd;
+      background-color: $main-blue;
     }
     &::before {
       content: "";
@@ -309,8 +311,8 @@
     padding-bottom: 35px;
     padding-left: 317px;
 
-    border-right: 1px solid #e5ddd5;
-    border-left: 1px solid #e5ddd5;
+    border-right: 1px solid $main-blue;
+    border-left: 1px solid $main-blue;
   }
 
   .reviews__author-photo {
