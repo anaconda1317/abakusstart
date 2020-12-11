@@ -76,7 +76,7 @@
   padding-bottom: 20px;
   padding-left: 20px;
 
-  border-bottom: 1px solid #0033ff;
+  border-bottom: 1px solid $main-blue;
 
   &:nth-child(2) {
     margin-bottom: 0;
@@ -144,7 +144,7 @@
   font-weight: normal;
   font-size: 16px;
   line-height: 16px;
-  color: #0033ff;
+  color: $main-blue;
   text-transform: lowercase;
 
   background-color: #ffde03;
@@ -197,10 +197,10 @@
 .news__to-all {
   width: 280px;
 
-  color: #0033ff;
+  color: $main-blue;
 
   background-color: #ffffff;
-  border: 1px solid #0033ff;
+  border: 1px solid $main-blue;
 
   &:focus,
   &:hover {
@@ -254,7 +254,12 @@
     padding-left: 18px;
 
     border-bottom: none;
+    border-right: 1px solid $main-blue;
   }
+
+  .news__item:nth-child(n+3) {
+    border-right: none;
+}
 
   .news__date {
     margin-top: 10px;
