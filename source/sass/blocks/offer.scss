@@ -29,14 +29,37 @@
 
 
 .offer__question {
+  position: relative;
+
   display: block;
-  margin: 0 0 20px 0;
-  padding: 26px 0 0 0;
+  width: 240px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  padding: 26px 0 5px 0;
 
   font-size: 21px;
+  text-align: center;
   line-height: 26px;
   font-weight: 700;
   color: $main-text-color;
+}
+
+.offer__question::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0;
+  content: ".";
+  color: transparent;
+  background: #000000;
+  height: 1px;
+  transition: all .5s;
+}
+
+.offer__question:hover::after {
+  width: 100%;
 }
 
 .offer__description {
@@ -111,8 +134,9 @@
   }
 
   .offer__question {
-    margin: 0 0 31px 0;
-    padding: 56px 0 0 0;
+    padding: 56px 0 10px 0;
+    width: 350px;
+    margin-bottom: 25px;
 
     font-size: 30px;
   }
