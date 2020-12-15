@@ -58,6 +58,10 @@
   font-weight: 700;
   color: #000000;
   text-transform: uppercase;
+  
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 // .news__title {
