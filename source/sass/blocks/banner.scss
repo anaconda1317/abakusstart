@@ -66,16 +66,24 @@
 }
 
 .banner__slogan {
+  margin: 0;
+
   font-size: 18px;
   font-weight: 700;
   line-height: 26px;
 
   color: $main-text-color;
+
+  &--action {
+    margin: 0;
+    
+    color: $main-blue;
+  }
 }
 
 .banner__intro {
   margin: 0;
-  padding: 9px 0 0;
+  padding: 20px 0 0;
 
   font-size: 14px;
   line-height: 26px;
@@ -181,11 +189,18 @@
     &--small {
       font-size: 21px;
     }
+
+    &--action {
+      padding: 10px 0 0;
+      
+      font-size: 21px;
+    }
   }
 
   .banner__intro {
     margin: 0;
-    padding: 28px 0 44px;
+    padding: 28px 0 24px;
+      // padding: 28px 0 44px;
 
     font-size: 14px;
     line-height: 26px;
@@ -240,6 +255,10 @@
       background-image: url("../img/bg-back-desktop@2x.jpg");
       background-size: cover;
     }
+  }
+
+  .banner__slogan--action {
+    font-size: 30px;
   }
 
   .banner__intro--photo {
