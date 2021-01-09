@@ -88,8 +88,19 @@
     width: 158px;
   }
 
+  // .reasons__hr::after {
+  //   display: none;
+  // }
+
   .reasons__hr::after {
-    display: none;
+    position: absolute;
+    content: "";
+
+    width: 1px;
+    height: 200px;
+    top: 35px;
+    left: 255px;
+    background-color: #fff;
   }
 }
 
@@ -101,4 +112,16 @@
   .reasons__description-grey {
     width: 300px;
   }
+
+  .reasons__hr::after {
+    position: absolute;
+    content: "";
+
+    width: 1px;
+    height: 200px;
+    top: 35px;
+    left: 394px;
+    background-color: #fff;
+  }
+
 }
