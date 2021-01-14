@@ -1,7 +1,8 @@
 .page-footer {
   display: flex;
   flex-direction: column;
-  height: 254px;
+  height: 320px;
+  // height: 254px;
   padding-top: 1px;
 
   text-transform: uppercase;
@@ -22,7 +23,15 @@
   font-size: 16px;
   line-height: 26px;
   font-weight: 700;
+
+  &--name {
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 700;
+    text-transform: none;
+  }
 }
+
 
 @media (min-width: $tablet-width) {
   .page-footer {
@@ -40,6 +49,12 @@
     font-size: 14px;
     line-height: 26px;
     font-weight: 700;
+
+    &--name {
+      padding-top: 10px;
+
+      text-transform: uppercase;
+    }
   }
 }
 
@@ -47,5 +62,8 @@
   .page-footer__adress-wrapper {
     margin: 0 0 0 101px;
     padding: 0;
+  }
+  .page-footer__adress {
+    font-size: 16px;
   }
 }
