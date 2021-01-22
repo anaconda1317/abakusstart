@@ -43,21 +43,15 @@
   text-transform: none;
   color: rgba( #000000, 0.6);
 
-  &:focus {
-    color: $main-blue;
-
-    background-color: transparent;
-  }
-
-  &:hover {
-    // color: $main-blue;
+  &:hover,
+  &:focus {  
     color: #F6921E;
 
     background-color: transparent;
   }
 
   &:active {
-    color: rgba(0, 0, 0, 0.3);
+    color: rgba(0, 0, 0, 0.8);
     background-color: transparent;
   }
 }

@@ -12,7 +12,7 @@
 }
 
 .page-footer__adress-wrapper {
-  margin: 20px 0 30px;
+  margin: 5px 0 30px;
 }
 
 // .page-footer__adress-wrapper {
@@ -30,7 +30,59 @@
     font-weight: 700;
     text-transform: none;
   }
+
+  &--email {
+    position: relative;
+    padding: 0;
+    margin: 0;
+
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  &--email a {
+    color: $main-text-color;
+  }
+
+  &--email a:focus,
+  &--email a:hover {
+      color: $main-blue;
+  }
+
+  &--email a:active {
+      color: #f6921e;
+  }
+
+  // &--email a:focus .page-footer__adress-icon-svg,
+  // &--email a:hover .page-footer__adress-icon-svg {
+  //     color: #ff00ff;
+  // }
+
+  // &--email a:active .page-footer__adress-icon-svg {
+  //     color: #ff0000;
+  // }
+
 }
+
+.page-footer__adress-icon-svg {
+  position: absolute;
+  top: 4px;
+  left: 72px;
+
+  cursor: pointer;
+}
+
+.page-footer__adress--email a:focus .page-footer__adress-icon-svg,
+.page-footer__adress--email a:hover .page-footer__adress-icon-svg {
+  fill: $main-blue;
+}
+
+.page-footer__adress--email a:active .page-footer__adress-icon-svg {
+  fill: #f6921e ; 
+}
+
 
 
 @media (min-width: $tablet-width) {
@@ -38,7 +90,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    height: 120px;
+    height: 140px;
   }
 
   .page-footer__adress-wrapper {
@@ -47,7 +99,7 @@
 
   .page-footer__adress {
     font-size: 14px;
-    line-height: 26px;
+    line-height: 24px;
     font-weight: 700;
 
     &--name {
@@ -55,15 +107,30 @@
 
       text-transform: uppercase;
     }
+
+    &--email {
+      font-weight: 400;
+    }    
   }
+
+  .page-footer__adress-icon-svg {
+    top: 6px;
+    left: 6px;
+  }
+
 }
 
 @media (min-width: $desktop-width) {
   .page-footer__adress-wrapper {
-    margin: 0 0 0 101px;
+    margin: 0 0 0 91px;
     padding: 0;
   }
   .page-footer__adress {
     font-size: 16px;
+
+    &--email {
+      font-size: 14px;
+    } 
+
   }
 }
