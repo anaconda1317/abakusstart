@@ -114,8 +114,8 @@
   }
 
   .page-footer__adress-icon-svg {
-    top: 6px;
-    left: 6px;
+    top: 4px;
+    left: 8px;
   }
 
 }
@@ -125,12 +125,16 @@
     margin: 0 0 0 91px;
     padding: 0;
   }
+
+  .page-footer__adress-icon-svg { 
+    left: 20px;
+  }
+
   .page-footer__adress {
     font-size: 16px;
 
     &--email {
       font-size: 14px;
-    } 
-
+    }
   }
 }
