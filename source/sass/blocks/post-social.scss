@@ -16,12 +16,38 @@
 
 
 .post-social__title {
+    position: relative;
+  
+    display: block;
+    width: 120px;
     margin: 0 0 15px;
     font-weight: 700;
     font-size: 18px;
     line-height: 26px; 
     text-transform: uppercase;
+    
+  &:hover {
+    cursor: pointer;
+  }
 }
+
+.post-social__title::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0;
+    content: ".";
+    color: transparent;
+    background: #000000;
+    height: 1px;
+    transition: all .5s;
+  }
+  
+  .post-social__title:hover::after {
+    width: 100%;
+  }
 
 .post-social__list {
     display: flex;
