@@ -85,20 +85,43 @@
   width: 280px;
   margin-bottom: 49px;
 
-  // &:hover,
-  // &:focus {
-  //   outline: none;
-  //   background-color: #669ec0;
-  // }
+  color: #ffde03;
 
-  // &:active {
-  //   color: rgba(255, 255, 255, 0.3);
-  //   background-color: #5496bd;
-  // }
+  background-color: $main-blue;
+  border: 1px $main-blue;
 
-  // &:disabled {
-  //   background-color: #e5e5e5;
-  // }
+  &:hover,
+  &:focus {
+    color: rgba(255, 255, 255, 0.7);
+
+    background-color: #0230eb;
+    border: 1px solid #ffde03;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.7);
+
+    outline: none;
+    background-color: #0e39e3;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+  }
+
+  &:disabled {
+    background-color: #e5e5e5;
+  }
+
+  &:hover .offer__icon-svg,
+  &:focus .offer__icon-svg
+  {  fill: rgba(255, 255, 255, 0.7);
+  }
+
+  &:active .offer__icon-svg {
+    fill: rgba(255, 255, 255, 0.7);
+  }
+
+  &:visited .offer__icon-svg {
+    fill: rgba(255, 255, 255, 0.7);
+  }
 }
 
 .offer__icon-svg {
@@ -109,12 +132,17 @@
   cursor: pointer;
 }
 
-.offer__open-search:hover .offer__icon-svg {
-  fill: rgba(255, 255, 255, 0.7);
-}
+// .offer__open-search:hover .offer__icon-svg,
+// .offer__open-search:focus .offer__icon-svg
+//  {  fill: rgba(255, 255, 255, 0.7);
+// }
 
-// .offer__open-search:hover .offer__icon-svg {
-//   fill: #ffde03;
+// .offer__open-search:active .offer__icon-svg {
+//   fill: rgba(255, 255, 255, 0.7);
+// }
+
+// .offer__open-search:visited .offer__icon-svg {
+//   fill: rgba(255, 255, 255, 0.7);
 // }
 
 .offer__map {
@@ -132,6 +160,11 @@
     }
   }
 
+  .offer__open-search {
+    width: 458px;
+    // margin-bottom: 58px;
+  }
+
   .offer__description {
     width: 450px;
     margin: 0 auto 42px auto;
@@ -143,11 +176,6 @@
     margin-bottom: 25px;
 
     font-size: 30px;
-  }
-
-  .offer__open-search {
-    width: 458px;
-    // margin-bottom: 58px;
   }
 
   .offer__icon-svg {
