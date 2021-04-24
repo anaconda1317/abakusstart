@@ -29,15 +29,12 @@ var button = document.querySelector(".button-up");
 window.addEventListener("scroll", function(){
   if (window.pageYOffset > 800) {
     button.classList.add( 'button-up--visible' );
-    button.classList.remove('button-up--hiden');
+    // button.classList.remove('button-up--hiden');
   } else if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-    button.classList.add('button-up--hiden');
+    // button.classList.add('button-up--hiden');
     button.classList.remove( 'button-up--visible' );
   }
 });
-
-
-
 
 // Ищем поля, чб фокус устанавливался автоматически
 
@@ -61,3 +58,50 @@ if (feedbackName) {
 // Получается, что атрибут input.getAttribute('value') хранит оригинальное (исходное) значение даже после того, как пользователь заполнил поле и свойство изменилось.
 
 // Например, можно взять изначальное значение из атрибута и сравнить со свойством, чтобы узнать, изменилось ли значение. А при необходимости и перезаписать свойство атрибутом, отменив изменения.
+
+
+
+
+// Слайдер с отзывами
+var sliderBtnttonNext = document.querySelector(".reviews__next");
+var sliderBtnttonPrev = document.querySelector(".reviews__prev");
+var sliderInputs = document.querySelectorAll(".reviews__input");
+// псевдомассив sliderInputs  и его длинна sliderInputs.length
+var numbersSliderInputs = sliderInputs.length;
+
+sliderBtnttonNext.addEventListener("click", setNextSlide);
+sliderBtnttonPrev.addEventListener("click", setPrevSlide);
+
+function setNextSlide() {
+  var currentSlide = getCurrentSlide();
+  // Это надо коммент!!!!
+  var nextSlide;
+  if (currentSlide + 1 === numbersSliderInputs) {
+    nextSlide = 0;
+  } else {
+    nextSlide = currentSlide + 1;
+  }
+  sliderInputs[nextSlide].checked = true;
+}
+
+function setPrevSlide() {
+  var currentSlide = getCurrentSlide();
+  // индекс следующего слайда, который будем показывать
+  var nextSlide;
+  if (currentSlide === 0) {
+    // если первый слайд нашли индекс 0, то переходим на последний (3) numbersSliderInputs -все количестов -1 = 2 - индекс последнего слайда
+    nextSlide = numbersSliderInputs - 1;
+  } else {
+    // если это не последний слайд, например 2, то переходим на первый
+    nextSlide = currentSlide - 1;
+  }
+  sliderInputs[nextSlide].checked = true;
+}
+// Как получаем .checked???????????????мы же на input click, а не на button
+function getCurrentSlide() {
+  for (var i = 0; i < numbersSliderInputs; i++) {
+    if (sliderInputs[i].checked) {
+      return i;
+    } 
+  }
+}

@@ -1,0 +1,88 @@
+.reserv {
+  // width: 180px;
+  padding: 0;
+  margin: 0 auto;
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.reserv__text {
+  position: relative;
+
+  display: block;
+  width: 180px;
+  padding: 0;
+  margin: 0 auto;
+
+  color: #aaaaaa;
+  text-transform: none;
+
+  border-top: 1px solid #aaaaaa;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0;
+    content: ".";
+    color: transparent;
+    background: #aaaaaa;
+    height: 1px;
+    transition: all .5s;
+  }
+  
+  &:hover::after {
+    width: 100%;
+  }
+}
+
+
+@media (min-width: $tablet-width) {
+
+  .reserv {
+    // width: 50%;
+    padding: 5px 0;
+    margin: 0 auto 10px;
+    // margin-right: 150px;
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: 400;
+    text-align: center;
+  
+    // border-top: 1px solid #aaaaaa;
+  }
+
+  .reserv__text {
+    text-transform: uppercase;
+
+    border-top: none;
+  }
+}
+
+
+@media (min-width: $desktop-width) {
+
+  .reserv {
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 400;
+  
+    // border-top: 1px solid #aaaaaa;
+  }
+
+  .reserv__text {
+    width: 200px;
+
+    text-transform: uppercase;
+  }
+
+}
