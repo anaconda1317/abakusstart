@@ -1,5 +1,5 @@
 .block-info {
-  height: calc(100vh - 405px);
+  height: calc(100vh - 406px);
   // height: calc(100vh - 208px);
   padding: 60px 20px;
   background-color: #ffffff;
@@ -16,7 +16,7 @@
 
 @media (min-width: $tablet-width) {
   .block-info {
-    height: calc(100vh - 208px);
+    height: calc(100vh - 234px);
     &__text {
       font-size: 32px;
     }
