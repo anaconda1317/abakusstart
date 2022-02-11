@@ -14,6 +14,7 @@
   text-decoration: none;
   cursor: pointer;
   background: rgba(0, 0, 0, 0.4);
+  // transition: all .3s linear;
 }
 
 
@@ -29,8 +30,8 @@
 
 .button-up--visible {
   opacity: 1;
-  // cursor: pointer;
-  // animation: fadeInRight 1s 1 cubic-bezier(0.77, 0, 0.175, 1);
+  cursor: pointer;
+  animation: fadeInRight 1s 1 cubic-bezier(0.77, 0, 0.175, 1);
 }
 
 
