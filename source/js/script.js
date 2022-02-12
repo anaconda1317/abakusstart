@@ -23,18 +23,37 @@ mainNavToggle.addEventListener("click", function(evt) {
   logoToggle.classList.toggle("page-header__logo--mobile");
 });
 
-// кнопка наверх в мобилке при скроле окна на 800px появляется, а если меньше - исчезает, таблетке и десктопе не исчезает
-var button = document.querySelector(".button-up");
+// // кнопка наверх в мобилке при скроле окна на 800px появляется, а если меньше - исчезает, таблетке и десктопе не исчезает
+// var button = document.querySelector(".button-up");
 
-window.addEventListener("scroll", function(){
-  if (window.pageYOffset > 800) {
-    button.classList.add( 'button-up--visible' );
-    // button.classList.remove('button-up--hiden');
-  } else if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-    // button.classList.add('button-up--hiden');
-    button.classList.remove( 'button-up--visible' );
-  }
-});
+// window.addEventListener("scroll", function(){
+//   if (window.pageYOffset > 800) {
+//     button.classList.add( 'button-up--visible' );
+//     // button.classList.remove('button-up--hiden');
+//   } else if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+//     // button.classList.add('button-up--hiden');
+//     button.classList.remove( 'button-up--visible' );
+//   }
+// });
+
+
+// Новый код кнопка наверх в мобилке при скроле окна на 800px появляется, а если меньше - исчезает, при этом коде !!! НЕ ИСЧЕЗАЕТ!!!
+// else if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) - на десктопе!!!!!!!!!
+
+var button = document.querySelector('.button-up');
+
+window.onscroll = function () {
+    if (window.pageYOffset > 800) {
+        button.classList.add('button-up--visible')
+    } else {
+        button.classList.remove( 'button-up--visible' );
+    }
+};
+
+button.onclick = function () {
+    window.scrollTo(0, 0);
+};
+// Новый код кнопка наверх -КОНЕЦ
 
 // Ищем поля, чб фокус устанавливался автоматически
 

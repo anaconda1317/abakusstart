@@ -15,8 +15,10 @@
   cursor: pointer;
   background: rgba(0, 0, 0, 0.4);
   transition: all .3s linear;
+  scroll-behavior: smooth;
 }
 
+// !!!Нет плавного скрола наверх
 
 .button-up::before {
   content: "\25b4";
