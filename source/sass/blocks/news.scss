@@ -248,6 +248,13 @@
   }
 }
 
+.news__rub {
+  line-height: 5px;
+	width: 0.4em;
+	border-bottom: 1px solid #000; 
+	display: inline-block;
+}
+
 @media (min-width: $tablet-width) {
   .news__wrapper {
     // width: 81%;
