@@ -1,0 +1,43 @@
+.block-error {
+  font-family: $page-font;
+  line-height: 26px;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #ffffff;  
+}
+
+.block-error__wrapper {
+  height:100vh;
+  width: 265px;
+  margin: 0 auto;
+  padding: 60px 0;
+  text-align: center;
+  // display: flex;
+  // flex-direction: column;
+}
+
+.block-error__text {
+  width: 250px;
+  margin: auto;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+  .block-error__wrapper {
+    height:100vh;
+  }
+
+  .block-error__text {
+    font-size: 32px;
+    line-height: 42px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .block-error__text {
+    font-size: 48px;
+    line-height: 52px;
+  }
+}
