@@ -13,7 +13,7 @@
   position: relative;
 
   display: block;
-  width: 180px;
+  width: 290px;
   padding: 0;
   margin: 0 auto;
 
@@ -62,8 +62,8 @@
   }
 
   .reserv__text {
-    text-transform: uppercase;
-
+    width: 350px;
+    text-transform: uppercase;    
     border-top: none;
   }
 }
@@ -80,7 +80,7 @@
   }
 
   .reserv__text {
-    width: 200px;
+    width: 500px;
 
     text-transform: uppercase;
   }
