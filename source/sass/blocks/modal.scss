@@ -1,6 +1,46 @@
 .modal {
   position: fixed;
-  display: block;
+  display: none;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
 }
 
 .modal-show {
@@ -15,12 +55,14 @@
 
 .modal__window {
   z-index: 10;
-  position: fixed;
   top: 50px;
   left: 50%;
-  transform: translate(-50%, 0);
-  width: 320px;
   padding-top: 42px;
+  padding-bottom: 10px;
+  margin-left: -160px;
+  // transform: translate(-50%, 0);
+  width: 320px;
+
 
   font-family: $page-font;
   text-transform: uppercase;
@@ -92,7 +134,7 @@
 }
 
 .modal__form input[type="text"],
-.modal__form input[type="password"] {
+.modal__form input[type="tel"] {
   box-sizing: border-box;
   width: 230px;
   padding: 10px 15px;
@@ -119,12 +161,12 @@
 }
 
 .modal__icon-user {
-  background-image: url("../img/user.svg");
+  background-image: url("../img/user_1.svg");
   background-position: 207px center;
   background-repeat: no-repeat;
 }
 
-.modal__icon-password {
+.modal__icon-tel {
   background-image: url("../img/icon-phone.svg");
   background-position: 207px center;
   background-repeat: no-repeat;
@@ -191,21 +233,22 @@
   transform: rotate(-45deg);
 }
 
-.restore {
+.modal__checkbox-reсall {
+  padding-top: 5px;
   color: #000000;
-  text-decoration: none;
+  // text-decoration: none;
+  font-weight: 700;
 }
 
-.restore:hover,
-.restore:focus {
-  text-decoration: none;
-}
+// .modal__checkbox-reсall:hover,
+// .modal__checkbox-reсall:focus {
+//   text-decoration: none;
+// }
 
 .modal__button {
   // width: 100%;
   width: 180px;
   padding-top: 4px;
-  margin-bottom: 5px;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
@@ -214,7 +257,7 @@
 .modal__button:hover,
 .modal__button:focus,
 .modal__button:active {
-  background-color: #663d15;
+  background-color: #ffde03;
 }
 
 .modal__button.disabled,
@@ -224,134 +267,26 @@
   background-color: #000000;
 }
 
-.pop-up__alert {
-  display: block;
-  margin: 0 0 28px;
-  padding: 0;
-
-  font-size: 18px;
-  line-height: 26px;
-  font-weight: 700;
-}
-
-.pop-up__alert--mistake {
-  margin: 0 0 26px;
-}
-
-
-.pop-up__description--mistake {
-  margin: 0 auto 21px;
-}
-
-.pop-up__button-wrapper {
-  min-height: 98px;
-  padding: 20px;
-
-  background-color: #f2f2f2;
-}
-
-.pop-up__button {
-  padding-top: 4px;
-
-  font-size: 18px;
-  line-height: 26px;
-  font-weight: 700;
-}
-
-.pop-up__button--mistake {
-  width: 180px;
-}
-
-@keyframes bounce {
-  0% {
-    transform: translateY(-2000px);
-  }
-
-  70% {
-    transform: translateY(30px);
-  }
-
-  90% {
-    transform: translateY(-10px);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
-}
-
-@keyframes shake {
-  0%,
-  100% {
-    transform: translateX(0);
-  }
-
-  10%,
-  30%,
-  50%,
-  70%,
-  90% {
-    transform: translateX(-10px);
-  }
-
-  20%,
-  40%,
-  60%,
-  80% {
-    transform: translateX(10px);
-  }
-}
 
 @media (min-width: $tablet-width) {
-  .pop-up__window {
-    width: 640px;
+  .modal__window {
+    width: 340px;
     padding-top: 61px;
+    padding-bottom: 20px;
   }
 
-  .pop-up__window--mistake {
-    width: 400px;
-    min-height: 347px;
-    padding-top: 56px;
+  .modal-close {
+    right: -34px;
   }
 
-  .pop-up__alert {
-    margin: 0 0 32px;
-
-    font-size: 30px;
-  }
-
-  .pop-up__alert--mistake {
-    width: 220px;
-    margin: 0 auto 25px;
-
-    line-height: 40px;
-  }
-
-  .pop-up__description {
-    width: 440px;
-  }
-
-  .pop-up__description--mistake {
-    width: 290px;
-    margin: 0 auto 32px;
-  }
-
-  .pop-up__button-wrapper {
-    min-height: 146px;
-    padding: 44px;
-  }
-
-  .pop-up__button {
-    width: 458px;
-  }
-
-  .pop-up__button--mistake {
-    width: 272px;
+  .modal__checkbox input[type="checkbox"] + .checkbox-indicator {
+    position: absolute;
+    left: 20px;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .pop-up__window {
-    min-height: 347px;
+  .modal__window {
+    width: 347px;
   }
 }

@@ -6,8 +6,10 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Детский центр развития в Красноярске в Северном | &laquo;СТАРТ&raquo;.</title>
   <meta name="keywords" content="">
-  <meta name="description" content="Детский центр развития &laquo;СТАРТ&raquo; в Красноярске расположен в микр-н Северный, ждет детей на курсы ментальной арифметики, робототехники, скорочтения, подготовки к школе, консультации с психотерапевтом и нейропсихологом, занятия с логопедом-дефектологом и репититором начальных классов. 
-  Стоимость урока 500 руб. Первое занятие бесплатно.">
+  <meta name="description" content="Детский центр развития &laquo;СТАРТ&raquo; в Красноярске расположен в микр-н Северный, приглашает детей от 4,5 лет на занятия 
+  по ментальной арифметике, робототехнике, подготовка к школе, английский язык, осмысленное чтение, каллиграфия логопед-
+  дефектолог, репетитор начальной школы, нейропсихолог, психотерапевт от 15 +. Стоимость  урока от 500 руб. Первое занятие 
+  бесплатно.">
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="preload" href="fonts/ptsans.woff2" as="font">
   <link rel="preload" href="fonts/ptsansbold.woff2" as="font">
@@ -466,28 +468,47 @@
     <p class="modal__description">Введите, пожалуйста, свое имя и телефон</p>
     <form class="modal__form" action="https:#" method="post">
       <p>
-        <label class="visually-hidden" for="user-login">Логин</label>
-        <input class="modal__icon-user" id="user-login" type="text" name="login" placeholder="Логин">
+        <label class="visually-hidden" for="user-name"><span class="visually-hidden">Пожалуйста, введите
+          ваше</span>Имя<sup>*</sup>:</label>
+        <input class="modal__icon-user" id="user-name" type="text" name="name" placeholder="Имя">
       </p>
       <p>
-        <label class="visually-hidden" for="user-password">Пароль</label>
-        <input class="modal__icon-password" id="user-password" type="password" name="password" placeholder="Пароль">
+        <label class="visually-hidden" for="user-tel"><span class="visually-hidden">Пожалуйста, введите ваш</span>Контактный </span>телефон<sup>*</sup>:</label>
+        <input class="modal__icon-tel" id="user-tel" type="tel" name="phone" placeholder="Телефон" required>
       </p>
       <p class="modal__help">
-        <label class="modal__checkbox">
-          <input type="checkbox" name="remember" class="visually-hidden">
+        <label class="modal__checkbox"> <span class="visually-hidden">Пожалуйста, отметьте, согласны
+            ли вы с политикой конфиденциальности?</span>
+          <input type="checkbox" name="check" class="visually-hidden">
           <span class="checkbox-indicator"></span>
           <a class="modal__checkbox-text" href="#" target="_blank">Согласен с политикой конфиденциальности</a>
         </label>
-        <span class="restore">Мы перезвоним!</span>
+        <span class="modal__checkbox-reсall">Мы перезвоним!</span>
       </p>
-      <button class="button modal__button" type="submit">Отправить</button>
+      <button class="button modal__button" type="submit">Отправить
+        <span class="visually-hidden">Кнопка отправки контактных данных в telegram chat детского центра развития &laquo;СТАРТ&raquo; в Красноярске, в микр-н Северный.</span>
+      </button>
     </form>
     <button class="modal-close" type="button">Закрыть</button>
   </section>
   <!-- модальное окно - форма данных для  КОНЕЦ-->
 
+  <script>
+    var link = document.querySelector(".banner__action-сall");
+var popup = document.querySelector(".modal__window");
 
+ link.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    popup.classList.add("modal-show");
+
+    if (storage) {
+      login.value = storage;
+      password.focus();
+    } else {
+      login.focus();
+    }
+  });
+  </script>
 
     <script type="application/ld+json">
       {  
