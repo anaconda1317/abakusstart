@@ -6,10 +6,9 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Детский центр развития в Красноярске в Северном | &laquo;СТАРТ&raquo;.</title>
   <meta name="keywords" content="">
-  <meta name="description" content="Детский центр развития &laquo;СТАРТ&raquo; в Красноярске расположен в микр-н Северный, приглашает детей от 4,5 лет на занятия 
-  по ментальной арифметике, робототехнике, подготовка к школе, английский язык, осмысленное чтение, каллиграфия логопед-
-  дефектолог, репетитор начальной школы, нейропсихолог, психотерапевт от 15 +. Стоимость  урока от 500 руб. Первое занятие 
-  бесплатно.">
+  <meta name="description" content="Первое занятие бесплатно. Детский центр развития &laquo;СТАРТ&raquo; расположен в микр-н Северный, и приглашает детей от 4,5 
+  лет на занятия по ментальной арифметике, робототехнике, подготовке к школе, английскому языку, каллиграфии. А также услуги 
+  логопеда-дефектолога, репетитора начальной школы, психотерапевта от 15+. Стоимость урока от 500 руб.">
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="preload" href="fonts/ptsans.woff2" as="font">
   <link rel="preload" href="fonts/ptsansbold.woff2" as="font">
@@ -19,9 +18,10 @@
   <script src="https://cdn.rawgit.com/scottjehl/picturefill/3.0.2/dist/picturefill.min.js" async></script>
   <meta property="og:site_name" content="abakusstart.ru" />
   <meta property="og:url" content="http://abakusstart.ru" />
-  <meta property="og:title" content="Детский центр развития в Красноярске в Северном | &laquo;СТАРТ&raquo;." >
-  <meta property="og:description" content="Детский центр развития &laquo;СТАРТ&raquo; в Красноярске расположен в микр-н Северный, ждет детей на курсы ментальной арифметики, робототехники, скорочтения, подготовки к школе, консультации с психотерапевтом и нейропсихологом, занятия с логопедом-дефектологом и репититором начальных классов. 
-  Стоимость урока 500 руб. Первое занятие бесплатно." />
+  <meta property="og:title" content="Детский центр развития в Красноярске в Северном | &laquo;СТАРТ&raquo;.">
+  <meta property="og:description" content="Первое занятие бесплатно. Детский центр развития &laquo;СТАРТ&raquo; расположен в микр-н Северный, и приглашает детей от 4,5 
+  лет на занятия по ментальной арифметике, робототехнике, подготовке к школе, английскому языку, каллиграфии. А также услуги 
+  логопеда-дефектолога, репетитора начальной школы, психотерапевта от 15+. Стоимость урока от 500 руб." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://abakusstart.ru/img/start_center_abakusstart.png" />
   <meta property="og:image:type" content="image/png" />
@@ -494,18 +494,57 @@
   <!-- модальное окно - форма данных для  КОНЕЦ-->
 
   <script>
-    var link = document.querySelector(".banner__action-сall");
-var popup = document.querySelector(".modal__window");
+  var link = document.querySelector(".banner__action-сall");
+  var popup = document.querySelector(".modal__window");
+
+  var close = popup.querySelector(".modal-close");
+
+  var form = popup.querySelector("form");
+  var name= popup.querySelector("[name=name]");
+  var tel = popup.querySelector("[name=phone]");
+
+  var isStorageSupport = true;
+  var storage = "";
+
 
  link.addEventListener("click", function (evt) {
     evt.preventDefault();
     popup.classList.add("modal-show");
 
     if (storage) {
-      login.value = storage;
-      password.focus();
+      name.value = storage;
+      tel.focus();
     } else {
-      login.focus();
+      name.focus();
+    }
+  });
+
+  close.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    popup.classList.remove("modal-show");
+    popup.classList.remove("modal-error");
+  });
+
+  form.addEventListener("submit", function (evt) {
+    if (!name.value || !tel.value) {
+      evt.preventDefault();
+      popup.classList.remove("modal-error");
+      popup.offsetWidth = popup.offsetWidth;
+      popup.classList.add("modal-error");
+    } else {
+      if (isStorageSupport) {
+        localStorage.setItem("name", name.value);
+      }
+    }
+  });
+
+  window.addEventListener("keydown", function (evt) {
+    if (evt.keyCode === 27) {
+      evt.preventDefault();
+      if (popup.classList.contains("modal-show")) {
+        popup.classList.remove("modal-show");
+        popup.classList.remove("modal-error");
+      }
     }
   });
   </script>
@@ -518,8 +557,9 @@ var popup = document.querySelector(".modal__window");
           "logo": "https://abakusstart.ru/img/logo-abakusstart-desktop.svg",
           "name": "Детский центр развития в Красноярске в Северном | &laquo;СТАРТ&raquo;.",
           "alternateName": "Развивающий детский центр «СТАРТ» в Красноярске мр-н Северный.",
-          "description": "Детский центр развития &laquo;СТАРТ&raquo; в Красноярске расположен в микр-н Северный, ждет детей на курсы ментальной арифметики, робототехники, скорочтения, подготовки к школе, консультации с психотерапевтом и нейропсихологом, занятия с логопедом-дефектологом и репититором начальных классов. 
-          Стоимость урока 500 руб. Первое занятие бесплатно.",
+          "description": "Первое занятие бесплатно. Детский центр развития &laquo;СТАРТ&raquo; расположен в микр-н Северный, и приглашает детей от 4,5 
+          лет на занятия по ментальной арифметике, робототехнике, подготовке к школе, английскому языку, каллиграфии. А также услуги 
+          логопеда-дефектолога, репетитора начальной школы, психотерапевта от 15+. Стоимость урока от 500 руб.",
           "email": "info@abakusstart.ru",
           "legalName": "ООО «Берег»",
           "image": "https://abakusstart.ru/img/start_center_abakusstart.png",
