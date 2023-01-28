@@ -52,9 +52,9 @@
         <div class="main-nav__wrapper" id="home">
           <ul class="main-nav__list site-list">
             <li class="site-list__item"><a class="site-list__link site-list__link--active">Главная</a></li>
-            <li class="site-list__item"><a class="site-list__link" href="info.html">Фото и видео</a></li>
-            <li class="site-list__item"><a class="site-list__link" href="info.html">Новости и акции</a></li>
-            <li class="site-list__item"><a class="site-list__link" href="info.html">Форма отзыва</a></li>
+            <li class="site-list__item"><a class="site-list__link" href="info.php">Фото и видео</a></li>
+            <li class="site-list__item"><a class="site-list__link" href="info.php">Новости и акции</a></li>
+            <li class="site-list__item"><a class="site-list__link" href="info.php">Форма отзыва</a></li>
           </ul>
         </div>
         <a class="page-header__logo page-header__logo--mobile">
@@ -466,7 +466,7 @@
   <h2 class="visually-hidden">&laquo;СТАРТ &raquo; в Красноярске | Записаться на бесплатное занятие</h2>
   <h3 class="modal__title">Контактные данные</h3>
     <p class="modal__description">Введите, пожалуйста, свое имя и телефон</p>
-    <form class="modal__form" action="https:#" method="post">
+    <form class="modal__form" action="/telegram/send.php" method="post">
       <p>
         <label class="visually-hidden" for="user-name"><span class="visually-hidden">Пожалуйста, введите
           ваше</span>Имя<sup>*</sup>:</label>
@@ -479,12 +479,13 @@
       <p class="modal__help">
         <label class="modal__checkbox"> <span class="visually-hidden">Пожалуйста, отметьте, согласны
             ли вы с политикой конфиденциальности?</span>
-          <input type="checkbox" name="check" class="visually-hidden">
+          <input type="checkbox" name="check" class="visually-hidden" required>
           <span class="checkbox-indicator"></span>
           <a class="modal__checkbox-text" href="#" target="_blank">Согласен с политикой конфиденциальности</a>
         </label>
         <span class="modal__checkbox-reсall">Мы перезвоним!</span>
       </p>
+      <input type="hidden" name="act" value="order">
       <button class="button modal__button" type="submit">Отправить
         <span class="visually-hidden">Кнопка отправки контактных данных в telegram chat детского центра развития &laquo;СТАРТ&raquo; в Красноярске, в микр-н Северный.</span>
       </button>
@@ -494,29 +495,21 @@
   <!-- модальное окно - форма данных для  КОНЕЦ-->
 
   <script>
-  var link = document.querySelector(".banner__action-сall");
-  var popup = document.querySelector(".modal__window");
+    document.addEventListener('DOMContentLoaded', () =>{
+      var link = document.querySelector(".banner__action-сall");
+      var popup = document.querySelector(".modal__window");
 
-  var close = popup.querySelector(".modal-close");
+      var close = popup.querySelector(".modal-close");
 
-  var form = popup.querySelector("form");
-  var name= popup.querySelector("[name=name]");
-  var tel = popup.querySelector("[name=phone]");
+      var form = popup.querySelector("form");
+      var name = popup.querySelector("[name=name]");
+      var tel = popup.querySelector("[name=phone]");
 
-  var isStorageSupport = true;
-  var storage = "";
-
-
- link.addEventListener("click", function (evt) {
+      var isStorageSupport = true;
+      var storage = "";
+      link.addEventListener("click", function (evt) {
     evt.preventDefault();
     popup.classList.add("modal-show");
-
-    if (storage) {
-      name.value = storage;
-      tel.focus();
-    } else {
-      name.focus();
-    }
   });
 
   close.addEventListener("click", function (evt) {
@@ -526,14 +519,18 @@
   });
 
   form.addEventListener("submit", function (evt) {
-    if (!name.value || !tel.value) {
+    if (typeof(name.value) === "undefined" || typeof(tel.value) === "undefined") {
       evt.preventDefault();
+      console.log(name.value, tel.value);
+     
       popup.classList.remove("modal-error");
       popup.offsetWidth = popup.offsetWidth;
       popup.classList.add("modal-error");
     } else {
       if (isStorageSupport) {
-        localStorage.setItem("name", name.value);
+        tel.value = '';
+        name.value = '';
+
       }
     }
   });
@@ -547,6 +544,10 @@
       }
     }
   });
+    })
+
+
+ 
   </script>
 
     <script type="application/ld+json">
