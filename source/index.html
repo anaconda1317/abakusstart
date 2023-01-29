@@ -470,11 +470,11 @@
       <p>
         <label class="visually-hidden" for="user-name"><span class="visually-hidden">Пожалуйста, введите
           ваше</span>Имя<sup>*</sup>:</label>
-        <input class="modal__icon-user" id="user-name" type="text" name="name" placeholder="Имя">
+        <input class="modal__icon-user" id="user-name" type="text" name="name" placeholder="Имя"  autofocus>
       </p>
       <p>
         <label class="visually-hidden" for="user-tel"><span class="visually-hidden">Пожалуйста, введите ваш</span>Контактный </span>телефон<sup>*</sup>:</label>
-        <input class="modal__icon-tel" id="user-tel" type="tel" name="phone" placeholder="Телефон" required>
+        <input class="modal__icon-tel" id="user-tel" type="tel" pattern="[0-9] {1}-[0-9] {3}-[0-9] {3}" name="phone" placeholder="Телефон" required>
       </p>
       <p class="modal__help">
         <label class="modal__checkbox"> <span class="visually-hidden">Пожалуйста, отметьте, согласны
@@ -511,6 +511,10 @@
     evt.preventDefault();
     popup.classList.add("modal-show");
   });
+
+  //   if (name) {
+  //   name.focus();
+  // }
 
   close.addEventListener("click", function (evt) {
     evt.preventDefault();
