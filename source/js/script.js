@@ -1,3 +1,71 @@
+  document.addEventListener('DOMContentLoaded', function(){
+      var link = document.querySelector(".banner__action-сall");
+      var popup = document.querySelector(".modal__window");
+      var modalButton =popup.querySelector(".modal__button");
+      var close = popup.querySelector(".modal-close");
+
+      var mainForm = popup.querySelector("form");
+      var name = popup.querySelector("[name=name]");
+      var tel = popup.querySelector("[name=phone]");
+     
+      var isStorageSupport = true;
+      var storage = "";
+    
+      link.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        popup.classList.add("modal-show");
+        // форма открылась -сразу автофокус ставим
+        if (name) {
+          name.focus();
+        }
+      });
+   
+      // скипт заполнение формы- смена цвета кнопки
+    //  undisabledButtonSubmit(mainForm, modalButton, '#d8d8d8'); 
+    // });
+  // function undisabledButtonSubmit(formInputs, btn, btnColor){
+  //   formInputs.querySelectorAll('input').foreach(el =>{
+  //     el.addEventListener
+  //   })
+  // }
+  close.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    name.value = '';
+    tel.value = '';
+    popup.classList.remove("modal-show");
+    popup.classList.remove("modal-error");
+  });
+
+  mainForm.addEventListener("submit", function (evt) {
+    if (typeof(name.value) === "undefined" || typeof(tel.value) === "undefined") {
+      evt.preventDefault();
+      popup.classList.remove("modal-error");
+      popup.offsetWidth = popup.offsetWidth;
+      popup.classList.add("modal-error");
+    }
+  });
+
+  window.addEventListener("keydown", function (evt) {
+    if (evt.keyCode === 27) {
+      evt.preventDefault();
+      if (popup.classList.contains("modal-show")) {
+        popup.classList.remove("modal-show");
+        popup.classList.remove("modal-error");
+      }
+    }
+  });
+});
+// маска телефона
+
+// ее нет - она в index
+// конец
+
+
+
+
+
+
+
 // Класс  main-nav__toggle- -closed по умолчанию,- мобильное меню закрыто, для его
 // открытия нужно нажать на кнопку бургера, для закрытия тоже нажать на крестик
 // Переменные для открытия и закрытия верхнего меню в мобилке
@@ -41,23 +109,24 @@ mainNavToggle.addEventListener("click", function(evt) {
 // else if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) - на десктопе!!!!!!!!!
 
 var button = document.querySelector('.button-up');
+if(button){
+    window.onscroll = function () {
+        if (window.pageYOffset > 800) {
+            button.classList.add('button-up--visible')
+        } else {
+            button.classList.remove( 'button-up--visible' );
+        }
+    };
 
-window.onscroll = function () {
-    if (window.pageYOffset > 800) {
-        button.classList.add('button-up--visible')
-    } else {
-        button.classList.remove( 'button-up--visible' );
-    }
-};
-
-button.onclick = function () {
-    window.scrollTo(0, 0);
-};
+  button.onclick = function () {
+      window.scrollTo(0, 0);
+  };
+}
 // Новый код кнопка наверх -КОНЕЦ
 
 // Ищем поля, чб фокус устанавливался автоматически
 
-var form = document.querySelector("#feedback-form");
+var feedbackForm = document.querySelector("#feedback-form");
 var feedbackName = document.querySelector("#name");
 var feedbackSurname = document.querySelector("#surname");
 var feedbackTel = document.querySelector("#tel");
@@ -74,16 +143,16 @@ var storageEmail = localStorage.getItem("email");
 if (feedbackName) {
   feedbackName.focus();
 }
+
 // Получается, что атрибут input.getAttribute('value') хранит оригинальное (исходное) значение даже после того, как пользователь заполнил поле и свойство изменилось.
 
-// Например, можно взять изначальное значение из атрибута и сравнить со свойством, чтобы узнать, изменилось ли значение. А при необходимости и перезаписать свойство атрибутом, отменив изменения.
-
-
-
+// Например, можно взять изначальное значение из атрибута и сравнить со свойством, чтобы узнать, изменилось ли значение.
+//  А при необходимости и перезаписать свойство атрибутом, отменив изменения.
 
 // Слайдер с отзывами
 var sliderBtnttonNext = document.querySelector(".reviews__next");
 var sliderBtnttonPrev = document.querySelector(".reviews__prev");
+if(sliderBtnttonNext && sliderBtnttonPrev){
 var sliderInputs = document.querySelectorAll(".reviews__input");
 // псевдомассив sliderInputs  и его длинна sliderInputs.length
 var numbersSliderInputs = sliderInputs.length;
@@ -123,4 +192,5 @@ function getCurrentSlide() {
       return i;
     } 
   }
+}
 }

@@ -252,6 +252,7 @@
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
+  background-color: #efefef;
 }
 
 .modal__button:hover,
@@ -265,6 +266,10 @@
   cursor: default;
   opacity: 0.5;
   background-color: #000000;
+}
+
+.modal__button-undisabled {
+  background-color: #d8d8d8;
 }
 
 
