@@ -136,6 +136,21 @@
   color: rgba(#000000, 0.8);
 }
 
+.reviews__star-rating {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  // font-size: 18px;
+  // color: $main-blue;
+}
+
+.reviews__star-rating::before {
+  content: url("../img/star.svg");
+  padding-right: 5px;
+  width: 13px;
+  height: 13px;
+}
+
 .reviews__next {
   display: none;
 }
@@ -225,6 +240,14 @@
     border: 1px solid $main-blue;
     border-right: none;
     border-left: none;
+  }
+
+  .reviews__star-rating {
+    position: absolute;
+    top: 168px;
+    right: 14px;
+    // font-size: 18px;
+    // color: $main-blue;
   }
 
   .reviews__author-photo {
@@ -372,6 +395,14 @@
   // .reviews__title {
   //   font-size: 31px;
   // }
+
+  .reviews__star-rating {
+    position: absolute;
+    top: 28px;
+    right: 73px;
+    // font-size: 18px;
+    // color: $main-blue;
+  }
 
   .reviews__author-photo {
     left: 0;
