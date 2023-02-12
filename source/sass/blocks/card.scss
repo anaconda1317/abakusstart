@@ -9,6 +9,7 @@
 }
 
 .card-list-container__item {
+  width: 324px;
   box-sizing: border-box;
 }
 
@@ -101,32 +102,22 @@
     border-top: none;
   }
 
-  .article {
+  .card-item {
     width: 324px;
     height: 347px;
     margin: 0;
     padding: 0;
 
-    background-color: $background;
+    // background-color: $background;
 
     &::after {
       display: none;
     }
-
-    &--first {
-      width: 648px;
-      height: 480px;
-    }
   }
 
-  .article__image {
+  .card__image {
     width: 324px;
     height: 267px;
-
-    &--first {
-      width: 648px;
-      height: 400px;
-    }
   }
 
   .article__outline {

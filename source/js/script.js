@@ -1,59 +1,70 @@
-  document.addEventListener('DOMContentLoaded', function(){
-      var link = document.querySelector(".banner__action-сall");
-      var popup = document.querySelector(".modal__window");
-      var modalButton =popup.querySelector(".modal__button");
-      var close = popup.querySelector(".modal-close");
-
-      var mainForm = popup.querySelector("form");
-      var name = popup.querySelector("[name=name]");
-      var tel = popup.querySelector("[name=phone]");
-     
-      var isStorageSupport = true;
-      var storage = "";
+document.addEventListener('DOMContentLoaded', function(){
+  var link = document.querySelector(".banner__action-сall");
+  var popup = document.querySelector(".modal__window");
+  if(popup){
+    var modalButton =popup.querySelector(".modal__button");
+    var close = popup.querySelector(".modal-close");
+  
+    var mainForm = popup.querySelector("form");
+    var name = popup.querySelector("[name=name]");
+    var tel = popup.querySelector("[name=phone]");
     
-      link.addEventListener("click", function (evt) {
-        evt.preventDefault();
-        popup.classList.add("modal-show");
-        // форма открылась -сразу автофокус ставим
-        if (name) {
-          name.focus();
-        }
-      });
-   
-      // скипт заполнение формы- смена цвета кнопки
-    //  undisabledButtonSubmit(mainForm, modalButton, '#d8d8d8'); 
-    // });
-  // function undisabledButtonSubmit(formInputs, btn, btnColor){
-  //   formInputs.querySelectorAll('input').foreach(el =>{
-  //     el.addEventListener
-  //   })
-  // }
-  close.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    name.value = '';
-    tel.value = '';
-    popup.classList.remove("modal-show");
-    popup.classList.remove("modal-error");
-  });
-
-  mainForm.addEventListener("submit", function (evt) {
-    if (typeof(name.value) === "undefined" || typeof(tel.value) === "undefined") {
+    var isStorageSupport = true;
+    var storage = "";
+  
+    link.addEventListener("click", function (evt) {
       evt.preventDefault();
-      popup.classList.remove("modal-error");
-      popup.offsetWidth = popup.offsetWidth;
-      popup.classList.add("modal-error");
-    }
-  });
-
-  window.addEventListener("keydown", function (evt) {
-    if (evt.keyCode === 27) {
-      evt.preventDefault();
-      if (popup.classList.contains("modal-show")) {
-        popup.classList.remove("modal-show");
-        popup.classList.remove("modal-error");
+      popup.classList.add("modal-show");
+      // форма открылась -сразу автофокус ставим
+      if (name) {
+        name.focus();
       }
+    });
+     
+    function validateForm(context) {
+        if(context.querySelector('input[type=text]').value !== ''
+            && context.querySelector('input[type=tel]').value !== ''
+            && context.querySelector('input[type=checkbox]').checked
+        ){
+            context.querySelector('button[type=submit]').classList.add('modal__button-undisabled');
+            context.querySelector('button[type=submit]').removeAttribute('disabled');
+        }else{
+            context.querySelector('button[type=submit]').classList.remove('modal__button-undisabled');
+            context.querySelector('button[type=submit]').setAttribute('disabled', 'disabled');
+        }
     }
-  });
+    mainForm.addEventListener('input', function (e){
+        validateForm(this);
+    })
+         
+    close.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      name.value = '';
+      tel.value = '';
+      popup.classList.remove("modal-show");
+      popup.classList.remove("modal-error");
+    });
+  
+    mainForm.addEventListener("submit", function (evt) {
+      if (typeof(name.value) === "undefined" || typeof(tel.value) === "undefined") {
+        evt.preventDefault();
+        popup.classList.remove("modal-error");
+        popup.offsetWidth = popup.offsetWidth;
+        popup.classList.add("modal-error");
+      }
+    });
+  
+    window.addEventListener("keydown", function (evt) {
+      if (evt.keyCode === 27) {
+        evt.preventDefault();
+        if (popup.classList.contains("modal-show")) {
+          popup.classList.remove("modal-show");
+          popup.classList.remove("modal-error");
+        }
+      }
+    });
+  }
+  
 });
 // маска телефона
 
