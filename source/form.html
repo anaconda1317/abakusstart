@@ -30,9 +30,9 @@
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
             <li class="site-list__item"><a class="site-list__link" href="index.html">Главная</a></li>
-            <li class="site-list__item"><a class="site-list__link" href="photo.html">Услуги центра</a></li>
-            <li class="site-list__item"><a class="site-list__link site-list__link--active">Форма отзыва</a></li>
-            <li class="site-list__item"><a class="site-list__link" href="https://htmlacademy.ru">Фото и видео</a></li>
+            <li class="site-list__item"><a class="site-list__link" href="uslugi.html">Услуги центра</a></li>
+            <li class="site-list__item"><a class="site-list__link" href="info.html">Новости и акции</a></li>
+            <li class="site-list__item"><a class="site-list__link" href="photo.html">Фото и видео</a></li>
           </ul>
         </div>
         <a class="page-header__logo" href="index.html">
@@ -61,13 +61,13 @@
         </div>
       </section>
 
-            <!-- breadcump start-->
+            <!-- breadcrump start-->
             <ul class="breadcrumb">
-              <h2 class="visually-hidden">??????????????????</h2>
+              <h2 class="visually-hidden"> </h2>
               <li><a class="breadcrumb-link" href="index.php">Главная</a></li>
               <li><a class="breadcrumb-link" href="uslugi.php">Форма отзыва</a></li>
             </ul>
-            <!-- breadcump finish-->
+            <!-- breadcrump finish-->
 
       <form class="feedback-form" id="feedback-form" action="/telegram/send.php" method="post">
 
@@ -76,20 +76,20 @@
           <div class="form-name">
             <label class="form-name__label" for="name"><span class="visually-hidden">Пожалуйста, введите
                 ваше</span>Имя<sup>*</sup>:</label>
-            <input class="form-name__input" type="text" name="name" id="name" placeholder="Петр">
+            <input class="form-name__input" type="text" name="name" id="name" placeholder="Петр" required>
           </div>
 
           <div class="form-name">
             <label class="form-name__label" for="surname"><span class="visually-hidden">Пожалуйста, введите
                 вашу</span>Фамилия<sup>*</sup>:</label>
-            <input class="form-name__input" type="text" name="surname" id="surname" placeholder="Иванов">
+            <input class="form-name__input" type="text" name="surname" id="surname" placeholder="Иванов" required>
           </div>
 
           <div class="form-name">
             <label class="form-name__label" for="grandfathername"><span class="visually-hidden">Пожалуйста, введите
                 ваше</span>Отчество<sup>*</sup>:</label>
             <input class="form-name__input" type="text" name="grandfathername" id="grandfathername"
-              placeholder="Александрович">
+              placeholder="Александрович" required>
           </div>
         </fieldset>
 
@@ -206,7 +206,7 @@
         <fieldset class="feedback-form__item feedback-form__item--feedback">
           <b class="feedback-form__b feedback-form__b--feedback">Ваши впечатления от занятий:</b>
           <textarea class="feedback-form__textarea" id="feedback" name="feedback" rows="5"
-            placeholder="Опишите подробно все свои эмоции"></textarea>
+            placeholder="Опишите, пожалуйста свои впечатления от занятий в нашем детском центре"></textarea>
         </fieldset>
         <input type="hidden" name="act" value="review">
         <button class=" button feedback-form__button" type="submit">Отправить отзыв</button>

@@ -20,6 +20,9 @@ document.addEventListener('DOMContentLoaded', function(){
         name.focus();
       }
     });
+
+
+    // скрипт при заполнениии формы кнопка меняет цвет
      
     function validateForm(context) {
         if(context.querySelector('input[type=text]').value !== ''

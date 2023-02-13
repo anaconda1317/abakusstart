@@ -103,26 +103,4 @@
 
     background-color: rgba(0, 0, 0, 0.3);
   }
-
-  .article__author-wrapper {
-    color: $white;
-  }
-
-  .article__author {
-    color: $white;
-  }
-
-  .article__likes {
-    background-color: transparent;
-    color: $white;
-
-    &--first {
-      padding-right: 21px;
-      margin-left: auto;
-    }
-  }
-
-  .article__likes-svg {
-    fill: $white;
-  }
 }
