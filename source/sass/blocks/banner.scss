@@ -77,8 +77,6 @@
   &--action {
     margin: 0 0 15px 0;
     padding-top: 10px;
-    // margin-bottom: 15px;
-    
     color: $main-blue;
   }
 }
@@ -313,10 +311,11 @@
     min-height: 301px;
     margin-bottom: 111px;
 
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/bg-back-desktop@2x.jpg");
-      background-size: cover;
-    }
+    background-image: url("../img/bg-back-desktop@1x_not_index.jpg");
+
+    // @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    //   background-image: url("../img/bg-back-desktop@2x.jpg");
+    // }
   }
 
   .banner__slogan--action {
@@ -334,11 +333,13 @@
 
   .banner__image--photo img {
     width: 458px;
-    padding-top: 100px;
+    // padding-top: 100px;
+    padding-top: 126px;
   }
 
   .banner__image--form img {
     width: 458px;
-    padding-top: 100px;
+    // padding-top: 100px;
+    padding-top: 126px;
   }
 }
