@@ -58,6 +58,18 @@
   }
 }
 
+.banner__image--photo,
+.banner__image--form {
+  background-image: url("../img/bg-back-mobile@1x_not_index.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+
+
+  // @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  //   background-image: url("../img/bg-back-mobile@2x.jpg");
+  //   background-size: 768px auto;
+  // }
+}
 
 .banner__wrapper {
   width: 265px;
@@ -110,19 +122,20 @@
 }
 
 
+.banner__image--form img,
 .banner__image--photo img {
   display: block;
-  width: 229px;
+  width: 280px;
   margin: 0 auto;
   padding-top: 50px;
 }
 
-.banner__image--form img {
-  display: block;
-  width: 229px;
-  margin: 0 auto;
-  padding-top: 50px;
-}
+// .banner__image--form img {
+//   display: block;
+//   width: 229px;
+//   margin: 0 auto;
+//   padding-top: 50px;
+// }
 
 .banner__action-сall {
   position: relative;
@@ -158,8 +171,8 @@
   }
 
   &:hover .banner__icon-svg,
-  &:focus .banner__icon-svg
-  {  fill: rgba(255, 255, 255, 0.7);
+  &:focus .banner__icon-svg {
+    fill: rgba(255, 255, 255, 0.7);
   }
 
   &:active .banner__icon-svg {
@@ -213,6 +226,12 @@
   .banner__image--form {
     min-height: 290px;
     margin-bottom: 74px;
+
+    background-image: url("../img/bg-back-tablet@1x_not_index.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-back-tablet@2x.jpg");
+    }
   }
 
   .banner__image--index img {
@@ -237,14 +256,14 @@
     // padding: 0 0 44px;
   }
 
-  .banner__slogan { 
+  .banner__slogan {
     font-size: 30px;
 
     &--small {
       font-size: 21px;
     }
 
-    &--action {   
+    &--action {
       font-size: 21px;
     }
   }
@@ -252,7 +271,7 @@
   .banner__intro {
     margin: 0;
     padding: 28px 0 24px;
-      // padding: 28px 0 44px;
+    // padding: 28px 0 44px;
 
     font-size: 14px;
     line-height: 26px;
@@ -272,9 +291,9 @@
     padding-top: 25px;
     padding-bottom: 46px;
   }
-  
+
   .banner__action-сall {
-    width: 458px;  
+    width: 458px;
   }
 
   .banner__icon-svg {
@@ -313,9 +332,9 @@
 
     background-image: url("../img/bg-back-desktop@1x_not_index.jpg");
 
-    // @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    //   background-image: url("../img/bg-back-desktop@2x.jpg");
-    // }
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-back-desktop@2x.jpg");
+    }
   }
 
   .banner__slogan--action {
@@ -334,12 +353,12 @@
   .banner__image--photo img {
     width: 458px;
     // padding-top: 100px;
-    padding-top: 126px;
+    padding-top: 140px;
   }
 
   .banner__image--form img {
     width: 458px;
     // padding-top: 100px;
-    padding-top: 126px;
+    padding-top: 140px;
   }
 }
