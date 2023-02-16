@@ -1,6 +1,16 @@
 document.addEventListener('DOMContentLoaded', function(){
   var link = document.querySelector(".banner__action-сall");
   var popup = document.querySelector(".modal__window");
+  var cards = document.querySelector('.card-list-container');
+  console.log();
+  if(cards){
+    var btnOrders = cards.querySelectorAll('.modal-open');
+   
+    btnOrders.forEach(function(element ){ 
+      openModal(element);
+    } );
+  }
+
   if(popup){
     var modalButton =popup.querySelector(".modal__button");
     var close = popup.querySelector(".modal-close");
@@ -10,17 +20,33 @@ document.addEventListener('DOMContentLoaded', function(){
     var tel = popup.querySelector("[name=phone]");
     
     var isStorageSupport = true;
-    var storage = "";
-  
-    link.addEventListener("click", function (evt) {
-      evt.preventDefault();
-      popup.classList.add("modal-show");
-      // форма открылась -сразу автофокус ставим
-      if (name) {
-        name.focus();
-      }
-    });
-
+    var storage = ""; 
+    if(link){
+      link.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        popup.classList.add("modal-show");
+        // форма открылась -сразу автофокус ставим
+        if (name) {
+          name.focus();
+        }
+      });
+    }
+    function openModal(element) {
+      
+      
+      element.addEventListener("click", function (evt) { 
+        if(evt.currentTarget.classList.contains('modal-open')) {
+          var hiddenInput = document.querySelector('.hidden__input-current__name')
+          hiddenInput.setAttribute('value', evt.currentTarget.dataset.name);
+        }
+        evt.preventDefault();
+        popup.classList.add("modal-show");
+        // форма открылась -сразу автофокус ставим
+        if (name) {
+          name.focus();
+        }
+      });
+    }
 
     // скрипт при заполнениии формы кнопка меняет цвет
      

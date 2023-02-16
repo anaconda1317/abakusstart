@@ -27,18 +27,17 @@
         </button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
-            <li class="site-list__item"><a class="site-list__link" href="index.html">Главная</a></li>
-            <li class="site-list__item"><a class="site-list__link site-list__link--active" href="photo.html">Фото и
-                видео</a></li>
-            <li class="site-list__item"><a class="site-list__link" href="form.html">Форма отзыва</a></li>
-            <li class="site-list__item"><a class="site-list__link" href="https://htmlacademy.ru">Html academy</a></li>
+            <li class="site-list__item"><a class="site-list__link" href="index.php">Главная</a></li>
+            <li class="site-list__item"><a class="site-list__link site-list__link--active" href="uslugi.php">Услуги центра</a></li>
+            <li class="site-list__item"><a class="site-list__link" href="info.php">Новости и акции</a></li>
+            <li class="site-list__item"><a class="site-list__link" href="info.php">Фото и видео</a></li>
           </ul>
         </div>
-        <a class="page-header__logo" href="index.html">
+        <a class="page-header__logo page-header__logo--mobile" href="index.php">
           <picture>
-            <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
-            <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
-            <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" alt="City of Sedona">
+            <source media="(min-width: 1200px)" srcset="img/logo-abakusstart-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-abakusstart-tablet.svg">
+            <img class="page-header__logo-image" src="img/logo-abakusstart-mobile.svg" alt="Логотип детского центра развития &laquo;СТАРТ&raquo; в Красноярске.">
           </picture>
         </a>
       </nav>
@@ -47,15 +46,17 @@
     <main class="page-main">
       <h1 class="visually-hidden">Услуги</h1>
       <section class="banner">
-        <h2 class="visually-hidden">Вводная секция с баннером о фото и видео в Седоне.</h2>
+        <h2 class="visually-hidden">Вводная секция с баннером о занятиях в детском центре &laquo;СТАРТ&raquo;.</h2>
         <div class="banner__image banner__image--photo">
-          <img src="img/text-sedona.svg" alt="Welcome Sedona" width="229" height="39">
+          <img src="img/text-abakusstart-index_not.svg" alt="Детский центр развития &laquo;СТАРТ&raquo; в Красноярске,
+          в Северном." width="229" height="138">
+          <!-- <img src="img/text-sedona.svg" alt="Welcome Sedona" width="229" height="39"> -->
         </div>
 
         <div class="banner__wrapper">
-          <p class="banner__slogan">Фото и видео</p>
-          <p class="banner__intro banner__intro--photo">Не можете решиться на путешествие из-за курса? Фотографии
-            помогут вам забыть о политике и экономике.</p>
+          <p class="banner__slogan">Занятия в центре</p>
+          <p class="banner__intro banner__intro--photo">Не знаете какие занятия подходят для вашего ребенка? Краткий обзор
+            поможет вам с проблемой выбора.</p>
         </div>
       </section>
 
@@ -72,6 +73,7 @@
 
         <ul class="card-list-container">
 
+          <!-- Ментальная арифметика начало -->
           <li class="card-list-container__item">
             <article class="card-item">
               <p class="card-item__chevron card-item__chevron--new">Новая коллекция</p>
@@ -95,7 +97,7 @@
                 </picture>
               </a>
               <p class="card-item__division">мужская одежда</p>
-              <h3 class="card-item__title" id="title_1">Yahweh Yireh, мужская футболка</h3>
+              <h3 class="card-item__title" id="title_1">Ментальная арифметика</h3>
               <!-- <div class="card-item__rate"> в этом макете называктся а это из другого - solution 29 cтрока</div> -->
               <div class="card-item__info">
                 <p class="card-item__availability card-item__availability--yes">Есть в наличии</p>
@@ -109,173 +111,592 @@
                 <dd>107 990 ₽</dd>
               </dl>
               <div class="card-item__button-block">
-                <button class="button card-info__button modal-show" type="submit" data-name="mental">Записаться на занятия
+                <button class="button card-info__button modal-open" type="submit" data-name="mental">Записаться на занятия
                   <span class="visually-hidden">Записаться на занятия по ментальной арифметике.</span>
                 </button>
                 <a class="button card-info__button card-info__button--border" href="#">
                   Подробнее про <span>занятия</span> <span class="visually-hidden">Подробнее про занятия.</span>
                 </a>
               </div>
-
-<!-- барбершоп иконки -->
-
-
-
-              <!-- <button class="btn card-info__button" type="submit">Добавить в корзину</button>
-              <button class="btn card-info__button card-info__button--border" type="button">
-                Рассрочка от <span>10 800 ₽ / месяц</span>
-              </button>
-              <div class="card-item__button-block">
-                <button class="card-item__button btn" type="button">В корзину</button>
-                <button class="card-item__favourite btn" type="button">
-                  <span class="visually-hidden">Добавить в избранное.</span>
-                </button>
-                <button class="card-item__button btn" type="button">Добавить в корзину</button> -->
-
+<!-- !!!!!!!!!!!!!!!!ДЕЛАТЬ барбершоп иконки -->
             </article>
           </li>
+          <!-- Ментальная арифметика КОНЕЦ -->
+
+          <!-- Робототехника НАЧАЛО -->
           <li class="card-list-container__item">
             <article class="card-item">
-              
-            </article>
-          </li>
-          <li class="card-list-container__item">
-            <article class="card-item">
-              
-            </article>
-          </li>
-          <li class="card-list-container__item">
-            <article class="card-item">
-              
-            </article>
-          </li>
-          <li class="card-list-container__item">
-            <article class="card-item">
-              
-            </article>
-          </li>
-
-<!-- 
-          <li>
-            <article class="article">
-              <h3 class="visually-hidden">Третья статья с фото о Седоне</h3>
-              <a href="#" class="article__link">
+              <p class="card-item__chevron card-item__chevron--new">Новая коллекция</p>
+              <h2 class="visually-hidden">Робототехника для детей</h2>
+              <a href="#" class="card__link">
                 <picture>
                   <source type="image/webp" media="(min-width: 1200px)"
-                    srcset="img/photo-roads-desktop@1x.webp 1x, img/photo-roads-desktop@2x.webp 2x">
+                    srcset="img/photo-cactus-desktop@1x.webp 1x, img/photo-cactus-desktop@2x.webp 2x">
                   <source type="image/webp" media="(min-width: 768px)"
-                    srcset="img/photo-roads-tablet@1x.webp 1x, img/photo-roads-tablet@2x.webp 2x">
+                    srcset="img/photo-cactus-tablet@1x.webp 1x, img/photo-cactus-tablet@2x.webp 2x">
                   <source type="image/webp"
-                    srcset="img/photo-roads-mobile@1x.webp 1x, img/photo-roads-mobile@2x.webp 2x">
+                    srcset="img/photo-cactus-mobile@1x.webp 1x, img/photo-cactus-mobile@2x.webp 2x">
 
                   <source media="(min-width: 1200px)"
-                    srcset="img/photo-roads-desktop@1x.jpg 1x, img/photo-roads-desktop@2x.jpg 2x">
+                    srcset="img/photo-cactus-desktop@1x.jpg 1x, img/photo-cactus-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)"
-                    srcset="img/photo-roads-tablet@1x.jpg 1x, img/photo-roads-tablet@2x.jpg 2x">
-                  <img class="article__image" src="img/photo-roads-mobile@1x.jpg"
-                    srcset="img/photo-roads-mobile@1x.jpg 1x, img/photo-roads-mobile@2x.jpg 2x" alt="Дорога на север">
+                    srcset="img/photo-cactus-tablet@1x.jpg 1x, img/photo-cactus-tablet@2x.jpg 2x">
+                  <img class="card__image" src="img/photo-cactus-mobilep@1x.jpg"
+                    srcset="img/photo-cactus-mobile@1x.jpg 1x, img/photo-cactus-mobile@2x.jpg 2x"
+                    alt="Местная растительность" aria-labelledby="title_1">
                 </picture>
               </a>
-              <div class="article__outline">
-                <p class="article__author-wrapper">
-                  <b class="article__title">Дорога на север</b>
-                  <span class="article__author-description">Автор фото: </span>
-                  <span class="article__author">Петр</span>
-                </p>
-                <span class="article__likes">
-                  <svg class="article__likes-svg" fill="#b2b2b2" width="22" height="20">
-                    <use xlink:href="#sp-icon-like"></use>
-                  </svg>
-                  96
-                </span>
+              <p class="card-item__division">мужская одежда</p>
+              <h3 class="card-item__title" id="title_1">Робототехника</h3>
+              <!-- <div class="card-item__rate"> в этом макете называктся а это из другого - solution 29 cтрока</div> -->
+              <div class="card-item__info">
+                <p class="card-item__availability card-item__availability--yes">Есть в наличии</p>
+                <p class="card-item__rating">4.9</p>
+                <a class="card-item__link-to-reviews link" href="#">56 отзывов</a>
               </div>
+              <p class="card-item__description">подзаголовок</p>
+              <!-- <dl class="card-info__price-list price-list"> -->
+              <dl class="card-item__price-list">
+                <dt>Цена:</dt>
+                <dd>107 990 ₽</dd>
+              </dl>
+              <div class="card-item__button-block">
+                <button class="button card-info__button modal-open" type="submit" data-name="robots">Записаться на занятия
+                  <span class="visually-hidden">Записаться на занятия по Робототехнике.</span>
+                </button>
+                <a class="button card-info__button card-info__button--border" href="#">
+                  Подробнее про <span>занятия</span> <span class="visually-hidden">Подробнее про занятия.</span>
+                </a>
+              </div>
+<!-- !!!!!!!!!!!!!!!!ДЕЛАТЬ барбершоп иконки -->
             </article>
           </li>
+          <!-- Робототехника КОНЕЦ -->
 
-
-          <li>
-            <article class="article">
-              <h3 class="visually-hidden">Четвертая статья с фото о Седоне</h3>
-              <a href="#" class="article__link">
+          <!-- Репетитор НАЧАЛО -->
+          <li class="card-list-container__item">
+            <article class="card-item">
+              <p class="card-item__chevron card-item__chevron--new">Новая коллекция</p>
+              <h2 class="visually-hidden">Репетитор начальных классов</h2>
+              <a href="#" class="card__link">
                 <picture>
-
                   <source type="image/webp" media="(min-width: 1200px)"
-                    srcset="img/photo-bridge-desktop@1x.webp 1x, img/photo-bridge-desktop@2x.webp 2x">
+                    srcset="img/photo-cactus-desktop@1x.webp 1x, img/photo-cactus-desktop@2x.webp 2x">
                   <source type="image/webp" media="(min-width: 768px)"
-                    srcset="img/photo-bridge-tablet@1x.webp 1x, img/photo-bridge-tablet@2x.webp 2x">
+                    srcset="img/photo-cactus-tablet@1x.webp 1x, img/photo-cactus-tablet@2x.webp 2x">
                   <source type="image/webp"
-                    srcset="img/photo-bridge-mobile@1x.webp 1x, img/photo-bridge-mobile@2x.webp 2x">
+                    srcset="img/photo-cactus-mobile@1x.webp 1x, img/photo-cactus-mobile@2x.webp 2x">
+
                   <source media="(min-width: 1200px)"
-                    srcset="img/photo-bridge-desktop@1x.jpg 1x, img/photo-bridge-desktop@2x.jpg 2x">
+                    srcset="img/photo-cactus-desktop@1x.jpg 1x, img/photo-cactus-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)"
-                    srcset="img/photo-bridge-tablet@1x.jpg 1x, img/photo-bridge-tablet@2x.jpg 2x">
-                  <img class="article__image" src="img/photo-bridge-mobile@1x.jpg"
-                    srcset="img/photo-bridge-mobile@1x.jpg 1x, img/photo-bridge-mobile@2x.jpg 2x" alt="Мост дьявола">
+                    srcset="img/photo-cactus-tablet@1x.jpg 1x, img/photo-cactus-tablet@2x.jpg 2x">
+                  <img class="card__image" src="img/photo-cactus-mobilep@1x.jpg"
+                    srcset="img/photo-cactus-mobile@1x.jpg 1x, img/photo-cactus-mobile@2x.jpg 2x"
+                    alt="Местная растительность" aria-labelledby="title_1">
                 </picture>
               </a>
-              <div class="article__outline">
-                <p class="article__author-wrapper">
-                  <b class="article__title">Мост дьявола</b>
-                  <span class="article__author-description">Автор фото: </span>
-                  <span class="article__author">Антон</span>
-                </p>
-                <span class="article__likes">
+              <p class="card-item__division">мужская одежда</p>
+              <h3 class="card-item__title" id="title_1">Репетитор</h3>
+              <!-- <div class="card-item__rate"> в этом макете называктся а это из другого - solution 29 cтрока</div> -->
+              <div class="card-item__info">
+                <p class="card-item__availability card-item__availability--yes">Есть в наличии</p>
+                <p class="card-item__rating">4.9</p>
+                <a class="card-item__link-to-reviews link" href="#">56 отзывов</a>
+              </div>
+              <p class="card-item__description">подзаголовок</p>
+              <!-- <dl class="card-info__price-list price-list"> -->
+              <dl class="card-item__price-list">
+                <dt>Цена:</dt>
+                <dd>107 990 ₽</dd>
+              </dl>
+              <div class="card-item__button-block">
+                <button class="button card-info__button modal-open" type="submit" data-name="repetitor">Записаться на занятия
+                  <span class="visually-hidden">Записаться на занятия к репетитору начальных классов.</span>
+                </button>
+                <a class="button card-info__button card-info__button--border" href="#">
+                  Подробнее про <span>занятия</span> <span class="visually-hidden">Подробнее про занятия.</span>
+                </a>
+              </div>
+<!-- !!!!!!!!!!!!!!!!ДЕЛАТЬ барбершоп иконки -->
+            </article>
+          </li>
+          <!-- Репетитор КОНЕЦ -->
+
+
+          <!-- Логопед НАЧАЛО -->
+          <li class="card-list-container__item">
+            <article class="card-item">
+              <p class="card-item__chevron card-item__chevron--new">Новая коллекция</p>
+              <h2 class="visually-hidden">Логопед-дефектолог для детей</h2>
+              <a href="#" class="card__link">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1200px)"
+                    srcset="img/photo-cactus-desktop@1x.webp 1x, img/photo-cactus-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/photo-cactus-tablet@1x.webp 1x, img/photo-cactus-tablet@2x.webp 2x">
+                  <source type="image/webp"
+                    srcset="img/photo-cactus-mobile@1x.webp 1x, img/photo-cactus-mobile@2x.webp 2x">
+
+                  <source media="(min-width: 1200px)"
+                    srcset="img/photo-cactus-desktop@1x.jpg 1x, img/photo-cactus-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)"
+                    srcset="img/photo-cactus-tablet@1x.jpg 1x, img/photo-cactus-tablet@2x.jpg 2x">
+                  <img class="card__image" src="img/photo-cactus-mobilep@1x.jpg"
+                    srcset="img/photo-cactus-mobile@1x.jpg 1x, img/photo-cactus-mobile@2x.jpg 2x"
+                    alt="Местная растительность" aria-labelledby="title_1">
+                </picture>
+              </a>
+              <p class="card-item__division">мужская одежда</p>
+              <h3 class="card-item__title" id="title_1">Логопед-дефектолог</h3>
+              <!-- <div class="card-item__rate"> в этом макете называктся а это из другого - solution 29 cтрока</div> -->
+              <div class="card-item__info">
+                <p class="card-item__availability card-item__availability--yes">Есть в наличии</p>
+                <p class="card-item__rating">4.9</p>
+                <a class="card-item__link-to-reviews link" href="#">56 отзывов</a>
+              </div>
+              <p class="card-item__description">подзаголовок</p>
+              <!-- <dl class="card-info__price-list price-list"> -->
+              <dl class="card-item__price-list">
+                <dt>Цена:</dt>
+                <dd>107 990 ₽</dd>
+              </dl>
+              <div class="card-item__button-block">
+                <button class="button card-info__button modal-open" type="submit" data-name="logopedist">Записаться на занятия
+                  <span class="visually-hidden">Записаться на занятия к Логопеду-дефектологу.</span>
+                </button>
+                <a class="button card-info__button card-info__button--border" href="#">
+                  Подробнее про <span>занятия</span> <span class="visually-hidden">Подробнее про занятия.</span>
+                </a>
+              </div>
+<!-- !!!!!!!!!!!!!!!!ДЕЛАТЬ барбершоп иконки -->
+            </article>
+          </li>
+          <!-- Логопед КОНЕЦ -->
+
+
+          <!-- Английский НАЧАЛО -->
+          <li class="card-list-container__item">
+            <article class="card-item">
+              <p class="card-item__chevron card-item__chevron--new">Новая коллекция</p>
+              <h2 class="visually-hidden">Английский язык для детей</h2>
+              <a href="#" class="card__link">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1200px)"
+                    srcset="img/photo-cactus-desktop@1x.webp 1x, img/photo-cactus-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/photo-cactus-tablet@1x.webp 1x, img/photo-cactus-tablet@2x.webp 2x">
+                  <source type="image/webp"
+                    srcset="img/photo-cactus-mobile@1x.webp 1x, img/photo-cactus-mobile@2x.webp 2x">
+
+                  <source media="(min-width: 1200px)"
+                    srcset="img/photo-cactus-desktop@1x.jpg 1x, img/photo-cactus-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)"
+                    srcset="img/photo-cactus-tablet@1x.jpg 1x, img/photo-cactus-tablet@2x.jpg 2x">
+                  <img class="card__image" src="img/photo-cactus-mobilep@1x.jpg"
+                    srcset="img/photo-cactus-mobile@1x.jpg 1x, img/photo-cactus-mobile@2x.jpg 2x"
+                    alt="Местная растительность" aria-labelledby="title_1">
+                </picture>
+              </a>
+              <p class="card-item__division">мужская одежда</p>
+              <h3 class="card-item__title" id="title_1">Английский язык</h3>
+              <!-- <div class="card-item__rate"> в этом макете называктся а это из другого - solution 29 cтрока</div> -->
+              <div class="card-item__info">
+                <p class="card-item__availability card-item__availability--yes">Есть в наличии</p>
+                <p class="card-item__rating">4.9</p>
+                <a class="card-item__link-to-reviews link" href="#">56 отзывов</a>
+              </div>
+              <p class="card-item__description">подзаголовок</p>
+              <!-- <dl class="card-info__price-list price-list"> -->
+              <dl class="card-item__price-list">
+                <dt>Цена:</dt>
+                <dd>107 990 ₽</dd>
+              </dl>
+              <div class="card-item__button-block">
+                <button class="button card-info__button modal-open" type="submit" data-name="english">Записаться на занятия
+                  <span class="visually-hidden">Записаться на занятия по английскому языку.</span>
+                </button>
+                <a class="button card-info__button card-info__button--border" href="#">
+                  Подробнее про <span>занятия</span> <span class="visually-hidden">Подробнее про занятия.</span>
+                </a>
+              </div>
+<!-- !!!!!!!!!!!!!!!!ДЕЛАТЬ барбершоп иконки -->
+            </article>
+          </li>
+          <!-- Английский КОНЕЦ -->
+
+
+          <!-- Нейропсихолог НАЧАЛО -->
+          <li class="card-list-container__item">
+            <article class="card-item">
+              <p class="card-item__chevron card-item__chevron--new">Новая коллекция</p>
+              <h2 class="visually-hidden">Консультация нейропсихолога для детей</h2>
+              <a href="#" class="card__link">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1200px)"
+                    srcset="img/photo-cactus-desktop@1x.webp 1x, img/photo-cactus-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/photo-cactus-tablet@1x.webp 1x, img/photo-cactus-tablet@2x.webp 2x">
+                  <source type="image/webp"
+                    srcset="img/photo-cactus-mobile@1x.webp 1x, img/photo-cactus-mobile@2x.webp 2x">
+
+                  <source media="(min-width: 1200px)"
+                    srcset="img/photo-cactus-desktop@1x.jpg 1x, img/photo-cactus-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)"
+                    srcset="img/photo-cactus-tablet@1x.jpg 1x, img/photo-cactus-tablet@2x.jpg 2x">
+                  <img class="card__image" src="img/photo-cactus-mobilep@1x.jpg"
+                    srcset="img/photo-cactus-mobile@1x.jpg 1x, img/photo-cactus-mobile@2x.jpg 2x"
+                    alt="Местная растительность" aria-labelledby="title_1">
+                </picture>
+              </a>
+              <p class="card-item__division">мужская одежда</p>
+              <h3 class="card-item__title" id="title_1">Нейропсихолог</h3>
+              <!-- <div class="card-item__rate"> в этом макете называктся а это из другого - solution 29 cтрока</div> -->
+              <div class="card-item__info">
+                <p class="card-item__availability card-item__availability--yes">Есть в наличии</p>
+                <p class="card-item__rating">4.9</p>
+                <a class="card-item__link-to-reviews link" href="#">56 отзывов</a>
+              </div>
+              <p class="card-item__description">подзаголовок</p>
+              <!-- <dl class="card-info__price-list price-list"> -->
+              <dl class="card-item__price-list">
+                <dt>Цена:</dt>
+                <dd>107 990 ₽</dd>
+              </dl>
+              <div class="card-item__button-block">
+                <button class="button card-info__button modal-open" type="submit" data-name="neuropsychologist">Записаться на занятия
+                  <span class="visually-hidden">Записать ребенка на консультацию к нейропсихологу.</span>
+                </button>
+                <a class="button card-info__button card-info__button--border" href="#">
+                  Подробнее про <span>занятия</span> <span class="visually-hidden">Подробнее про занятия.</span>
+                </a>
+              </div>
+<!-- !!!!!!!!!!!!!!!!ДЕЛАТЬ барбершоп иконки -->
+            </article>
+          </li>
+          <!-- Нейропсихолог КОНЕЦ -->
+
+
+          <!-- Психотерапевт НАЧАЛО -->
+          <li class="card-list-container__item">
+            <article class="card-item">
+              <p class="card-item__chevron card-item__chevron--new">Новая коллекция</p>
+              <h2 class="visually-hidden">Психотерапевт для детей</h2>
+              <a href="#" class="card__link">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1200px)"
+                    srcset="img/photo-cactus-desktop@1x.webp 1x, img/photo-cactus-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/photo-cactus-tablet@1x.webp 1x, img/photo-cactus-tablet@2x.webp 2x">
+                  <source type="image/webp"
+                    srcset="img/photo-cactus-mobile@1x.webp 1x, img/photo-cactus-mobile@2x.webp 2x">
+
+                  <source media="(min-width: 1200px)"
+                    srcset="img/photo-cactus-desktop@1x.jpg 1x, img/photo-cactus-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)"
+                    srcset="img/photo-cactus-tablet@1x.jpg 1x, img/photo-cactus-tablet@2x.jpg 2x">
+                  <img class="card__image" src="img/photo-cactus-mobilep@1x.jpg"
+                    srcset="img/photo-cactus-mobile@1x.jpg 1x, img/photo-cactus-mobile@2x.jpg 2x"
+                    alt="Местная растительность" aria-labelledby="title_1">
+                </picture>
+              </a>
+              <p class="card-item__division">мужская одежда</p>
+              <h3 class="card-item__title" id="title_1">Психотерапевт</h3>
+              <!-- <div class="card-item__rate"> в этом макете называктся а это из другого - solution 29 cтрока</div> -->
+              <div class="card-item__info">
+                <p class="card-item__availability card-item__availability--yes">Есть в наличии</p>
+                <p class="card-item__rating">4.9</p>
+                <a class="card-item__link-to-reviews link" href="#">56 отзывов</a>
+              </div>
+              <p class="card-item__description">подзаголовок</p>
+              <!-- <dl class="card-info__price-list price-list"> -->
+              <dl class="card-item__price-list">
+                <dt>Цена:</dt>
+                <dd>107 990 ₽</dd>
+              </dl>
+              <div class="card-item__button-block">
+                <button class="button card-info__button modal-open" type="submit" data-name="psychotherapist">Записаться на занятия
+                  <span class="visually-hidden">Записаться на консультацию к психотерапевту.</span>
+                </button>
+                <a class="button card-info__button card-info__button--border" href="#">
+                  Подробнее про <span>занятия</span> <span class="visually-hidden">Подробнее про занятия.</span>
+                </a>
+              </div>
+<!-- !!!!!!!!!!!!!!!!ДЕЛАТЬ барбершоп иконки -->
+            </article>
+          </li>
+          <!-- Психотерапевт КОНЕЦ -->
+
+
+          <!-- Каллиграфия НАЧАЛО -->
+          <li class="card-list-container__item">
+            <article class="card-item">
+              <p class="card-item__chevron card-item__chevron--new">Новая коллекция</p>
+              <h2 class="visually-hidden">Каллиграфия для детей</h2>
+              <a href="#" class="card__link">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1200px)"
+                    srcset="img/photo-cactus-desktop@1x.webp 1x, img/photo-cactus-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/photo-cactus-tablet@1x.webp 1x, img/photo-cactus-tablet@2x.webp 2x">
+                  <source type="image/webp"
+                    srcset="img/photo-cactus-mobile@1x.webp 1x, img/photo-cactus-mobile@2x.webp 2x">
+
+                  <source media="(min-width: 1200px)"
+                    srcset="img/photo-cactus-desktop@1x.jpg 1x, img/photo-cactus-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)"
+                    srcset="img/photo-cactus-tablet@1x.jpg 1x, img/photo-cactus-tablet@2x.jpg 2x">
+                  <img class="card__image" src="img/photo-cactus-mobilep@1x.jpg"
+                    srcset="img/photo-cactus-mobile@1x.jpg 1x, img/photo-cactus-mobile@2x.jpg 2x"
+                    alt="Местная растительность" aria-labelledby="title_1">
+                </picture>
+              </a>
+              <p class="card-item__division">мужская одежда</p>
+              <h3 class="card-item__title" id="title_1">Каллиграфия</h3>
+              <!-- <div class="card-item__rate"> в этом макете называктся а это из другого - solution 29 cтрока</div> -->
+              <div class="card-item__info">
+                <p class="card-item__availability card-item__availability--yes">Есть в наличии</p>
+                <p class="card-item__rating">4.9</p>
+                <a class="card-item__link-to-reviews link" href="#">56 отзывов</a>
+              </div>
+              <p class="card-item__description">подзаголовок</p>
+              <!-- <dl class="card-info__price-list price-list"> -->
+              <dl class="card-item__price-list">
+                <dt>Цена:</dt>
+                <dd>107 990 ₽</dd>
+              </dl>
+              <div class="card-item__button-block">
+                <button class="button card-info__button modal-open" type="submit" data-name="calligraphy">Записаться на занятия
+                  <span class="visually-hidden">Записаться на занятия по Каллиграфии.</span>
+                </button>
+                <a class="button card-info__button card-info__button--border" href="#">
+                  Подробнее про <span>занятия</span> <span class="visually-hidden">Подробнее про занятия.</span>
+                </a>
+              </div>
+<!-- !!!!!!!!!!!!!!!!ДЕЛАТЬ барбершоп иконки -->
+            </article>
+          </li>
+          <!-- Каллиграфия КОНЕЦ -->
+
+                <!-- <span class="article__likes">
                   <svg class="article__likes-svg" fill="#b2b2b2" width="22" height="20">
                     <use xlink:href="#sp-icon-like"></use>
                   </svg>
                   254
-                </span>
-              </div>
-            </article>
-          </li> -->
-        </ul>
+                </span> -->
 
-      </section>
+        </ul>
+ </section>
+
+ 
+<!-- ТАБЛИЦА ПРЕЙСКУРАНТ НАЧАЛО-->
+<section class="price">
+  <div class="price__wrapper">
+    <h2 class="price__header">Прейскурант</h1>
+    <div class="price__columns">
+      <table class="price__table">
+        <tr>
+          <td class="col-1">1</td>
+          <td class="col-2">Групповое занятие</td>
+          <td class="col-3">от 3 детей</td>
+          <td class="col-4">1 500 руб.</td>
+        </tr>
+        <tr>
+          <td class="col-1">2</td>
+          <td class="col-2">Индивидуальное занятие</td>
+          <td class="col-3">от 1 часа</td>
+          <td class="col-4">1 500 руб.</td>
+        </tr>
+        <tr>
+          <td class="col-1">3</td>
+          <td class="col-2">Групповое занятие</td>
+          <td class="col-3">от 7 детей</td>
+          <td class="col-4">2 000 руб.</td>
+        </tr>
+        <tr>
+          <td class="col-1">4</td>
+          <td class="col-2">Индивидуальное в выхоной</td>
+          <td class="col-3">от 1 часа</td>
+          <td class="col-4">500 руб.</td>
+        </tr>
+        <tr>
+          <td class="col-1">5</td>
+          <td class="col-2">Групповое в выходной</td>
+          <td class="col-3">от 3 детей</td>
+          <td class="col-4">1 000 руб.</td>
+        </tr>
+      </table>
+      <p class="price__discount">С 10:00 до 16:00 в выходные</p>
+    </div>
+  </div>
+</section>
+<!-- ТАБЛИЦА ПРЕЙСКУРАНТ кОНЕЦ-->
+
+
+ <section class="post-social">
+  <div class="post-social__wrapper">
+    <h2 class="visually-hidden"> Поделиться в социальных сетях сайт развивающего детского центра &laquo;СТАРТ&raquo; в Красноярске, в Советском районе.</h2>
+      <h3 class="post-social__title">Поделиться</h3>
+          <ul class="post-social__list">
+              <li class="post-social__item post-social__item--vk">
+                  <a class="post-social__button" href="https://vk.com/share.php?url==https://abakusstart.ru/index.html" target="_blank" rel="nofollow">Вконтакте
+                      <span class="visually-hidden">Поделиться в vk сайтом развивающего детского центра &laquo;СТАРТ&raquo; в Красноярске.</span>
+                      <svg  aria-hidden="true" width="20" height="20">
+                        <use xlink:href="#sp-icon-vk"></use>
+                      </svg>
+                  </a>
+              </li>
+              <li class="post-social__item post-social__item--fb">
+                      <a class="post-social__button" href="https://www.facebook.com/sharer.php?u=https://abakusstart.ru/index.html" target="_blank" rel="nofollow">Фейсбук
+                          <span class="visually-hidden">Поделиться в facebook сайтом развивающего детского центра &laquo;СТАРТ&raquo; в Красноярске, в Советском районе.</span>
+                          <svg  aria-hidden="true" width="20" height="20">
+                            <use xlink:href="#sp-icon-facebook"></use>
+                          </svg>
+                      </a>
+              </li>
+              <li class="post-social__item post-social__item--tw">
+                      <a class="post-social__button" href="https://twitter.com/intent/tweet?=https://abakusstart.ru/index.html" target="_blank" rel="nofollow">Твитер
+                          <span class="visually-hidden">Поделиться в twitter сайтом детского центра развития &laquo;СТАРТ&raquo; в Красноярске, в Советском районе.</span>
+                          <svg  aria-hidden="true" width="20" height="20">
+                              <use xlink:href="#sp-icon-twitter"></use>
+                          </svg>
+                      </a>
+              </li>
+              <li class="post-social__item post-social__item--tel">
+                      <a class="post-social__button" href="https://telegram.me/share/url?url=https://abakusstart.ru/index.html" target="_blank" rel="nofollow">Телеграм
+                          <span class="visually-hidden">Поделиться в telegram сайтом детского центра развития &laquo;СТАРТ&raquo; в Красноярске, в Советском районе.</span>
+                          <svg  aria-hidden="true" width="20" height="20">
+                              <use xlink:href="#sp-icon-telegram"></use>
+                          </svg>
+                      </a>
+              </li>
+              <li class="post-social__item post-social__item--od">
+                      <a class="post-social__button" href="https://connect.ok.ru/dk?st.cmd=WidgetSharePreview&st.shareUrl=https://abakusstart.ru/index.html" target="_blank" rel="nofollow">Одноклассники
+                          <span class="visually-hidden">Поделиться в ok сайтом детского центра развития &laquo;СТАРТ&raquo; в Красноярске, в Советском районе.</span>
+                          <svg  aria-hidden="true" width="20" height="20">
+                          <use xlink:href="#sp-icon-ok"></use>
+                          </svg>
+                      </a>
+              </li>
+              <li class="post-social__item post-social__item--pin">
+                      <a class="post-social__button" href="https://ru.pinterest.com/pin/create/button/?url=https://abakusstart.ru/index.html" target="_blank" rel="nofollow">Pinterest
+                          <span class="visually-hidden">Поделиться в pinterest сайтом детского центра развития &laquo;СТАРТ&raquo; в Красноярске, в Советском районе.</span>
+                          <svg  aria-hidden="true" width="20" height="20">
+                          <use xlink:href="#sp-icon-pin"></use>
+                          </svg>
+                      </a>
+              </li>
+          </ul>
+    
+  </div>
+</section>
     </main>
 
     <footer class="page-footer">
 
-      <div class="page-footer__hash-wrapper">
-        <span class="page-footer__hash">#Visitsedona</span>
+      <div class="adress">
+        <div class="adress__name"><span class="visually-hidden">Детский центр развития &laquo;СТАРТ&raquo; в Красноярске, в Советском районе.</span> 
+          Детский центр &laquo;СТАРТ&raquo;</div>
+      <address class="adress__adress">
+        <div><span class="visually-hidden">Адрес детского центра развития &laquo;СТАРТ&raquo; в Красноярске, в Советском районе.</span> 
+          г. Красноярск
+        </div>
+        <div><span class="visually-hidden">Адрес детского центра развития &laquo;СТАРТ&raquo; в Красноярске, в Советском районе.</span> 
+          ул. Мате Залки, д. 11, оф. 200
+        </div>
+      </address>
+        <p class=" adress__email">
+          <a class="adress__link" href="mailto:info@abakusstart.ru?subject=Вопрос по занятиям " target="_blank">info@abakusstart
+          <span class="visually-hidden">Электронная почта.</span>
+            <svg class="adress__link-svg" width="20" height="20" fill="#0033ff">
+              <use xlink:href="#sp-icon-mail"></use>
+            </svg>
+         </a>
+        </p>
       </div>
 
-      <div class="page-footer__social social">
+      <div class="social">
         <ul class="social__list">
           <li class="social__item">
-            <a class="social__link" href="#">
-              <span class="visually-hidden">Твиттер</span>
-              <svg class="social__link-svg social__link-svg--tw" width="18" height="15" fill="#fff">
-                <use xlink:href="#sp-icon-twitter"></use>
+            <a class="social__link" href="https://instagram.com/start.centr?igshid=2c5mk9f2v986">
+              <span class="visually-hidden">Инстаграм детского центра развития &laquo;СТАРТ&raquo; в Красноярске, в Советском районе.</span>
+              <svg class="social__link-svg social__link-svg--insta" width="18" height="18" fill="#fff">
+                <use xlink:href="#sp-icon-instagram"></use>
               </svg></a>
-
           </li>
           <li class="social__item">
             <a class="social__link" href="#">
-              <span class="visually-hidden">Фейсбук</span>
+              <span class="visually-hidden">Ютуб детского центра развития &laquo;СТАРТ&raquo; в Красноярске, в Советском районе.</span>
+              <svg class="social__link-svg social__link-svg--yt" width="24" height="18" fill="#fff">
+                <use xlink:href="#sp-icon-youtube"></use>
+              </svg></a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="#">
+              <span class="visually-hidden">Фейсбук детского центра развития &laquo;СТАРТ&raquo; в Красноярске, в Советском районе.</span>
               <svg class="social__link-svg social__link-svg--fb" width="9" height="19" fill="#fff">
                 <use xlink:href="#sp-icon-facebook"></use>
               </svg></a>
           </li>
-          <li class="social__item">
-            <a class="social__link" href="#">
-              <span class="visually-hidden">Ютуб</span>
-              <svg class="social__link-svg social__link-svg--yt" width="20" height="14" fill="#fff">
-                <use xlink:href="#sp-icon-youtube"></use>
-              </svg></a>
-          </li>
         </ul>
       </div>
-      <div class="page-footer__copyright copyright">
+      <div class="copyright">
         <b class="copyright__text">Разработано</b>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-          <span class="visually-hidden">Ссылка на интенсив в Академии</span>
-          <svg class="copyright__link-svg" width="27" height="34">
-            <use xlink:href="#sp-logo-htmlacademy"></use>
+        <a class="copyright__link" href="#">
+          <span class="visually-hidden">Ссылка на сайт дизайн-студии Mandarin.</span>
+          <svg class="copyright__link-svg" width="27" height="29" fill="#ff00ff">
+            <use xlink:href="#sp-logo-mandarin-studio"></use>
           </svg>
         </a>
+        <div>
+          <span class="visually-hidden">Ссылка на сайт дизайн-студии Mandarin</span>
+          <a class="copyright__link-text" href="https://mandarinart.ru">Дизайн-студия Mandarin</a>
+        </div>
+      </div>
+      <div class="page-footer__reserv reserv">
+        <span class="visually-hidden">Право ООО «Берег» на сайт детского центра развития &laquo;СТАРТ&raquo; в Красноярске, в Советском районе.</span>
+        <p class="reserv__text">Услуги предоставляет ООО &laquo;Берег&raquo;.<br> ИНН 2463100060&nbsp;| ОГРН 1162468062778. &copy;&nbsp;2018-2023</p>
       </div>
     </footer>
   </div>
+    <a href="#home" title="Вернуться наверх" class="button-up button-up--hiden" >
+      <span class="visually-hidden">Cсылка для перехода в начало страницы.</span></a>
+
+<!-- модальное окно - форма данных для telegram НАЧАЛО-->
+<section class="modal modal__window">
+  <h2 class="visually-hidden">&laquo;СТАРТ &raquo; в Красноярске | Записаться на бесплатное занятие</h2>
+  <h3 class="modal__title">Контактные данные</h3>
+    <p class="modal__description">Введите, пожалуйста, свое имя и телефон</p>
+    <form class="modal__form" action="/telegram/send.php" method="post">
+      <p>
+        <label class="visually-hidden" for="user-name"><span class="visually-hidden">Пожалуйста, введите
+          ваше</span>Имя<sup>*</sup>:</label>
+        <input class="modal__icon-user" id="user-name" type="text" name="name" pattern="^[а-яА-ЯёЁa-zA-Z]+$" placeholder="Имя" required>
+      </p>
+      <p>
+        <label class="visually-hidden" for="user-tel"><span class="visually-hidden">Пожалуйста, введите ваш</span>Контактный </span>телефон<sup>*</sup>:</label>
+        <input class="modal__icon-tel phone__mask" id="user-tel" type="tel" name="phone" placeholder="7(___)___-__-__" required>
+      </p>
+      <p class="modal__help">
+        <label class="modal__checkbox"> <span class="visually-hidden">Пожалуйста, отметьте, согласны
+            ли вы с политикой конфиденциальности?</span>
+          <input type="checkbox" name="check" class="visually-hidden" required checked>
+          <span class="checkbox-indicator"></span>
+          <a class="modal__checkbox-text" href="#" target="_blank">Согласен с политикой конфиденциальности</a>
+        </label>
+        <span class="modal__checkbox-reсall">Мы перезвоним!</span>
+      </p>
+      <input type="hidden" name="act" value="order">
+      <input class="hidden__input-current__name" type="hidden" name="currentName" value="">
+      <button class="button modal__button" type="submit" disabled>Отправить
+        <span class="visually-hidden">Кнопка отправки контактных данных в telegram chat детского центра развития &laquo;СТАРТ&raquo; в Красноярске, в микр-н Северный.</span>
+      </button>
+    </form>
+    <button class="modal-close" type="button">Закрыть</button>
+  </section>
+  <!-- модальное окно - форма данных для  КОНЕЦ -->
+
+
   <script src="js/script.min.js"></script>
 </body>
 
