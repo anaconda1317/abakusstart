@@ -26,8 +26,10 @@
   transition: all 0.2s ease-in-out 0s;
 
   background-color: #ffffff;
-  // box-shadow: 0 4px 15px rgb(157 162 166 / 12%);
+  box-shadow: 0 4px 15px rgba(157, 162, 166, 0.12);
   // background-color: $background;
+  // box-shadow: 0 0 15px 5px rgba(0, 1, 1, 0.2);
+  // box-shadow: 0 4px 15px rgb(157 162 166 / 12%);
 
   &::after {
     position: absolute;
@@ -58,30 +60,35 @@
   // width: 280px;
   height: 52px;
   padding: 0;
-  border: 1px solid #de012c;
-  border-radius: 4px;
-  background-color: #de012c;
+  border: 1px solid #ff5722;
+  // border-radius: 4px;
+  background-color: #ff5722;
   color: #ffffff;
-  // font-size: 14px;
   font-weight: 700;
   line-height: calc(52px - 1px * 2);
   text-align: center;
 }
 
-.card-info__button:enabled:hover,
-.card-info__button:enabled:focus,
-.card-info__button:enabled:active {
-  transition: all 0.2s ease-in-out 0s;
-}
+// .card-info__button:enabled:hover,
+// .card-info__button:enabled:focus,
+// .card-info__button:enabled:active {
+//   transition: all 0.2s ease-in-out 0s;
+// }
 
 .card-info__button:enabled:hover {
-  background-color: #c20127;
+  background-color: #f94208;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  // color: $main-text-color;
 }
 
 .card-info__button:enabled:focus,
 .card-info__button:enabled:active {
-  border: 1px solid #001524;
-  background-color: #de012c;
+  // border: none;
+  border: 1px solid #ffffff;
+  // border: 2px solid $main-text-color;
+  background-color: #ff5722;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .card-info__button:first-of-type {
@@ -89,22 +96,22 @@
 }
 
 .card-info__button--border {
-  border: 1px solid #de012c;
+  border: 1px solid  #ff5722;
   background-color: #ffffff;
-  color: #1c1919;
+  color: $main-text-color;
 }
 
 .card-info__button--border:hover {
-  border: 1px solid #001524;
-  background-color: #001524;
+  border: 1px solid #ffffff;
+  background-color: #0033ff;
   color: #ffffff;
 }
 
-.card-info__button--border:enabled:focus,
-.card-info__button--border:enabled:active {
-  border: 2px solid #001524;
+.card-info__button--border:focus,
+.card-info__button--border:active {
+  border: 1px solid #000000;
   background-color: #ffffff;
-  color: #1c1919;
+  color: $main-text-color;
   line-height: calc(52px - 2px * 2);
 }
 
@@ -115,7 +122,7 @@
 }
 
 .card-info__button--border span {
-  color: #de012c;
+  color: #ff5722;
 }
 
 .article__outline {
@@ -192,10 +199,10 @@
     height: 100%;
     // padding: 20px 10px;
     transition: all 0.2s ease-in-out 0s;
-    // background-color: #ffffff;
+    background-color: #ffffff;
     // box-shadow: 0 4px 15px rgb(157 162 166 / 12%);
 
-    background-color: $background;
+    // background-color: $background;
 
     &::after {
       display: none;
