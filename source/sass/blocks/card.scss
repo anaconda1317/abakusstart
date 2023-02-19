@@ -3,9 +3,12 @@
 
   display: flex;
   flex-wrap: wrap;
+  padding-top: 15px;
+  margin: 0 auto;
   box-sizing: border-box;
   flex-direction: column;
   border-top: 1px solid #e5e5e5;
+  // background: #f2f3f5;
 }
 
 .card-list-container__item {
@@ -122,21 +125,28 @@
 }
 
 .card-item__chevron--new {
-  background-color: #1ea5fc;
+  background-color: #36e0b3;
+  color: #ffffff;
 }
 
 .card-item__chevron--hit {
-  background-color: #8962f8;
+  background-color: #692be0;
+  // background-color: #8962f8;
   color: #ffffff;
 }
 
 .card-item__chevron--sale {
-  background-color: #fd7441;
+  // background-color: #e0d84c;
+  background-color: #f2cd13;
 }
 
 .card-item__link {
   display: block;
   margin-bottom: 10px;
+}
+
+.card-item__text-link {
+  transition: color, text-decoration-color 0.2s ease-in-out 0s;
 }
 
 // .card__image {
@@ -222,7 +232,7 @@
   padding-left: calc(13px + 0.6em);
   color: #333333;
   font-family: "M PLUS 1p", "Arial", sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
   line-height: 1.5;
 }
@@ -240,7 +250,7 @@
 .card-item__link-to-reviews {
   margin-left: 0.9em;
   color: #797d80;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.5;
   text-decoration: underline;
 }
@@ -286,6 +296,7 @@
 }
 
 .card-info__button {
+  box-sizing: border-box;
   width: 85%;
   // width: 280px;
   height: 52px;
@@ -325,14 +336,25 @@
 }
 
 .card-info__button:first-of-type {
-  margin-bottom: 1 em;
+  margin-bottom: 1em;
   // margin-bottom: 1.4em;
 }
 
 .card-info__button--border {
+  position: relative;
+  padding-left: 12px;
   border: 1px solid  #ff5722;
   background-color: #ffffff;
   color: $main-text-color;
+}
+
+.card-info__button--border::before {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  content: "\f138";
+  font-family: "FontAwesome";
+  margin-right: 7px;
 }
 
 .card-info__button--border:hover {
@@ -447,6 +469,14 @@
     font-size: 21px;
   }
 
+  .card-item__description {
+    font-size: 18px;
+  }
+
+  .card-info__button {
+    font-size: 18px;
+  }
+
   .article__outline {
     display: flex;
     flex-direction: row;
@@ -479,7 +509,8 @@
   .card-list-container {
     // width: 100%;
     width: 1200px;
-    margin: 1em auto 0;
+    margin: 0 auto;
+    // margin: 1em auto 0;
     padding: 50px;
   }
 
@@ -496,8 +527,21 @@
     font-size: 16px;
   }
 
+  .card-info__button--border::before {
+    position: absolute;
+    top: 0;
+    left: 4px;
+    content: "\f138";
+    font-family: "FontAwesome";
+    margin-right: 7px;
+  }
+
   .card-item__title {
     font-size: 18px;
+  }
+
+  .card-item__description {
+    font-size: 16px;
   }
 
   .article {
