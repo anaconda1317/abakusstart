@@ -25,54 +25,83 @@
 
   height: 100%;
   margin: 0 auto;
+  margin-top: 20px;
   // padding: 20px 10px;
 
   font-family: $page-font;
   transition: all 0.2s ease-in-out 0s;
 
-  background-color: #ffffff;
-  box-shadow: 0 4px 15px rgba(157, 162, 166, 0.12);
+  // background-color: #ffffff;
+  background-color: #f4f5f7;
+  border-radius: 10px 0;
+  // box-shadow: 0 4px 15px rgba(157, 162, 166, 0.12);
 
   // background-color: $background;
   // box-shadow: 0 0 15px 5px rgba(0, 1, 1, 0.2);
   // box-shadow: 0 4px 15px rgb(157 162 166 / 12%);
 
   // полоска - она в px- ПЕРЕДЕЛАТЬ! спросить Андрей -в тел код
-  // &::after {
-  //   position: absolute;
-  //   z-index: 3;
+  &::after {
+    position: absolute;
+    // z-index: 3;
+    content: "";
+    width: 320px;
+    height: 1px;
+    background-color: $article-line;
+    top: 630px;
+    left: -20px;
+  }
+  // .card-list-container li + li::after {
   //   content: "";
-  //   width: 320px;
+  //   position: absolute;
+  //   left: -20px;
+  //   right: -20px;
+  //   top: 0;
+  //   display: block;
   //   height: 1px;
   //   background-color: $article-line;
-  //   top: 414px;
-  //   left: -20px;
+  //   opacity: 0.3;
   // }
 }
 
-.card-item::before {
-  content: "";
-  position: absolute;
-  z-index: 0;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transition: all 0.2s ease-in-out 0s;
-  background-color: #ffffff;
+// .card-item::before {
+//   content: "";
+//   position: absolute;
+//   z-index: 0;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   transition: all 0.2s ease-in-out 0s;
+//   // background-color: #f4f5f7;
+//   background-color: #ffffff;
+//   border-radius: 10px 0;
+//   // background-color: #ffffff;
+// }
+
+// .card-item:hover {
+//   transition: all 0.2s ease-in-out 0s;
+// }
+
+.card-item {
+  transition: box-shadow 1s ease;
 }
 
 .card-item:hover {
-  transition: all 0.2s ease-in-out 0s;
+  background-color: #eee8e0;
+  box-shadow: 0 0 20px 0 #f0f0f0;
+
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
-.card-item:hover::before {
-  top: -15px;
-  left: -15px;
-  padding: 15px;
-  transition: all 0.2s ease-in-out 0s;
-  box-shadow: 0 4px 20px rgba(157, 162, 166, 0.35);
-}
+
+// .card-item:hover::before {
+//   top: -15px;
+//   left: -15px;
+//   padding: 15px;
+//   transition: all 0.2s ease-in-out 0s;
+//   box-shadow: 0 4px 20px rgba(157, 162, 166, 0.35);
+// }
 
 // .card-item::before {
 //   content: "";
@@ -101,10 +130,10 @@
 // }
 
 /* из-за before */
-.card-item > * {
-  position: relative;
-  z-index: 1;
-}
+// .card-item > * {
+//   position: relative;
+//   z-index: 1;
+// }
 
 .card-item__chevron {
   position: absolute;
@@ -140,14 +169,24 @@
   background-color: #f2cd13;
 }
 
+// .card-item__link {
+//   display: block;
+//   margin-bottom: 10px;
+// }
+
 .card-item__link {
   display: block;
-  margin-bottom: 10px;
+  // margin-bottom: 10px;
+  // display: flex;
+  width: 240px;
+  height: 240px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 10px 0;
+  box-shadow: 0 0 1px 0 #bc986a;
+  transform: translateY(-20px);
 }
 
-.card-item__text-link {
-  transition: color, text-decoration-color 0.2s ease-in-out 0s;
-}
 
 // .card__image {
 //   display: block;
@@ -156,11 +195,25 @@
 //   margin: 0 auto;
 // }
 
+// .card-item__img {
+//   display: block;
+//   max-width: 100%;
+//   height: auto;
+//   border-radius: 8px 8px 0 0;
+// }
+
 .card-item__img {
   display: block;
   max-width: 100%;
   height: auto;
-  border-radius: 8px 8px 0 0;
+
+  border-radius: 10px 0;
+
+  object-fit: cover;
+}
+
+.card-item__text-link {
+  transition: color, text-decoration-color 0.2s ease-in-out 0s;
 }
 
 .card-item__title {
@@ -169,7 +222,8 @@
   padding: 0 10px;
   font-size: 18px;
   font-weight: 700;
-  color: #000000;
+  // font-weight: 500;
+  color: #252525;
   text-transform: uppercase;
   line-height: 1.3;
 }
@@ -178,8 +232,9 @@
 /* возраст */
 .card-item__division {
   padding: 0 10px 0;
+  margin: 0 auto;
   margin-bottom: 1.1em;
-  color: #919199;
+  color: #5f6366;
   font-size: 12px;
   font-weight: 500;
   line-height: 1.2;
@@ -272,13 +327,13 @@
 
 .card-item__price-list dt {
   margin: 0;
-  color: #000000;
+  color: #252525;
   font-size: 18px;
 }
 
 .card-item__price-list dd {
   margin: 0;
-  color: #000000;
+  color: #252525;
   font-size: 24px;
 }
 
@@ -308,20 +363,18 @@
   text-align: center;
   color: #ffffff;
 
-  border: 1px solid #ff5722;
+  // border: 1px solid #ff5722
+  // background-color: #ff5722;
   // border-radius: 4px;
-  background-color: #ff5722;
+  border-radius: 10px 0;
+  background-color: $main-blue;
+  border: 1px $main-blue;
 }
 
-// .card-info__button:enabled:hover,
-// .card-info__button:enabled:focus,
-// .card-info__button:enabled:active {
-//   transition: all 0.2s ease-in-out 0s;
-// }
-
 .card-info__button:enabled:hover {
-  background-color: #f94208;
-  color: #ffffff;
+  background-color: #0230eb;
+  // background-color: unset;
+  color: rgba(255, 255, 255, 0.7);
   border: 1px solid #ffffff;
   // color: $main-text-color;
 }
@@ -329,10 +382,11 @@
 .card-info__button:enabled:focus,
 .card-info__button:enabled:active {
   // border: none;
-  border: 1px solid #000000;
+  border: 1px solid $main-blue;
   // border: 2px solid $main-text-color;
-  background-color: #ff5722;
-  color: rgba(255, 255, 255, 0.7);
+  background-color: #ffffff;
+  color: $main-blue;
+  // color: rgba(255, 255, 255, 0.7);
 }
 
 .card-info__button:first-of-type {
@@ -343,9 +397,10 @@
 .card-info__button--border {
   position: relative;
   padding-left: 12px;
-  border: 1px solid  #ff5722;
+  border: 1px solid  $main-blue;
   background-color: #ffffff;
-  color: $main-text-color;
+  // color: $main-text-color;
+  color: $main-blue;
 }
 
 .card-info__button--border::before {
@@ -359,7 +414,7 @@
 
 .card-info__button--border:hover {
   border: 1px solid #ffffff;
-  background-color: #0033ff;
+  background-color: #ff5722;
   color: #ffffff;
 }
 
@@ -378,7 +433,8 @@
 }
 
 .card-info__button--border span {
-  color: #ff5722;
+  // color: $main-blue;
+  color: $main-text-color;
 }
 
 .article__outline {
@@ -442,7 +498,7 @@
   .card-list-container__item {
     box-sizing: border-box;
     flex-basis: calc((100% - 30px) / 2);
-    margin-bottom: 30px;
+    margin-bottom: 40px;
   }
 
   .card-list-container__item:not(:nth-of-type(2n)) {
@@ -455,7 +511,6 @@
     height: 100%;
     // padding: 20px 10px;
     transition: all 0.2s ease-in-out 0s;
-    background-color: #ffffff;
     // box-shadow: 0 4px 15px rgb(157 162 166 / 12%);
 
     // background-color: $background;
@@ -463,6 +518,18 @@
     &::after {
       display: none;
     }
+  }
+
+  .card-item__link {
+    // display: block;
+    // margin-bottom: 10px;
+    display: flex;
+    width: 269px;
+    height: 222px;
+  }
+
+  .card-item__img {
+    height: auto;
   }
 
   .card-item__title {
@@ -512,15 +579,21 @@
     margin: 0 auto;
     // margin: 1em auto 0;
     padding: 50px;
+    padding-top: 15px;
   }
 
   .card-list-container__item {
     flex-basis: calc((100% - 3 * 30px) / 4);
-    margin-bottom: 30px;
+    // margin-bottom: 30px;
   }
 
   .card-list-container__item:not(:nth-of-type(4n)) {
     margin-right: 30px;
+  }
+
+  .card-item__link {
+    width: 222px;
+    height: 148px;
   }
 
   .card-info__button {
