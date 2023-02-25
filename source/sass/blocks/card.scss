@@ -368,24 +368,29 @@
   // border-radius: 4px;
   border-radius: 10px 0;
   background-color: $main-blue;
-  border: 1px $main-blue;
+  // border: 1px $main-blue;
+  // transition: box-shadow 0.3s ease;
+  transition: opacity 0.3s ease 0.1s, box-shadow 1s ease, background-color 0.5s ease, color 0.3s ease 0.2s;
 }
 
 .card-info__button:enabled:hover {
   background-color: #0230eb;
   // background-color: unset;
   color: rgba(255, 255, 255, 0.7);
-  border: 1px solid #ffffff;
+  border: 1px $main-blue;
+  // border: 1px solid #ffffff;
   // color: $main-text-color;
+  box-shadow: 4px 4px 0 0 #9da2ab;
 }
 
 .card-info__button:enabled:focus,
 .card-info__button:enabled:active {
   // border: none;
-  border: 1px solid $main-blue;
+  // border: 1px solid $main-blue;
   // border: 2px solid $main-text-color;
-  background-color: #ffffff;
-  color: $main-blue;
+  background-color: #0230eb;
+  color: rgba(255, 255, 255, 0.7);
+  box-shadow: 2px 2px 0 0 #9da2ab;
   // color: rgba(255, 255, 255, 0.7);
 }
 
@@ -397,7 +402,7 @@
 .card-info__button--border {
   position: relative;
   padding-left: 12px;
-  border: 1px solid  $main-blue;
+  border: 1px solid $main-blue;
   background-color: #ffffff;
   // color: $main-text-color;
   color: $main-blue;
@@ -414,17 +419,26 @@
 
 .card-info__button--border:hover {
   border: 1px solid #ffffff;
-  background-color: #ff5722;
-  color: #ffffff;
+  background-color: #ffffff;
+  color: rgba(0, 51, 255, 0.7);
+  box-shadow: 4px 4px 0 0 #9da2ab;
+  // color: #ffffff;
 }
 
 .card-info__button--border:focus,
 .card-info__button--border:active {
-  border: 1px solid #000000;
+  border: 1px solid #ffffff;
   background-color: #ffffff;
-  color: $main-text-color;
-  line-height: calc(52px - 2px * 2);
+  color: rgba(0, 51, 255, 0.7);
+  box-shadow: 2px 2px 0 0 #9da2ab;
 }
+
+// .card-info__button--border:visited {
+//   border: 1px solid #000000;
+//   background-color: #ffffff;
+//   color: $main-text-color;
+//   line-height: calc(52px - 2px * 2);
+// }
 
 .card-info__button:disabled {
   border: 1px solid #cccacb;
@@ -437,53 +451,6 @@
   color: $main-text-color;
 }
 
-.article__outline {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  padding: 15px 0 0 0;
-
-  font-size: 14px;
-  line-height: 24px;
-  color: $main-text-color;
-}
-
-.article__author-wrapper {
-  margin: 0;
-  padding: 0;
-}
-
-.article__title {
-  display: block;
-  margin: 0;
-  padding: 0;
-
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.article__author {
-  margin-left: 2px;
-
-  font-size: 14px;
-  line-height: 24px;
-  color: #000000;
-}
-
-.article__likes {
-  position: relative;
-  display: block;
-  padding-top: 9px;
-  padding-left: 37px;
-}
-
-
-.article__likes-svg {
-  position: absolute;
-  top: 7px;
-  left: 1px;
-  cursor: pointer;
-}
 
 @media (min-width: $tablet-width) {
   .card-list-container {
@@ -543,34 +510,7 @@
   .card-info__button {
     font-size: 18px;
   }
-
-  .article__outline {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    padding-left: 21px;
-
-    background-color: $background;
-  }
-
-  .article__likes {
-    margin-left: auto;
-    padding-right: 30px;
-    padding-top: 15px;
-
-    background-color: $background;
-
-    &--first {
-      padding-right: 21px;
-    }
-  }
-
-  .article__likes-svg {
-    top: 13px;
-    left: 4px;
-  }
 }
-
 
 @media (min-width: $desktop-width) {
   .card-list-container {
@@ -615,63 +555,5 @@
 
   .card-item__description {
     font-size: 16px;
-  }
-
-  .article {
-    position: relative;
-    width: 400px;
-    height: 267px;
-
-    &::after {
-      display: none;
-    }
-
-    &--first {
-      width: 1200px;
-      height: 400px;
-    }
-  }
-
-  .article__image {
-    width: 400px;
-    height: 267px;
-
-    &--first {
-      width: 1200px;
-      height: 400px;
-    }
-  }
-
-  .article__outline {
-    position: absolute;
-    bottom: 0;
-
-    width: 100%;
-    min-height: 80px;
-    padding-top: 15px;
-
-    background-color: rgba(0, 0, 0, 0.3);
-  }
-
-  .article__author-wrapper {
-    color: $white;
-  }
-
-  .article__author {
-    color: $white;
-  }
-
-  .article__likes {
-    background-color: transparent;
-    color: $white;
-
-    &--first {
-      padding-right: 21px;
-      margin-left: auto;
-    }
-  }
-
-  .article__likes-svg {
-    fill: $white;
   }
 }
