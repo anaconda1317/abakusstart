@@ -1,0 +1,28 @@
+/* компонент - ссылка */
+.link {
+  transition: all 0.2s ease-in-out 0s;
+  outline: none;
+  color: #0d0417;
+  text-decoration: none;
+}
+
+// .link:visited {
+//   color: #797980;
+// }
+
+.link:hover {
+  transition: all 0.2s ease-in-out 0s;
+  color: #0d0417;
+  text-decoration-color: #0d0417;
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+}
+
+.link:focus,
+.link:active {
+  transition: all 0.2s ease-in-out 0s;
+  color: #0d0417;
+  text-decoration-color: #f8d456;
+  text-decoration-line: underline;
+  text-decoration-thickness: 2px;
+}

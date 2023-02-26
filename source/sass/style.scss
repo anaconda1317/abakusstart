@@ -3,6 +3,8 @@
 @import "global/variables.scss";
 @import "global/mixins.scss";
 @import "global/tags.scss";
+@import "blocks/link.scss";
+@import "blocks/button.scss";
 @import "blocks/all-reasons.scss";
 @import "blocks/advantages.scss";
 @import "blocks/adress.scss";
@@ -18,7 +20,6 @@
 @import "blocks/site-list.scss";
 @import "blocks/reason.scss";
 @import "blocks/offer.scss";
-@import "blocks/button.scss";
 @import "blocks/button-up.scss";
 @import "blocks/page-footer.scss";
 @import "blocks/social.scss";
