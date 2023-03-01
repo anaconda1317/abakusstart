@@ -25,15 +25,19 @@
 //   }
 .price__table {
     border-collapse: collapse;
-    }
-    .price__header {
-    margin-top: 0;
-    margin-bottom: 27px;
-    font-size: 30px;
-    line-height: 1;
-    text-align: center;
-    text-transform: uppercase;
-  }
+ }
+
+.price__header {
+  position: relative;
+  display: block;
+  width: 280px;
+  margin-top: 0;
+  margin-bottom: 27px;
+  font-size: 30px;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+}
 
   .price__rub {
     line-height: 5px;
