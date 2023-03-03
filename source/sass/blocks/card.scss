@@ -13,10 +13,9 @@
 
 .card-list-container__item {
   width: 280px;
-  margin: 0 auto;
   box-sizing: border-box;
   // height: 414px;
-  margin-bottom: 30px;
+  margin: 20px auto 30px;
 }
 
 .card-item {
@@ -25,7 +24,6 @@
 
   height: 100%;
   margin: 0 auto;
-  margin-top: 20px;
   // padding: 20px 10px;
 
   font-family: $page-font;
@@ -34,7 +32,8 @@
   border-radius: 10px 0;
   border: 1px solid #e5e5e5;
   // background-color: #ffffff;
-  background-color: #f4f5f7;
+  // background-color: #f4f5f7;
+  background-color: #f9f9f9;
   // box-shadow: 0 4px 15px rgba(157, 162, 166, 0.12);
 
   // background-color: $background;
@@ -89,7 +88,8 @@
 }
 
 .card-item:hover {
-  background-color: #eee8e0;
+  background-color: #fbf8f6;
+  // background-color: #eee8e0;
   box-shadow: 0 0 20px 0 #f0f0f0;
   border-color: #e1d7cb;
 
@@ -483,49 +483,55 @@
   color: $main-text-color;
 }
 
+// svg иконки спрайт для каждой карточки
+
 .card-item__parameter-list {
-  @include list-reset();
+  position: relative;
   display: flex;
-  flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
+  /* display: block; */
+  /* padding-top: 34px; */
+  padding-left: 60px;
+  margin-left: auto;
+  margin-bottom: 10px;
+  align-items: center;
+  font-size: 16px;
+  line-height: 1.2;
+  min-height: 40px;
+  text-transform: none;
+  //  color: #5f6366;
+  color: #797d80;
 }
 
 .card-item__parameter-item {
-  position: relative;
-  width: auto;
-  margin-right: 10px;
-  margin-bottom: 15px;
-  padding-left: 55px;
-  font-size: 16px;
-  // font-size: 14px;
-  color: #5f6366;
-  text-transform: none;
-}
-
-.card-item__parameter-item::before {
-  content: "";
   position: absolute;
-  top: 50%;
-  left: 20px;
-  width: 45px;
-  height: 40px;
-  background-repeat: no-repeat;
-  // background-size: 36px 36px;
-  background-position: center center;
-  transform: translate(-30%, -50%);
-  // transition: transform 0.3s ease-in;
+  top: 0;
+  left: 10px;
+  cursor: pointer;
 }
 
-// .card-item__parameter-item::before:hover {
-//   transform: scale(0.95);
-// }
-
-.card-item__parameter-item--abacus::before {
-  // background-image: url("../img/scissors-icon.svg");
-  background-image: url("../img/abacus_uslugi_icon.svg");
+svg {
+  transition: all 0.15s ease-in-out;
 }
 
+.card-item__parameter-list:hover {
+  color: #2c2c2c;
+}
+
+.card-item__parameter-list:hover svg {
+  transform: scale(1.1);
+}
+
+.abacus:hover svg {
+  fill: #75a62d;
+}
+
+.roboto:hover svg {
+  fill: #8f8ebf;
+}
+
+.repetitor:hover svg {
+  fill: #04bfbf;
+}
 
 @media (min-width: $tablet-width) {
   .card-list-container {
@@ -541,7 +547,7 @@
   .card-list-container__item {
     box-sizing: border-box;
     flex-basis: calc((100% - 30px) / 2);
-    margin-bottom: 40px;
+    margin-bottom: 35px;
   }
 
   .card-list-container__item:not(:nth-of-type(2n)) {

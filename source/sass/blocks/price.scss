@@ -20,12 +20,9 @@
     width: auto;
 }
 
-//   .price__table {
-//     border-collapse: collapse;
-//   }
 .price__table {
     border-collapse: collapse;
- }
+}
 
 .price__header {
   position: relative;
@@ -126,6 +123,7 @@
     }
     .price__header {
       margin-bottom: 50px;
+      width: 330px;
       font-size: 40px;
       text-align: left;
     }
@@ -190,9 +188,10 @@
     .price__wrapper {
       padding: 70px 0 80px;
     }
-    .price__header {
-      padding-left: 70px;
-    }
+    // .price__header {
+    //   padding-left: 70px;
+    //   width: 466px;
+    // }
     .price__columns {
       display: -ms-flexbox;
       display: flex;
@@ -209,7 +208,7 @@
       width: 270px;
       height: auto;
       margin: 0;
-      padding: 200px 55px 10px;
+      padding: 220px 55px 10px;
       // padding: 10px 50px;
       // padding-top: 190px;
       font-weight: normal;

@@ -149,16 +149,18 @@
 }
 
 .reviews__write {
+  // display: block;
+  display: flex;
+  align-items: center;
   position: absolute;
   top: 360px;
   right: 10px;
   min-height: 33px;
-  display: block;
-  width: 116px;
+  width: 118px;
   margin: 0;
-  padding-top: 2px;
-  padding-right: 3px;
-  padding-left: 3px;
+  padding-top: 0;
+  padding-right: 6px;
+  padding-left: 6px;
   font-size: 14px;
   font-weight: 700;
   line-height: calc(33px - 1px * 2);

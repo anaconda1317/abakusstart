@@ -74,7 +74,7 @@
 
 .modal-close {
   position: absolute;
-  top: 0;
+  top: 6px;
   right: 17px;
 
   width: 22px;
@@ -280,7 +280,7 @@
 @media (min-width: $tablet-width) {
   .modal__window {
     width: 340px;
-    padding-top: 61px;
+    padding-top: 52px;
     padding-bottom: 20px;
   }
 
@@ -297,5 +297,6 @@
 @media (min-width: $desktop-width) {
   .modal__window {
     width: 347px;
+    padding-top: 75px;
   }
 }

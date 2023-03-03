@@ -1,7 +1,13 @@
 .page-header {
   text-align: center;
-
   background-color: $white;
+
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(135, 135, 135, 0.1);
+  z-index: 100;
+  height: 56px;
 }
 
 .page-header__logo {
@@ -19,6 +25,14 @@
 }
 
 @media (min-width: $tablet-width) {
+  .page-header {
+    position: fixed;
+    top: 0;
+    width: 768px;
+    box-shadow: 0 4px 10px rgba(135, 135, 135, 0.1);
+    z-index: 100;
+  }
+
   .page-header__logo {
     top: 0;
   }
@@ -26,6 +40,16 @@
 
 
 @media (min-width: $desktop-width) {
+  .page-header {
+    position: fixed;
+    top: 0;
+    /* left: 0; */
+    /* width: 100%; */
+    min-width: 1200px;
+    box-shadow: 0 4px 10px rgba(135, 135, 135, 0.1);
+    z-index: 100;
+  }
+
   .page-header__logo-image {
     width: 187px;
     height: 122px;
