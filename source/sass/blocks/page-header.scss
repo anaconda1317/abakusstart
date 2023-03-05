@@ -4,7 +4,7 @@
 
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 320px;
   box-shadow: 0 4px 10px rgba(135, 135, 135, 0.1);
   z-index: 100;
   height: 56px;
@@ -28,7 +28,8 @@
   .page-header {
     position: fixed;
     top: 0;
-    width: 768px;
+    max-width: 768px;
+    width: 100%;
     box-shadow: 0 4px 10px rgba(135, 135, 135, 0.1);
     z-index: 100;
   }

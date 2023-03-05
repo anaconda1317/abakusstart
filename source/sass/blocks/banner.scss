@@ -60,16 +60,33 @@
 
 .banner__image--photo,
 .banner__image--form {
-  background-image: url("../img/bg-back-mobile@1x_not_index.jpg");
+  background-image: url("../img/bg-back-mobile@1x_not_index_768.jpg");
   background-repeat: no-repeat;
   background-position: bottom;
 
+  background-size: auto;
 
-  // @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-  //   background-image: url("../img/bg-back-mobile@2x.jpg");
-  //   background-size: 768px auto;
-  // }
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-back-mobile@2x_not_index_1536.jpg");
+    background-size: 768px auto;
+  }
 }
+
+// .banner__image--photo,
+// .banner__image--form {
+//   background-image: url("../img/bg-back-mobile@1x_not_index.jpg");
+//   background-repeat: no-repeat;
+//   background-position: bottom;
+
+//   background-size: auto;
+
+
+//   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+//     background-image: url("../img/bg-back-mobile@2x_not_index.jpg");
+//     background-size: 768px auto;
+//   }
+// }
 
 .banner__wrapper {
   width: 265px;

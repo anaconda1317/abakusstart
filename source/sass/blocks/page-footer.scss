@@ -12,15 +12,13 @@
   color: $main-text-color;
 }
 
-
-
 @media (min-width: $tablet-width) {
   .page-footer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    height: 140px;
+    // height: 140px;
     height: 175px;
   }
 }
@@ -30,6 +28,6 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    height: 175px;
+    height: 180px;
   }
 }
