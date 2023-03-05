@@ -35,6 +35,8 @@
   text-align: center;
   text-transform: uppercase;
 
+  transition: color 0.1s linear;
+
   &:hover {
     cursor: pointer;
   }
@@ -111,9 +113,13 @@
     padding: 30px 42px 20px 110px;
     // padding: 30px 10px;
     // padding-left: 110px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #252525;
     border: 1px solid #797d80;
-    color: #5f6366;
+    // color: #5f6366;
   }
+
   .price__discount::before {
     content: "";
     position: absolute;
@@ -191,7 +197,7 @@
       margin-top: 30px;
       padding: 45px 10px;
       padding-left: 105px;
-      font-weight: 500;
+      font-weight: 700;
       font-size: 30px;
       line-height: 27px;
       text-align: center;
@@ -234,7 +240,7 @@
       padding: 220px 55px 10px;
       // padding: 10px 50px;
       // padding-top: 190px;
-      font-weight: normal;
+      font-weight: bold;
       font-size: 20px;
       line-height: 27px;
       text-transform: none;
