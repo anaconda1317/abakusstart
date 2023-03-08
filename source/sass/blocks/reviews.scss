@@ -358,13 +358,16 @@
     cursor: pointer;
 
     transition: border-color 0.2s linear, background-color 0.2s linear;
+
     &:hover,
     &:focus {
       border-color: $main-blue;
     }
+
     &:active {
       background-color: $main-blue;
     }
+
     &::before {
       content: "";
       position: absolute;
@@ -381,6 +384,7 @@
 
       transition: filter 0.2s linear;
     }
+
     &:active::before {
       filter: opacity(0.3);
     }
@@ -388,6 +392,7 @@
 
   .reviews__prev {
     order: -1;
+
     &::before {
       border-right: 12px solid #000000;
       border-left: none;
@@ -396,16 +401,17 @@
 
   .reviews__write {
     position: absolute;
-    top: 18px;
+    top: 25px;
     right: 0;
-    min-height: 50px;
+    min-height: 40px;
     display: block;
-    width: 159px;
+    width: 150px;
     margin: 0;
     padding-top: 10px;
     padding-right: 11px;
     padding-left: 11px;
-    font-size: 18px;
+    font-size: 14px;
+    line-height: 21px;
     color: $main-blue;
     background-color: #ffffff;
     border-radius: 0;
