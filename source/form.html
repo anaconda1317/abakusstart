@@ -30,6 +30,10 @@
   <link rel="icon" type="image/png" href="png/favicon-64x64.png" sizes="64x64">
   <link rel="icon" type="image/png" href="png/favicon-32x32.png" sizes="32x32">
   <link rel="icon" type="image/png" href="png/favicon-16x16.png" sizes="16x16">
+
+  <!-- скрипт_антиспам -->
+<script src="https://www.google.com/recaptcha/api.js"></script>
+
   <!-- Подтверждение права собственности google search console -->
   <meta name="google-site-verification" content="PTuGksDEkS9xbmGLgJCMiEONqGCgBn4Q_PGa-L9ayMk" />
 </head>
@@ -231,6 +235,12 @@
             placeholder="Опишите, пожалуйста свои впечатления от занятий в нашем детском центре."></textarea>
         </fieldset>
         <input type="hidden" name="act" value="review">
+        <!-- recapcha_generator -->
+        <fieldset class="feedback-form__item feedback-form__item--captcha " style="width: 100%; order: 6; margin-bottom: 40px;">
+          <div class="g-recaptcha" data-sitekey="6Lec4xMlAAAAABWNHpZy81amc7ogVSO-ektm3SOT"></div>
+          <span class="feedback-form__item--captcha-error" style="color: #ff0000; font-weight: 700; "></span>
+      </fieldset>
+        <!-- recapcha_generator -->
         <button class=" button feedback-form__button" type="submit">Отправить отзыв</button>
       </form>
     </main>
@@ -447,8 +457,31 @@
       }
       </script>
 
+<!-- скрипт_антиспам -->
+<script>
+  document.addEventListener('DOMContentLoaded', ()=>{
+      if(document.querySelector('#feedback-form')){
+          document.querySelector('#feedback-form').addEventListener('submit', function(e){
+              e.preventDefault();
+              let response = grecaptcha.getResponse();
+              console.log(response);
+              if(response.length == 0) {
+                  if(document.querySelector('.feedback-form__item--captcha-error')){
+                      document.querySelector('.feedback-form__item--captcha-error').textContent = 'Вы не прошли проверку CAPTCHA должным образом'
+                  }
+                  setTimeout(()=>{
+                      if(document.querySelector('.feedback-form__item--captcha-error')){
+                          document.querySelector('.feedback-form__item--captcha-error').textContent = ''
+                      }
+                  }, 10000)
+                  return false;
+              }
+          });
+      }
 
- 
+  })
+
+</script>
 </body>
 
 </html>

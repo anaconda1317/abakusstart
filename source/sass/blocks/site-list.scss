@@ -3,7 +3,9 @@
 }
 
 .site-list__item {
-  min-height: 56px;
+  position: relative;
+  // min-height: 56px;
+  height: 56px;
 
   background-color: $main-blue;
 

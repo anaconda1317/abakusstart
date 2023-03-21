@@ -235,19 +235,21 @@
   }
 
   .banner__image--index {
+    width: 100%;
     min-height: 518px;
     margin-bottom: 49px;
   }
 
   .banner__image--photo,
   .banner__image--form {
+    width: 100%;
     min-height: 290px;
     margin-bottom: 74px;
 
     background-image: url("../img/bg-back-tablet@1x_not_index.jpg");
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/bg-back-tablet@2x.jpg");
+      background-image: url("../img/bg-back-tablet@2x_not_index.jpg");
     }
   }
 
@@ -344,13 +346,16 @@
 
   .banner__image--photo,
   .banner__image--form {
+    width: 100%;
     min-height: 301px;
     margin-bottom: 111px;
 
     background-image: url("../img/bg-back-desktop@1x_not_index.jpg");
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/bg-back-desktop@2x.jpg");
+      background-image: url("../img/bg-back-desktop@2x_not_index.jpg");
+      background-size: cover;
+      // background-size: 1200px auto;
     }
   }
 

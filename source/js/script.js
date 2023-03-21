@@ -93,6 +93,25 @@ document.addEventListener('DOMContentLoaded', function(){
       }
     });
   }
+  // sub-menu uslugi
+  if(window.innerWidth <= 768){
+    var menuItems = document.querySelectorAll(".site-list__item")
+    menuItems.forEach(function(el){
+        el.addEventListener('click', function(e){
+          console.log(e.target);
+            e.preventDefault()
+            if(el.querySelector('.sub-menu__ikon-wrapper') || el.querySelector('sub-menu__ikon')){
+              if(e.target.classList.contains('sub-menu__ikon-wrapper') 
+              || e.target.classList.contains('sub-menu__ikon') 
+              || e.target.classList.contains('use')){
+                el.classList.toggle('__show_dropdown_sub')
+                
+              }
+            }
+           
+        }) 
+    }) 
+  }
   
 });
 // маска телефона
