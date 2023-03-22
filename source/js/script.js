@@ -93,17 +93,17 @@ document.addEventListener('DOMContentLoaded', function(){
       }
     });
   }
-  // sub-menu uslugi
+  // sub-menu for uslugi in main menu  
+
+
   if(window.innerWidth <= 768){
     var menuItems = document.querySelectorAll(".site-list__item")
     menuItems.forEach(function(el){
         el.addEventListener('click', function(e){
-          console.log(e.target);
-            e.preventDefault()
             if(el.querySelector('.sub-menu__ikon-wrapper') || el.querySelector('sub-menu__ikon')){
               if(e.target.classList.contains('sub-menu__ikon-wrapper') 
               || e.target.classList.contains('sub-menu__ikon') 
-              || e.target.classList.contains('use')){
+              || e.target.tagName == 'use'){
                 el.classList.toggle('__show_dropdown_sub')
                 
               }
@@ -112,7 +112,26 @@ document.addEventListener('DOMContentLoaded', function(){
         }) 
     }) 
   }
+
+    // АНИМАЦИЮ СИРЕНВУЮ ДОБАВИТЬ!СКРИПТ
   
+	
+  // // Loop through each nav item
+  // $('nav.navbar').children('ul.nav').children('li').each(function(indexCount){
+    
+  //   // loop through each dropdown, count children and apply a animation delay based on their index value
+  //   $(this).children('ul.dropdown').children('li').each(function(index){
+      
+  //     // Turn the index value into a reasonable animation delay
+  //     var delay = 0.1 + index*0.03;
+      
+  //     // Apply the animation delay
+  //     $(this).css("animation-delay", delay + "s")			
+  //   });
+  // });
+ 
+
+
 });
 // маска телефона
 

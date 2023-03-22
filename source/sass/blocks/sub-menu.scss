@@ -1,5 +1,6 @@
 // без медиа - десктоп
 // медиа запрос ближайший подходит но сверху
+// hover только desktop!
 // 
 
 .sub-menu__wrapper { 
@@ -12,7 +13,7 @@
   flex-direction: column;
   margin: 0;
   padding: 0;
-  background-color: #f5f5f5;
+  background-color: #f8f2ee;
 }
 .site-list__item:not(.__show_dropdown_sub) .sub-menu{
   display: none;
@@ -29,10 +30,11 @@
 .site-list__item.__show_dropdown_sub .sub-menu__ikon-wrapper svg{
   transform: rotate(0deg);
 }
-.site-list__item:not(.__show_dropdown_sub) .sub-menu__ikon-wrapper svg{
-  
+.site-list__item:not(.__show_dropdown_sub) .sub-menu__ikon-wrapper svg{  
   transform: rotate(180deg);
 }
+
+
 // .site-list > li:hover .sub-menu {
 //   // display: block;
 //   display: flex;
@@ -59,6 +61,7 @@
   line-height: 21px;
   font-weight: 400;
   border: 1px solid #e1d7cb;
+  transition: all 0.5s ease-out;
 
     // &:focus {
     //   color: #000;
@@ -92,28 +95,32 @@
   }
 
   svg {
-    transition: all 0.15s ease-in-out;
+    // transition: all 0.15s ease-in-out;
+    transition: all 500ms ease-in-out;
   }
 
   .sub-menu__ikon {
-    fill: $main-text-color;
+    fill: #ffffff;
     transform: rotate(180deg);
     cursor: pointer;
   }
 
   // я анимацию начало сиреневая
-.sub-menu li {
-  height: 40px;
-  overflow: hidden;
-  transition: all 500ms;
-}
+// .sub-menu li {
+//   height: 40px;
+//   overflow: hidden;
+//   transition: all 500ms;
+// }
+
 
 
 .sub-menu li {
   opacity: 1;
   cursor: pointer;
-  animation: slideInLeft 0.3s ease-in-out backwards;
+  animation: slideInLeft 0.3s ease-in-out; 
 }
+
+
 
 @keyframes slideInLeft {
   0% {
@@ -125,8 +132,9 @@
       transform: translate(0,0);
       opacity: 1;
     }  
-
 }
+
+
 
   // .site-list__item--has-children:hover svg{
   //   transform: rotate(0deg);
@@ -168,6 +176,15 @@
   .site-list__item.__show_dropdown_sub .sub-menu__ikon-wrapper svg{
     transform: rotate(0deg);
   }
+  .site-list__item.__show_dropdown_sub .sub-menu__ikon-wrapper svg{
+    fill: $main-blue;
+  }
+
+  // .site-list__item:active .sub-menu__ikon-wrapper svg{
+  //   fill: $main-blue;
+  // }
+
+  
   .site-list__item:not(.__show_dropdown_sub) .sub-menu__ikon-wrapper svg{
     
     transform: rotate(180deg);
@@ -183,9 +200,9 @@
     height: 100%;
   }
 
-  .site-list > li:hover .sub-menu {
-    display: block;
-  }
+  // .site-list > li:hover .sub-menu {
+  //   display: block;
+  // }
   .site-list__item--has-children a{
     padding-left: 23px;
   }
@@ -225,15 +242,12 @@
     left: 0px;
   }
 
+
   .sub-menu__ikon {
     top: 20px;
     left: 0;
     transform: rotate(180deg);
     fill: #000;  
-  }
-
-  .site-list__item--has-children:hover svg {
-    fill: $main-blue;
   }
 
 // я анимацию начало сиреневая
@@ -274,10 +288,27 @@
     width: 200px;
   }
 
+
+
+
+.site-list > li:hover .sub-menu {
+    display: block;
+
+  }
+
+  .sub-menu__ikon {
+    top: 20px;
+   left: unset;
+
+}
+  // .site-list__item:not(.__show_dropdown_sub) .sub-menu__wrapper{
+  //   display: block;
+  // }
   // АНИМАЦИЯ_НАЧАЛО code pen
 
   .sub-menu a {
     display: block;
+    border: none;
     // padding: 0 0 0 10px;
     // text-decoration: none;
     // line-height: 40px;
@@ -310,15 +341,33 @@
   height: 0;
   top: 0;
   border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
-  border-bottom: 10px solid #c21d1d;
-  // border-bottom: 10px solid #fff;
+  border-right: 15px solid transparent; 
+  border-bottom: 10px solid #fff;
   margin: -10px 0 0 30px;
 }
 
-.sub-menu a:hover {
-  background-color: #EEE;
+// .sub-menu a:hover {
+//   background-color: #EEE;
+//   color: #666;
+// }
+
+.sub-menu__item-link {
+  display: block;
+  box-sizing: border-box;
+  padding: 10px 3px;
   color: #666;
+
+  &:hover {
+    color: #000;
+    background-color: #EEE;
+  }
+
+  &:active {
+    // color: rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+    border: 1px solid #ff5722;
+    background-color: #ff5722;
+  }
 }
 
 .sub-menu > a:hover::after {
@@ -326,12 +375,12 @@
 }
 
 .sub-menu li:first-child a:hover::before {
-  // border-bottom-color: #EEE;
-  border-bottom-color: #1c15f1;
+  border-bottom-color: #EEE;
 }
 
 .site-list > li:hover:hover li {
-  height: 40px;
+  // height: 40px;
+  height: 41px;
 }
  
 .sub-menu:hover li:first-child {
@@ -339,9 +388,12 @@
 }
 // АНИМАЦИЯ_КОНЕЦ  code pen
 
-.site-list > li:hover .sub-menu{
+
+.site-list > li:hover .sub-menu {
   display: flex;
 }
+
+
 .site-list > li:hover .sub-menu__wrapper {
   padding-top: 15px;
   display: block;
@@ -351,17 +403,27 @@
 
  .sub-menu__item-link {
   // line-height: 40px;
-    padding: 8px 4px;
+    padding: 10px 4px;
   }
 
   .sub-menu__ikon {
     position: absolute;
-    top: 20px;
-    left: 35px;
+    top: 20px;    
   }
 
-  .site-list__item--has-children:hover svg{
+  
+  // .site-list__item--has-children:hover svg{
+  //   transform: rotate(0deg);
+  // }
+
+  .site-list__item .sub-menu__ikon-wrapper svg {
+    transition: all 500ms;
+    transition-delay: 300ms;
+  }
+
+  .site-list__item .sub-menu__ikon-wrapper:hover svg {
     transform: rotate(0deg);
+    transition: all 500ms;
   }
 
   .site-list__item--has-children:hover svg { 
@@ -369,9 +431,9 @@
   }
 }
 
-// @media (max-width: $mobile-width-only) {
-//   // .sub-menu {
-//   //   @include list-reset;
-//   //   position: absolute;
-//   // }
-// }
+@media (max-width: $mobile-width-only) {
+  // .sub-menu {
+  //   @include list-reset;
+  //   position: absolute;
+  // }
+}

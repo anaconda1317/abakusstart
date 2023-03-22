@@ -5,7 +5,8 @@
 .site-list__item {
   position: relative;
   // min-height: 56px;
-  height: 56px;
+  // height: 56px;
+  height:auto;
 
   background-color: $main-blue;
 
@@ -49,6 +50,7 @@
 @media (min-width: $tablet-width) {
   .site-list {
     display: flex;
+    height: 56px;
     justify-content: space-between;
     margin-bottom: 0;
   }
@@ -138,9 +140,11 @@
     width: 1200px;
     min-height: 56px;
   }
+  
 
   .site-list__item {
     width: 239px;
+    height: 56px;
 
     &:nth-child(3) {
       margin-left: 244px;
