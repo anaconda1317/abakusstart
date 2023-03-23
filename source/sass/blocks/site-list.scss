@@ -73,7 +73,8 @@
   }
 
   .site-list__link {
-    display: block;
+    // display: block;
+    display: inline-block;
     padding-top: 13px;
 
     font-family: $page-font;
@@ -130,7 +131,7 @@
 }
 
 .site-list__item .site-list__link:hover::after {
-  width: 70%;
+  width: 100%;
 }
 
 @media (min-width: $desktop-width) {
