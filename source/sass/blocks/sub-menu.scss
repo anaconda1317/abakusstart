@@ -15,6 +15,7 @@
   padding: 0;
   background-color: #fbf8f6;
 }
+
 .site-list__item:not(.__show_dropdown_sub) .sub-menu{
   display: none;
 }
@@ -24,7 +25,7 @@
 .site-list__item.__show_dropdown_sub .sub-menu {
   display: flex;
 }
-.site-list__item.__show_dropdown_sub  .sub-menu__wrapper{
+.site-list__item.__show_dropdown_sub .sub-menu__wrapper{
   display: block;
 }
 .site-list__item.__show_dropdown_sub .sub-menu__ikon-wrapper svg{
@@ -38,20 +39,24 @@
   transform: rotate(180deg);
 }
 
-.sub-menu__item {
-  // min-height: max-content;
-  height: 50px;
-}
-
 .site-list__item--has-children {
   position: relative;
+
+  &:active svg { 
+    fill: rgba(255, 255, 255, 0.3);
+  }
 }
 
+.sub-menu__item {
+  // min-height: max-content;
+  height: 56px;
+}
 
 .sub-menu__item-link {
+  position: relative;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   height: 100%;
   padding: 12px 3px;
   margin-bottom: -1px;
@@ -61,7 +66,7 @@
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
-  border: 1px solid #e1d7cb;
+  // border: 1px solid #e1d7cb;
   transition: all 0.5s ease-out;  
 
     // &:focus {
@@ -79,6 +84,11 @@
       border: 1px solid #ff5722;
       background-color: #ff5722;
     }
+
+    &:active svg {
+      fill: #ffffff;
+      transform: scale(1.1);
+    }
   }
 
   .sub-menu__ikon-wrapper {
@@ -90,7 +100,7 @@
     position: absolute;
     transform: translate(0, -50%);
     top: 50%;
-    left: 40px;
+    left: 15px;
     z-index: 100;
   }
 
@@ -104,21 +114,20 @@
     transform: rotate(180deg);
     cursor: pointer;
   }
-
-  .site-list__item--has-children:active svg { 
-    fill: rgba(255, 255, 255, 0.3);
+  
+  .sub-menu__item-link-svg {
+    position: absolute;
+    top: 15%;
+    left: 15px;
+    cursor: pointer;
   }
 
-
   // я анимацию начало сиреневая
-
 .sub-menu__item-link {
   opacity: 1;
   cursor: pointer;
   animation: slideInLeft 0.3s ease-in-out; 
 }
-
-
 
 @keyframes slideInLeft {
   0% {
@@ -131,34 +140,25 @@
       opacity: 1;
     }  
 }
-
-
-
-  // .site-list__item--has-children:hover svg{
-  //   transform: rotate(0deg);
-  // }
-
-  // .site-list__item--has-children:hover svg { 
-  //   fill: $main-text-color;
-  // }
+  // я анимацию конец сиреневая
 
 
 @media (min-width: $tablet-width) {
-  .site-list > li.__show_dropdown_sub .sub-menu__wrapper {
+  // .sub-menu__wrapper {
+  //     display: none;
+  //   } 
+
+  // .site-list > li.__show_dropdown_sub .sub-menu__wrapper
+  .site-list__item.__show_dropdown_sub .sub-menu__wrapper  {
     padding-top: 15px;
     background-color: transparent;
   }
 
-  .sub-menu__wrapper {
-    display: none;
-  } 
-
   .sub-menu {
     position: absolute;
     display: none;
-    // top: 66px;
-    left: -50px;
-    width: 240px;
+    left: -70px;
+    width: 260px;
     background-color: #fef4ee; 
     box-shadow: 0 0.0625rem 0.25rem rgba(0,0,0,0.3);
     z-index: 2;
@@ -170,20 +170,13 @@
   .site-list__item .sub-menu__wrapper{
     display: block;
   }
-  .site-list__item.__show_dropdown_sub .sub-menu__ikon-wrapper svg{
+  .site-list__item.__show_dropdown_sub .sub-menu__ikon-wrapper svg {
     transform: rotate(0deg);
   }
-  .site-list__item.__show_dropdown_sub .sub-menu__ikon-wrapper svg{
+  .site-list__item.__show_dropdown_sub .sub-menu__ikon-wrapper svg {
     fill: $main-blue;
-  }
-
-  // .site-list__item:active .sub-menu__ikon-wrapper svg{
-  //   fill: $main-blue;
-  // }
-
-  
-  .site-list__item:not(.__show_dropdown_sub) .sub-menu__ikon-wrapper svg{
-    
+  }  
+  .site-list__item:not(.__show_dropdown_sub) .sub-menu__ikon-wrapper svg {    
     transform: rotate(180deg);
   }
   .site-list__item.__show_dropdown_sub .sub-menu {
@@ -192,22 +185,19 @@
   .site-list__item.__show_dropdown_sub  .sub-menu__wrapper{
     display: block;
   }
-
   .site-list__item--has-children {
     height: 100%;
   }
-
-  // .site-list > li:hover .sub-menu {
-  //   display: block;
+  // .site-list__item--has-children a{
+  //   padding-left: 0;
   // }
-  .site-list__item--has-children a{
+  .site-list__item--has-children .site-list__link{
     padding-left: 0;
   }
 
-
-
   .sub-menu__item-link {
-    padding: 10px 3px;
+    justify-content: flex-start;
+    padding: 10px 10px;
     margin-bottom: -1px;
     color: #666;
     text-decoration: none;
@@ -215,30 +205,16 @@
     font-weight: 400;
     border: none;
     // border: 1px solid #f2f2f2;
-
-    // &:focus {
-    //   color: #000;
-    //   background-color: transparent;
-    // }
-
-    // &:hover {
-    //   color: #000;
-    //   background-color: #fbf8f6;
-    // }
-
-    // &:active {
-    //   // color: rgba(0, 0, 0, 0.3);
-    //   color: #ffffff;
-    //   border: 1px solid #ff5722;
-    //   background-color: #ff5722;
-    // }
   }
 
-  .sub-menu__ikon-wrapper {
+ .sub-menu__ikon-wrapper {
     // left: 0px;
     left: -15px;
   }
 
+  .sub-menu__item-link-svg {
+    left: 200px;
+  }
 
   .sub-menu__ikon {
     top: 20px;
@@ -251,14 +227,10 @@
 
 @media (min-width: $desktop-width) {
   .sub-menu {
-    left: -20px;
-    width: 260px;
+    left: -30px;
+    width: 280px;
     background-color: #fff; 
   }
-
-  // .site-list > li:hover .sub-menu {
-  //   display: flex;
-  // }
 
 .site-list > li:hover .sub-menu {
     display: flex;
@@ -267,8 +239,8 @@
   .sub-menu__ikon {
     top: 20px;
    left: unset;
-
 }
+
   .site-list__item:not(.__show_dropdown_sub) .sub-menu__wrapper{
     display: block;
   }
@@ -288,7 +260,6 @@
   // }
 // тут 0 высота должна быть
   .sub-menu li {
-    // height: 56px;
     height: 0;
     overflow: hidden;
     transition: all 500ms;
@@ -313,16 +284,17 @@
   border-left: 15px solid transparent;
   border-right: 15px solid transparent; 
   border-bottom: 10px solid #fff;
-  margin: -10px 0 0 30px;
+  border-bottom: 10px solid #39df27;
+  // margin: -10px 0 0 30px;
+  margin: 0 0 0 30px;
 }
 
-// .sub-menu a:hover {
-//   background-color: #EEE;
-//   color: #666;
-// }
+.sub-menu li:first-child a:hover::before {
+  border-bottom-color: #EEE;
+}
 
 .sub-menu__item-link {
-  padding: 10px 3px;
+  padding: 10px 20px;
   color: #666;
 
   &:hover {
@@ -336,48 +308,41 @@
   }
 
   &:active {
-    // color: rgba(0, 0, 0, 0.3);
     color: #ffffff;
     border: 1px solid #ff5722;
     background-color: #ff5722;
   }
+
+  &:hover svg,
+  &:focus svg {
+    fill: #000;
+  }
+
+  &:active svg {
+    fill: #ffffff;
+  }
+}
+
+.sub-menu__item-link-svg {
+  left: 220px;
 }
 
 .sub-menu > a:hover::after {
   border-top-color: #AAA;
 }
 
-.sub-menu li:first-child a:hover::before {
-  border-bottom-color: #EEE;
-}
-
-
 // вопрос по вложености такой
 .site-list > li:hover:hover li {
-  // height: 40px;
   height: 56px;
 }
- 
-.sub-menu:hover li:first-child {
-  // padding-top: 15px;
-}
+
 // АНИМАЦИЯ_КОНЕЦ  code pen
-
-
-
-
 
 .site-list > li:hover .sub-menu__wrapper {
   padding-top: 15px;
   display: block;
-  // display: flex;
   // visibility: visible;
 }
-
- .sub-menu__item-link {
-  // line-height: 40px;
-    padding: 10px 4px;
-  }
 
   .sub-menu__ikon-wrapper {
     left: 20px;
@@ -401,11 +366,4 @@
   .site-list__item--has-children:hover svg { 
     fill: $main-blue;
   }
-}
-
-@media (max-width: $mobile-width-only) {
-  // .sub-menu {
-  //   @include list-reset;
-  //   position: absolute;
-  // }
 }
