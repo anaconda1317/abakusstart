@@ -17,7 +17,7 @@
 }
 
 .site-list__item:not(.__show_dropdown_sub) .sub-menu{
-  display: none;
+  display: none; 
 }
 .site-list__item:not(.__show_dropdown_sub) .sub-menu__wrapper{
   display: none;
@@ -122,11 +122,18 @@
     cursor: pointer;
   }
 
+  
   // я анимацию начало сиреневая
+  // .sub-menu {
+  //   opacity: 1;
+  //   cursor: pointer;
+  //   animation: slideInLeft 0.3s ease-in-out; 
+  // }
+
 .sub-menu__item-link {
   opacity: 1;
   cursor: pointer;
-  animation: slideInLeft 0.3s ease-in-out; 
+  animation: slideInLeft 0.3s ease-in-out;   
 }
 
 @keyframes slideInLeft {
@@ -160,8 +167,9 @@
     left: -70px;
     width: 260px;
     background-color: #fef4ee; 
-    box-shadow: 0 0.0625rem 0.25rem rgba(0,0,0,0.3);
+    // box-shadow: 0 0.0625rem 0.25rem rgba(0,0,0,0.3);
     z-index: 2;
+    box-shadow: 1px 2px 5px -1px rgba(0,0,0,0.15),0px 4px 14px -1px rgba(0,0,0,0.10)
   } 
 
   .site-list__item .sub-menu{
@@ -229,11 +237,19 @@
   .sub-menu {
     left: -30px;
     width: 280px;
-    background-color: #fff; 
+    background-color: #fff7ed; 
+  }
+
+  .site-list > li:hover .sub-menu__wrapper {
+    padding-top: 15px;
+    display: block;
+    // visibility: visible;
   }
 
 .site-list > li:hover .sub-menu {
     display: flex;
+    border-radius: 8px;
+    z-index: 99;
   }
 
   .sub-menu__ikon {
@@ -269,10 +285,10 @@
   }
 
 .sub-menu li:first-child a {
-  border-radius: 2px 2px 0 0;
+  border-radius: 8px 8px 0 0;
 }
 .sub-menu li:last-child a {
-  border-radius: 0 0 2px 2px;
+  border-radius: 0 0 8px 8px;
 }
 .sub-menu li:first-child a::before {
   content: "";
@@ -283,7 +299,7 @@
   top: 0;
   border-left: 15px solid transparent;
   border-right: 15px solid transparent; 
-  border-bottom: 10px solid #fff;
+  // border-bottom: 10px solid #fff7ed;
   border-bottom: 10px solid #39df27;
   // margin: -10px 0 0 30px;
   margin: 0 0 0 30px;
@@ -335,14 +351,9 @@
 .site-list > li:hover:hover li {
   height: 56px;
 }
-
 // АНИМАЦИЯ_КОНЕЦ  code pen
 
-.site-list > li:hover .sub-menu__wrapper {
-  padding-top: 15px;
-  display: block;
-  // visibility: visible;
-}
+
 
   .sub-menu__ikon-wrapper {
     left: 20px;
