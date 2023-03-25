@@ -93,8 +93,8 @@ document.addEventListener('DOMContentLoaded', function(){
       }
     });
   }
-  // sub-menu for uslugi in main menu  
 
+  // sub-menu for uslugi in main menu  
 
   if(window.innerWidth <= 768){
     var menuItems = document.querySelectorAll(".site-list__item")
@@ -105,12 +105,25 @@ document.addEventListener('DOMContentLoaded', function(){
               || e.target.classList.contains('sub-menu__ikon') 
               || e.target.tagName == 'use'){
                 el.classList.toggle('__show_dropdown_sub')
-                
+                removeViewWindow()
               }
             }
            
         }) 
     }) 
+    // function removeViewWindow(){
+
+    // }
+    // window.addEventListener('click', function(e){
+    //   e.preventDefault()
+    //   if(!e.target.classList.contains('site-list__link') ||
+    //   e.target.classList.contains('site-list__link')
+      
+    //   ){
+    //     console.log(e.target);
+    //   }
+      
+    // })
   }
 
     // АНИМАЦИЮ СИРЕНВУЮ ДОБАВИТЬ!СКРИПТ
