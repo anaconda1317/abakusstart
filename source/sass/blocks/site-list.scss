@@ -248,6 +248,8 @@
 .site-list > li:hover .sub-menu {
   display: flex;
   border-radius: 8px;
+  // border: 1px solid #c7c5c5;
+  transition: all 500ms;
 }
 
   .site-list > li:hover .sub-menu__wrapper {

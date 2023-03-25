@@ -172,7 +172,8 @@
   .sub-menu {
     left: -30px;
     width: 280px;
-    background-color: #fff7ed; 
+    background-color:#feffed; 
+    transition: all 500ms;
   }
 
   .sub-menu__ikon {
@@ -195,7 +196,8 @@
   top: -10px;
   border-left: 15px solid transparent;
   border-right: 15px solid transparent; 
-  border-bottom: 10px solid #fff7ed;
+  border-bottom: 10px solid #feffed;
+  // border-bottom: 10px solid #fff7ed;
   margin: 0 0 0 30px;
 }
 
@@ -208,11 +210,12 @@
 }
 
 .sub-menu__item-link {
-  // border-bottom: 1px solid rgba(102,102,102,0.2);
   color: #666;
+  border-bottom: 1px solid rgba(102,102,102,0.2);
 
   &:hover {
     color: #000;
+    border-bottom: 1px solid rgba(102,102,102,0.6);
     background-color: #EEE;
     padding: 10px 0 10px 20px;
   }
