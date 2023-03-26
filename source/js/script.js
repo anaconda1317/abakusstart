@@ -95,6 +95,21 @@ document.addEventListener('DOMContentLoaded', function(){
   }
 
   // sub-menu for uslugi in main menu  
+  function removeClassOpenMenu() {
+    var menuItems = document.querySelectorAll(".site-list__item");
+    menuItems.forEach(function (element) {
+      element.classList.remove("__show_dropdown_sub");
+    });
+  }
+  function closeSubMenu() {
+    window.addEventListener("click", function (event) {
+      if (!event.target.closest(".__show_dropdown_sub")) {
+        removeClassOpenMenu();
+      }
+    });
+  }
+  
+
 
   if(window.innerWidth <= 768){
     var menuItems = document.querySelectorAll(".site-list__item")
@@ -104,46 +119,23 @@ document.addEventListener('DOMContentLoaded', function(){
               if(e.target.classList.contains('sub-menu__ikon-wrapper') 
               || e.target.classList.contains('sub-menu__ikon') 
               || e.target.tagName == 'use'){
-                el.classList.toggle('__show_dropdown_sub')
-                removeViewWindow()
+                el.classList.toggle('__show_dropdown_sub') 
               }
             }
            
         }) 
     }) 
-    // function removeViewWindow(){
+    closeSubMenu();
+    document.addEventListener("keydown", function (event) {
+      if (event.code == "Escape") {
+        removeClassOpenMenu();
+      }
+    });
 
-    // }
-    // window.addEventListener('click', function(e){
-    //   e.preventDefault()
-    //   if(!e.target.classList.contains('site-list__link') ||
-    //   e.target.classList.contains('site-list__link')
-      
-    //   ){
-    //     console.log(e.target);
-    //   }
-      
-    // })
   }
 
     // АНИМАЦИЮ СИРЕНВУЮ ДОБАВИТЬ!СКРИПТ
-  
-	
-  // // Loop through each nav item
-  // $('nav.navbar').children('ul.nav').children('li').each(function(indexCount){
-    
-  //   // loop through each dropdown, count children and apply a animation delay based on their index value
-  //   $(this).children('ul.dropdown').children('li').each(function(index){
-      
-  //     // Turn the index value into a reasonable animation delay
-  //     var delay = 0.1 + index*0.03;
-      
-  //     // Apply the animation delay
-  //     $(this).css("animation-delay", delay + "s")			
-  //   });
-  // });
  
-
 
 });
 // маска телефона

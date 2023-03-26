@@ -520,6 +520,7 @@
   text-transform: none;
   //  color: #5f6366;
   color: #797d80;
+  transition: all .35s ease-in-out;
 }
 
 .card-item__parameter-item {
@@ -530,15 +531,18 @@
 }
 
 svg {
-  transition: all 0.15s ease-in-out;
+  // transition: all 0.15s ease-in-out;
+  transition: all 0.35s ease-in-out;
 }
 
 .card-item__parameter-list:hover {
   color: #2c2c2c;
+  transition: all .5s ease-in-out;
 }
 
 .card-item__parameter-list:hover svg {
   transform: scale(1.1);
+  transition: all .35s ease-in-out;
 }
 
 .card-item__parameter-list--abacus:hover svg {
