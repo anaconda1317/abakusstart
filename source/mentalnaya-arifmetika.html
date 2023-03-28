@@ -49,6 +49,8 @@
       <section class="banner">
         <h2 class="visually-hidden">Вводная секция с баннером о занятиях в детском центре &laquo;СТАРТ&raquo;.</h2>
         <div class="banner__image banner__image--photo">
+
+           <!-- ЧЕРЕЗ тэг picture подключить - см телега save message html ac отзывы -->
           <img src="img/text-abakusstart-index_not.svg" alt="Детский центр развития &laquo;СТАРТ&raquo; в Красноярске,
           в Северном." width="229" height="138">
           <!-- <img src="img/text-sedona.svg" alt="Welcome Sedona" width="229" height="39"> -->
@@ -234,6 +236,8 @@
       <div class="oder__container">
         <div class="oder__wrapper">
           <div class="oder__img-column">
+
+            <!-- ЧЕРЕЗ тэг picture подключить - см телега save message html ac отзывы -->
             <img src="img/photo-banner.jpg" width="521" width="414" alt="banner">
           </div>
           <div class="oder__text-column">
@@ -249,9 +253,41 @@
       </div>
     </section>
 
-
-
-
+    
+  <!-- ОТЗЫВЫ НАЧАЛО -->
+    <section>
+      <div class="carousel__wrapper">
+        <div class="carousel">
+          <div class="items-container">
+            <div class="item active">
+              <div class="description">
+                <div class="project-name">theyalow 1</div>
+                <img class="project-image" src="img/theyalow1.png" alt="project">
+              </div>
+            </div>
+            <div class="item">
+              <div class="description">
+                <div class="project-name">theyalow 2</div>
+                <img class="project-image" src="img/theyalow2.png" alt="project">
+              </div>
+            </div>
+            <div class="item">
+              <div class="description">
+                <div class="project-name">theyalow 3</div>
+                <img class="project-image" src="img/theyalow3.png" alt="project">
+              </div>
+            </div>
+          </div>
+          <div class="control left">
+            <div class="arrow left">&lt;</div>
+          </div>
+          <div class="control right">
+            <div class="arrow right">&gt;</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  <!-- ОТЗЫВЫ КОНЕЦ -->
 
 
     <!-- ТАБЛИЦА ПРЕЙСКУРАНТ НАЧАЛО-->
@@ -265,6 +301,7 @@
     <!-- ТАБЛИЦА ПРЕЙСКУРАНТ КОНЕЦ-->
 
     <!-- Читайте также -->
+
     <!-- <section class="popular">
       <div class="container">
         <h2>Читайте также:</h2>
@@ -296,11 +333,6 @@
         </ul>
       </div>
     </section> -->
-
-
-
-
-
 
  <section class="post-social">
   <div class="post-social__wrapper">
@@ -462,11 +494,196 @@
       </button>
     </form>
     <button class="modal-close" type="button">Закрыть</button>
-  </section>
-  <!-- модальное окно - форма данных для  КОНЕЦ -->
+</section>
+<!-- модальное окно - форма данных для  КОНЕЦ -->
+
+<script src="js/script.min.js"></script>
 
 
-  <script src="js/script.min.js"></script>
+<!-- slaider carusel отзывы -->
+<script>
+let items = document.querySelectorAll('.carousel .item');
+let currentItem = 0;
+let isEnabled = true;
+
+function changeCurrentItem(n) {
+	currentItem = (n + items.length) % items.length;
+}
+
+function hideItem(direction) {
+	isEnabled = false;
+	items[currentItem].classList.add(direction);
+	items[currentItem].addEventListener('animationend', function() {
+		this.classList.remove('active', direction);
+	});
+}
+
+function showItem(direction) {
+	items[currentItem].classList.add('next', direction);
+	items[currentItem].addEventListener('animationend', function() {
+		this.classList.remove('next', direction);
+		this.classList.add('active');
+		isEnabled = true;
+	});
+}
+
+function nextItem(n) {
+	hideItem('to-left');
+	changeCurrentItem(n + 1);
+	showItem('from-right');
+}
+
+function previousItem(n) {
+	hideItem('to-right');
+	changeCurrentItem(n - 1);
+	showItem('from-left');
+}
+
+document.querySelector('.control.left').addEventListener('click', function() {
+	if (isEnabled) {
+		previousItem(currentItem);
+	}
+});
+
+document.querySelector('.control.right').addEventListener('click', function() {
+	if (isEnabled) {
+		nextItem(currentItem);
+	}
+});
+
+// функция отслеживает состояние свайпа
+const swipedetect = (el) => {
+  
+	let surface = el;
+	let startX = 0;
+	let startY = 0;
+	let distX = 0;
+	let distY = 0;
+	let startTime = 0;
+	let elapsedTime = 0;
+
+	let threshold = 150;
+	let restraint = 100;
+	let allowedTime = 300;
+
+	surface.addEventListener('mousedown', function(e){
+		startX = e.pageX;
+		startY = e.pageY;
+		startTime = new Date().getTime();
+		e.preventDefault();
+	}, false);
+
+	surface.addEventListener('mouseup', function(e){
+		distX = e.pageX - startX;
+		distY = e.pageY - startY;
+		elapsedTime = new Date().getTime() - startTime;
+		if (elapsedTime <= allowedTime){
+			if (Math.abs(distX) >= threshold && Math.abs(distY) <= restraint){
+				if ((distX > 0)) {
+					if (isEnabled) {
+						previousItem(currentItem);
+					}
+				} else {
+					if (isEnabled) {
+						nextItem(currentItem);
+					}
+				}
+			}
+		}
+		e.preventDefault();
+	}, false);
+
+	surface.addEventListener('touchstart', function(e){
+		if (e.target.classList.contains('arrow') || e.target.classList.contains('control')) {
+			if (e.target.classList.contains('left')) {
+				if (isEnabled) {
+					previousItem(currentItem);
+				}
+			} else {
+				if (isEnabled) {
+					nextItem(currentItem);
+				}
+			}
+		}
+			var touchobj = e.changedTouches[0];
+			startX = touchobj.pageX;
+			startY = touchobj.pageY;
+			startTime = new Date().getTime();
+			e.preventDefault();
+	}, false);
+
+	surface.addEventListener('touchmove', function(e){
+			e.preventDefault();
+	}, false);
+
+	surface.addEventListener('touchend', function(e){
+			var touchobj = e.changedTouches[0];
+			distX = touchobj.pageX - startX;
+			distY = touchobj.pageY - startY;
+			elapsedTime = new Date().getTime() - startTime;
+			if (elapsedTime <= allowedTime){
+					if (Math.abs(distX) >= threshold && Math.abs(distY) <= restraint){
+							if ((distX > 0)) {
+								if (isEnabled) {
+									previousItem(currentItem);
+								}
+							} else {
+								if (isEnabled) {
+									nextItem(currentItem);
+								}
+							}
+					}
+			}
+			e.preventDefault();
+	}, false);
+}
+
+var el = document.querySelector('.carousel');
+swipedetect(el);
+</script>
+<!-- slaider carusel отзывы end-->
+
+<script>
+  // маска телефона
+  function maskPhone(selector, masked = '+7(___)___-__-__') {
+    const elems = document.querySelectorAll(selector);
+  
+    function mask(event) {
+      const keyCode = event.keyCode;
+      const template = masked,
+        def = template.replace(/\D/g, ""),
+        val = this.value.replace(/\D/g, ""); 
+      let i = 0,
+        newValue = template.replace(/[_\d]/g, function (a) {
+          return i < val.length ? val.charAt(i++) || def.charAt(i) : a;
+        });
+      i = newValue.indexOf("_");
+      if (i !== -1) {
+        newValue = newValue.slice(0, i);
+      }
+      let reg = template.substr(0, this.value.length).replace(/_+/g,
+        function (a) {
+          return "\\d{1," + a.length + "}";
+        }).replace(/[+()]/g, "\\$&");
+      reg = new RegExp("^" + reg + "$");
+      if (!reg.test(this.value) || this.value.length < 5 || keyCode > 47 && keyCode < 58) {
+        this.value = newValue;
+      }
+      if (event.type === "blur" && this.value.length < 5) {
+        this.value = "";
+      }
+  
+    }
+  
+    for (const elem of elems) {
+      elem.addEventListener("input", mask);
+      elem.addEventListener("focus", mask);
+      elem.addEventListener("blur", mask);
+    }
+    
+  }
+  maskPhone('.phone__mask');
+</script>
 </body>
 
 </html>

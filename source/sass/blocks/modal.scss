@@ -53,6 +53,35 @@
   animation: shake 0.6s;
 }
 
+// overlay Под окном модалки 
+.modal__shadow {
+  position: fixed;
+  border:none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 98;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+  background: rgba(73,90,102,0.7);
+  overflow-y: auto;
+}
+
+/* активная подложка */
+.modal__shadow--show{
+  pointer-events: auto;
+  opacity: 0.8;
+}
+// overlay Под окном модалки end
+
+
 .modal__window {
   z-index: 10;
   top: 50px;

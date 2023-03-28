@@ -19,7 +19,7 @@
 
 .sub-menu__item {
   // min-height: max-content;
-  height: 56px;
+  height: 50px;
 }
 
 .sub-menu__item-link {
@@ -71,7 +71,7 @@
     position: absolute;
     transform: translate(0, -50%);
     top: 50%;
-    left: 15px;
+    left: 20px;
     z-index: 100;
   }
 
@@ -92,6 +92,8 @@
     position: absolute;
     top: 15%;
     left: 15px;
+    width: 42px;
+    height: auto;
     cursor: pointer;
   }
 
@@ -150,6 +152,10 @@
     // border: 1px solid #f2f2f2;
   }
 
+  .sub-menu__item {
+    height: 56px;
+  }
+
  .sub-menu__ikon-wrapper {
     // left: 0px;
     left: -15px;
@@ -157,6 +163,9 @@
 
   .sub-menu__item-link-svg {
     left: 200px;
+    width: 47px;
+    height: auto;
+    fill: #666;
   }
 
   .sub-menu__ikon {
@@ -171,7 +180,7 @@
 @media (min-width: $desktop-width) {
   .sub-menu {
     left: -30px;
-    width: 280px;
+    width: 300px;
     background-color:#feffed; 
     transition: all 500ms;
   }
@@ -184,9 +193,11 @@
 .sub-menu li:first-child a {
   border-radius: 8px 8px 0 0;
 }
+
 .sub-menu li:last-child a {
   border-radius: 0 0 8px 8px;
 }
+
 .sub-menu li:first-child a::before {
   content: "";
   display: block;
@@ -243,7 +254,7 @@
 }
 
 .sub-menu__item-link-svg {
-  left: 210px;
+  left: 240px;
 }
 
 .sub-menu > a:hover::after {

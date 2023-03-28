@@ -2,15 +2,7 @@ document.addEventListener('DOMContentLoaded', function(){
   var link = document.querySelector(".banner__action-сall");
   var popup = document.querySelector(".modal__window");
   var cards = document.querySelector('.card-list-container');
-  console.log();
-  if(cards){
-    var btnOrders = cards.querySelectorAll('.modal-open');
-   
-    btnOrders.forEach(function(element ){ 
-      openModal(element);
-    } );
-  }
-
+ 
   if(popup){
     var modalButton =popup.querySelector(".modal__button");
     var close = popup.querySelector(".modal-close");
@@ -31,6 +23,9 @@ document.addEventListener('DOMContentLoaded', function(){
         }
       });
     }
+    if(document.querySelector('.modal-open')){ 
+        openModal(document.querySelector('.modal-open'))
+    }
     function openModal(element) {
       
       
@@ -47,7 +42,13 @@ document.addEventListener('DOMContentLoaded', function(){
         }
       });
     }
-
+    if(cards){
+      var btnOrders = cards.querySelectorAll('.modal-open');
+     
+      btnOrders.forEach(function(element ){ 
+        openModal(element);
+      } );
+    }
     // скрипт при заполнениии формы кнопка меняет цвет
      
     function validateForm(context) {
@@ -94,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function(){
     });
   }
 
-  // sub-menu for uslugi in main menu  
+  // sub-menu for uslugi in main menu  дополнит функции - закрытие sub-menu по клику пустого поля и  Esc
   function removeClassOpenMenu() {
     var menuItems = document.querySelectorAll(".site-list__item");
     menuItems.forEach(function (element) {
@@ -109,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function(){
     });
   }
   
-
+  // sub-menu for uslugi in main menu  - открытие на имобилке и таблетке
 
   if(window.innerWidth <= 768){
     var menuItems = document.querySelectorAll(".site-list__item")

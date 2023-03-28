@@ -1,4 +1,5 @@
 @import "normalize.scss";
+@import "global/animate.min.scss";
 @import "global/fonts.scss";
 @import "global/variables.scss";
 @import "global/mixins.scss";
@@ -47,3 +48,4 @@
 @import "blocks/breadcrumb.scss";
 @import "blocks/price.scss";
 @import "blocks/sub-menu.scss";
+@import "blocks/carousel.scss";
