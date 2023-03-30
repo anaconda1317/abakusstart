@@ -87,11 +87,13 @@
 
       <!-- breadcump start-->
       <nav class="breadcrumb" aria-label="Хлебные крошки" data-role="breadcrumb">
-        <ul class="breadcrumb-list">
-          <h2 class="visually-hidden">Навигация по сайту</h2>
-          <li><a class="breadcrumb-list__link" href="/index.php">Главная</a></li>
-          <li><span aria-current="page"><a class="breadcrumb-list__link" href="/form.php">Форма отзыва</a></span></li>
-        </ul>
+        <div class="breadcrumb__wrapper">
+          <ul class="breadcrumb-list">
+            <h2 class="visually-hidden">Навигация по сайту</h2>
+            <li class="breadcrumb-item"><a class="breadcrumb-list__link" href="/index.php">Главная</a></li>
+            <li class="breadcrumb-item"><span aria-current="page"><a class="breadcrumb-list__link" href="/form.php">Форма отзыва</a></span></li>
+          </ul>
+      </div>
       </nav>
       <!-- breadcump finish-->
 
@@ -233,6 +235,10 @@
           <b class="feedback-form__b feedback-form__b--feedback">Ваши впечатления от занятий:</b>
           <textarea class="feedback-form__textarea" id="feedback" name="feedback" rows="5"
             placeholder="Опишите, пожалуйста свои впечатления от занятий в нашем детском центре."></textarea>
+
+            <!-- <figcaption class="feedback-form__caption">Каждый оставленный отзыв проходит ряд проверок, прежде чем будет размещен на сайте.
+               Оригинальные тексты не редактируются и не фильтруются.
+            </figcaption> -->
         </fieldset>
         <input type="hidden" name="act" value="review">
         <!-- recapcha_generator -->

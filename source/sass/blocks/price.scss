@@ -82,9 +82,15 @@
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     -ms-flex-pack: justify;
-        justify-content: space-between;
+   justify-content: space-between;
     margin-bottom: 15px;
+    border-bottom:1px solid #797d80;
   }
+
+  .price__table tr:last-child {
+    border-bottom:none;
+  }
+
   .price__table td {
     display: block;
     padding: 0 5px;
@@ -160,12 +166,25 @@
       display: table;
       width: 100%;
     }
+
+    .price__table tr {
+      border-bottom:none;
+    }
+
+    .price__table tr:nth-child(even) {
+      background-color: #fde859;
+      // background-color: rgba(255, 222, 3, .3);
+      border-radius: 4px;
+    }
+
     .price__table tbody {
       display: table-row-group;
     }
     .price__table tr {
       display: table-row;
     }
+
+  // обводка ячеек таблицы
     .price__table td {
       display: table-cell;
       padding: 12px 19px;
