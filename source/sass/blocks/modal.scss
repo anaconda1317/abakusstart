@@ -54,31 +54,57 @@
 }
 
 // overlay Под окном модалки 
-.modal__shadow {
-  position: fixed;
-  border:none;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  overflow: hidden;
-  pointer-events: none;
-  z-index: 98;
-  opacity: 0;
-  transition: opacity 0.15s ease;
-  background: rgba(73,90,102,0.7);
-  overflow-y: auto;
-}
+// .modal__shadow {
+// pointer-events: none;
+//     visibility: hidden;
+//     position: fixed;
+//     top: 0;
+//     right: 0;
+//     bottom: 0;
+//     left: 0;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     opacity: 0;
+//     z-index: 10;
+//     background-color: rgba(0, 0, 0, 0.8);
+//     transition-duration: 0.2s;
+//     transition-property: opacity;
+//     overflow-y: hidden;
+//   }
+
+//   .modal-open--open {
+//     pointer-events: auto;
+//     visibility: visible;
+//     opacity: 1;
+// }
+
+
+// .modal__shadow {
+//   position: fixed;
+//   border:none;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   width: 100%;
+//   top: 0;
+//   bottom: 0;
+//   right: 0;
+//   left: 0;
+//   overflow: hidden;
+//   pointer-events: none;
+//   z-index: 98;
+//   opacity: 0;
+//   transition: opacity 0.15s ease;
+//   background: rgba(73,90,102,0.7);
+//   overflow-y: auto;
+// }
 
 /* активная подложка */
-.modal__shadow--show{
-  pointer-events: auto;
-  opacity: 0.8;
-}
+// .modal__shadow--open {
+//   pointer-events: auto;
+//   opacity: 0.8;
+// }
 // overlay Под окном модалки end
 
 

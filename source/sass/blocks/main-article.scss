@@ -5,7 +5,7 @@
 .main-article__header {
   position: relative;
   background-color: #f1f4fb;
-  border-top: 1px solid #b13a3a;
+  border-top: 1px solid transparent;
 }
 
 .main-article__header-content {
@@ -14,7 +14,7 @@
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
-  width: 320px; 
+  // width: 320px; 
   margin: 0 auto;
   padding-left: 10px;
   padding-right: 10px;
@@ -38,7 +38,7 @@
   padding: 20px 0 5px;
   text-align: center;
   font-size: 27px;
-  letter-spacing: 4px;
+  letter-spacing: 1px;
   line-height: 1.2em;
   font-weight: 700;
   color: #000;
@@ -51,8 +51,14 @@
   font-weight: 600;
   // font-weight: normal;
   font-size: 18px;
-  line-height: 21px;
-  // width: 280px;
+  line-height: 26px;
+  // color: #666;
+}
+
+.main-article__lead::first-letter {
+  font-weight: 800;
+  font-size: 38px;
+  color: #6bb9b5;
 }
 
 .main-article__meta-row {
@@ -108,8 +114,8 @@
   .main-article__nav-title {
     // width: 280px;
     margin: 30px auto 20px;
-    font-weight: 600;
-    font-size: 21px;
+    font-weight: 500;
+    font-size: 24px;
     line-height: 30px;
   }
 
@@ -128,7 +134,7 @@
   }
 
   .main-article__link {
-    font-size: 16px;
+    font-size: 18px;
     color: #b13a3a;
   }
 
@@ -148,7 +154,7 @@
   .main-article__rules-item::before {
     content: counter(rule-counter);
     position: absolute;
-    top: -5px;
+    top: 0;
     left: 0;
     font-size: 35px;
     font-weight: 700;
@@ -159,16 +165,17 @@
   .main-article__rules-title {
     margin: 0 0 15px 30px;
     font-weight: 700;
-    font-size: 24px;
+    font-size: 28px;
     line-height: 1.2em;
   }
 
   .main-article__rules-text {
     margin: 0 0 30px;
     // padding: 0 0 18px;
-    font-size: 16px;
+    font-size: 18px;
+    font-weight: 400;
     letter-spacing: 0.3px;
-    line-height: 21px;
+    line-height: 26px;
     color: $main-text-color;
   }
 
@@ -186,6 +193,7 @@
     font-size: 16px;
     line-height: 24px;
     text-align: center;
+    color: #666;
   }
 
   .main-article__img-with-reference img {
@@ -204,22 +212,20 @@
   }
 
   
-  .main-article__quote p {
+  .main-article__quote-text {
     margin: 0 0 25px 0;
-    font-family: 'Lato', sans-serif;
-    // font-family: 'verdana', sans-serif;
-    // font-family: "Cormorant", "Times New Roman", serif;
+    font-family: "Lato", "Arial", sans-serif;   
     font-style: italic;
     font-weight: 500;
     font-size: 21px;
     line-height: 31px;
   }
   
-  .main-article__quote p::before {
+  .main-article__quote-text::before {
     content: open-quote;
   }
   
-  .main-article__quote p::after {
+  .main-article__quote-text::after {
     content: close-quote;
   }
 
@@ -231,10 +237,18 @@
     color: rgba(0, 0, 0, 0.5);
   }
 
+  .main-article__sidebar  {
+    display: none;
+  }
+
+  .restaurant-guide {
+    display: none;
+  }
+
 
 @media (min-width: $tablet-width) {
   .main-article__content-wrapper {
-    width: 450px;
+    width: 500px;
     margin: 0 auto;
   }
 
@@ -247,7 +261,11 @@
     margin: 0 auto;
   }
 
-
+  .main-article__lead::first-letter {
+    font-weight: 800;
+    font-size: 48px;
+    color: #6bb9b5;
+  }
 
   .main-article__meta-col {
     margin-left: 15px;
@@ -277,27 +295,19 @@
     line-height: 45px;
   }
 
-  .main-article__img-with-reference {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-    
-  .main-article__reference {
+      .main-article__reference {
     width: 327px;
     padding: 30px 0 25px 0;
     margin: 0 0 0 35px;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 18px;
+    line-height: 28px;
     text-align: center;
   }
 
-  .main-article__quote p {
+  .main-article__quote-text {
     margin: 0 0 25px 0;
-    font-family: 'Lato', sans-serif;
-    // font-family: 'verdana', sans-serif;
-    // font-family: "Cormorant", "Times New Roman", serif;
+    font-family: "Lato", "Arial", sans-serif;
     font-style: italic;
     font-weight: 500;
     font-size: 30px;
@@ -318,10 +328,13 @@
     left: -75px;
     width: 38px;
     height: 40px;
-    background-image: url("../img/quote.svg");
+    background-image: url("../img/quote_article.svg");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
+    background-size: contain;    
+    // background-color: linen;
+    /* border-radius: 50%; */
+    // outline:  14px solid linen;
   }
   
   .main-article__quote::after {
@@ -332,7 +345,7 @@
     font-weight: 700;
     font-size: 36px;
     line-height: 61px;
-    color: #f1f1f2;
+    color: #d7d9df;
     transform: rotate(-90deg);
     transform-origin: 0 0;
   }
@@ -351,7 +364,7 @@
 
  .main-article__header-content {
     position: relative;
-    width: 1170px;
+    // width: 1170px;
     margin: 0 auto;
     padding-left: 15px;
     padding-right: 15px;
@@ -364,14 +377,14 @@
 
 .main-article__title {
   /* position: relative; */
-  width: 577px;
+  width: 640px;
   display: block;
   /* width: 498px; */
   margin: 78px auto 78px;
-  padding: 20px 0 52px;
+  padding: 20px 0 40px;
   text-align: center;
-  font-size: 42px;
-  line-height: 1.2em;
+  font-size: 40px;
+  line-height: 60px;
   font-weight: 700;
   color: #000;
   text-transform: uppercase;
@@ -384,9 +397,9 @@
     margin: 25px auto;
     padding: 25px 0;
     font-weight: 600;
-    font-size: 26px;
-    line-height: 34px;
-    max-width: 475px;
+    font-size: 21px;
+    line-height: 31px;
+    // max-width: 475px;
   }
 
   .main-article-nav-title {
@@ -395,4 +408,132 @@
     font-size: 24px;
     line-height: 30px;
   }
+  
+  .main-article__img-with-reference {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  
+  .main-article__sidebar  {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: -235px;
+  }
+  
+  .socials {
+    width: 167px;
+  }
+  
+  .socials h2 {
+    margin: 0 0 18px 0;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center;
+  }
+  
+  .socials-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .socials-item {
+    margin-bottom: 30px;
+  }
+  
+  .socials-link {
+    display: flex;
+  }
+  
+  .socials-link:hover,
+  .socials-link:focus {
+    opacity: 0.6;
+  }
+  
+  .socials-link:active {
+    opacity: 0.3;
+  }
+  
+  .socials-link::before {
+    content: "";
+    width: 25px;
+    height: 25px;
+  }
+  
+  .socials-link-vk::before {
+    background-image: url("../img/vk.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  
+  .socials-link-pinterest::before {
+    background-image: url("../img/pinterest.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  
+  .socials-link-instagram::before {
+    background-image: url("../img/instagram.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  } 
+
+  .main-article__right-floated {
+    float: right;
+    margin-left: 10px;
+    margin-bottom: 10px;
+  }
+
+  .restaurant-guide {
+    display: block;
+    position: relative;
+    padding: 20px 53px;
+    margin-top: -10px;
+    font-family: "Lato", "Arial", sans-serif;  
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 0 60px;
+    background-color: #f1f1f2;
+  }
+  
+  .restaurant-guide_title {
+    margin: 0 0 12px 0;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 30px;
+  }
+  
+  .restaurant-guide a {
+    color: #000000;
+    text-decoration: none;
+  }
+  
+  .restaurant-guide figure {
+    margin: 0;
+  }
+  
+  .restaurant-guide figcaption {
+    margin: 0;
+    line-height: 1;
+  }
+  
+  .restaurant-guide img {
+    border-radius: 50%;
+    border: 5px solid #6bb9b5;
+  }
+  
+
 }
