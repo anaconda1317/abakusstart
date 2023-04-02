@@ -135,7 +135,9 @@
 
   .main-article__link {
     font-size: 18px;
-    color: #b13a3a;
+    color: #6bb9b5;
+    
+  text-decoration: underline 1px dashed;
   }
 
   .main-article__rules {
@@ -196,11 +198,43 @@
     color: #666;
   }
 
-  .main-article__img-with-reference img {
+  .main-article__img-reference {
+    position: relative;
     display: block;
     height: 100%;
     object-fit: cover;
   }
+
+  .main-article__img-reference--cropping-bottom-right {
+    border-bottom-right-radius: 80px 80px;
+}
+
+  .main-article__img-reference--cropping-top-left {
+  border-top-left-radius: 80px 80px;
+}
+
+  .main-article__img {
+    position: relative;
+    display: block;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .main-article__img--cropping-top-right {
+    border-top-right-radius: 80px 80px;
+  }
+
+  .main-article__img--cropping-top-left {
+    border-top-left-radius: 80px 80px;
+  }
+
+  .main-article__img--cropping-bottom-right {
+    border-bottom-right-radius: 80px 80px;
+  }
+
+  .main-article__img--cropping-bottom-left {
+    border-bottom-left-radius: 80px 80px;
+}
 
   .main-article__quote {
     position: relative;
@@ -241,12 +275,21 @@
     display: none;
   }
 
-  .restaurant-guide {
+  .main-article__right {
+    display: none;
+  }
+
+  .main-article__left-floated {
     display: none;
   }
 
 
 @media (min-width: $tablet-width) {
+
+  .main-article__header {
+    background-color:unset; 
+  }
+
   .main-article__content-wrapper {
     width: 500px;
     margin: 0 auto;
@@ -270,6 +313,11 @@
   .main-article__meta-col {
     margin-left: 15px;
     margin-right: 15px;
+  }
+
+  .main-article__link:hover,
+  .main-article__link:focus {
+    text-decoration: none;
   }
 
   .main-article__rules-item {
@@ -310,8 +358,10 @@
     font-family: "Lato", "Arial", sans-serif;
     font-style: italic;
     font-weight: 500;
-    font-size: 30px;
-    line-height: 45px;
+    font-size: 28px;
+    // font-size: 30px;
+    line-height: 41px;
+    // line-height: 45px;
   }
 
   .main-article__quote {
@@ -422,80 +472,21 @@
     top: 0;
     left: -235px;
   }
-  
-  .socials {
-    width: 167px;
-  }
-  
-  .socials h2 {
-    margin: 0 0 18px 0;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 26px;
-    text-align: center;
-  }
-  
-  .socials-list {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .socials-item {
-    margin-bottom: 30px;
-  }
-  
-  .socials-link {
-    display: flex;
-  }
-  
-  .socials-link:hover,
-  .socials-link:focus {
-    opacity: 0.6;
-  }
-  
-  .socials-link:active {
-    opacity: 0.3;
-  }
-  
-  .socials-link::before {
-    content: "";
-    width: 25px;
-    height: 25px;
-  }
-  
-  .socials-link-vk::before {
-    background-image: url("../img/vk.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
-  
-  .socials-link-pinterest::before {
-    background-image: url("../img/pinterest.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
-  
-  .socials-link-instagram::before {
-    background-image: url("../img/instagram.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-  } 
 
-  .main-article__right-floated {
+  .main-article__right--floated {
     float: right;
     margin-left: 10px;
     margin-bottom: 10px;
   }
 
-  .restaurant-guide {
+  .main-article__left-floated {
+    display: block;
+    float: left;
+    margin-right: 27px;
+    margin-top: 7px;
+  }
+
+  .main-article__right {
     display: block;
     position: relative;
     padding: 20px 53px;
@@ -509,31 +500,29 @@
     background-color: #f1f1f2;
   }
   
-  .restaurant-guide_title {
+  .main-article__right_title {
     margin: 0 0 12px 0;
     font-weight: 700;
     font-size: 18px;
     line-height: 30px;
   }
   
-  .restaurant-guide a {
+  .main-article__right a {
     color: #000000;
     text-decoration: none;
   }
   
-  .restaurant-guide figure {
+  .main-article__right figure {
     margin: 0;
   }
   
-  .restaurant-guide figcaption {
+  .main-article__right figcaption {
     margin: 0;
     line-height: 1;
   }
   
-  .restaurant-guide img {
+  .main-article__right img {
     border-radius: 50%;
     border: 5px solid #6bb9b5;
   }
-  
-
 }

@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function(){
   var link = document.querySelector(".banner__action-сall");
   var popup = document.querySelector(".modal__window");
   var cards = document.querySelector('.card-list-container');
- 
+  var overlay = document.querySelector('.__modal__overlay')
   if(popup){
     var modalButton =popup.querySelector(".modal__button");
     var close = popup.querySelector(".modal-close");
@@ -17,6 +17,9 @@ document.addEventListener('DOMContentLoaded', function(){
       link.addEventListener("click", function (evt) {
         evt.preventDefault();
         popup.classList.add("modal-show");
+        if(overlay){
+          overlay.classList.add('modal__shadow')
+        }
         // форма открылась -сразу автофокус ставим
         if (name) {
           name.focus();
@@ -27,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function(){
         openModal(document.querySelector('.modal-open'))
     }
     function openModal(element) {
-      
+      var overlay = document.querySelector('.__modal__overlay')
       
       element.addEventListener("click", function (evt) { 
         if(evt.currentTarget.classList.contains('modal-open')) {
@@ -36,6 +39,7 @@ document.addEventListener('DOMContentLoaded', function(){
         }
         evt.preventDefault();
         popup.classList.add("modal-show");
+        overlay.classList.add('modal__shadow')
         // форма открылась -сразу автофокус ставим
         if (name) {
           name.focus();
@@ -67,10 +71,30 @@ document.addEventListener('DOMContentLoaded', function(){
         validateForm(this);
     })
          
+    if(overlay){
+      overlay.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        name.value = '';
+        tel.value = '';
+        if(!evt.target.closest('.modal__window')){
+          overlay.classList.remove('modal__shadow')
+          popup.classList.remove("modal-show");
+          popup.classList.remove("modal-error");
+        }
+         
+        
+       
+      });
+    
+    }
     close.addEventListener("click", function (evt) {
+
       evt.preventDefault();
       name.value = '';
       tel.value = '';
+      if(overlay){
+        overlay.classList.remove('modal__shadow')
+      }
       popup.classList.remove("modal-show");
       popup.classList.remove("modal-error");
     });
@@ -88,6 +112,9 @@ document.addEventListener('DOMContentLoaded', function(){
       if (evt.keyCode === 27) {
         evt.preventDefault();
         if (popup.classList.contains("modal-show")) {
+          if(overlay){
+            overlay.classList.remove('modal__shadow')
+          }
           popup.classList.remove("modal-show");
           popup.classList.remove("modal-error");
         }

@@ -9,6 +9,12 @@
   font-family: $page-font;
 }
 
+.feedback-form__item.feedback-form__item--captcha {
+  width: 280px;
+  order: unset;
+  margin-bottom: 40px;
+}
+
 .feedback-form__item {
   position: relative;
   margin: 0;
@@ -132,6 +138,13 @@
     flex-wrap: wrap;
     padding-bottom: 61px;
   }
+
+  .feedback-form__item.feedback-form__item--captcha {   
+    width: 100%;
+    order: 6;
+    margin-bottom: 40px;
+  }
+  
 
   .feedback-form__item--visited-places {
     order: 4;

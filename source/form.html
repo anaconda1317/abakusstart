@@ -104,20 +104,20 @@
           <div class="form-name">
             <label class="form-name__label" for="name"><span class="visually-hidden">Пожалуйста, введите
                 ваше</span>Имя<sup>*</sup>:</label>
-            <input class="form-name__input" type="text" name="name" id="name"  pattern="^[а-яА-ЯёЁa-zA-Z]+$" placeholder="Дмитрий" required>
+            <input class="form-name__input" type="text" name="name" id="name"  pattern="^[а-яА-ЯёЁa-zA-Z]+$" placeholder="Дмитрий" autocomplete="off" required>
           </div>
 
           <div class="form-name">
             <label class="form-name__label" for="surname"><span class="visually-hidden">Пожалуйста, введите
                 вашу</span>Фамилия<sup>*</sup>:</label>
-            <input class="form-name__input" type="text" name="surname" id="surname"  pattern="^[а-яА-ЯёЁa-zA-Z]+$" placeholder="МИРОНОВ" required>
+            <input class="form-name__input" type="text" name="surname" id="surname"  pattern="^[а-яА-ЯёЁa-zA-Z]+$" placeholder="МИРОНОВ" autocomplete="off" required>
           </div>
 
           <div class="form-name">
             <label class="form-name__label" for="grandfathername"><span class="visually-hidden">Пожалуйста, введите
                 ваше</span>Отчество<sup>*</sup>:</label>
             <input class="form-name__input" type="text" name="grandfathername"  pattern="^[а-яА-ЯёЁa-zA-Z]+$" id="grandfathername"
-              placeholder="Васильевич" required>
+              placeholder="Васильевич" autocomplete="off" required>
           </div>
         </fieldset>
 
@@ -133,7 +133,7 @@
               </label>
               <p class="form-contact__input-container">
                 <input class="form-contact__input phone__mask" type="tel" name="tel" id="tel" placeholder="+7(___)___-__-__"
-                  required>
+                autocomplete="off" required>
                 <span class="form-contact__logo form-contact__logo--phone"></span>
               </p>
             </div>
@@ -146,7 +146,7 @@
                   вашу</span>Электронная почта<sup>*</sup>:</label>
               <p class="form-contact__input-container">
                 <input class="form-contact__input" type="email" name="email" id="email" placeholder="Введите e-mail"
-                  required>
+                autocomplete="off" required>
                 <span class="form-contact__logo form-contact__logo--mail"></span>
               </p>
             </div>
@@ -242,7 +242,7 @@
         </fieldset>
         <input type="hidden" name="act" value="review">
         <!-- recapcha_generator -->
-        <fieldset class="feedback-form__item feedback-form__item--captcha " style="width: 100%; order: 6; margin-bottom: 40px;">
+        <fieldset class="feedback-form__item feedback-form__item--captcha">
           <div class="g-recaptcha" data-sitekey="6Lec4xMlAAAAABWNHpZy81amc7ogVSO-ektm3SOT"></div>
           <span class="feedback-form__item--captcha-error" style="color: #ff0000; font-weight: 700; "></span>
       </fieldset>
@@ -468,10 +468,11 @@
   document.addEventListener('DOMContentLoaded', ()=>{
       if(document.querySelector('#feedback-form')){
           document.querySelector('#feedback-form').addEventListener('submit', function(e){
-              e.preventDefault();
+             
               let response = grecaptcha.getResponse();
               console.log(response);
               if(response.length == 0) {
+                e.preventDefault();
                   if(document.querySelector('.feedback-form__item--captcha-error')){
                       document.querySelector('.feedback-form__item--captcha-error').textContent = 'Вы не прошли проверку CAPTCHA должным образом'
                   }

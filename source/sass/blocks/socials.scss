@@ -1,0 +1,72 @@
+@media (min-width: $tablet-width) {
+
+}
+
+
+@media (min-width: $desktop-width) {
+  .socials {
+    width: 167px;
+  }
+  
+  .socials h2 {
+    margin: 0 0 18px 0;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center;
+  }
+  
+  .socials-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .socials-item {
+    margin-bottom: 30px;
+  }
+  
+  .socials-link {
+    display: flex;
+  }
+  
+  .socials-link:hover,
+  .socials-link:focus {
+    opacity: 0.6;
+  }
+  
+  .socials-link:active {
+    opacity: 0.3;
+  }
+  
+  .socials-link::before {
+    content: "";
+    width: 25px;
+    height: 25px;
+  }
+  
+  .socials-link-vk::before {
+    background-image: url("../img/vk.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  
+  .socials-link-pinterest::before {
+    background-image: url("../img/pinterest.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  
+  .socials-link-instagram::before {
+    background-image: url("../img/instagram.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  } 
+}
