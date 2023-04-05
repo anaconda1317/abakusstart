@@ -1,0 +1,170 @@
+.oder {
+  padding-bottom: 65px;
+  // background-color: azure;
+  }
+
+.oder__container {  
+  margin: 0 auto;
+  width: 290px;
+  padding-top: 10px;
+
+  border-top: 1px solid $main-blue;
+  background-color: $main-blue;
+  }
+
+  .oder__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;    
+  } 
+
+  .oder__text-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 11px 0 25px;
+
+    color: #fdfdfd;
+
+    order: 1;
+  }
+
+  .oder__title {
+    margin: 0 auto;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.2em; 
+    text-align: center;   
+  }
+
+  .oder__text {
+    width: 290px;
+    margin: 0;
+    padding: 30px 15px 18px;    
+  }
+
+  .oder__button {
+    display: block;
+    box-sizing: border-box;
+    // width: 85%;
+    width: 265px;
+    height: 52px;
+    padding: 0;
+  
+    font-size: 18px;
+    font-weight: 700;
+    line-height: calc(52px - 1px * 2);
+    text-align: center;
+    color: $main-blue;
+    cursor: pointer;
+    border-radius: 10px 0;
+    border: none;
+    background-color: $main-yellow;
+    // background-color: $main-blue;   
+    transition: opacity 0.3s ease 0.1s, box-shadow 1s ease, background-color 0.5s ease, border-color 0.3s ease 0.2s, color 0.3s, opacity 0.1s;
+  }
+  
+  // Дополнительно указала задержку перехода цвета текста при наведении на кнопку.
+  // При отведении мыши с кнопки цвет текста будет меняться без задержки. Прописано в основном стиле .oder__button
+  
+  .oder__button:enabled:hover,
+  .oder__button:enabled:focus {
+    background-color: #ffe54d;
+    // background-color: #0230eb;
+    color: rgba(0, 51, 255, 0.7);
+    border: 1px $main-yellow;
+    // border: 1px $main-blue;
+    box-shadow: 4px 4px 0 0 #9da2ab;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease 0.25s, border-color 0.3s ease, opacity 0.2s;
+  }
+  
+  .oder__button:enabled:active { 
+    background-color: #ffe54d;
+    // background-color: #0230eb;
+    color: rgba(0, 51, 255, 0.8);
+    box-shadow: 2px 2px 0 0 #9da2ab;
+  }
+
+  .oder__img-column {
+    display: flex;
+    position: relative;
+    order: 1;
+  }
+
+  .oder__img--cropping-top-right {
+    position: relative;
+    display: block;
+    border-top-right-radius: 80px 80px;
+}
+
+
+@media (min-width: $tablet-width) {
+
+  .oder__container {  
+    width: 500px;
+    margin: 0 auto;
+  }
+
+  .oder__text {
+    width: 430px;
+    margin: 0;
+    padding: 30px 20px 18px;
+}
+
+  .oder__button {
+    display: block;
+    box-sizing: border-box;
+    width: 280px;
+  }
+  
+}
+
+@media (min-width: $desktop-width) {
+
+  .oder__container {  
+    margin: 0 auto;
+    width: 700px;
+  }
+
+  .oder__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;    
+  } 
+
+  .oder__text-column {
+    width: 340px;
+
+    padding-top: 30px;
+    padding-right: 30px;
+}
+
+  .oder__text {
+    width: 310px;
+    margin: 0;
+    padding: 30px 15px 18px;
+  }
+
+  .oder__img-column {    
+    position: relative;  
+    width: 350px;
+    order: -1;
+
+    padding-top: 30px;
+    padding-right: 30px;
+  }
+
+  .oder__img-column::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 30px;
+    width: calc(100% - 30px);
+    height: calc(100% - 30px);
+    border: 1px dashed #fdfdfd;
+    border-radius: 0 80px 0 0;
+  }
+}

@@ -1,0 +1,120 @@
+.profit {
+  padding-bottom: 65px;
+  // background-color: azure;
+  }
+
+.profit__container {  
+  margin: 0 auto;
+  width: 290px;
+  padding-top: 10px;
+
+  border-top: 1px solid red;
+  background-color: azure;
+  }
+
+  .profit__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;    
+  } 
+
+  .profit__list-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 11px 0 25px;
+  }
+
+  .profit__title {
+    margin: 0 auto;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.2em; 
+    text-align: center;   
+  }
+
+  .profit__list {
+    width: 290px;
+    margin: 0;
+    padding: 30px 15px 18px;
+  }
+
+  .profit__item {
+  margin-bottom: 5px;
+  }
+
+
+  .profit__img-column {
+    display: flex;
+    position: relative;  
+  }
+
+  .profit__img--cropping-top-left {
+    position: relative;
+    display: block;
+    border-top-left-radius: 80px 80px;
+}
+
+
+@media (min-width: $tablet-width) {
+
+  .profit__container {  
+    width: 500px;
+    margin: 0 auto;
+  }
+
+  .profit__list {
+    margin: 0;
+    padding: 30px 20px 18px;
+    width: 430px;
+  } 
+}
+
+@media (min-width: $desktop-width) {
+
+  .profit__container {  
+    margin: 0 auto;
+    width: 700px;
+  }
+
+  .profit__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;    
+  } 
+
+  .profit__list-column {
+    width: 340px;
+    padding-top: 30px;
+    padding-left: 30px;
+  }
+
+  .profit__list {
+    margin: 0;
+    padding: 30px 15px 18px;
+    width: 310px;
+  } 
+
+  .profit__img-column {    
+    position: relative;  
+    width: 350px;
+
+    padding-top: 30px;
+    padding-left: 30px;
+  }
+
+  .profit__img-column::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: calc(100% - 30px);
+    height: calc(100% - 30px);
+    border: 1px dashed red;
+    // border: 1px dashed #fdfdfd;
+    border-radius: 80px 0 0 0;
+  }
+}
