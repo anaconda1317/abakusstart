@@ -13,6 +13,10 @@
   width: 100%;
   text-align: center;
   transform: translate(-50%, -50%);
+
+  background-color: #fff;
+  box-shadow: 3px 3px 13px 0 rgba(0,0,0,.2);
+    overflow: hidden;
 }
 
 .items-container {
@@ -55,23 +59,64 @@
   padding: 10px;
 }
 
+// .control {
+//   position: absolute;
+//   top: 0;
+//   bottom: 0;
+//   width: 15%;
+//   cursor: pointer;
+// }
+
+// я заменила -старое закомичено - начало
 .control {
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 15%;
+  margin: auto 0;
+  display: flex;
+  align-items: center;
+  // width: 15%;
+  // height: 15%;
+  width: 120px;
+  height: 120px;
+  padding: 28px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: none;
+  border-radius: 50%;
+  box-sizing: border-box;
   cursor: pointer;
+  z-index: 1;
 }
 
-.control.left {
+.control.left  {
   left: 0;
   right: auto;
+  justify-content: flex-end;
+  transform: translateX(-50%);
 }
 
 .control.right {
   right: 0;
-  left: auto;
+  justify-content: flex-start;
+  transform: translateX(50%);
 }
+
+.control  svg {
+  fill: #ffffff;}
+
+
+// я заменила -старое закомичено -конец
+
+
+// .control.left {
+//   left: 0;
+//   right: auto;
+// }
+
+// .control.right {
+//   right: 0;
+//   left: auto;
+// }
 
 .arrow {
   display: inline-block;
@@ -120,11 +165,6 @@
     left: 0;
   }
 }
-
-
-
-
-
 
 
 @media (min-width: $tablet-width) {

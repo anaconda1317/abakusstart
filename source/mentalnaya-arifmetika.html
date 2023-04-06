@@ -334,7 +334,14 @@
         <div class="oder__wrapper">       
           <div class="oder__text-column">
             <h3 class="oder__title">Ментальная арифметика</h3>
-            <p class="oder__text">Все часы производятся в Швейцарии и имеют сертификаты качества. Настоящие швейцарские часы — это предмет гордости и престижа.</p>
+            <p class="oder__lead">ПЕрвое занятие бесплатно</p>
+            <p class="oder__text">Все часы производятся в Швейцарии и имеют сертификаты качества. 
+              Настоящие швейцарские часы — это предмет гордости и престижа.
+            </p>
+            <dl class="card-item__price-list">
+              <dt>Цена:</dt>
+              <dd>от 900 ₽/час</dd>
+            </dl>
 <!-- записаться на занятие кнопка -->
               <button class="button oder__button modal-open" type="button" data-name="mental">Записаться на занятия
                 <span class="visually-hidden">Записаться на занятия по ментальной арифметике.</span>
@@ -356,6 +363,7 @@
           <h2 class="person-reviews__title">Отзывы родителей</h2>
           <p class="person-reviews__info">Мы&nbsp;уже зарекомендовали себя не&nbsp;только среди родителей и&nbsp;детей нашего района, но&nbsp;и&nbsp;в&nbsp;профессиональном сообществе. 
             Вот несколько отзывов родителей о&nbsp;результатах своих детей и&nbsp;о&nbsp;занятиях в&nbsp;нашем детском центре.</p>
+            <a class="reviews__write button" href="/form.php" target="_blank">Оставить свой</a>
         </div>
 
         <div class="carousel__wrapper">
@@ -382,12 +390,30 @@
             </div>
             <div class="control left">
               <span class="visually-hidden">Назад</span>
+              <!-- <div class="arrow left">&lt;-->
+                <svg  aria-hidden="true" width="12" height="20">
+                  <use xlink:href="#sp-icon-left-slider"></use>
+                </svg>
+               <!-- </div> -->
+            </div>
+            <div class="control right">
+              <span class="visually-hidden">Далее</span>
+            <!-- <div class="arrow right"> &gt;-->
+              <svg  aria-hidden="true" width="12" height="20">
+                <use xlink:href="#sp-icon-right-slider"></use>
+              </svg>
+            <!-- </div> -->
+            </div>
+
+            <!-- <div class="control left">
+              <span class="visually-hidden">Назад</span>
               <div class="arrow left">&lt;</div>
             </div>
             <div class="control right">
               <span class="visually-hidden">Далее</span>
               <div class="arrow right">&gt;</div>
-            </div>
+            </div> -->
+
           </div>
         </div>
 
@@ -396,9 +422,9 @@
           <div class="person-reviews__item-wrapper"> 
             <div class="person-reviews__left">
               <p class="person-reviews__category">Достоинства</p>
-              <div class="person-reviews__text">Кого-то может ток незначительный.</div>
+              <div class="person-reviews__text">Кого-то может ток незначительныйКого-то может ток незначительный.</div>
               <p class="person-reviews__category">Недостатки</p>
-              <div class="person-reviews__text">Невероятно легкий и тонкий, всего 1 сант </div>
+              <div class="person-reviews__text">Невероятно легкий и тонкий, всего 1 сантНевероятно легкий и тонкий, всего 1 сант  </div>
               <p class="person-reviews__category">Комментарий</p>
               <div class="person-reviews__text">Я очень ждала выхода новой да, эта модел мощнее. 
                 А дизайн и такой нежный фиолетовый цвет – это моя любовь. Если раздумываете о покупсомневайтесь и берите!</div>
@@ -407,7 +433,7 @@
             <div class="person-reviews__right">
               <p class="person-reviews__author">Наталья Николаевна</p>
               <div class="person-reviews__rate__wrapper">
-                <div class="person-reviews__rate person-reviews__rate--svg" aria-label="Рейтинг 5 из 5">
+                <div role="img" aria-label="Рейтинг 5 из 5" class="person-reviews__rate person-reviews__rate--svg">
                   <!-- звездочка -->
                   <svg class="person-reviews__star" width="15" height="15">
                     <use xlink:href="#sp-ikon_star-article"></use>

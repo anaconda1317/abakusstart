@@ -416,15 +416,14 @@
     position: absolute;
     top: 15px;
     left: -75px;
-    width: 38px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     background-image: url("../img/quote_article.svg");
-    background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;    
-    // background-color: linen;
-    /* border-radius: 50%; */
-    // outline:  14px solid linen;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    background-color: linen;
+    // background-size: contain; 
   }
   
   .main-article__quote::after {

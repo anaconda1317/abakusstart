@@ -4,6 +4,7 @@
   }
 
   .person-reviews__wrapper {
+    position: relative;
     width: 100%;
     margin-bottom: 30px;
     padding-top: 40px;
@@ -85,6 +86,10 @@
     gap: 3px;
   }
 
+  .person-reviews__rate svg {
+    display: block;
+  }
+
   .person-reviews__value {
     margin-left: 7px;
     font-size: 16px;
@@ -93,7 +98,9 @@
   }
 
   .person-reviews__date {
-
+    font-size: 16px;
+    line-height: 16px;
+    color: $main-text-color;
   }
 
 
@@ -106,6 +113,10 @@
     line-height: 16px;
     text-transform: uppercase;
     border-top: 1px dashed #666;
+  }
+
+  .person-reviews__category:first-child {
+    border-top: unset;
   }
 
   .person-reviews__text {
