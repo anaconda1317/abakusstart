@@ -77,11 +77,14 @@
     position: relative;  
   }
 
-  .profit__img--cropping-top-left {
+  .profit__img {
     position: relative;
     display: block;
+  }
+
+  .profit__img--cropping-top-left {
     border-top-left-radius: 80px 80px;
-}
+  }
 
 
 @media (min-width: $tablet-width) {

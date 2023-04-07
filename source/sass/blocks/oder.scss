@@ -48,7 +48,7 @@
     padding: 0 5px;
     margin-top: 10px;
     color: $main-yellow;
-    font-size: 19px;
+    font-size: 18px;
     // line-height: 29px;
     font-weight: 500;
     letter-spacing: .1rem;
@@ -140,11 +140,16 @@
     order: 1;
   }
 
+  .oder__img {
+    position: relative;
+    display: block;
+  }
+
   .oder__img--cropping-top-right {
     position: relative;
     display: block;
     border-top-right-radius: 80px 80px;
-}
+  }
 
 
 @media (min-width: $tablet-width) {
@@ -165,7 +170,7 @@
     margin-top: 20px;
     padding-left: 20px;
     padding-right: 0;
-    font-size: 21px;
+    font-size: 19px;
     color: $main-yellow;
     font-weight: 500;
     letter-spacing: .110rem;

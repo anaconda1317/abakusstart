@@ -1,8 +1,9 @@
 .carousel__wrapper {
   position: relative;
   width: auto;
-  height: 550px;
+  height: 671px;
   margin: 0 auto;
+  overflow: hidden;
   // padding: 0;
 }
 
@@ -11,17 +12,18 @@
   top: 50%;
   left: 50%;
   width: 100%;
+  height: 100%;
   text-align: center;
   transform: translate(-50%, -50%);
 
   background-color: #fff;
-  box-shadow: 3px 3px 13px 0 rgba(0,0,0,.2);
-    overflow: hidden;
+  // box-shadow: 3px 3px 13px 0 rgba(0,0,0,.2);
 }
 
 .items-container {
   position: relative;
   width: 100%;
+  height: 100%;
   overflow: hidden;
 }
 
@@ -46,7 +48,7 @@
 .description {
   display: flex;
   justify-content: space-between;
-  margin: 30px 20%;
+  // margin: 30px 20%;
   font-size: 32px;
   border: 2px solid black;
 }
@@ -80,7 +82,7 @@
   width: 120px;
   height: 120px;
   padding: 28px;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0,51,255,.5);
   border: none;
   border-radius: 50%;
   box-sizing: border-box;
@@ -190,7 +192,7 @@
   .control {
     width: unset;
     height: unset;
-    
+
     background-color: unset;
     border-radius: unset; 
   }
