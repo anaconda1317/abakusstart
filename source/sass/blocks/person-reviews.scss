@@ -111,6 +111,7 @@
     font-weight: 700;
     font-size: 16px;
     line-height: 16px;
+    color: #666;
     text-transform: uppercase;
     border-top: 1px dashed #666;
   }
@@ -127,7 +128,47 @@
     line-height: 1.5;
   }
 
+  .person-reviews__write-btn {
+    // display: block;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 362px;
+    right: 10px;
+    min-height: 32px;
+    width: 112px;
+    margin: 0;
+    padding-top: 0;
+    padding-right: 6px;
+    padding-left: 6px;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: calc(32px - 1px * 2);
+    text-align: center;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    background-color: $main-blue;
+    z-index: 99;
   
+    transition: opacity 0.3s ease 0.1s, box-shadow 1s ease, background-color 0.5s ease, border-color 0.3s ease 0.2s, color 0.3s;
+  
+    &:focus,
+    &:hover {
+      background-color: #0230eb;
+      // background-color: unset;
+      color: rgba(255, 255, 255, 0.7);
+      border: 1px $main-blue;
+      box-shadow: 4px 4px 0 0 #9da2ab;
+      transition: box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease 0.25s, border-color 0.3s ease, opacity 0.2s;
+    }
+  
+    &:active {
+      background-color: #0230eb;
+      color: rgba(255, 255, 255, 0.7);
+      box-shadow: 2px 2px 0 0 #9da2ab;
+    }
+  }
 
 
 @media (min-width: $tablet-width) {
@@ -163,6 +204,44 @@
   //   width: 100%;
   //   margin-bottom: 1.1em;
   // }
+
+  .person-reviews__write-btn {
+    position: absolute;
+    top: 25px;
+    right: 0;
+    min-height: 40px;
+    display: block;
+    width: 150px;
+    margin: 0;
+    padding-top: 10px;
+    padding-right: 11px;
+    padding-left: 11px;
+    font-size: 14px;
+    line-height: 21px;
+    color: $main-blue;
+    background-color: #ffffff;
+    border-radius: 0;
+    border: 1px solid $main-blue;
+
+    outline: none;
+    transition: opacity 0.3s ease 0.1s, box-shadow 1s ease, background-color 0.5s ease, border-color 0.3s ease 0.2s, color 0.3s, opacity 0.1s;
+
+    &:focus,
+    &:hover {
+      background-color: #ffffff;
+      color: rgba(0, 51, 255, 0.8);
+      box-shadow: 4px 4px 0 0 #9da2ab;
+      border: 1px solid $main-blue;
+      transition: box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease 0.25s, border-color 0.3s ease, opacity 0.2s;
+    }
+
+    &:active {
+      border: 1px solid $main-blue;
+      background-color: #ffffff;
+      color: rgba(0, 51, 255, 0.8);
+      box-shadow: 2px 2px 0 0 #9da2ab;
+    }
+  }  
 }
 
 
@@ -171,45 +250,5 @@
   .person-reviews__container {  
     margin: 0 auto;
     width: 700px;
-  }
-
-  .profit__wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 auto;    
-  } 
-
-  .profit__list-column {
-    width: 340px;
-    padding-top: 30px;
-    padding-left: 30px;
-  }
-
-  .profit__list {
-    margin: 0;
-    padding: 30px 15px 18px;
-    width: 310px;
-  } 
-
-  .profit__img-column {    
-    position: relative;  
-    width: 350px;
-
-    padding-top: 30px;
-    padding-left: 30px;
-  }
-
-  .profit__img-column::before {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    width: calc(100% - 30px);
-    height: calc(100% - 30px);
-    border: 1px dashed red;
-    // border: 1px dashed #fdfdfd;
-    border-radius: 80px 0 0 0;
   }
 }

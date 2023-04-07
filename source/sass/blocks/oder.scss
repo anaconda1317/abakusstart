@@ -31,22 +31,66 @@
   }
 
   .oder__title {
-    margin: 0 auto;
+    margin: 0;
+    padding: 0 5px;
+    font-weight: 500;
+    // font-weight: 700;
+    font-size: 21px;
+    line-height: 29px;
+    letter-spacing: .125rem; 
     font-weight: 700;
-    font-size: 28px;
-    line-height: 1.2em; 
-    text-align: center;   
+    text-align: center; 
+    text-transform: uppercase; 
   }
 
   .oder__lead {
-    
+    margin: 0 auto;
+    padding: 0 5px;
+    margin-top: 10px;
+    color: $main-yellow;
+    font-size: 19px;
+    // line-height: 29px;
+    font-weight: 500;
+    letter-spacing: .1rem;
+    text-align: center;
+    // transition: border .25s, color .25s;
   }
 
   .oder__text {
     width: 290px;
     margin: 0;
     padding: 30px 15px 18px;    
+    font-size: 16px;
+    line-height: 22px;
   }
+
+  /* компонент -  */
+.oder__price-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 270px;
+  margin-top: 0;
+  margin-right: 0;
+  margin-left: 0;
+  // margin-bottom: 2.9em;
+  margin-bottom: 0.85em;
+  padding: 0 10px 0;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.oder__price-list dt {
+  margin: 0;
+  color: $white;
+  font-size: 18px;
+}
+
+.oder__price-list dd {
+  margin: 0;
+  color: $white;
+  font-size: 24px;
+}
 
   .oder__button {
     display: block;
@@ -110,18 +154,45 @@
     margin: 0 auto;
   }
 
+  .oder__title {
+    font-weight: 700;
+    font-size: 23px;
+    letter-spacing: .125rem;
+  }
+
+  .oder__lead {
+    margin: 0 auto;
+    margin-top: 20px;
+    padding-left: 20px;
+    padding-right: 0;
+    font-size: 21px;
+    color: $main-yellow;
+    font-weight: 500;
+    letter-spacing: .110rem;
+    border: none;
+    border-left: 2px solid $main-yellow;
+    // transition: border .25s, color .25s;
+  }
+
   .oder__text {
-    width: 430px;
+    width: 370px;
     margin: 0;
-    padding: 30px 20px 18px;
-}
+    padding: 30px 10px 18px;
+    font-size: 18px;
+    line-height: 23px;
+    }
+
+  .oder__price-list {
+    width: 300px;
+    margin: 0;
+    padding: 10px 10px 15px;
+  }
 
   .oder__button {
     display: block;
     box-sizing: border-box;
     width: 280px;
-  }
-  
+  }  
 }
 
 @media (min-width: $desktop-width) {
@@ -129,6 +200,7 @@
   .oder__container {  
     margin: 0 auto;
     width: 700px;
+    padding-top: 0;
   }
 
   .oder__wrapper {
@@ -146,10 +218,26 @@
     padding-right: 30px;
 }
 
+  .oder__title {
+    font-size: 27px;
+    line-height: 35px;
+    font-weight: 700;
+    letter-spacing: .125rem;
+  }
+
+  .oder__lead {
+    font-size: 19px;
+    padding-left: 10px;
+  }
+
   .oder__text {
-    width: 310px;
+    width: 300px;
     margin: 0;
     padding: 30px 15px 18px;
+  }
+
+  .oder__price-list {
+    width: 290px;
   }
 
   .oder__img-column {    

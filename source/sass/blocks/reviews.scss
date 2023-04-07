@@ -148,7 +148,7 @@
   display: none;
 }
 
-.reviews__write {
+.reviews__write-btn {
   // display: block;
   display: flex;
   align-items: center;
@@ -190,7 +190,7 @@
   }
 }
 
-// .reviews__write {
+// .reviews__write-btn {
 //   position: absolute;
 //   top: 350px;
 //   right: 0;
@@ -220,7 +220,7 @@
 //   }
 // }
 
-// .reviews__write {
+// .reviews__write-btn {
 //   display: none;
 // }
 
@@ -399,7 +399,7 @@
     }
   }
 
-  .reviews__write {
+  .reviews__write-btn {
     position: absolute;
     top: 25px;
     right: 0;

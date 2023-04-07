@@ -186,7 +186,20 @@
 
 
 @media (max-width: $mobile-width-only) {
+
+  .control {
+    width: unset;
+    height: unset;
+    
+    background-color: unset;
+    border-radius: unset; 
+  }
+
   .control > .arrow {
+    display: none;
+  }
+
+  .control > svg {
     display: none;
   }
 

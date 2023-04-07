@@ -35,15 +35,42 @@
   }
 
   .profit__list {
+    @include list-reset();
     width: 290px;
     margin: 0;
     padding: 30px 15px 18px;
+    counter-reset: rating;
   }
+
+  // .profit__item {
+  // margin-bottom: 5px;
+  // }
 
   .profit__item {
-  margin-bottom: 5px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    counter-increment: rating;
+    margin-bottom: 5px;
+    font-size: 20px;
+    line-height: 30px;
   }
 
+  .profit__item::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: counter(rating);
+    font-size: 33px;
+    line-height: 46px;
+    font-weight: 600;
+    color: rgba(0, 51, 255, 0.5);
+  }
+
+  .profit__name {
+    margin: 10px 0 5px 50px;
+    font-weight: 600;
+  }
 
   .profit__img-column {
     display: flex;
@@ -94,9 +121,13 @@
 
   .profit__list {
     margin: 0;
-    padding: 30px 15px 18px;
+    padding: 10px 15px 18px;
     width: 310px;
   } 
+
+  .profit__name {
+    margin: 5px 0 5px 50px;
+  }
 
   .profit__img-column {    
     position: relative;  
