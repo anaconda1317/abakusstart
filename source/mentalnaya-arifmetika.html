@@ -168,10 +168,10 @@
                   <h2>Поделиться в соцсетях</h2>
                   <ul class="socials-list">
                     <li class="socials-item">
-                      <a class="socials-link socials-link-vk" href="#"><span class="visually-hidden">VK</span></a>
+                      <a class="socials-link socials-link-vk" href="#"><span class="visually-hidden">Telegram</span></a>
                     </li>
                     <li class="socials-item">
-                      <a class="socials-link socials-link-pinterest" href="#"><span class="visually-hidden">Facebook</span></a>
+                      <a class="socials-link socials-link-pinterest" href="#"><span class="visually-hidden">Pinterest</span></a>
                     </li>
                     <li class="socials-item">
                       <a class="socials-link socials-link-instagram" href="#"><span class="visually-hidden">Instagram</span></a>
@@ -281,7 +281,7 @@
 <!--article_footer start -->
           <footer class="main-article__footer">
             <div class="main-article__content-wrapper">
-              <h3 class="main-article__footer-title">Любите ли вы Грузию?</h3>
+              <h3 class="main-article__footer-title line-decoration">Любите ли вы Грузию?</h3>
               <ul class="main-article__footer-links">
                 <li class="main-article__footer-item">
                   <a class="main-article__footer-link" href="#">Грузия</a>
@@ -367,11 +367,11 @@
 <!-- slaider_start -->
         <div class="carousel__wrapper">
           <div class="carousel">
-            <div class="items-container" role="list">
+            <ul class="items-container" role="list">
 <!-- отзывы в слайдер 1--> 
-              <div class="item active">  
+              <li class="item active">  
                 <div class="person-reviews__item"> 
-                  <div class="person-reviews__item-wrapper"> 
+                  <div class="person-reviews__item-wrapper person-reviews__item-wrapper--accent"> 
                     <div class="person-reviews__left">
                       <p class="person-reviews__category">Достоинства</p>
                       <div class="person-reviews__text">Кого-то может ток незначительныйКого-то может ток незначительный.</div>
@@ -409,9 +409,9 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </li>
 <!-- отзывы в слайдер 2-->   
-              <div class="item">
+              <li class="item">
                 <div class="person-reviews__item"> 
                   <div class="person-reviews__item-wrapper"> 
                     <div class="person-reviews__left">
@@ -451,9 +451,9 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </li>
 <!-- отзывы в слайдер 3-->  
-              <div class="item">
+              <li class="item">
                 <div class="person-reviews__item"> 
                   <div class="person-reviews__item-wrapper"> 
                     <div class="person-reviews__left">
@@ -493,22 +493,23 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </li>
 <!-- стрелка назад -->
-            <div class="control left">
+            <button class="control left">
               <span class="visually-hidden">Назад</span>
-                <svg  aria-hidden="true" width="12" height="20">
+                <svg class="arrow left" aria-hidden="true" width="12" height="20">
                   <use xlink:href="#sp-icon-left-slider"></use>
                 </svg>
-            </div>
+            </button>
+
 <!-- стрелка вперед -->
-            <div class="control right">
+            <button class="control right">
               <span class="visually-hidden">Далее</span>
-              <svg  aria-hidden="true" width="12" height="20">
+              <svg class="arrow right" aria-hidden="true" width="12" height="20">
                 <use xlink:href="#sp-icon-right-slider"></use>
               </svg>
-            </div>
-          </div>
+            </button>
+          </ul>
         </div>
 <!-- slaider_end -->
       </div>     
@@ -518,31 +519,49 @@
     <!-- Читайте также -->
 
     <section class="popular">
-      <div class="container">
-        <h2>Читайте также:</h2>
-        <ul class="popular-list">
-          <li class="popular-item">
-            <a class="popular-item-link" href="#">
-              <img class="popular-item-img" src="img/photo-14.jpg" width="235" height="131" alt="Пассивный дом">
-              <p class="popular-item-text">Пассивный дом</p>
+      <div class="popular__container">
+        <h3 class="popular__title line-decoration line-decoration--popular">Что еще почитать</h3>
+        <ul class="popular__list">
+          <li class="popular__item">
+            <a class="popular__item-link" href="#">
+              <!-- <section> -->
+                <img class="popular__item-img" src="img/photo-14.jpg" width="235" height="131" alt="Пассивный дом">
+                  <div class="popular__more-info">
+                    <p class="popular__more-topic">Страны, Япония</p>
+                    <time class="popular__more-meta" datetime="2020-09-01">01.09.2020</time>
+                  </div>
+                <h3 class="popular__item-title">Пассивный дом</h3>
+              <!-- </section> -->
             </a>
           </li>
-          <li class="popular-item">
-            <a class="popular-item-link" href="#">
-              <img class="popular-item-img" src="img/photo-15.jpg" width="235" height="131" alt="История религии в Грузии">
-              <p class="popular-item-text">История религии в Грузии</p>
+          <li class="popular__item">
+            <a class="popular__item-link" href="#">
+              <img class="popular__item-img" src="img/photo-15.jpg" width="235" height="131" alt="История религии в Грузии">
+                <div class="popular__more-info">
+                  <p class="popular__more-topic">Путешественники</p>
+                  <time class="popular__more-meta" datetime="2020-09-29">29.09.2020</time>
+                </div>
+              <h3 class="popular__item-title">История религии в Грузии</h3>
             </a>
           </li>
-          <li class="popular-item">
-            <a class="popular-item-link" href="#">
-              <img class="popular-item-img" src="img/photo-16.jpg" width="235" height="131" alt="Куда полететь в свой долгожданный отпуск?">
-              <p class="popular-item-text">Куда полететь в свой долгожданный отпуск?</p>
+          <li class="popular__item">
+            <a class="popular__item-link" href="#">
+              <img class="popular__item-img" src="img/photo-16.jpg" width="235" height="131" alt="Куда полететь в свой долгожданный отпуск?">
+                <div class="popular__more-info">
+                  <p class="popular__more-topic">Путешественники</p>
+                  <time class="popular__more-meta" datetime="2020-09-29">29.09.2020</time>
+                </div>
+              <h3 class="popular__item-title">Куда полететь в свой долгожданный отпуск?</h3>
             </a>
           </li>
-          <li class="popular-item">
-            <a class="popular-item-link" href="#">
-              <img class="popular-item-img" src="img/photo-17.jpg" width="235" height="131" alt="Электрическое отопление в частном доме">
-              <p class="popular-item-text">Электрическое отопление в частном доме</p>
+          <li class="popular__item">
+            <a class="popular__item-link" href="#">
+              <img class="popular__item-img" src="img/photo-17.jpg" width="235" height="131" alt="Электрическое отопление в частном доме">
+                <div class="popular__more-info">
+                  <p class="popular__more-topic">Путешественники</p>
+                  <time class="popular__more-meta" datetime="2020-09-29">29.09.2020</time>
+                </div>
+              <h3 class="popular__item-title">Электрическое отопление в частном доме</h3>
             </a>
           </li>
         </ul>
@@ -552,7 +571,11 @@
  <section class="post-social">
   <div class="post-social__wrapper">
     <h2 class="visually-hidden"> Поделиться в социальных сетях сайт развивающего детского центра &laquo;СТАРТ&raquo; в Красноярске, в Советском районе.</h2>
-      <h3 class="post-social__title">Поделиться</h3>
+      <h3 class="post-social__title">Поделиться
+        <svg  aria-hidden="true" width="16" height="16">
+          <use xlink:href="#sp-share_abakusstart"></use>
+        </svg>
+      </h3>
           <ul class="post-social__list">
               <li class="post-social__item post-social__item--vk">
                   <a class="post-social__button" href="https://vk.com/share.php?url==https://abakusstart.ru/index.html" target="_blank" rel="nofollow">Вконтакте

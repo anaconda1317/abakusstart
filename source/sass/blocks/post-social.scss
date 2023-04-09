@@ -18,8 +18,9 @@
 .post-social__title {
     position: relative;
   
-    display: block;
-    width: 120px;
+    display: flex;
+    align-items: center;
+    width: auto;
     margin: 0 0 15px;
     font-weight: 700;
     font-size: 18px;
@@ -29,6 +30,14 @@
   &:hover {
     cursor: pointer;
   }
+}
+
+.post-social__title svg {
+    margin-left: 10px;
+
+    &:hover {
+        cursor: pointer;
+      }
 }
 
 .post-social__title::after {

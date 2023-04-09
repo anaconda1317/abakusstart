@@ -17,10 +17,10 @@
   transform: translate(-50%, -50%);
 
   background-color: #fff;
-  // box-shadow: 3px 3px 13px 0 rgba(0,0,0,.2);
 }
 
 .items-container {
+  @include list-reset();
   position: relative;
   width: 100%;
   height: 100%;
@@ -45,22 +45,6 @@
   width: 100%;
 }
 
-.description {
-  display: flex;
-  justify-content: space-between;
-  // margin: 30px 20%;
-  font-size: 32px;
-  border: 2px solid black;
-}
-
-// .description img {
-//   height: unset;
-// }
-
-.project-name {
-  padding: 10px;
-}
-
 // .control {
 //   position: absolute;
 //   top: 0;
@@ -78,7 +62,6 @@
   display: flex;
   align-items: center;
   // width: 15%;
-  // height: 15%;
   width: 120px;
   height: 120px;
   padding: 28px;
@@ -88,6 +71,14 @@
   box-sizing: border-box;
   cursor: pointer;
   z-index: 1;
+
+    &:hover {
+      opacity: 0.7;
+    }
+    
+    &:active {
+      opacity: 0.5;
+    }
 }
 
 .control.left  {
@@ -99,12 +90,18 @@
 
 .control.right {
   right: 0;
+  left: auto;
   justify-content: flex-start;
   transform: translateX(50%);
 }
 
-.control  svg {
-  fill: #ffffff;}
+.arrow  {
+  fill: #ffffff;
+}
+
+// .control  svg {
+//   fill: #ffffff;
+// }
 
 
 // я заменила -старое закомичено -конец
@@ -119,14 +116,6 @@
 //   right: 0;
 //   left: auto;
 // }
-
-.arrow {
-  display: inline-block;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 84px;
-}
 
 .arrow.right {
   right: 50%;
@@ -171,18 +160,10 @@
 
 @media (min-width: $tablet-width) {
 
-  .description {
-    flex-direction: column;
-    align-items: center;
-  }
 }
  
 
 @media (min-width: $desktop-width) {
-  .description {
-    flex-direction: row;
-    align-items: center;
-  }
 
 }
 
@@ -197,20 +178,9 @@
     border-radius: unset; 
   }
 
-  .control > .arrow {
-    display: none;
-  }
-
   .control > svg {
     display: none;
   }
 
-  .project-name {
-    display: none;
-  }
-
-  .description {
-    border: 0;
-  }
 }
 

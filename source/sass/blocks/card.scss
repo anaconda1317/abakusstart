@@ -512,6 +512,7 @@
   /* display: block; */
   /* padding-top: 34px; */
   padding-left: 60px;
+  padding-right: 5px;
   margin-left: auto;
   margin-bottom: 10px;
   align-items: center;
@@ -705,5 +706,9 @@ svg {
 
   .card-item__description {
     font-size: 16px;
+  }
+
+  .card-item__parameter-list {
+    padding-right: 0;
   }
 }
