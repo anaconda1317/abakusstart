@@ -39,7 +39,8 @@
   margin: 0;
   margin-bottom: 1.25rem; 
   font-weight: 600;
-  font-size: 28px;
+  font-size: 22px;
+  // font-size: 28px;
   line-height: 1.2em;
   color: #87929A;
   text-align: center;
@@ -85,8 +86,9 @@
   transition: all 0.5s linear;
   transition-delay: .15s;
 
-  &:hover {
-    scale: 1.02;
+  &:hover {    
+    transform: scale(1.02);
+    // scale: 1.02;
     // opacity: .9;
     transition: all 0.5s linear;
   }
@@ -159,7 +161,7 @@
   .popular__title {
     margin: 0;
     font-weight: 700;
-    font-size: 30px;
+    font-size: 22px;
     line-height: 45px;
   } 
 }

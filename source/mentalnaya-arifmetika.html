@@ -105,12 +105,27 @@
 
 
       <!-- статья -->
-    <section class="main-article-uslugi" name="qqq">
+    <section class="main-article-uslugi">
 <!-- header_article start-->
         <h2 class="visually-hidden">Cтатья о занятиях по ментальной арифметике</h2>
         <article class="main-article">
           <header class="main-article__header">
-            <img class="main-article__header-img" src="img/photo-1.jpg" width="1169" height="316" alt="Тбилиси. Исторический центр">
+
+            <picture>
+              <!-- <source type="image/webp" media="(min-width: 1200px)"
+                srcset="img/mental-desktop@1x.webp 1x, img/mental-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)"
+                srcset="img/mental-tablet@1x.webp 1x, img/mental-tablet@2x.webp 2x">                  -->
+
+              <source media="(min-width: 1200px)"
+                srcset="img/mental_artical/mental-desktop@1x.jpg 1x, img/mental_artical/mental-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)"
+                srcset="img/mental_artical/mental-tablet@1x.jpg 1x, img/mental_artical/mental-tablet@2x.jpg 2x">
+              <img class="main-article__header-img" src="img/mental_artical/mental-desktop@1x.jpg 1x" alt="Тбилиси. Исторический центр">
+              <!-- <img class="main-article__header-img" src="img/mental_artical/photo-1.jpg" width="1169" height="316" alt="Тбилиси. Исторический центр"> -->
+  </picture>     
+           
+           
             <div class="main-article__header-content">
               <h3 class="main-article__title">10 золотых правил для поездки в Грузию</h3>
               <div class="main-article__meta-row">
@@ -263,7 +278,20 @@
               <li class="main-article__rules-item">
                 <section class="rule">
                   <h4 class="main-article__rules-title">Не все знают русский язык</h4>
-                  <p class="main-article__rules-text">Несмотря на то, что Грузия является территорией постсоветского пространства, здесь далеко не всего знают русский. Как правило, на русском языке говорят люди старшего возраста, а молодёжь лучше знает английский язык.</p>
+                  <p class="main-article__rules-text">Несмотря на то, что 
+                    <span class="tooltip">
+                      <dfn class="tooltip-toggle" id="psicho" aria-labelledby="tooltip-label-psicho">психиатр</dfn>
+                      <span class="tooltip-content user-info" role="tooltip">
+                        <img class="user-photo" src="img/user-photo-01-big.jpg" width="64" height="64" alt="">
+                        <span class="user-name">Семён Иванов</span>
+                        <span class="user-prof">фотограф</span>
+                        <span class="user-email">semen@ivanov.ru</span>
+                      </span>
+                    </span>
+                     является территорией постсоветского пространства, здесь далеко не всего знают русский. Как правило, на русском языке говорят люди старшего возраста,  а молодёжь лучше знает английский язык.</p>
+                  <!-- <p class="main-article__rules-text">Несмотря на то, что Грузия является территорией постсоветского пространства,
+                     здесь далеко не всего знают русский. Как правило, на русском языке говорят люди старшего возраста,
+                      а молодёжь лучше знает английский язык.</p> -->
                 </section>
               </li>
 
@@ -356,7 +384,7 @@
 
     
 <!-- ОТЗЫВЫ НАЧАЛО -->
-    <section class="person-reviews">
+    <section class="person-reviews" id="reviews">
       <div class="person-reviews__container">
         <div class="person-reviews__wrapper">
           <h2 class="person-reviews__title">Отзывы родителей</h2>
@@ -525,7 +553,19 @@
           <li class="popular__item">
             <a class="popular__item-link" href="#">
               <!-- <section> -->
-                <img class="popular__item-img" src="img/photo-14.jpg" width="235" height="131" alt="Пассивный дом">
+                
+                <picture>                 
+                  <source type="image/webp"
+                    srcset="img/photo-mental-mobile@1x.webp 1x, img/photo-mental-mobile@2x.webp 2x">
+
+                  <img class="popular__item-img" src="img/mental_artical/photo-14.jpg" width="235" height="131" alt="Пассивный дом"
+                    srcset="img/photo-mental-mobile@1x.jpg 1x, img/photo-mental-mobile@2x.jpg 2x">
+
+                    <!-- <img class="card-item__img" src="img/photo-repetitor-mobile@1x.jpg"
+                    srcset="img/photo-repetitor-mobile@1x.jpg 1x, img/photo-repetitor-mobile@2x.jpg 2x"
+                    alt="Репетитор начальных классов" aria-labelledby="title_3"> -->
+                </picture>      
+
                   <div class="popular__more-info">
                     <p class="popular__more-topic">Страны, Япония</p>
                     <time class="popular__more-meta" datetime="2020-09-01">01.09.2020</time>
