@@ -1,0 +1,96 @@
+
+  .tooltip {
+    position: relative;
+    cursor: pointer;
+  }
+
+  .tooltip dfn {
+    font-style: normal;
+    text-decoration: underline dashed #ff8d86;
+    text-underline-offset: 4px;
+}
+
+//  .tooltip__toggle {
+//   font-style: normal;
+//   text-decoration: underline dashed #ff8d86;
+//   text-underline-offset: 4px;
+//  }
+  
+.tooltip__content {
+  position: absolute;
+  top: 45px;
+  left: -100px;
+  width: 240px;
+  padding: 8px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+  background: #333333;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  border-radius: 16px;
+  box-sizing: border-box;
+  opacity: 0;
+  transition-property: opacity;
+  transition: opacity 0.5s ease 0.1s;
+}
+
+  .tooltip__toggle:hover ~ .tooltip__content {
+    opacity: 1;
+    transition-delay: 75ms;
+    transition: opacity 0.3s ease;
+  }
+
+  .user-info {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-areas:
+      "img name"
+      "img prof"
+      "img insta";
+    column-gap: 12px;
+  }
+  
+  .user-photo {
+    grid-area: img;
+    border-radius: 50%;
+  }
+  
+  .user-name {
+    grid-area: name;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  
+  .user-prof {
+    grid-area: prof;
+    font-size: 12px;
+    line-height: 16px;
+    color: #aaaaaa;
+  }
+  
+  .user-insta {
+    grid-area: email;
+  }
+
+
+@media (min-width: $tablet-width) {
+
+  .tooltip__content {
+    position: absolute;
+    top: -60px;
+    left: 150px;
+  }
+  
+}
+ 
+
+@media (min-width: $desktop-width) {
+
+  .tooltip__content {
+    position: absolute;
+    top: -35px;
+    left: 200px;
+  }
+
+}

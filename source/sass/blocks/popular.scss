@@ -81,7 +81,8 @@
 
 .popular__item-img {
   margin-bottom: 15px;
-  border: none;
+  // border: none;
+  border: 1px solid #87929a;
   border-radius: 6px;
   transition: all 0.5s linear;
   transition-delay: .15s;
@@ -89,7 +90,7 @@
   &:hover {    
     transform: scale(1.02);
     // scale: 1.02;
-    // opacity: .9;
+    opacity: .9;
     transition: all 0.5s linear;
   }
 }

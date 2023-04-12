@@ -1,7 +1,7 @@
 .carousel__wrapper {
   position: relative;
   width: auto;
-  height: 671px;
+  height: 710px;
   margin: 0 auto;
   overflow: hidden;
   // padding: 0;
@@ -159,12 +159,17 @@
 
 
 @media (min-width: $tablet-width) {
-
+  .carousel__wrapper {
+    height: 660px;
+  }
 }
  
 
 @media (min-width: $desktop-width) {
 
+  .carousel__wrapper {
+    height: 560px;
+  }
 }
 
 
