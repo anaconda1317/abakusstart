@@ -1,7 +1,7 @@
 .carousel__wrapper {
   position: relative;
   width: auto;
-  height: 710px;
+  height: 700px;
   margin: 0 auto;
   overflow: hidden;
   // padding: 0;
@@ -65,7 +65,8 @@
   width: 120px;
   height: 120px;
   padding: 28px;
-  background-color: rgba(0,51,255,.5);
+  background-color: #0033ff;
+  // background-color: rgba(0,51,255,.5);
   border: none;
   border-radius: 50%;
   box-sizing: border-box;
@@ -160,7 +161,7 @@
 
 @media (min-width: $tablet-width) {
   .carousel__wrapper {
-    height: 660px;
+    height: 630px;
   }
 }
  
@@ -168,7 +169,7 @@
 @media (min-width: $desktop-width) {
 
   .carousel__wrapper {
-    height: 560px;
+    height: 525px;
   }
 }
 

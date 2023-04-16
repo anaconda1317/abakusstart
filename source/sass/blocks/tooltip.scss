@@ -20,24 +20,27 @@
   position: absolute;
   top: 45px;
   left: -100px;
-  width: 240px;
-  padding: 8px;
+  width: 245px;
+  padding: 5px;
+  // padding: 8px;
   font-size: 14px;
   line-height: 20px;
   color: #ffffff;
-  background: #333333;
+  background: #ff0266;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-  border-radius: 16px;
+  border-radius: 6px;
   box-sizing: border-box;
   opacity: 0;
   transition-property: opacity;
-  transition: opacity 0.5s ease 0.1s;
+  transition: all 0.5s ease-out 550ms;
+  // transition: opacity 0.5s ease 0.1s;
 }
 
   .tooltip__toggle:hover ~ .tooltip__content {
     opacity: 1;
     transition-delay: 75ms;
-    transition: opacity 0.3s ease;
+    transition: all 0.3s ease-out;
+    // transition: opacity 0.3s ease;
   }
 
   .user-info {
@@ -64,19 +67,22 @@
   
   .user-prof {
     grid-area: prof;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 16px;
-    color: #aaaaaa;
+    color: $main-text-color;
+    // color: #aaaaaa;
   }
   
   .user-insta {
-    grid-area: email;
+    grid-area: insta;
   }
 
 
 @media (min-width: $tablet-width) {
 
   .tooltip__content {
+    width: 250px;
+    padding: 8px;
     position: absolute;
     top: -60px;
     left: 150px;
