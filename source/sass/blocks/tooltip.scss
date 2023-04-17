@@ -32,16 +32,14 @@
   box-sizing: border-box;
   opacity: 0;
   transition-property: opacity;
-  transition: all 0.5s ease-out 550ms;
+  transition: all 0.5s ease-out 0.2s;
   // transition: opacity 0.5s ease 0.1s;
 }
 
-  .tooltip__toggle:hover ~ .tooltip__content {
-    opacity: 1;
-    transition-delay: 75ms;
-    transition: all 0.3s ease-out;
-    // transition: opacity 0.3s ease;
-  }
+
+  .__opened {
+  opacity: 1;
+}
 
   .user-info {
     display: grid;
@@ -86,17 +84,22 @@
     position: absolute;
     top: -60px;
     left: 150px;
-  }
-  
+  }  
 }
  
 
 @media (min-width: $desktop-width) {
+
+  .tooltip__toggle:hover ~ .tooltip__content {
+    opacity: 1;
+    transition-delay: 75ms;
+    transition: all 0.3s ease-out;
+    // transition: opacity 0.3s ease;
+  }
 
   .tooltip__content {
     position: absolute;
     top: -35px;
     left: 200px;
   }
-
 }
