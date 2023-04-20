@@ -10,11 +10,6 @@
     text-underline-offset: 4px;
 }
 
-//  .tooltip__toggle {
-//   font-style: normal;
-//   text-decoration: underline dashed #ff8d86;
-//   text-underline-offset: 4px;
-//  }
   
 .tooltip__content {
   position: absolute;
@@ -23,7 +18,7 @@
   width: 245px;
   padding: 5px;
   // padding: 8px;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 20px;
   color: #ffffff;
   background: #ff0266;
@@ -41,42 +36,7 @@
   opacity: 1;
 }
 
-  .user-info {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    grid-template-areas:
-      "img name"
-      "img prof"
-      "img insta";
-    column-gap: 12px;
-  }
-  
-  .user-photo {
-    grid-area: img;
-    border-radius: 50%;
-  }
-  
-  .user-name {
-    grid-area: name;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 24px;
-  }
-  
-  .user-prof {
-    grid-area: prof;
-    font-size: 14px;
-    line-height: 16px;
-    color: $main-text-color;
-    // color: #aaaaaa;
-  }
-  
-  .user-insta {
-    grid-area: insta;
-  }
-
-
-@media (min-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
 
   .tooltip__content {
     width: 250px;

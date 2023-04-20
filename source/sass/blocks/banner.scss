@@ -57,7 +57,7 @@
     padding-top: 157px;
   }
 }
-
+.banner__image--inner,
 .banner__image--photo,
 .banner__image--form {
   background-image: url("../img/bg-back-mobile@1x_not_index_768.jpg");
@@ -90,6 +90,12 @@
 
 .banner__wrapper {
   width: 265px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.banner__wrapper--inner {
+  width: 285px;
   margin: 0 auto;
   padding: 0;
 }
@@ -129,6 +135,15 @@
   line-height: 24px;
 }
 
+.banner__intro--inner {
+  width: 280px;
+  margin: 0 auto;
+  padding-top: 8px;
+  padding-bottom: 21px;
+
+  line-height: 24px;
+}
+
 .banner__intro--form {
   width: 265px;
   margin: 0 auto;
@@ -138,7 +153,7 @@
   line-height: 24px;
 }
 
-
+.banner__image--inner img,
 .banner__image--form img,
 .banner__image--photo img {
   display: block;
@@ -240,6 +255,7 @@
     margin-bottom: 49px;
   }
 
+  .banner__image--inner,
   .banner__image--photo,
   .banner__image--form {
     width: 100%;
@@ -253,11 +269,17 @@
     }
   }
 
+  .banner__image--inner {
+    margin-bottom: 60px;
+  }
+
+
   .banner__image--index img {
     width: 400px;
     padding-top: 185px;
   }
 
+  .banner__image--inner img,
   .banner__image--photo img {
     width: 458px;
     padding-top: 94px;
@@ -270,6 +292,13 @@
 
   .banner__wrapper {
     width: 510px;
+    margin-left: auto;
+    margin-right: auto;
+    // padding: 0 0 44px;
+  }
+
+  .banner__wrapper--inner {
+    width: 650px;
     margin-left: auto;
     margin-right: auto;
     // padding: 0 0 44px;
@@ -302,6 +331,12 @@
     width: 445px;
     margin: 0 auto;
     padding-bottom: 62px;
+  }
+
+  .banner__intro--inner {
+    width: 575px;
+    margin: 0 auto;
+    padding-bottom: 42px;
   }
 
   .banner__intro--form {
@@ -344,6 +379,7 @@
     }
   }
 
+  .banner__image--inner,
   .banner__image--photo,
   .banner__image--form {
     width: 100%;
@@ -357,6 +393,10 @@
       background-size: cover;
       // background-size: 1200px auto;
     }
+  }
+  
+  .banner__image--inner {
+    margin-bottom: 70px;
   }
 
   .banner__slogan--action {
@@ -372,6 +412,7 @@
     padding-bottom: 29px;
   }
 
+  .banner__image--inner img,
   .banner__image--photo img {
     width: 458px;
     // padding-top: 100px;

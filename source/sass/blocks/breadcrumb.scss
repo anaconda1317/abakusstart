@@ -1,7 +1,6 @@
 .breadcrumb__wrapper {
   background-color: #f1f4fb;
   margin: 0 auto;
-  margin-bottom: 10px;
 }
 
 .breadcrumb__wrapper--main-article {
@@ -76,6 +75,11 @@
 
 
 @media (min-width: $tablet-width) {
+
+  .breadcrumb__wrapper {
+    margin-bottom: 10px;
+  }
+
   .breadcrumb-list {
     margin-left: 60px;
   }

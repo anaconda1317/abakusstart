@@ -1,0 +1,47 @@
+.user {
+  font-family: "Lato","Arial",sans-serif;
+}
+
+.user__info {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas:
+    "img name"
+    "img prof"
+    "img insta";
+  column-gap: 12px;
+}
+
+.user__photo {
+  grid-area: img;
+  border-radius: 50%;
+}
+
+.user__name {
+  grid-area: name;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.user__prof {
+  grid-area: prof;
+  font-size: 14px;
+  line-height: 18px;
+  color: $main-text-color;
+  // color: #aaaaaa;
+}
+
+.user__insta {
+  grid-area: insta;
+  // font-size: 14px;
+  // line-height: 16px;
+}
+
+@media (min-width: $tablet-width) {
+  
+}
+
+@media (min-width: $desktop-width) {
+  
+}

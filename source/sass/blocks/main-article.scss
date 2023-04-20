@@ -1,6 +1,7 @@
 .main-article__header {
   position: relative;
-  background-color: #93f0ec;
+  background-color: #91f0f3;
+  // background-color: #93f0ec;
   border-top: 1px solid transparent;
 }
 
@@ -26,36 +27,52 @@
   display: none;
 }
 
+.main-article__title-link {
+  color: #000;
+  cursor: pointer;
+
+  // &:hover,&:focus {
+  //   color: #4b4b4b;
+  // }
+
+  // &:active {
+  //   color: #4b4b4b;
+  // }
+}
+
 .main-article__title {
   position: relative;
 
   width: 270px;
-  margin: 10px auto 10px;
+  margin: 0 auto;
   padding: 20px 0 5px;
   text-align: center;
   font-size: 27px;
   letter-spacing: 1px;
-  line-height: 1.2em;
+  line-height: 1.3em;
   font-weight: 700;
   color: #000;
   text-transform: uppercase;
+  text-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
 }
 
 .main-article__lead {
   margin: 25px auto;
   padding: 20px 0;
-  font-weight: 600;
-  // font-weight: normal;
-  font-size: 18px;
-  line-height: 26px;
-  // color: #666;
+  font-weight: 500; 
+  // font-weight: 600; 
+  // font-size: 18px;
+  font-size: 21px;
+  line-height: 29px;
+  color: #00b2c1;
+  // color: #252525;
 }
 
-.main-article__lead::first-letter {
-  font-weight: 800;
-  font-size: 38px;
-  color: #6bb9b5;
-}
+// .main-article__lead::first-letter {
+//   font-weight: 800;
+//   font-size: 38px;
+//   color: #6bb9b5;
+// }
 
 .main-article__meta-row {
   display: flex;
@@ -82,7 +99,8 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 27px;
-  opacity: 0.8;
+  color: #252525;
+  // opacity: 0.8;
   } 
 
   .main-article__meta::before {
@@ -145,8 +163,8 @@
   }
 
   .main-article__link {
-    font-size: 18px;
-    color: #6bb9b5;
+    // font-size: 18px;
+    color: #252525;
     
     text-decoration: underline 1px dashed;
     transition: all .35s ease-in-out;
@@ -170,6 +188,7 @@
     position: relative;
     counter-increment: rule-counter;
     margin: 0 0 30px;
+    color: #252525;
   }
   
   .main-article__rules-item::before {
@@ -188,7 +207,8 @@
     font-weight: 700;
     font-size: 28px;
     line-height: 1.2em;
-    color: #ff0266;
+    color: #00b2c1;
+    // color: #ff0266;
   }
 
   .main-article__rules-text {
@@ -259,7 +279,7 @@
   .main-article__quote {
     position: relative;
     margin: 30px 0 25px 10px;
-    padding: 5px 0 10px 25px;
+    padding: 10px 0 10px 25px;
     border-left: 5px solid #000000;
     background-color:   linen;
     // background-color: #FFEFD5;
@@ -273,6 +293,7 @@
     font-weight: 500;
     font-size: 21px;
     line-height: 31px;
+    color: $main-text-color;
   }
   
   .main-article__quote-text::before {
@@ -287,7 +308,8 @@
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
-    line-height: 29px;
+    line-height: 1.3em;
+    // line-height: 29px;
     color: rgba(0, 0, 0, 0.5);
   }
 
@@ -355,7 +377,7 @@
   .main-article__header-content {
     position: relative;
 
-    &:before {
+    &::before {
       display: block;
       position: absolute;
       top: 0;
@@ -363,12 +385,11 @@
       bottom: 0;
       left: 0;
       content: '';
-      background: linear-gradient(to bottom, rgba(0, 0, 0, 1e-05), rgba(0, 0, 0, 0.6) 80%);
-      // background: linear-gradient(to bottom, rgba(0, 0, 0, 1e-05), rgba(237, 240, 249, 0.6) 80%);
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 1e-05), rgba(237, 240, 249, 0.6) 80%);
       transition: opacity 0.5s;
       transition-delay: 1.5s;
-      opacity: 0.3;
-      // opacity: 0.785;
+      opacity: .6;
+      // opacity: .7;
     }
   }
 
@@ -376,6 +397,13 @@
     width: 500px;
     margin: 0 auto;
   }
+
+  
+.main-article__wrapper-header-img {
+    position: absolute;
+    width: 768px;
+    height: 208px;    
+}
 
   .main-article__header-img {
     display: block;
@@ -387,29 +415,50 @@
   }
 
   .main-article__title {
-    width: 460px;
+    width: 485px;
     margin: 35px auto;
-    padding: 15px 0 20px;
+    padding: 15px 5px 20px;
     text-align: center;
     font-size: 32px;
     line-height: 50px;
     font-weight: 700;
     color: #000;
+    letter-spacing: 1px;
     text-transform: uppercase;
     border-radius: 6px;
     border: 1px solid #e5e5e5;
     background: rgba(255,255,255,.6);
+    transition: all 0.5s;
     }
 
-  .main-article__lead::first-letter {
-    font-weight: 800;
-    font-size: 48px;
-    color: #6bb9b5;
+  .main-article__title-link:hover .main-article__title,
+  .main-article__title-link:focus .main-article__title {
+    cursor: pointer;
+    color: #4b4b4b;
+    background: #f8f9fd;
+    // background: linen;
   }
+
+  .main-article__title-link:active .main-article__title {
+    cursor: pointer;
+    color: #4b4b4b;
+    // background: linen;
+  }
+
+  // .main-article__lead::first-letter {
+  //   font-weight: 800;
+  //   font-size: 48px;
+  //   color: #6bb9b5;
+  // }
 
   .main-article__meta-col {
     margin-left: 15px;
     margin-right: 15px;
+  }
+
+  .main-article__nav-item {
+    font-size: 21px;
+    line-height: 29px; 
   }
 
   .main-article__rules-item {
@@ -468,7 +517,8 @@
   .main-article__quote::before {
     content: "";
     position: absolute;
-    top: 15px;
+    top: -15px;
+    // top: 15px;
     left: -75px;
     width: 60px;
     height: 60px;
@@ -476,15 +526,15 @@
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 50%;
-    background-color: linen;
-    // background-size: contain; 
+    // background-color: linen;
   }
   
   .main-article__quote::after {
     content: "Цитаты";
     position: absolute;
     left: -85px;
-    bottom: -45px;
+    bottom: -65px;
+    // bottom: -45px;
     font-weight: 700;
     font-size: 36px;
     line-height: 61px;
@@ -532,6 +582,12 @@
     padding-right: 15px;
   }
 
+  .main-article__wrapper-header-img {
+    position: absolute;
+    width: 1200px;
+    height: 324px;    
+  } 
+
   .main-article__content-wrapper {
     width: 700px;
     margin: 0 auto;
@@ -546,17 +602,16 @@
     font-size: 40px;
     line-height: 60px;
     font-weight: 700;
-    color: #000;
+    // color: #000;
     text-transform: uppercase;
     border-radius: 6px;
     border: 1px solid #e5e5e5;
-    background: rgba(255,255,255,.6);
+    background: rgba(255,255,255,.8);
     }
 
   .main-article__lead {
     margin: 25px auto;
     padding: 25px 0;
-    font-weight: 600;
     font-size: 21px;
     line-height: 31px;
     // max-width: 475px;
