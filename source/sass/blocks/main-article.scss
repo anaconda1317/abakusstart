@@ -64,8 +64,8 @@
   // font-size: 18px;
   font-size: 21px;
   line-height: 29px;
-  color: #00b2c1;
-  // color: #252525;
+  color: #00a5c1;
+  // color: #00b2c1;
 }
 
 // .main-article__lead::first-letter {
@@ -202,6 +202,10 @@
     text-align: center;
   }
 
+  .main-article__rule {
+
+  }
+
   .main-article__rules-title {
     margin: 0 0 15px 30px;
     font-weight: 700;
@@ -217,7 +221,8 @@
     font-size: 18px;
     font-weight: 400;
     letter-spacing: 0.3px;
-    line-height: 26px;
+    line-height: 1.5;
+    // line-height: 27px;
     color: $main-text-color;
   }
 
@@ -233,7 +238,8 @@
     margin: 20px auto;
     font-weight: 400;
     font-size: 16px;
-    line-height: 24px;
+    line-height: 1.5;
+    // line-height: 24px;
     text-align: center;
     color: #666;
   }
@@ -281,8 +287,8 @@
     margin: 30px 0 25px 10px;
     padding: 10px 0 10px 25px;
     border-left: 5px solid #000000;
-    background-color:   linen;
-    // background-color: #FFEFD5;
+    // background-color:   linen;
+    background-color: #e2fdff;
   }
 
   
@@ -325,6 +331,33 @@
     display: none;
   }
 
+  .main-article__bullet-list {
+    @include list-reset();
+    padding: 0;
+    margin: -7px 0 75px 0;
+  }
+
+  .main-article__bullet-list-item {
+    position: relative;
+    margin-bottom: 24px;
+  }
+
+  .main-article__bullet-list-item {
+    position: relative;
+  }
+
+  .main-article__bullet-list-item::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: -20px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #4770a0;
+    opacity: 1;
+}
+
   .main-article__footer {
     padding-bottom: 65px;
 }
@@ -335,7 +368,8 @@
   font-weight: 600;
   font-size: 28px;
   line-height: 1.2em;
-  color: #87929A;
+  color: #252525;
+  // color: #87929A;
   text-align: center;
 }
 
@@ -422,27 +456,44 @@
     font-size: 32px;
     line-height: 50px;
     font-weight: 700;
-    color: #000;
+    // color: #000;
+    color: #00a5c1;
     letter-spacing: 1px;
     text-transform: uppercase;
-    border-radius: 6px;
+    text-shadow: unset;
+    border-radius: 30px 0;
     border: 1px solid #e5e5e5;
-    background: rgba(255,255,255,.6);
+    background: rgba(255,255,255,.9);
     transition: all 0.5s;
     }
 
   .main-article__title-link:hover .main-article__title,
   .main-article__title-link:focus .main-article__title {
     cursor: pointer;
-    color: #4b4b4b;
+    color: #05b0cd;
+    // color: #4b4b4b;
     background: #f8f9fd;
     // background: linen;
   }
 
   .main-article__title-link:active .main-article__title {
     cursor: pointer;
-    color: #4b4b4b;
+    color: #05b0cd;
+    // color: #4b4b4b;
+    background: #f8f9fd;
     // background: linen;
+  }
+
+  .main-article__lead {
+    margin: 25px auto;
+    padding: 20px 0;
+    font-weight: 600; 
+    // font-weight: 600; 
+    // font-size: 18px;
+    font-size: 21px;
+    line-height: 29px;
+    color: #666666;
+    // color: #252525;
   }
 
   // .main-article__lead::first-letter {
@@ -477,6 +528,15 @@
     text-align: center;
   }
 
+  .main-article__rule-list::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -30px;
+    border-left: 1px solid #4770a0;
+  }
+
   .main-article__rules-title {
     margin: 0 0 15px 65px;
     font-weight: 700;
@@ -486,13 +546,12 @@
     // line-height: 45px;
   }
 
-      .main-article__reference {
+    .main-article__reference {
     width: 327px;
     padding: 30px 0 25px 0;
-    margin: 0 0 0 35px;
     font-weight: 400;
-    font-size: 18px;
-    line-height: 28px;
+    // font-size: 18px;
+    // line-height: 28px;
     text-align: center;
   }
 
@@ -510,7 +569,7 @@
   .main-article__quote {
     position: relative;
     margin: 30px 0 25px 0;
-    padding: 5px 0 10px 30px; 
+    padding: 3px 0 10px 30px; 
     border-left: 5px solid #000000;
   }
 
@@ -604,7 +663,6 @@
     font-weight: 700;
     // color: #000;
     text-transform: uppercase;
-    border-radius: 6px;
     border: 1px solid #e5e5e5;
     background: rgba(255,255,255,.8);
     }
@@ -623,13 +681,16 @@
     font-size: 24px;
     line-height: 30px;
   }
-  
+
   .main-article__img-with-reference {
     display: flex;
     flex-direction: row;
     align-items: center;
   }
 
+  .main-article__reference {  
+    padding: 30px 0 25px 0;  
+  }
   
   .main-article__sidebar  {
     position: absolute;
