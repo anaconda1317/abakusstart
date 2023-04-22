@@ -1,4 +1,4 @@
-var items = document.querySelectorAll('.carousel .item');
+var items = document.querySelectorAll('.carousel .carousel__item');
 var currentItem = 0;
 var isEnabled = true;
 
@@ -35,13 +35,13 @@ function previousItem(n) {
 	showItem('from-left');
 }
 
-document.querySelector('.control.left').addEventListener('click', function() {
+document.querySelector('.carousel__control.left').addEventListener('click', function() {
 	if (isEnabled) {
 		previousItem(currentItem);
 	}
 });
 
-document.querySelector('.control.right').addEventListener('click', function() {
+document.querySelector('.carousel__control.right').addEventListener('click', function() {
 	if (isEnabled) {
 		nextItem(currentItem);
 	}
@@ -90,7 +90,7 @@ var swipedetect = function(el) {
 	}, false);
 
 	surface.addEventListener('touchstart', function(e){
-		if (e.target.classList.contains('arrow') || e.target.classList.contains('control')) {
+		if (e.target.classList.contains('carousel__arrow') || e.target.classList.contains('carousel__control')) {
 			if (e.target.classList.contains('left')) {
 				if (isEnabled) {
 					previousItem(currentItem);

@@ -10,7 +10,6 @@
     text-underline-offset: 4px;
 }
 
-  
 .tooltip__content {
   position: absolute;
   top: 45px;
@@ -20,8 +19,9 @@
   // padding: 8px;
   font-size: 16px;
   line-height: 20px;
-  color: #ffffff;
-  background: #ff0266;
+  color: $white;
+  background: #00A0AE;
+  // background: #ff0266;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
   border-radius: 6px;
   box-sizing: border-box;
@@ -43,7 +43,7 @@
     padding: 8px;
     position: absolute;
     top: -60px;
-    left: 150px;
+    left: 148px;
   }  
 }
  

@@ -54,7 +54,94 @@
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
             <li class="site-list__item"><a class="site-list__link" href="index.php">Главная</a></li>
-            <li class="site-list__item"><a class="site-list__link site-list__link--active" href="uslugi.php">Услуги центра</a></li>
+            <!-- site-list__item with sub-menu -->  
+            <li class="site-list__item"> 
+              <div class="site-list__item--has-children">
+                <a class="site-list__link site-list__link--active" href="/uslugi.php" target="_blank" aria-current="page" aria-haspopup="true" aria-expanded="false" role="menuitem">Услуги центра</a>
+                <span class="sub-menu__ikon-wrapper">
+                  <svg class="sub-menu__ikon" width="25.667" height="15" fill="#000000">
+                    <use xlink:href="#sp-icon-arrow_sub-menu"></use></svg>
+                </span>
+              </div>
+              <!-- start sub-menu -->
+                <div class="sub-menu__wrapper">
+                  <ul class="sub-menu" role="menu">
+                    <li class="sub-menu__item" style="animation-delay: 0.1s;">
+                      <a class="sub-menu__item-link" href="/mentalnaya-arifmetica.php" target="_blank" role="menuitem">Ментальная арифметика
+                        <!-- ikon start abacus-->
+                          <svg class="sub-menu__item-link-svg" fill="#4b7324" width="47" height="40" viewBox="0 0 47 40">
+                            <use xlink:href="#sp-abacus_uslugi_icon"></use>
+                          </svg>
+                        <!-- ikon finish -->
+                      </a>
+                    </li>
+                    <li class="sub-menu__item" style="animation-delay: 0.13s;">
+                      <a class="sub-menu__item-link" href="/info.php" target="_blank" role="menuitem">Робототехника
+                        <!-- ikon start robot-->
+                        <svg class="sub-menu__item-link-svg" fill="#401c8c" width="47" height="40" viewBox="0 0 47 40">
+                          <use xlink:href="#sp-robototehnica_uslugi_icon"></use>
+                        </svg>
+                        <!-- ikon finish -->
+                      </a>
+                    </li>
+                    <li class="sub-menu__item" style="animation-delay: 0.16s;">
+                      <a class="sub-menu__item-link" href="/info.php" target="_blank" role="menuitem">Репетитор 1-4 классов
+                        <!-- ikon start repetitor-->
+                        <svg class="sub-menu__item-link-svg" fill="#038c8c" width="47" height="40" viewBox="0 0 47 40">
+                          <use xlink:href="#sp-repetitor_uslugi_icon"></use>
+                        </svg>
+                        <!-- ikon finish -->
+                      </a>
+                    </li>
+                    <li class="sub-menu__item" style="animation-delay: 0.19s;">
+                      <a class="sub-menu__item-link" href="/info.php" target="_blank" role="menuitem">Логопед-дефектолог
+                        <!-- ikon start logoped-defektolog-->
+                        <svg class="sub-menu__item-link-svg" fill="#d90d58" width="47" height="40" viewBox="0 0 47 40">
+                          <use xlink:href="#sp-logoped_uslugi_icon"></use>
+                        </svg>
+                        <!-- ikon finish -->
+                      </a>
+                    </li>
+                    <li class="sub-menu__item" style="animation-delay: 0.21s;">
+                      <a class="sub-menu__item-link" href="/info.php" target="_blank" role="menuitem">Анлийский язык
+                        <!-- ikon start english-->
+                        <svg class="sub-menu__item-link-svg" fill="#02734a" width="47" height="40" viewBox="0 0 47 40">
+                          <use xlink:href="#sp-english_1_uslugi_icon"></use>
+                        </svg>
+                        <!-- ikon finish -->
+                      </a>
+                    </li>
+                    <li class="sub-menu__item" style="animation-delay: 0.24s;">
+                      <a class="sub-menu__item-link" href="/info.php" target="_blank" role="menuitem">Нейропсихолог
+                        <!-- ikon start nejropsiholog-->
+                        <svg class="sub-menu__item-link-svg" fill="#d94ab3" width="47" height="40" viewBox="0 0 47 40">
+                          <use xlink:href="#sp-neiropsiho_uslugi_icon"></use>
+                        </svg>
+                        <!-- ikon finish -->
+                      </a>
+                    </li>
+                    <li class="sub-menu__item" style="animation-delay: 0.27s;">
+                      <a class="sub-menu__item-link" href="/info.php" target="_blank" role="menuitem">Психотерапевт
+                        <!-- ikon start psihoterapevt-->
+                        <svg class="sub-menu__item-link-svg" fill="#0b9ed9" width="47" height="40" viewBox="0 0 47 40">
+                          <use xlink:href="#sp-psiho_uslugi_icon"></use>
+                        </svg>
+                        <!-- ikon finish -->
+                      </a>
+                    </li>
+                    <li class="sub-menu__item" style="animation-delay: 0.30s;">
+                      <a class="sub-menu__item-link" href="/info.php" target="_blank" role="menuitem">Kaллиграфия
+                      <!-- ikon start kalligrafiya-->
+                      <svg class="sub-menu__item-link-svg" fill="#e02b40" width="47" height="40" viewBox="0 0 47 40">
+                        <use xlink:href="#sp-calligraphiya_uslugi_icon"></use>
+                      </svg>
+                      <!-- ikon finish -->
+                    </a>
+                  </li>
+                  </ul>
+                </div>
+            </li>
+              <!-- finish sub-menu -->  
             <li class="site-list__item"><a class="site-list__link" href="info.php">Новости и акции</a></li>
             <li class="site-list__item"><a class="site-list__link" href="info.php">Фото и видео</a></li>
           </ul>
@@ -110,6 +197,7 @@
       <span class="visually-hidden">Детская школа ментальной арифметики в Красноярске, в Северном.</span>
         <article class="main-article">
           <header class="main-article__header">
+
            <div class="main-article__wrapper-header-img">
             <picture>
               <!-- <source type="image/webp" media="(min-width: 1200px)"
@@ -121,14 +209,14 @@
                 srcset="img/mental_artical/mental-desktop@1x.jpg 1x, img/mental_artical/mental-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)"
                 srcset="img/mental_artical/mental-tablet@1x.jpg 1x, img/mental_artical/mental-tablet@2x.jpg 2x">
-              <img class="main-article__header-img" src="img/mental_artical/mental-desktop@1x.jpg 1x" alt="Ментальная арифметика в детском центре &laquo;СТАРТ&raquo;">
-              <!-- <img class="main-article__header-img" src="img/mental_artical/photo-1.jpg" width="1169" height="316" alt="Тбилиси. Исторический центр"> -->
+                <img class="main-article__header-img" src="img/mental_artical/mental-desktop@1x.jpg" alt="Ментальная арифметика в детском центре &laquo;СТАРТ&raquo;">
+              <!-- <img class="main-article__header-img" src="img/mental_artical/photo-1.jpg" width="1169" height="316" alt="Ментальная арифметика в детском центре &laquo;СТАРТ&raquo"> -->
             </picture>   
            </div>
   
            
             <div class="main-article__header-content">
-              <a class="main-article__title-link"  href="https://mel.fm/blog/yekaterina-khasanova1/8652-7sposobov-dokazat-mladshim-shkolnikam-chto-matematika-eto-kruto" target="_blank">  
+              <a class="main-article__title-link"  href="#" target="_blank">  
                 <h2 class="main-article__title">Для чего нужна ментальная арифметика?</h2>
               </a>
               <div class="main-article__meta-row">
@@ -151,7 +239,7 @@
 <!--article_body start -->
           <div class="main-article__content-wrapper">
             <p class="main-article__lead dotted-decoration">
-              Хотите, чтобы ваш ребенок научился легко и&nbsp;быстро считать в&nbsp;уме? Мы&nbsp;подготовили для вас топ-10 ответов на&nbsp;часто задаваемые вопросы. Надеемся, что эта статья поможет сделать выбор в&nbsp;пользу занятий ментальной арифметикой.
+              Хотите, чтобы ваш ребенок научился легко и&nbsp;быстро считать в&nbsp;уме? Мы&nbsp;подготовили для вас топ-9 ответов на&nbsp;часто задаваемые вопросы. Надеемся, что эта статья поможет сделать выбор в&nbsp;пользу занятий ментальной арифметикой.
               <!-- Вашего малыша привлекает математика? Тогда &laquo;СТАРТ&raquo; может стать для него отправной точкой!  -->
             </p>
 
@@ -166,8 +254,8 @@
                 <li class="main-article__nav-item"><a class="main-article__link" href="#part-5">Как проходят занятия</a></li>
                 <li class="main-article__nav-item"><a class="main-article__link" href="#part-6">Инвестиции в будущее</a></li>
                 <li class="main-article__nav-item"><a class="main-article__link" href="#part-7">Наши преимущества</a></li>
-                <li class="main-article__nav-item"><a class="main-article__link" href="#part-8">Не ругайтесь</a></li>
-                <li class="main-article__nav-item"><a class="main-article__link" href="#part-9">Не ругайтесь</a></li>
+                <li class="main-article__nav-item"><a class="main-article__link" href="#part-8">Какая польза от занятий</a></li>
+                <li class="main-article__nav-item"><a class="main-article__link" href="#part-9">Совет от психолога</a></li>
               </ol>
             </nav>
 <!-- оглавление содержание конец-->
@@ -218,7 +306,7 @@
 <!-- статьи секция 3-->
               <li class="main-article__rules-item">
                 <section class="rule" id="part-3">
-                  <h2 class="visually-hidden">Из чего состоит методика абакус.</h2>
+                  <h2 class="visually-hidden">Из чего состоит методика абакус</h2>
                   <h3 class="main-article__rules-title">Как это работает</h3>
                   <aside class="main-article__right main-article__right--floated">
                     <h3 class="main-article__right_title">Навык</h3>
@@ -229,8 +317,8 @@
                       </figure>
                     </a>                   
                   </aside>
-                  <p class="main-article__rules-text">Как это работает или из&nbsp;чего состоит методика абакус? Сначала дети учатся считать на&nbsp;настоящем абаке&nbsp;&mdash; специальных счетах (соробан, Абакус). При этом они тренируют мелкую моторику рук. Потом дети начинают считать ментально&nbsp;&mdash; счеты убирают и&nbsp;ребенок, представляя в&nbsp;уме счеты, может производить с&nbsp;ним те&nbsp;же операции, что и&nbsp;с&nbsp;настоящим. При этом идет развитие правого полушария головного мозга и&nbsp;интеллектуальных способностей.</p>
-                  <p class="main-article__rules-text">Выглядит это захватывающе и&nbsp;почти как маленькое чудо: двигая в&nbsp;воздухе невидимые костяшки, малыши, многие из&nbsp;которых даже еще не&nbsp;ходят в&nbsp;школу, перемалывают длинные ряды двухзначных и&nbsp;даже трехзначных чисел и&nbsp;за&nbsp;какие-то секунды дают правильный ответ.</p>
+                  <p class="main-article__rules-text">Из&nbsp;чего состоит методика абакус? Сначала дети учатся считать на&nbsp;настоящем абаке&nbsp;&mdash; специальных счетах (соробан, абакус). При этом они  еще тренируют мелкую моторику рук. Потом дети начинают считать ментально&nbsp;&mdash; счеты убирают и&nbsp;ребенок, представляя в&nbsp;уме счеты, может производить с&nbsp;ним те&nbsp;же операции, что и&nbsp;с&nbsp;настоящими. При этом идет развитие правого полушария головного мозга и&nbsp;интеллектуальных способностей.</p>
+                  <p class="main-article__rules-text">Почти как маленькое чудо&nbsp;&mdash; захватывающий процесс наблюдения: двигая в&nbsp;воздухе невидимые костяшки, малыши, многие из&nbsp;которых даже еще не&nbsp;ходят в&nbsp;школу, перемалывают длинные ряды двухзначных и&nbsp;даже трехзначных чисел и&nbsp;за&nbsp;какие-то секунды дают правильный ответ.</p>
                   <img class="main-article__img main-article__img--cropping-bottom-left" src="img/photo-10.jpg" width="304" height="453" alt="Как это работает или из чего состоит методика абакус">
                 </section>
               </li>
@@ -239,7 +327,7 @@
               <li class="main-article__rules-item">
                 <section class="rule" id="part-4">
                   <h2 class="visually-hidden">Есть ли у преподавателей специальное образование?</h2>
-                  <h3 class="main-article__rules-title">Опытные преподаватели</h3>
+                  <h3 class="main-article__rules-title">Преподаватели</h3>
                   <p class="main-article__rules-text">Есть&nbsp;ли у&nbsp;преподавателей специальное образование? Мы&nbsp;является официальным представителем международной школы по&nbsp;ментальной арифметике &laquo;Абакус- центр&raquo;. Преподаватели центра прошли обучение у&nbsp;московских специалистов.</p>
                   <p class="main-article__rules-text">Наши дети принимают участие в&nbsp;международных олимпиадах и&nbsp;занимают там также и&nbsp;призовые места. Мы&nbsp;работаем по&nbsp;выверенным опытом программам и&nbsp;методикам обучения.</p>
                 </section>
@@ -287,11 +375,11 @@
                 <h2 class="visually-hidden">Почему стоит заниматься у нас?</h2>
                 <h3 class="main-article__rules-title">Преимущества</h3>
                 <img class="main-article__left-floated" src="img/photo-9.png" width="138" height="139" alt="Не ругайтесь матом">
-                <p class="main-article__rules-text">Почему стоит заниматься у&nbsp;нас?</p>
+                <p class="main-article__rules-text"><span style="text-transform: uppercase; font-weight: 600;">Почему стоит заниматься у&nbsp;нас?</span></p>
                 <ul class="main-article__bullet-list">
-                  <li class="main-article__bullet-list-item">Проветри помещение, в&nbsp;котором спишь, и&nbsp;старайся не&nbsp;</li>
-                  <li class="main-article__bullet-list-item">Заведи спокойный ритуал для от медленный ритм.</li>
-                  <li class="main-article__bullet-list-item">Наш сон состоит из&nbsp;неовил, что спать <b>7,5 часов</b>&nbsp;— гораздо лучше, чем&nbsp;<b>8</b>.</li>
+                  <li class="main-article__bullet-list-item">Мы&nbsp;являемся официальным представителем международной школы &laquo;Абакус&raquo;.</li>
+                  <li class="main-article__bullet-list-item">Наши преподаватели прошли обучение и стажировку в&nbsp;Московском филиале школы.</li>
+                  <li class="main-article__bullet-list-item">Занятия проходят на&nbsp;портале &laquo;Абакус-центра&raquo;.</li>
                 </ul>
               </section>
             </li>
@@ -299,28 +387,34 @@
 <!-- статьи секция 8-->
               <li class="main-article__rules-item">
                 <section class="rule" id="part-8">
-                  <h3 class="main-article__rules-title">Наркотики в Грузии</h3>
-                  <p class="main-article__rules-text">Не стоит баловаться наркотическими веществами в Грузии. Несмотря на то, что в законодательство внесены предложения на легализацию легких наркотиков, грузинская полиция серьезно следит за такими правонарушениями.</p>
+                  <h2 class="visually-hidden">Какая польза от ментальной арифметики?</h2>
+                  <h3 class="main-article__rules-title">Какая польза</h3>
+                  <p class="main-article__rules-text">Восприятие, внимание, память, мышление, воображение, речь&nbsp;&mdash; это когнитивные навыки&nbsp;&mdash; то&nbsp;есть базовые способности. Почему их&nbsp;надо развивать у&nbsp;ребенка? При отсутствие этих навыков, придя в&nbsp;школу, ребенок зачастую не&nbsp;испытывает интерес к&nbsp;учебе, считая ее&nbsp;скучной и&nbsp;сложной. 
+                    Когнитивные навыки обеспечивают успех в&nbsp;школьной учебе. Именно поэтому очень важно их&nbsp;сформировать у&nbsp;вашего ребенка до&nbsp;школы.</p>
+                  <p class="main-article__rules-text">Ментальная арифметика развивает мышление, память, внимательность... Такие занятия позитивно будут влиять на&nbsp;способности к&nbsp;обучению в&nbsp;школе, особенно если ребенку тяжело дается математика. К&nbsp;тому&nbsp;же на&nbsp;занятиях формируется навык трудиться&nbsp;&mdash; без него в&nbsp;жизни очень трудно чего-то добиться. 
+                    Еще один плюс: целеустремленная компания сверстников на&nbsp;занятиях в&nbsp;группе&nbsp;&mdash; скорее всего они смогут стать новыми друзьями. Ничто так не&nbsp;сближает как общие интересы&nbsp;&mdash; очень хорошая мотивация для того, чтобы кроме развития когнитивных навыков найти друзей.</p>
                 </section>
               </li>
 
 <!-- статьи секция 9-->
               <li class="main-article__rules-item">
                 <section class="rule">
+                  <h2 class="visually-hidden">Совет от психолога</h2>
                   <h3 class="main-article__rules-title">Совет от 
                     <span class="tooltip">
                       <dfn class="tooltip__toggle" id="psicho" aria-labelledby="tooltip-label-psicho">психолга</dfn>
                       <span class="tooltip__content user__info" id="tooltip-label-psicho" role="tooltip">
                         <img class="user__photo" src="img/mental_artical/user-photo-01-big.jpg" width="64" height="64" alt="">
                         <span class="user__name">Анастасия Щетникова</span>
-                        <span class="user__prof">психиатр</span>
+                        <span class="user__prof">психолог</span>
                         <span class="user__insta">#dr.shetnikova</span>
                       </span>
                     </span>
                   </h3>
-                  <p class="main-article__rules-text">Несмотря на то, что Грузия является территорией постсоветского пространства,
-                     здесь далеко не всего знают русский. Как правило, на русском языке говорят люди старшего возраста,
-                    а молодёжь лучше знает английский язык.</p>
+                  <p class="main-article__rules-text">Сегодня мы&nbsp;говорим о&nbsp;ментальной арифметике&nbsp;&mdash; однако важнее понимать следующее: многим родителям в&nbsp;современном мире не&nbsp;хватает сил для личных занятий со&nbsp;своим ребенком. 
+                    Общение со&nbsp;сверстниками, занятия в&nbsp;детском центре с&nbsp;опытными преподавателями, уделяющими внимание каждому, развивают личность ребенка и&nbsp;его способности.</p>
+                  <p class="main-article__rules-text">Дети развиваются всегда, чему&nbsp;бы вы&nbsp;их&nbsp;ни&nbsp;учили. 
+                    А&nbsp;чему учить вашего ребенка&nbsp;&mdash; выбор за&nbsp;вами.</p>
                 </section>
               </li>
 
@@ -341,7 +435,8 @@
               <h3 class="main-article__footer-title line-decoration">Интересно</h3>
               <ul class="main-article__footer-links">
                 <li class="main-article__footer-item">
-                  <a class="main-article__footer-link" href="#">Грузия</a>
+                  <a class="main-article__footer-link" href="https://mel.fm/blog/yekaterina-khasanova1/8652-7sposobov-dokazat-mladshim-shkolnikam-chto-matematika-eto-kruto">
+                    Как полюбить математику</a>
                 </li>
                 <li class="main-article__footer-item">
                   <a class="main-article__footer-link" href="#">Путешествия</a>
@@ -364,17 +459,17 @@
 
         <!-- какие навыки получит ребенок кейс-4   <h3>Рейтинг крупнейших российских брокеров</h3> 35-38 слайд -->
     <section class="profit">
-      <h2 class="visually-hidden">Преимущества</h2>
+      <h2 class="visually-hidden">Международная сеть Абакус Центр</h2>
       <div class="profit__container">
         <div class="profit__wrapper">
           <div class="profit__list-column">
             <h3 class="profit__title">Какие навыки получит ребенок</h3>
             <ol class="profit__list">
-              <li class="profit__item"><span class="profit__name">БКС Рус</span></li>
-              <li class="profit__item"><span class="profit__name">БКС Рус</span></li>
-              <li class="profit__item"><span class="profit__name">БКС Рус</span></li>
-              <li class="profit__item"><span class="profit__name">БКС Рус</span></li>
-              <li class="profit__item"><span class="profit__name">БКС Рус</span></li>
+              <li class="profit__item"><span class="profit__name">Научится быстрому счету в уме</span></li>
+              <li class="profit__item"><span class="profit__name">Станет более сообразительным</span></li>
+              <li class="profit__item"><span class="profit__name">Разовьет мелкую моторику рук</span></li>
+              <li class="profit__item"><span class="profit__name">Выработает усидчивость</span></li>
+              <li class="profit__item"><span class="profit__name">Научится трудится</span></li>
             </ol>
         </div>
           <div class="profit__img-column">
@@ -385,23 +480,23 @@
     </div>
     </section>
 
-   
-<!-- записаться на занятие блок -->
+       
+    <!-- записаться на занятие блок -->
     <section class="oder">
-     <h2 class="visually-hidden">Ментальная арифметика обучение в детском центре &laquo;СТАРТ&raquo;</h2>
+      <h2 class="visually-hidden">Ментальная арифметика обучение в детском центре &laquo;СТАРТ&raquo;</h2>
       <div class="oder__container">
         <div class="oder__wrapper">       
           <div class="oder__text-column">
             <h3 class="oder__title">Ментальная арифметика</h3>
             <p class="oder__lead">Первое занятие бесплатно</p>
-            <p class="oder__text">максимальное развитие потенциала ребенка, опытные преподаватели, проверенные программы и методики обучения. 
-              Ждём вас на&nbsp;дополнительных занятий в&nbsp;нашем центре.          
+            <p class="oder__text">Ментальная арифметика&nbsp;&mdash; часть гармоничного развития. Ведь именно в&nbsp;детстве, закладываются и&nbsp;развиваются все фундаментальные способности. Приводите к&nbsp;нам, ваших будущих гениев. 
+              Ждём вас на&nbsp;занятий в&nbsp;нашем центре.          
             </p>
             <dl class="oder__price-list">
               <dt>Цена:</dt>
               <dd>от 900 ₽/час</dd>
             </dl>
-<!-- записаться на занятие кнопка -->
+    <!-- записаться на занятие кнопка -->
               <button class="button oder__button modal-open" type="button" data-name="mental">Записаться на занятия
                 <span class="visually-hidden">Записаться через форму на сайте на занятия по ментальной арифметике  или по телефону.</span>
               </button>
@@ -414,280 +509,282 @@
       </div>
     </section>
 
-    
-<!-- ОТЗЫВЫ НАЧАЛО -->
+        
+    <!-- ОТЗЫВЫ НАЧАЛО -->
     <section class="person-reviews" id="reviews">
-      <h2 class="visually-hidden">Оставить отзыв о центре</h2>
-      <div class="person-reviews__container">
-        <div class="person-reviews__wrapper">
-          <h3 class="person-reviews__title">Отзывы родителей</h3>
-          <p class="person-reviews__info">Мы&nbsp;уже зарекомендовали себя не&nbsp;только среди родителей и&nbsp;детей нашего района, но&nbsp;и&nbsp;в&nbsp;профессиональном сообществе. 
-            Вот несколько отзывов родителей о&nbsp;результатах своих детей и&nbsp;о&nbsp;занятиях в&nbsp;нашем детском центре.</p>
-            <a class="person-reviews__write-btn button" href="/form.php" target="_blank">Оставить свой</a>
-        </div>
-<!-- slaider_start -->
-        <div class="carousel__wrapper">
-          <div class="carousel">
-            <ul class="items-container" role="list">
-<!-- отзывы в слайдер 1--> 
-              <li class="item active">  
-                <div class="person-reviews__item"> 
-                  <div class="person-reviews__item-wrapper person-reviews__item-wrapper--accent"> 
-                    <div class="person-reviews__left">
-                      <p class="person-reviews__category">Комментарий</p>
-                      <div class="person-reviews__text">Ходили с сыном на подготовку к школе полтора года. Педагог очень спокойная, внимательная, материал преподносит интересно.</div>
-                      <p class="person-reviews__category">Минусы</p>
-                      <div class="person-reviews__text">Нет.</div>
-                      <p class="person-reviews__category">Плюсы</p>
-                      <div class="person-reviews__text">На собеседовании в школу ребенка хвалили. Спасибо большое центру, учится на отлично.</div>
+    <h2 class="visually-hidden">Оставить отзыв о центре</h2>
+    <div class="person-reviews__container">
+      <div class="person-reviews__wrapper">
+        <h3 class="person-reviews__title">Отзывы родителей</h3>
+        <p class="person-reviews__info">Мы&nbsp;уже зарекомендовали себя не&nbsp;только среди родителей и&nbsp;детей нашего района, но&nbsp;и&nbsp;в&nbsp;профессиональном сообществе. 
+          Вот несколько отзывов родителей о&nbsp;результатах своих детей и&nbsp;о&nbsp;занятиях в&nbsp;нашем детском центре.</p>
+          <a class="person-reviews__write-btn button" href="/form.php" target="_blank">Оставить свой</a>
+      </div>
+    <!-- slaider_start -->
+      <div class="carousel__wrapper">
+        <div class="carousel">
+          <ul class="carousel__items-container" role="list">
+    <!-- отзывы в слайдер 1--> 
+            <li class="carousel__item active">  
+              <div class="person-reviews__item"> 
+                <div class="person-reviews__item-wrapper person-reviews__item-wrapper--accent"> 
+                  <div class="person-reviews__left">
+                    <p class="person-reviews__category">Комментарий</p>
+                    <div class="person-reviews__text">Ходили с сыном на подготовку к школе полтора года. Педагог очень спокойная, внимательная, материал преподносит интересно.</div>
+                    <p class="person-reviews__category">Минусы</p>
+                    <div class="person-reviews__text">Нет.</div>
+                    <p class="person-reviews__category">Плюсы</p>
+                    <div class="person-reviews__text">На собеседовании в школу ребенка хвалили. Спасибо большое центру, учится на отлично.</div>
+                  </div>
+      
+                  <div class="person-reviews__right">
+                    <div class="person-reviews__profile">
+                      <p class="person-reviews__author">Елена Бачурина</p>
+                      <a class="person-reviews__link" href="https://2gis.ru/krasnoyarsk/search/%D0%B4%D0%B5%D1%82%D1%81%D0%BA%D0%B8%D0%B9%20%D1%86%D0%B5%D0%BD%D1%82%D1%80%20%22%D0%A1%D1%82%D0%B0%D1%80%D1%82%22%20%D0%9C%D0%B0%D1%82%D0%B5%20%D0%97%D0%B0%D0%BB%D0%BA%D0%B8%2C%2011/firm/70000001056207952/92.942035%2C56.064837/tab/reviews?floor=0&m=92.942061%2C56.064826%2F17.74" target="_blank">
+                        отзыв с 2gis</a>
                     </div>
-        
-                    <div class="person-reviews__right">
-                      <div class="person-reviews__profile">
-                        <p class="person-reviews__author">Елена Бачурина</p>
-                        <a class="person-reviews__link" href="https://2gis.ru/krasnoyarsk/search/%D0%B4%D0%B5%D1%82%D1%81%D0%BA%D0%B8%D0%B9%20%D1%86%D0%B5%D0%BD%D1%82%D1%80%20%22%D0%A1%D1%82%D0%B0%D1%80%D1%82%22%20%D0%9C%D0%B0%D1%82%D0%B5%20%D0%97%D0%B0%D0%BB%D0%BA%D0%B8%2C%2011/firm/70000001056207952/92.942035%2C56.064837/tab/reviews?floor=0&m=92.942061%2C56.064826%2F17.74" target="_blank">
-                          отзыв с 2gis</a>
-                      </div>
 
-                      <div class="person-reviews__rate__wrapper">
-                        <div role="img" aria-label="Рейтинг 5 из 5" class="person-reviews__rate person-reviews__rate--svg">
-                          <!-- звездочка -->
-                          <svg class="person-reviews__star" width="15" height="15">
-                            <use xlink:href="#sp-ikon_star-article"></use>
-                          </svg>
-                          <svg class="person-reviews__star" width="15" height="15">
-                            <use xlink:href="#sp-ikon_star-article"></use>
-                          </svg>
-                          <svg class="person-reviews__star" width="15" height="15">
-                            <use xlink:href="#sp-ikon_star-article"></use>
-                          </svg>
-                          <svg class="person-reviews__star" width="15" height="15">
-                            <use xlink:href="#sp-ikon_star-article"></use>
-                          </svg>
-                          <svg class="person-reviews__star" width="15" height="15">
-                            <use xlink:href="#sp-ikon_star-article"></use>
-                          </svg>
-                          <span class="person-reviews__value">5</span>
-                        </div>
-                        <time class="person-reviews__date" datetime="2023-04-04">04.04.2023</time>
+                    <div class="person-reviews__rate__wrapper">
+                      <div role="img" aria-label="Рейтинг 5 из 5" class="person-reviews__rate person-reviews__rate--svg">
+                        <!-- звездочка -->
+                        <svg class="person-reviews__star" width="15" height="15">
+                          <use xlink:href="#sp-ikon_star-article"></use>
+                        </svg>
+                        <svg class="person-reviews__star" width="15" height="15">
+                          <use xlink:href="#sp-ikon_star-article"></use>
+                        </svg>
+                        <svg class="person-reviews__star" width="15" height="15">
+                          <use xlink:href="#sp-ikon_star-article"></use>
+                        </svg>
+                        <svg class="person-reviews__star" width="15" height="15">
+                          <use xlink:href="#sp-ikon_star-article"></use>
+                        </svg>
+                        <svg class="person-reviews__star" width="15" height="15">
+                          <use xlink:href="#sp-ikon_star-article"></use>
+                        </svg>
+                        <span class="person-reviews__value">5</span>
                       </div>
+                      <time class="person-reviews__date" datetime="2023-04-04">04.04.2023</time>
                     </div>
                   </div>
                 </div>
-              </li>
-<!-- отзывы в слайдер 2-->   
-              <li class="item">
-                <div class="person-reviews__item"> 
-                  <div class="person-reviews__item-wrapper"> 
-                    <div class="person-reviews__left">
-                      <p class="person-reviews__category">Комментарий</p>
-                      <div class="person-reviews__text">Ходили с 5-ти на занятия по ментальной арифметике до школы в &laquo;СТАРТ&raquo;, ребенок реально начал быстро считать, выучил счет до 100, стал более усидчивый (были небольшие проблемы с этим), 
-                        но когда пошли в школу, не получилось продолжить занятия — переехали в другой район.
-                         </div>
-                      <p class="person-reviews__category">Минусы</p>
-                      <div class="person-reviews__text">Когда пропускаешь занятия по каким-то причинам, мало вариантов по времени для отработки.</div>
-                      <p class="person-reviews__category">Плюсы</p>
-                      <div class="person-reviews__text">Ребенок в школе, больше всего любит математику.</div>
-                    </div>
-        
-                    <div class="person-reviews__right">
-                      <div class="person-reviews__profile">
-                        <p class="person-reviews__author">Карина Ларионова</p>
-                        <a class="person-reviews__link" href="https://2gis.ru/krasnoyarsk/search/%D0%B4%D0%B5%D1%82%D1%81%D0%BA%D0%B8%D0%B9%20%D1%86%D0%B5%D0%BD%D1%82%D1%80%20%22%D0%A1%D1%82%D0%B0%D1%80%D1%82%22%20%D0%9C%D0%B0%D1%82%D0%B5%20%D0%97%D0%B0%D0%BB%D0%BA%D0%B8%2C%2011/firm/70000001056207952/92.942035%2C56.064837/tab/reviews?floor=0&m=92.942061%2C56.064826%2F17.74" target="_blank">
-                          отзыв с 2gis</a>
-                      </div>
-                      <div class="person-reviews__rate__wrapper">
-                        <div role="img" aria-label="Рейтинг 5 из 5" class="person-reviews__rate person-reviews__rate--svg">
-                          <!-- звездочка -->
-                          <svg class="person-reviews__star" width="15" height="15">
-                            <use xlink:href="#sp-ikon_star-article"></use>
-                          </svg>
-                          <svg class="person-reviews__star" width="15" height="15">
-                            <use xlink:href="#sp-ikon_star-article"></use>
-                          </svg>
-                          <svg class="person-reviews__star" width="15" height="15">
-                            <use xlink:href="#sp-ikon_star-article"></use>
-                          </svg>
-                          <svg class="person-reviews__star" width="15" height="15">
-                            <use xlink:href="#sp-ikon_star-article"></use>
-                          </svg>
-                          <svg class="person-reviews__star" width="15" height="15">
-                            <use xlink:href="#sp-ikon_star-article"></use>
-                          </svg>
-                          <span class="person-reviews__value">5</span>
+              </div>
+            </li>
+    <!-- отзывы в слайдер 2-->   
+            <li class="carousel__item">
+              <div class="person-reviews__item"> 
+                <div class="person-reviews__item-wrapper"> 
+                  <div class="person-reviews__left">
+                    <p class="person-reviews__category">Комментарий</p>
+                    <div class="person-reviews__text">Ходили с 5-ти на занятия по ментальной арифметике до школы в &laquo;СТАРТ&raquo;, ребенок реально начал быстро считать, выучил счет до 100, стал более усидчивый (были небольшие проблемы с этим), 
+                      но когда пошли в школу, не получилось продолжить занятия — переехали в другой район.
                         </div>
-                        <time class="person-reviews__date" datetime="2023-04-14">14.04.2023</time>
+                    <p class="person-reviews__category">Минусы</p>
+                    <div class="person-reviews__text">Когда пропускаешь занятия по каким-то причинам, мало вариантов по времени для отработки.</div>
+                    <p class="person-reviews__category">Плюсы</p>
+                    <div class="person-reviews__text">Ребенок в школе, больше всего любит математику.</div>
+                  </div>
+      
+                  <div class="person-reviews__right">
+                    <div class="person-reviews__profile">
+                      <p class="person-reviews__author">Карина Ларионова</p>
+                      <a class="person-reviews__link" href="https://2gis.ru/krasnoyarsk/search/%D0%B4%D0%B5%D1%82%D1%81%D0%BA%D0%B8%D0%B9%20%D1%86%D0%B5%D0%BD%D1%82%D1%80%20%22%D0%A1%D1%82%D0%B0%D1%80%D1%82%22%20%D0%9C%D0%B0%D1%82%D0%B5%20%D0%97%D0%B0%D0%BB%D0%BA%D0%B8%2C%2011/firm/70000001056207952/92.942035%2C56.064837/tab/reviews?floor=0&m=92.942061%2C56.064826%2F17.74" target="_blank">
+                        отзыв с 2gis</a>
                     </div>
-                    </div>
+                    <div class="person-reviews__rate__wrapper">
+                      <div role="img" aria-label="Рейтинг 5 из 5" class="person-reviews__rate person-reviews__rate--svg">
+                        <!-- звездочка -->
+                        <svg class="person-reviews__star" width="15" height="15">
+                          <use xlink:href="#sp-ikon_star-article"></use>
+                        </svg>
+                        <svg class="person-reviews__star" width="15" height="15">
+                          <use xlink:href="#sp-ikon_star-article"></use>
+                        </svg>
+                        <svg class="person-reviews__star" width="15" height="15">
+                          <use xlink:href="#sp-ikon_star-article"></use>
+                        </svg>
+                        <svg class="person-reviews__star" width="15" height="15">
+                          <use xlink:href="#sp-ikon_star-article"></use>
+                        </svg>
+                        <svg class="person-reviews__star" width="15" height="15">
+                          <use xlink:href="#sp-ikon_star-article"></use>
+                        </svg>
+                        <span class="person-reviews__value">5</span>
+                      </div>
+                      <time class="person-reviews__date" datetime="2023-04-14">14.04.2023</time>
+                  </div>
                   </div>
                 </div>
-              </li>
-<!-- отзывы в слайдер 3-->  
-              <li class="item">
-                <div class="person-reviews__item"> 
-                  <div class="person-reviews__item-wrapper"> 
-                    <div class="person-reviews__left">
-                      <p class="person-reviews__category">Комментарий</p>
-                      <div class="person-reviews__text">Занимались в прошлом году ментальной арифметикой в ДЦ &laquo;СТАРТ&raquo;, была группа из 3 детей, но в середине года, 
-                        дети начали болеть, то по двое, то по очереди. После Нового года одни бросили, другим надоело, дочь занималась одна, ей нравилось,
-                        но пропал «дух соревнований», когда была команда, каждый хотел быть лучшим и это держало детей в тонусе.</div>
-                      <p class="person-reviews__category">Минусы</p>
-                      <div class="person-reviews__text">Проблема с парковкой, не всегда был администратор, но горячие напитки, родителям всегда предлагали.</div>
-                      <p class="person-reviews__category">Плюсы</p>
-                      <div class="person-reviews__text">Занятие проходило, даже  если был 1 ребенок и стоимость была всегда, как за групповое
-                         (даже когда дочь осталась одна, сказали, что это не наша вина).
-                      </div>
-                    </div>
-        
-                    <div class="person-reviews__right">
-                      <div class="person-reviews__profile">
-                        <p class="person-reviews__author">Андрей Викулов</p>
-                        <a class="person-reviews__link" href="https://2gis.ru/krasnoyarsk/search/%D0%B4%D0%B5%D1%82%D1%81%D0%BA%D0%B8%D0%B9%20%D1%86%D0%B5%D0%BD%D1%82%D1%80%20%22%D0%A1%D1%82%D0%B0%D1%80%D1%82%22%20%D0%9C%D0%B0%D1%82%D0%B5%20%D0%97%D0%B0%D0%BB%D0%BA%D0%B8%2C%2011/firm/70000001056207952/92.942035%2C56.064837/tab/reviews?floor=0&m=92.942061%2C56.064826%2F17.74" target="_blank">
-                          отзыв с 2gis</a>
-                      </div>
-                      <div class="person-reviews__rate__wrapper">
-                        <div role="img" aria-label="Рейтинг 5 из 5" class="person-reviews__rate person-reviews__rate--svg">
-                          <!-- звездочка -->
-                          <svg class="person-reviews__star" width="15" height="15">
-                            <use xlink:href="#sp-ikon_star-article"></use>
-                          </svg>
-                          <svg class="person-reviews__star" width="15" height="15">
-                            <use xlink:href="#sp-ikon_star-article"></use>
-                          </svg>
-                          <svg class="person-reviews__star" width="15" height="15">
-                            <use xlink:href="#sp-ikon_star-article"></use>
-                          </svg>
-                          <svg class="person-reviews__star" width="15" height="15">
-                            <use xlink:href="#sp-ikon_star-article"></use>
-                          </svg>
-                          <svg class="person-reviews__star" width="15" height="15">
-                            <use xlink:href="#sp-ikon_star-article"></use>
-                          </svg>
-                          <span class="person-reviews__value">5</span>
-                        </div>
-                        <time class="person-reviews__date" datetime="2023-04-17">17.04.2023</time>
-                    </div>
+              </div>
+            </li>
+    <!-- отзывы в слайдер 3-->  
+            <li class="carousel__item">
+              <div class="person-reviews__item"> 
+                <div class="person-reviews__item-wrapper"> 
+                  <div class="person-reviews__left">
+                    <p class="person-reviews__category">Комментарий</p>
+                    <div class="person-reviews__text">Занимались в прошлом году ментальной арифметикой в ДЦ &laquo;СТАРТ&raquo;, была группа из 3 детей, но в середине года, 
+                      дети начали болеть, то по двое, то по очереди. После Нового года одни бросили, другим надоело, дочь занималась одна, ей нравилось,
+                      но пропал «дух соревнований», когда была команда, каждый хотел быть лучшим и это держало детей в тонусе.</div>
+                    <p class="person-reviews__category">Минусы</p>
+                    <div class="person-reviews__text">Проблема с парковкой, не всегда был администратор, но горячие напитки, родителям всегда предлагали.</div>
+                    <p class="person-reviews__category">Плюсы</p>
+                    <div class="person-reviews__text">Занятие проходило, даже  если был 1 ребенок и стоимость была всегда, как за групповое
+                        (даже когда дочь осталась одна, сказали, что это не наша вина).
                     </div>
                   </div>
-                </div>
-              </li>
-<!-- отзывы в слайдер 4-->  
-               <li class="item">
-                <div class="person-reviews__item"> 
-                  <div class="person-reviews__item-wrapper"> 
-                    <div class="person-reviews__left">
-                      <p class="person-reviews__category">Комментарий</p>
-                      <div class="person-reviews__text">С племянником ходим на ментальную арифметику – Антону 7 лет. Преподаватель внимательный к детям, часто устраивает переменки в игровой форме для них. 
-                        У Антона есть мотивация – он хочет поехать на соревнования в Москву по ментальной арифметике.</div>
-                      <p class="person-reviews__category">Минусы</p>
-                      <div class="person-reviews__text">Нет.</div>
-                      <p class="person-reviews__category">Плюсы</p>
-                      <div class="person-reviews__text">Нравится  адекватная  цена за занятия.
-                        И главное преимущество – очень здорово, что этот центр находится в Северном рядом с домом.
+      
+                  <div class="person-reviews__right">
+                    <div class="person-reviews__profile">
+                      <p class="person-reviews__author">Андрей Викулов</p>
+                      <a class="person-reviews__link" href="https://2gis.ru/krasnoyarsk/search/%D0%B4%D0%B5%D1%82%D1%81%D0%BA%D0%B8%D0%B9%20%D1%86%D0%B5%D0%BD%D1%82%D1%80%20%22%D0%A1%D1%82%D0%B0%D1%80%D1%82%22%20%D0%9C%D0%B0%D1%82%D0%B5%20%D0%97%D0%B0%D0%BB%D0%BA%D0%B8%2C%2011/firm/70000001056207952/92.942035%2C56.064837/tab/reviews?floor=0&m=92.942061%2C56.064826%2F17.74" target="_blank">
+                        отзыв с 2gis</a>
+                    </div>
+                    <div class="person-reviews__rate__wrapper">
+                      <div role="img" aria-label="Рейтинг 5 из 5" class="person-reviews__rate person-reviews__rate--svg">
+                        <!-- звездочка -->
+                        <svg class="person-reviews__star" width="15" height="15">
+                          <use xlink:href="#sp-ikon_star-article"></use>
+                        </svg>
+                        <svg class="person-reviews__star" width="15" height="15">
+                          <use xlink:href="#sp-ikon_star-article"></use>
+                        </svg>
+                        <svg class="person-reviews__star" width="15" height="15">
+                          <use xlink:href="#sp-ikon_star-article"></use>
+                        </svg>
+                        <svg class="person-reviews__star" width="15" height="15">
+                          <use xlink:href="#sp-ikon_star-article"></use>
+                        </svg>
+                        <svg class="person-reviews__star" width="15" height="15">
+                          <use xlink:href="#sp-ikon_star-article"></use>
+                        </svg>
+                        <span class="person-reviews__value">5</span>
                       </div>
-                    </div>
-        
-                    <div class="person-reviews__right">
-                      <div class="person-reviews__profile">
-                        <p class="person-reviews__author">Софья Перцева</p>
-                        <a class="person-reviews__link" href="https://yandex.ru/profile/126944487030?ysclid=lf9i5j6r5471527668" target="_blank">
-                          отзыв с yandex.ru</a>
-                      </div>
-                      <div class="person-reviews__rate__wrapper">
-                        <div role="img" aria-label="Рейтинг 5 из 5" class="person-reviews__rate person-reviews__rate--svg">
-                          <!-- звездочка -->
-                          <svg class="person-reviews__star" width="15" height="15">
-                            <use xlink:href="#sp-ikon_star-article"></use>
-                          </svg>
-                          <svg class="person-reviews__star" width="15" height="15">
-                            <use xlink:href="#sp-ikon_star-article"></use>
-                          </svg>
-                          <svg class="person-reviews__star" width="15" height="15">
-                            <use xlink:href="#sp-ikon_star-article"></use>
-                          </svg>
-                          <svg class="person-reviews__star" width="15" height="15">
-                            <use xlink:href="#sp-ikon_star-article"></use>
-                          </svg>
-                          <svg class="person-reviews__star" width="15" height="15">
-                            <use xlink:href="#sp-ikon_star-article"></use>
-                          </svg>
-                          <span class="person-reviews__value">5</span>
-                        </div>
-                        <time class="person-reviews__date" datetime="2023-03-27">27.03.2023</time>
-                    </div>
-                    </div>
+                      <time class="person-reviews__date" datetime="2023-04-17">17.04.2023</time>
+                  </div>
                   </div>
                 </div>
-              </li>
-<!-- отзывы в слайдер 5-->  
-              <li class="item">
-                <div class="person-reviews__item"> 
-                  <div class="person-reviews__item-wrapper"> 
-                    <div class="person-reviews__left">
-                      <p class="person-reviews__category">Комментарий</p>
-                      <div class="person-reviews__text">Руслан 6 лет. Ходили в &laquo;СТАРТ&raquo; с 5-ти лет на ментальную арифметику, сын знал только цифры до 10 и как называются, 
-                        но писал сам не все цифры и плохо. На первом уроке сказали, что этого достаточно. 
-                        Очень удивительно, но быстрый счет освоил довольно скоро, примерно через 2,5 месяца. </div>
-                      <p class="person-reviews__category">Минусы</p>
-                      <div class="person-reviews__text">Маленький выбор времени для занятий.</div>
-                      <p class="person-reviews__category">Плюсы</p>
-                      <div class="person-reviews__text">Ещё порадовало – 
-                        были задания на укрепление руки – ребенок научился писать все цифры довольно хорошо и с усидчивостью стало гораздо лучше.
-                      </div>
-                    </div>
-        
-                    <div class="person-reviews__right">
-                      <div class="person-reviews__profile">
-                        <p class="person-reviews__author">Павел Жабинский</p>
-                        <a class="person-reviews__link" href="https://yandex.ru/profile/126944487030?ysclid=lf9i5j6r5471527668" target="_blank">
-                          отзыв с yandex.ru</a>
-                      </div>
-                      <div class="person-reviews__rate__wrapper">
-                        <div role="img" aria-label="Рейтинг 4 из 5" class="person-reviews__rate person-reviews__rate--svg">
-                          <!-- звездочка -->
-                          <svg class="person-reviews__star" width="15" height="15">
-                            <use xlink:href="#sp-ikon_star-article"></use>
-                          </svg>
-                          <svg class="person-reviews__star" width="15" height="15">
-                            <use xlink:href="#sp-ikon_star-article"></use>
-                          </svg>
-                          <svg class="person-reviews__star" width="15" height="15">
-                            <use xlink:href="#sp-ikon_star-article"></use>
-                          </svg>
-                          <svg class="person-reviews__star" width="15" height="15">
-                            <use xlink:href="#sp-ikon_star-article"></use>
-                          </svg>
-                          <!-- <svg class="person-reviews__star" width="15" height="15">
-                            <use xlink:href="#sp-ikon_star-article"></use>
-                          </svg> -->
-                          <span class="person-reviews__value">4</span>
-                        </div>
-                        <time class="person-reviews__date" datetime="2023-04-27">27.04.2023</time>
-                    </div>
+              </div>
+            </li>
+    <!-- отзывы в слайдер 4-->  
+              <li class="carousel__item">
+              <div class="person-reviews__item"> 
+                <div class="person-reviews__item-wrapper"> 
+                  <div class="person-reviews__left">
+                    <p class="person-reviews__category">Комментарий</p>
+                    <div class="person-reviews__text">С племянником ходим на ментальную арифметику – Антону 7 лет. Преподаватель внимательный к детям, часто устраивает переменки в игровой форме для них. 
+                      У Антона есть мотивация – он хочет поехать на соревнования в Москву по ментальной арифметике.</div>
+                    <p class="person-reviews__category">Минусы</p>
+                    <div class="person-reviews__text">Нет.</div>
+                    <p class="person-reviews__category">Плюсы</p>
+                    <div class="person-reviews__text">Нравится  адекватная  цена за занятия.
+                      И главное преимущество – очень здорово, что этот центр находится в Северном рядом с домом.
                     </div>
                   </div>
+      
+                  <div class="person-reviews__right">
+                    <div class="person-reviews__profile">
+                      <p class="person-reviews__author">Софья Перцева</p>
+                      <a class="person-reviews__link" href="https://yandex.ru/profile/126944487030?ysclid=lf9i5j6r5471527668" target="_blank">
+                        отзыв с yandex.ru</a>
+                    </div>
+                    <div class="person-reviews__rate__wrapper">
+                      <div role="img" aria-label="Рейтинг 5 из 5" class="person-reviews__rate person-reviews__rate--svg">
+                        <!-- звездочка -->
+                        <svg class="person-reviews__star" width="15" height="15">
+                          <use xlink:href="#sp-ikon_star-article"></use>
+                        </svg>
+                        <svg class="person-reviews__star" width="15" height="15">
+                          <use xlink:href="#sp-ikon_star-article"></use>
+                        </svg>
+                        <svg class="person-reviews__star" width="15" height="15">
+                          <use xlink:href="#sp-ikon_star-article"></use>
+                        </svg>
+                        <svg class="person-reviews__star" width="15" height="15">
+                          <use xlink:href="#sp-ikon_star-article"></use>
+                        </svg>
+                        <svg class="person-reviews__star" width="15" height="15">
+                          <use xlink:href="#sp-ikon_star-article"></use>
+                        </svg>
+                        <span class="person-reviews__value">5</span>
+                      </div>
+                      <time class="person-reviews__date" datetime="2023-03-27">27.03.2023</time>
+                  </div>
+                  </div>
                 </div>
-              </li>
-<!-- стрелка назад -->
-            <button class="control left">
-              <span class="visually-hidden">Назад</span>
-                <svg class="arrow left" aria-hidden="true" width="12" height="20">
-                  <use xlink:href="#sp-icon-left-slider"></use>
-                </svg>
-            </button>
-
-<!-- стрелка вперед -->
-            <button class="control right">
-              <span class="visually-hidden">Далее</span>
-              <svg class="arrow right" aria-hidden="true" width="12" height="20">
-                <use xlink:href="#sp-icon-right-slider"></use>
+              </div>
+            </li>
+    <!-- отзывы в слайдер 5-->  
+            <li class="carousel__item">
+              <div class="person-reviews__item"> 
+                <div class="person-reviews__item-wrapper"> 
+                  <div class="person-reviews__left">
+                    <p class="person-reviews__category">Комментарий</p>
+                    <div class="person-reviews__text">Руслан 6 лет. Ходили в &laquo;СТАРТ&raquo; с 5-ти лет на ментальную арифметику, сын знал только цифры до 10 и как называются, 
+                      но писал сам не все цифры и плохо. На первом уроке сказали, что этого достаточно. 
+                      Очень удивительно, но быстрый счет освоил довольно скоро, примерно через 2,5 месяца. </div>
+                    <p class="person-reviews__category">Минусы</p>
+                    <div class="person-reviews__text">Маленький выбор времени для занятий.</div>
+                    <p class="person-reviews__category">Плюсы</p>
+                    <div class="person-reviews__text">Ещё порадовало – 
+                      были задания на укрепление руки – ребенок научился писать все цифры довольно хорошо и с усидчивостью стало гораздо лучше.
+                    </div>
+                  </div>
+      
+                  <div class="person-reviews__right">
+                    <div class="person-reviews__profile">
+                      <p class="person-reviews__author">Павел Жабинский</p>
+                      <a class="person-reviews__link" href="https://yandex.ru/profile/126944487030?ysclid=lf9i5j6r5471527668" target="_blank">
+                        отзыв с yandex.ru</a>
+                    </div>
+                    <div class="person-reviews__rate__wrapper">
+                      <div role="img" aria-label="Рейтинг 4 из 5" class="person-reviews__rate person-reviews__rate--svg">
+                        <!-- звездочка -->
+                        <svg class="person-reviews__star" width="15" height="15">
+                          <use xlink:href="#sp-ikon_star-article"></use>
+                        </svg>
+                        <svg class="person-reviews__star" width="15" height="15">
+                          <use xlink:href="#sp-ikon_star-article"></use>
+                        </svg>
+                        <svg class="person-reviews__star" width="15" height="15">
+                          <use xlink:href="#sp-ikon_star-article"></use>
+                        </svg>
+                        <svg class="person-reviews__star" width="15" height="15">
+                          <use xlink:href="#sp-ikon_star-article"></use>
+                        </svg>
+                        <!-- <svg class="person-reviews__star" width="15" height="15">
+                          <use xlink:href="#sp-ikon_star-article"></use>
+                        </svg> -->
+                        <span class="person-reviews__value">4</span>
+                      </div>
+                      <time class="person-reviews__date" datetime="2023-04-27">27.04.2023</time>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+    <!-- стрелка назад -->
+          <button class="carousel__control left">
+            <span class="visually-hidden">Назад</span>
+              <svg class="carousel__arrow left" aria-hidden="true" width="12" height="20">
+                <use xlink:href="#sp-icon-left-slider"></use>
               </svg>
-            </button>
-          </ul>
-        </div>
-<!-- slaider_end -->
-      </div>     
+          </button>
+
+    <!-- стрелка вперед -->
+          <button class="carousel__control right">
+            <span class="visually-hidden">Далее</span>
+            <svg class="carousel__arrow right" aria-hidden="true" width="12" height="20">
+              <use xlink:href="#sp-icon-right-slider"></use>
+            </svg>
+          </button>
+        </ul>
+      </div>
+    <!-- slaider_end -->
+    </div>     
     </section>
+
+
 
 
     <!-- Читайте также -->
@@ -704,8 +801,8 @@
                   <!-- <source type="image/webp"
                   srcset="img/mental_artical/history-mental-mobile@1x.webp 1x, img/mental_artical/history-mental-mobile@2x.webp 2x"> -->
 
-                  <img class="popular__item-img" src="img/mental_artical/history-mental-mobile@1x" alt="Пассивный дом" 
-                  srcset="img/mental_artical//history-mental-mobile@1x.jpg 1x, img/mental_artical//history-mental-mobile@2x.jpg 2x">
+                  <img class="popular__item-img" src="img/mental_artical/history-mental-mobile@1x.jpg" alt="Пассивный дом" 
+                  srcset="img/mental_artical/history-mental-mobile@1x.jpg 1x, img/mental_artical/history-mental-mobile@2x.jpg 2x">
                 </picture>      
 
                   <div class="popular__more-info">

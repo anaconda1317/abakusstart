@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', function(){
   }
   
   // sub-menu for uslugi in main menu  - открытие на имобилке и таблетке
-
+console.log(window.innerWidth);
   if(window.innerWidth <= 768){
     var menuItems = document.querySelectorAll(".site-list__item")
     menuItems.forEach(function(el){

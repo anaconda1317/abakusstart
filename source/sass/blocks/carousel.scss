@@ -19,7 +19,7 @@
   background-color: #fff;
 }
 
-.items-container {
+.carousel__items-container {
   @include list-reset();
   position: relative;
   width: 100%;
@@ -27,7 +27,7 @@
   overflow: hidden;
 }
 
-.item {
+.carousel__item {
   display: none;
   position: relative;
   animation: 0.5s ease-in-out;
@@ -54,7 +54,7 @@
 // }
 
 // я заменила -старое закомичено - начало
-.control {
+.carousel__control {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -82,22 +82,22 @@
     }
 }
 
-.control.left  {
+.carousel__control.left  {
   left: 0;
   right: auto;
   justify-content: flex-end;
   transform: translateX(-50%);
 }
 
-.control.right {
+.carousel__control.right {
   right: 0;
   left: auto;
   justify-content: flex-start;
   transform: translateX(50%);
 }
 
-.arrow  {
-  fill: #ffffff;
+.carousel__arrow  {
+  fill: $white;
 }
 
 // .control  svg {
@@ -118,7 +118,7 @@
 //   left: auto;
 // }
 
-.arrow.right {
+.carousel__arrow.right {
   right: 50%;
 }
 
@@ -176,7 +176,7 @@
 
 @media (max-width: $mobile-width-only) {
 
-  .control {
+  .carousel__control {
     width: unset;
     height: unset;
 
@@ -184,7 +184,7 @@
     border-radius: unset; 
   }
 
-  .control > svg {
+  .carousel__control > svg {
     display: none;
   }
 
