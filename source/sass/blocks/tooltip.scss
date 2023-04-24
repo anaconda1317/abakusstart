@@ -6,7 +6,7 @@
 
   .tooltip dfn {
     font-style: normal;
-    text-decoration: underline dashed #ff8d86;
+    text-decoration: underline 2px dashed #00A0AE;
     text-underline-offset: 4px;
 }
 
@@ -20,7 +20,8 @@
   font-size: 16px;
   line-height: 20px;
   color: $white;
-  background: #00A0AE;
+  // background: #00A0AE;
+  background: #13AAAF;
   // background: #ff0266;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
   border-radius: 6px;
@@ -31,8 +32,7 @@
   // transition: opacity 0.5s ease 0.1s;
 }
 
-
-  .__opened {
+.__opened {
   opacity: 1;
 }
 

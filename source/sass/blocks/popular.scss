@@ -79,6 +79,12 @@
   margin: 0;
 }
 
+.popular__wrapper-img {
+    position: relative;
+    width: 235px;
+    height: 131px;
+  }
+
 .popular__item-img {
   margin-bottom: 15px;
   // border: none;
@@ -94,7 +100,6 @@
     transition: all 0.5s linear;
   }
 }
-
   
   .popular__more-info {
     display: flex;

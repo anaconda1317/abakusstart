@@ -122,11 +122,11 @@
     font-size: 18px;
     // font-size: 16px;
     font-weight: bold;
-    color: #252525;
+    // color: #252525;
+    color: $main-blue;
     border: 1px solid $main-blue;
     // border: 1px solid #797d80;
-    border-radius: 15px;
-    // color: #5f6366;
+    border-radius: 15px 0;
   }
 
   .price__discount::before {
@@ -158,9 +158,9 @@
     }
 
     .price__header {
-      margin-bottom: 50px;
+      margin-bottom: 30px;
       width: 294px;
-      font-size: 36px;
+      font-size: 28px;
       // font-size: 40px;
       text-align: left;
     }

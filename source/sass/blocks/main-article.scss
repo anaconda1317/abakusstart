@@ -149,7 +149,8 @@
     position: relative;
     counter-increment: num;
     margin-bottom: 15px;
-    padding-left: 23px;
+    // padding-left: 23px;
+    padding-left: 35px;
     font-size: 18px;
     line-height: 23px; 
     // margin-bottom: 5px;
@@ -265,6 +266,12 @@
     color: #666;
   }
 
+  .main-article__wrapper-reference-img {
+    position: relative;
+    width: 343px;
+    height: 216px;
+  }             
+
   .main-article__img-reference {
     position: relative;
     display: block;
@@ -352,6 +359,14 @@
     display: none;
   }
 
+  .main-article__right-floated {
+    display: none;
+  }
+
+  .main-article__right-floated--aside {
+    display: none;
+  }
+
   .main-article__bullet-list {
     @include list-reset();
     width: 90%;
@@ -393,8 +408,8 @@
   font-weight: 600;
   font-size: 28px;
   line-height: 1.2em;
-  color: #252525;
-  // color: #87929A;
+  // color: #252525;
+  color: #87929A;
   text-align: center;
 }
 
@@ -413,7 +428,7 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 30px;
-  color: #0094fe;
+  color: #11999E;
   text-transform: lowercase;
 }
 
@@ -550,6 +565,11 @@
     line-height: 41px;
   }
 
+  // .main-article__rules-item::before:first-child {
+  //   width: 50px;
+  //   height: 50px;
+  // }
+
   .main-article__rule-list::before {
     content: "";
     position: absolute;
@@ -567,6 +587,10 @@
     // font-size: 30px;
     // line-height: 45px;
   }
+
+  // .main-article__rules-title:first-child {
+  //   margin: 0 0 15px 65px;
+  // }
 
     .main-article__reference {
     width: 327px; 
@@ -591,7 +615,7 @@
   .main-article__quote {
     position: relative;
     margin: 30px 0 25px 0;
-    padding: 3px 0 10px 30px; 
+    padding: 1px 0 10px 30px; 
     border-left: 3px solid #000000;
   }
 
@@ -634,7 +658,7 @@
 
   .main-article__bullet-list-item::before {
     top: 8px;
-    left: -20px;
+    left: -30px;
     width: 10px;
     height: 10px;
 }
@@ -644,14 +668,6 @@
     font-weight: 700;
     font-size: 30px;
     line-height: 45px;
-  }
-
-  .main-article__footer-link {
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 30px;
-    color: #0094fe;
-    text-transform: lowercase;
   }
 }
 
@@ -741,8 +757,15 @@
     border-radius: 0 60px;
     background-color: #f1f1f2;
   }
+  
+  .main-article__right-floated {
+    display: block;
+    float: right;
+    margin-left: 27px;
+    margin-top: 17px;
+  }
 
-  .main-article__right--floated {
+  .main-article__right-floated--aside {
     float: right;
     margin-left: 10px;
     margin-bottom: 10px;
