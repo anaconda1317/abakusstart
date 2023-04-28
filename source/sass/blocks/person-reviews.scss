@@ -17,8 +17,8 @@
   width: 290px;
   padding-top: 10px;
 
-  border-top: 1px solid red;
-  background-color: azure;
+  border-top: 1px solid #bebebe;
+  // background-color: azure;
   }
 
   .person-reviews__item {
@@ -78,24 +78,37 @@
     order: 2;
   }
 
+  .person-reviews__title {
+    font-size: 25px;
+    line-height: 1.5;
+    font-weight: 400;
+    color: #1f2829;
+  }
+
+  .person-reviews__info {
+    font-size: 17px;
+    color: #808080;
+    line-height: 1.3;
+  }   
+
   .person-reviews__profile {
     display: flex;
     margin-bottom: 10px;
     margin-top: 25px;
     flex-direction: column;
     align-items: flex-start;
-    flex-wrap: wrap;
-    
+    flex-wrap: wrap;    
   }
 
   .person-reviews__author {
     display: flex;
     align-items: center;
-    margin: 0 0 10px;    
-    font-weight: 500;
+    margin: 0 0 10px; 
     font-size: 21px;
-    line-height: 23px;
-    color: inherit;
+    line-height: 27px;
+    font-weight: 400;
+    color: #1f2829;
+
   }
 
   .person-reviews__author::before {
@@ -110,12 +123,13 @@
     border-radius: 50%;
   }
 
+
   .person-reviews__link {
     margin-bottom: 10px;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 21px;  
-    color: #000000;
+    color: #bcbec2;
     text-decoration: none;
     // transition: opacity 0.3s ease;
     transition: color .1s ease;
@@ -123,7 +137,7 @@
 
     &:hover,
     &:focus {
-      color: #8e9aad;
+      color: #A8ABB0;
     text-decoration: underline;
   }
 
@@ -162,7 +176,7 @@
   .person-reviews__date {
     font-size: 16px;
     line-height: 16px;
-    color: $main-text-color;
+    color: #1f2829;
   }
 
 
@@ -172,8 +186,8 @@
     padding-top: 10px;
     font-weight: 700;
     font-size: 16px;
-    line-height: 16px;
-    color: #666;
+    line-height: 1.2;
+    color: #bebebe;
     text-align: left;
     text-transform: uppercase;
     // border-top: 1px dashed #666;
@@ -188,8 +202,9 @@
     margin-bottom: 15px;
     white-space: pre-line;
     font-size: 16px;
-    line-height: 21px;
+    line-height: 1.3;
     text-align: left;
+    color: #1f2829;;
     // line-height: 1.5;
   }
 
