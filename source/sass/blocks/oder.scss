@@ -62,7 +62,7 @@
     width: 290px;
     margin: 0;
     padding: 30px 10px 18px;  
-    font-size: 19px;
+    font-size: 18px;
     line-height: 1.5;
   }
 
@@ -146,13 +146,15 @@
   .oder__img {
     position: relative;
     display: block;
+    width: 290px;
+    height: auto;
   }
 
-  .oder__img--cropping-top-right {
-    position: relative;
-    display: block;
-    border-top-right-radius: 80px 80px;
-  }
+  // .oder__img--cropping-top-right {
+  //   position: relative;
+  //   display: block;
+  //   border-top-right-radius: 80px 80px;
+  // }
 
 
 @media (min-width: $tablet-width) {
@@ -160,6 +162,14 @@
   .oder__container {  
     width: 500px;
     margin: 0 auto;
+  }
+
+  .oder__img {
+    position: relative;
+    display: block;
+    width: 500px;
+    height: auto;
+    border-bottom-right-radius: 40px;
   }
 
   .oder__title {
@@ -182,11 +192,13 @@
     // transition: border .25s, color .25s;
   }
 
+  
   .oder__text {
     // width: 370px;
     width: 420px;
     margin: 0;
     padding: 30px 10px 18px;
+    font-size: 19px;
     }
 
   .oder__price-list {
@@ -220,12 +232,13 @@
   .oder__text-column {
     width: 340px;
 
-    padding-top: 30px;
+    // padding-top: 30px;
     // padding-right: 30px;
-    padding-right: 10px;
+    padding-left: 10px;
 }
 
   .oder__title {
+    padding-bottom: 10px;
     font-size: 27px;
     line-height: 35px;
     font-weight: 700;
@@ -233,6 +246,7 @@
   }
 
   .oder__lead {
+    margin: 0;
     font-size: 21px;
     padding-left: 10px;
   }
@@ -240,7 +254,7 @@
   .oder__text {
     width: 330px;
     margin: 0;
-    padding: 30px 15px 18px;
+    padding: 15px 15px 12px;
   }
 
   // .oder__price-list {
@@ -252,19 +266,29 @@
     width: 350px;
     order: -1;
 
-    padding-top: 30px;
-    padding-right: 30px;
+    // padding-top: 30px;
+    // padding-right: 30px;
   }
 
-  .oder__img-column::before {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 30px;
-    width: calc(100% - 30px);
-    height: calc(100% - 30px);
-    border: 1px dashed #ffde03;
-    // border: 1px dashed #fdfdfd;
-    border-radius: 0 80px 0 0;
+  .oder__img {
+    position: relative;
+    display: block;
+    width: 350px;
+    height: auto;
+
+    border-top-left-radius: 40px;
+    border-bottom-right-radius: 0;
   }
+
+  // .oder__img-column::before {
+  //   position: absolute;
+  //   content: "";
+  //   top: 0;
+  //   left: 30px;
+  //   width: calc(100% - 30px);
+  //   height: calc(100% - 30px);
+  //   border: 1px dashed #ffde03;
+  //   // border: 1px dashed #fdfdfd;
+  //   border-radius: 0 80px 0 0;
+  // }
 }

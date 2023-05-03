@@ -137,9 +137,11 @@ var swipedetect = function(el) {
 var el = document.querySelector('.carousel');
 swipedetect(el);
 
-// tooltip
+// slaider carusel отзывы end
+
+// tooltip 
 window.addEventListener('load', function(){ 
-  if(window.innerWidth <= 768){
+//   if(window.innerWidth <= 768){
     var tooltip = document.querySelector ('.tooltip__content');
     var tooltipTogle = document.querySelector ('.tooltip__toggle');
 
@@ -153,8 +155,38 @@ window.addEventListener('load', function(){
             tooltip.classList.remove('__opened');
           }
       });
-    }
+    // }
   }
 });
-// slaider carusel отзывы end
+
+// chat
+  window.addEventListener('load', function(){ 
+    if(window.innerWidth <= 767){
+      var chat = document.querySelector ('.chat__list');
+      var chatTogle = document.querySelector ('.chat__btn-toggle--open');
+      var chatClouse = document.querySelector ('.chat__btn-toggle--clouse');
+
+      if(chatTogle){
+        chatTogle.addEventListener('click', function(){
+          chat.classList.add('chat__list--showed'); 
+          chatClouse.classList.add('__show')
+          chatClouse.classList.remove('__hide')
+          chatTogle.classList.add('__hide')
+  
+      }); 
+      chatClouse.addEventListener('click', function(){
+          chat.classList.remove('chat__list--showed'); 
+          chatClouse.classList.remove('__show')
+          chatClouse.classList.add('__hide')
+          chatTogle.classList.remove('__hide')
+      }); 
+        document.addEventListener("keydown", function (event) {
+          // console.log(ev.keyCode); не вывел в консоль почему-то????
+            if (event.code == "Escape") {
+              chat.classList.remove('chat__list--showed');
+            }
+        });
+      }
+    }
+  });
 

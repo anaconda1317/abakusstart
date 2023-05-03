@@ -39,7 +39,24 @@
   line-height: 18px;
   // font-size: 14px;
   // line-height: 16px;
+  color: #f9f9f9;
+  text-decoration: underline dashed 1px #f9f9f9;
+  transition: all 0.6s ease;
 }
+
+.user__insta:hover,
+.user__insta:focus {
+  opacity: .6;
+  text-decoration: none;
+  transition: all 0.6s ease;
+}
+
+.user__insta:active {
+  opacity: 1;
+  text-decoration: underline dashed 1px #f9f9f9;
+  transition: all 0.3s ease;
+}
+
 
 @media (min-width: $tablet-width) {
   

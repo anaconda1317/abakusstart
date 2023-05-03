@@ -20,7 +20,7 @@
   font-size: 16px;
   line-height: 20px;
   color: $white;
-  // background: #00A0AE;
+
   background: #13AAAF;
   // background: #ff0266;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
@@ -50,12 +50,12 @@
 
 @media (min-width: $desktop-width) {
 
-  .tooltip__toggle:hover ~ .tooltip__content {
-    opacity: 1;
-    transition-delay: 75ms;
-    transition: all 0.3s ease-out;
-    // transition: opacity 0.3s ease;
-  }
+  // .tooltip__toggle:hover ~ .tooltip__content {
+  //   opacity: 1;
+  //   transition-delay: 75ms;
+  //   transition: all 0.3s ease-out;
+  //   // transition: opacity 0.3s ease;
+  // }
 
   .tooltip__content {
     position: absolute;
