@@ -185,6 +185,7 @@
   #advantages-input-2:checked ~ .advantages__items .advantages__item--cool,
   #advantages-input-3:checked ~ .advantages__items .advantages__item--expensive {
     display: block;
+    scroll-behavior: smooth;
   }
 }
 

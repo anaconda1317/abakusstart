@@ -64,11 +64,6 @@
 
   }
 
-  // .__chat-showed {
-  //   transform: translate(0);
-  //   opacity: 1;
-  // }
-
   .chat__list {
     @include list-reset();
     position: relative;
@@ -182,8 +177,24 @@
 
   @media (min-width: $tablet-width) {
 
-    .chat__btn-toggle {      
-      background-color: unset;
+    .chat__btn-wrapper {
+      display: none;
+    }
+
+    .chat__btn-toggle--clouse {
+      display: none;
+    } 
+    
+    .chat__btn-toggle--clouse.__hide {
+      display: none;  
+    }
+
+    .chat__btn-toggle--open {
+      display: none;
+    }
+  
+    .chat__btn-toggle--open.__hide {
+      display: none;
     }
 
     .chat {
@@ -218,6 +229,8 @@
       background: unset;
       box-shadow: unset;
       opacity: 1;
+
+      transform: translate(0);
     }
 
     .chat__item {

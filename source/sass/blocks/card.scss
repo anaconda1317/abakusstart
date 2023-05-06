@@ -41,6 +41,9 @@
   // box-shadow: 0 4px 15px rgb(157 162 166 / 12%);
 
   // полоска - она в px- ПЕРЕДЕЛАТЬ! спросить Андрей -в тел код
+  // :not(:last-child)::after
+
+  
   &::after {
     position: absolute;
     // z-index: 3;
@@ -50,7 +53,16 @@
     background-color: $article-line;
     top: 680px;
     left: -20px;
+    
   }
+  
+  // &::nth-child(8)::after {
+  //   background-color: unset;
+  // }
+
+  // &:last-child::after {
+  //   background-color: unset;
+  // }
 
   // .card-list-container li + li::after {
   //   content: "";

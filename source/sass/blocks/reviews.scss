@@ -68,12 +68,14 @@
   position: relative;
 
   margin: 0 20px;
+  margin-bottom: 10px;
   padding-right: 20px;
   padding-bottom: 55px;
   padding-left: 70px;
   &:nth-child(n) {
     display: none;
   }
+  transition: all 0.3s ease-in-out;
 }
 
 .reviews__author-photo {
@@ -117,12 +119,14 @@
 }
 
 .reviews__item p {
+  height: 216px;
   margin: 0;
 
   font-size: 18px;
   line-height: 27px;
   letter-spacing: -0.1px;
   color: rgba(#000000, 0.8);
+  overflow: hidden;
 }
 
 .reviews__star-rating {
@@ -152,22 +156,20 @@
   // display: block;
   display: flex;
   align-items: center;
+  justify-content: center;
   position: absolute;
-  top: 362px;
+  top: 370px;
   right: 10px;
   min-height: 32px;
-  width: 112px;
+  width: 122px;
   margin: 0;
   padding-top: 0;
-  padding-right: 6px;
-  padding-left: 6px;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 700;
   line-height: calc(32px - 1px * 2);
-  text-align: center;
   color: #ffffff;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px 0;
   background-color: $main-blue;
   z-index: 99;
 
@@ -239,6 +241,7 @@
   background: #ffffff;
 
   transform: translateX(-50%);
+  transition: all 0.6s ease-in-out;
 }
 
 .reviews__toggle {
@@ -257,7 +260,36 @@
   display: block;
 }
 
+// анимация появления
+#reviews-input-1:checked ~ .reviews__items .reviews__item:nth-child(1),
+#reviews-input-2:checked ~ .reviews__items .reviews__item:nth-child(2),
+#reviews-input-3:checked ~ .reviews__items .reviews__item:nth-child(3) {
+  animation-name: shows;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  animation-delay: 0s;
+}
+
+@keyframes shows {
+  0% {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+
+
   @media (min-width: $tablet-width) {
+
   .reviews {
     position: relative;
     // &::after {
@@ -301,6 +333,10 @@
     border: 1px solid $main-blue;
     border-right: none;
     border-left: none;
+  }
+
+  .reviews__item p {
+    height: 108px;
   }
 
   .reviews__star-rating {
@@ -399,22 +435,26 @@
     }
   }
 
+  .reviews__next {
+    border-radius: 0 6px 6px 0;
+  }
+
+  .reviews__prev {
+    border-radius: 6px 0 0 6px ;
+  }
+
   .reviews__write-btn {
     position: absolute;
     top: 25px;
     right: 0;
-    min-height: 40px;
-    display: block;
+    min-height: 40px;  
     width: 150px;
     margin: 0;
-    padding-top: 10px;
-    padding-right: 11px;
-    padding-left: 11px;
     font-size: 14px;
     line-height: 21px;
     color: $main-blue;
     background-color: #ffffff;
-    border-radius: 0;
+    border-radius: 6px 0;
     border: 1px solid $main-blue;
 
     outline: none;
@@ -475,11 +515,16 @@
 
     border-right: 1px solid $main-blue;
     border-left: 1px solid $main-blue;
+    border-radius: 6px;
   }
 
   // .reviews__title {
   //   font-size: 31px;
   // }
+
+  .reviews__item p {
+    height: 81px;
+  }
 
   .reviews__star-rating {
     position: absolute;
@@ -495,7 +540,8 @@
     width: 249px;
     height: 100%;
 
-    border-radius: 0;
+    // border-radius: 0;
+    border-radius: 6px 0 30px 6px;
   }
 
   .reviews__author-photo img {

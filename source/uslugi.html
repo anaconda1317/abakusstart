@@ -41,16 +41,16 @@
   <div class="container">
     <header class="page-header">
       <nav class="main-nav">
-        <button class="main-nav__toggle main-nav__toggle--closed" type="button"><span class="visually-hidden">Кнопка
-            открытия/закрытия меню в мобильой версии</span>
-        </button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list">
+        <button class="main-nav__toggle main-nav__toggle--closed main-nav__toggle--nojs" type="button" aria-expanded="false" aria-label="Menu" aria-controls="main-nav"><span
+          class="visually-hidden">Кнопка открытия/закрытия меню в мобильой версии</span>
+      </button>
+        <div class="main-nav__wrapper" id="home">
+          <ul class="main-nav__list site-list" role="menubar" data-role="menu">
             <li class="site-list__item"><a class="site-list__link" href="/index.php">Главная</a></li>
             <!-- site-list__item with sub-menu -->  
             <li class="site-list__item"> 
               <div class="site-list__item--has-children">
-                <a class="site-list__link site-list__link--active" href="/uslugi.php" target="_blank" aria-current="page" aria-haspopup="true" aria-expanded="false" role="menuitem">Услуги центра</a>
+                <a class="site-list__link site-list__link--active" href="/uslugi.php" aria-current="page" aria-haspopup="true" aria-expanded="false" role="menuitem">Услуги центра</a>
                 <span class="sub-menu__ikon-wrapper">
                   <svg class="sub-menu__ikon" width="25.667" height="15" fill="#000000">
                     <use xlink:href="#sp-icon-arrow_sub-menu"></use></svg>
@@ -60,7 +60,7 @@
                 <div class="sub-menu__wrapper">
                   <ul class="sub-menu" role="menu">
                     <li class="sub-menu__item" style="animation-delay: 0.1s;">
-                      <a class="sub-menu__item-link" href="/mentalnaya-arifmetica.php" target="_blank" role="menuitem">Ментальная арифметика
+                      <a class="sub-menu__item-link" href="/mentalnaya-arifmetika.php" role="menuitem">Ментальная арифметика
                         <!-- ikon start abacus-->
                           <svg class="sub-menu__item-link-svg" fill="#4b7324" width="47" height="40" viewBox="0 0 47 40">
                             <use xlink:href="#sp-abacus_uslugi_icon"></use>
@@ -69,7 +69,7 @@
                       </a>
                     </li>
                     <li class="sub-menu__item" style="animation-delay: 0.13s;">
-                      <a class="sub-menu__item-link" href="/info.php" target="_blank" role="menuitem">Робототехника
+                      <a class="sub-menu__item-link" href="/info.php" role="menuitem">Робототехника
                         <!-- ikon start robot-->
                         <svg class="sub-menu__item-link-svg" fill="#401c8c" width="47" height="40" viewBox="0 0 47 40">
                           <use xlink:href="#sp-robototehnica_uslugi_icon"></use>
@@ -78,7 +78,7 @@
                       </a>
                     </li>
                     <li class="sub-menu__item" style="animation-delay: 0.16s;">
-                      <a class="sub-menu__item-link" href="/info.php" target="_blank" role="menuitem">Репетитор 1-4 классов
+                      <a class="sub-menu__item-link" href="/info.php" role="menuitem">Репетитор 1-4 классов
                         <!-- ikon start repetitor-->
                         <svg class="sub-menu__item-link-svg" fill="#038c8c" width="47" height="40" viewBox="0 0 47 40">
                           <use xlink:href="#sp-repetitor_uslugi_icon"></use>
@@ -87,7 +87,7 @@
                       </a>
                     </li>
                     <li class="sub-menu__item" style="animation-delay: 0.19s;">
-                      <a class="sub-menu__item-link" href="/info.php" target="_blank" role="menuitem">Логопед-дефектолог
+                      <a class="sub-menu__item-link" href="/info.php" role="menuitem">Логопед-дефектолог
                         <!-- ikon start logoped-defektolog-->
                         <svg class="sub-menu__item-link-svg" fill="#d90d58" width="47" height="40" viewBox="0 0 47 40">
                           <use xlink:href="#sp-logoped_uslugi_icon"></use>
@@ -96,7 +96,7 @@
                       </a>
                     </li>
                     <li class="sub-menu__item" style="animation-delay: 0.21s;">
-                      <a class="sub-menu__item-link" href="/info.php" target="_blank" role="menuitem">Анлийский язык
+                      <a class="sub-menu__item-link" href="/info.php" role="menuitem">Анлийский язык
                         <!-- ikon start english-->
                         <svg class="sub-menu__item-link-svg" fill="#02734a" width="47" height="40" viewBox="0 0 47 40">
                           <use xlink:href="#sp-english_1_uslugi_icon"></use>
@@ -105,7 +105,7 @@
                       </a>
                     </li>
                     <li class="sub-menu__item" style="animation-delay: 0.24s;">
-                      <a class="sub-menu__item-link" href="/info.php" target="_blank" role="menuitem">Нейропсихолог
+                      <a class="sub-menu__item-link" href="/info.php" role="menuitem">Нейропсихолог
                         <!-- ikon start nejropsiholog-->
                         <svg class="sub-menu__item-link-svg" fill="#d94ab3" width="47" height="40" viewBox="0 0 47 40">
                           <use xlink:href="#sp-neiropsiho_uslugi_icon"></use>
@@ -114,7 +114,7 @@
                       </a>
                     </li>
                     <li class="sub-menu__item" style="animation-delay: 0.27s;">
-                      <a class="sub-menu__item-link" href="/info.php" target="_blank" role="menuitem">Психотерапевт
+                      <a class="sub-menu__item-link" href="/info.php" role="menuitem">Психотерапевт
                         <!-- ikon start psihoterapevt-->
                         <svg class="sub-menu__item-link-svg" fill="#0b9ed9" width="47" height="40" viewBox="0 0 47 40">
                           <use xlink:href="#sp-psiho_uslugi_icon"></use>
@@ -123,7 +123,7 @@
                       </a>
                     </li>
                     <li class="sub-menu__item" style="animation-delay: 0.30s;">
-                      <a class="sub-menu__item-link" href="/info.php" target="_blank" role="menuitem">Kaллиграфия
+                      <a class="sub-menu__item-link" href="/info.php" role="menuitem">Kaллиграфия
                       <!-- ikon start kalligrafiya-->
                       <svg class="sub-menu__item-link-svg" fill="#e02b40" width="47" height="40" viewBox="0 0 47 40">
                         <use xlink:href="#sp-calligraphiya_uslugi_icon"></use>
@@ -150,7 +150,7 @@
     </header>
 
     <main class="page-main">
-      <h1 class="visually-hidden">Услуги</h1>
+      <h1 class="visually-hidden">Услуги, стоимость занятий</h1>
       <section class="banner">
         <h2 class="visually-hidden">Вводная секция с баннером о занятиях в детском центре &laquo;СТАРТ&raquo;.</h2>
         <div class="banner__image banner__image--photo">
@@ -239,7 +239,7 @@
                 <button class="button card-info__button modal-open" type="button" data-name="mental">Записаться на занятия
                   <span class="visually-hidden">Записаться на занятия по ментальной арифметике.</span>
                 </button>
-                <a class="button card-info__button card-info__button--border" href="/mentalnaya-arifmetica.php" target="_blank">
+                <a class="button card-info__button card-info__button--border" href="/mentalnaya-arifmetika.php" target="_blank">
                   <!-- <a class="button card-info__button card-info__button--border" href="/mental_abacus.php#qqq" target="_blank"> -->
                   <span><svg class="card-info__button-svg" width="20" height="20" fill="#03f">
                     <use xlink:href="#sp-icon-arrow_btn"></use></svg></span>
@@ -745,138 +745,200 @@
 <!-- ТАБЛИЦА ПРЕЙСКУРАНТ кОНЕЦ-->
 
 
-  <section class="post-social">
-    <div class="post-social__wrapper">
-      <h2 class="visually-hidden"> Поделиться в социальных сетях сайт развивающего детского центра &laquo;СТАРТ&raquo; в Красноярске, в Советском районе.</h2>
-        <h3 class="post-social__title">Поделиться
-          <svg  aria-hidden="true" width="16" height="16">
-            <use xlink:href="#sp-share_abakusstart"></use>
-          </svg>
-        </h3>
-            <ul class="post-social__list">
-                <li class="post-social__item post-social__item--vk">
-                    <a class="post-social__button" href="https://vk.com/share.php?url==https://abakusstart.ru/index.html" target="_blank" rel="nofollow">Вконтакте
-                        <span class="visually-hidden">Поделиться в vk сайтом развивающего детского центра &laquo;СТАРТ&raquo; в Красноярске.</span>
-                        <svg  aria-hidden="true" width="20" height="20">
-                          <use xlink:href="#sp-icon-vk"></use>
-                        </svg>
-                    </a>
-                </li>
-                <li class="post-social__item post-social__item--fb">
-                        <a class="post-social__button" href="https://www.facebook.com/sharer.php?u=https://abakusstart.ru/index.html" target="_blank" rel="nofollow">Фейсбук
-                            <span class="visually-hidden">Поделиться в facebook сайтом развивающего детского центра &laquo;СТАРТ&raquo; в Красноярске, в Советском районе.</span>
-                            <svg  aria-hidden="true" width="20" height="20">
-                              <use xlink:href="#sp-icon-facebook"></use>
-                            </svg>
-                        </a>
-                </li>
-                <li class="post-social__item post-social__item--tw">
-                        <a class="post-social__button" href="https://twitter.com/intent/tweet?=https://abakusstart.ru/index.html" target="_blank" rel="nofollow">Твитер
-                            <span class="visually-hidden">Поделиться в twitter сайтом детского центра развития &laquo;СТАРТ&raquo; в Красноярске, в Советском районе.</span>
-                            <svg  aria-hidden="true" width="20" height="20">
-                                <use xlink:href="#sp-icon-twitter"></use>
-                            </svg>
-                        </a>
-                </li>
-                <li class="post-social__item post-social__item--tel">
-                        <a class="post-social__button" href="https://telegram.me/share/url?url=https://abakusstart.ru/index.html" target="_blank" rel="nofollow">Телеграм
-                            <span class="visually-hidden">Поделиться в telegram сайтом детского центра развития &laquo;СТАРТ&raquo; в Красноярске, в Советском районе.</span>
-                            <svg  aria-hidden="true" width="20" height="20">
-                                <use xlink:href="#sp-icon-telegram"></use>
-                            </svg>
-                        </a>
-                </li>
-                <li class="post-social__item post-social__item--od">
-                        <a class="post-social__button" href="https://connect.ok.ru/dk?st.cmd=WidgetSharePreview&st.shareUrl=https://abakusstart.ru/index.html" target="_blank" rel="nofollow">Одноклассники
-                            <span class="visually-hidden">Поделиться в ok сайтом детского центра развития &laquo;СТАРТ&raquo; в Красноярске, в Советском районе.</span>
-                            <svg  aria-hidden="true" width="20" height="20">
-                            <use xlink:href="#sp-icon-ok"></use>
-                            </svg>
-                        </a>
-                </li>
-                <li class="post-social__item post-social__item--pin">
-                        <a class="post-social__button" href="https://ru.pinterest.com/pin/create/button/?url=https://abakusstart.ru/index.html" target="_blank" rel="nofollow">Pinterest
-                            <span class="visually-hidden">Поделиться в pinterest сайтом детского центра развития &laquo;СТАРТ&raquo; в Красноярске, в Советском районе.</span>
-                            <svg  aria-hidden="true" width="20" height="20">
-                            <use xlink:href="#sp-icon-pin"></use>
-                            </svg>
-                        </a>
-                </li>
-            </ul>
-      
-    </div>
-  </section>
-    </main>
-
-  <footer class="page-footer">
-
-    <div class="adress">
-      <div class="adress__name"><span class="visually-hidden">Детский центр развития &laquo;СТАРТ&raquo; в Красноярске, в Советском районе.</span> 
-        Детский центр &laquo;СТАРТ&raquo;</div>
-    <address class="adress__adress">
-      <div><span class="visually-hidden">Адрес детского центра развития &laquo;СТАРТ&raquo; в Красноярске, в Советском районе.</span> 
-        г. Красноярск
+    <section class="post-social">
+      <div class="post-social__wrapper">
+        <h2 class="visually-hidden"> Поделиться в социальных сетях сайт развивающего детского центра &laquo;СТАРТ&raquo; в Красноярске, в Советском районе.</h2>
+          <h3 class="post-social__title">Поделиться
+            <svg  aria-hidden="true" width="16" height="16">
+              <use xlink:href="#sp-share_abakusstart"></use>
+            </svg>
+          </h3>
+              <ul class="post-social__list" role="list">
+                  <li class="post-social__item post-social__item--vk">
+                      <a class="post-social__button" href="https://vk.com/share.php?url==https://abakusstart.ru/uslugi.php" target="_blank" rel="nofollow">Вконтакте
+                          <span class="visually-hidden">Поделиться в vk сайтом развивающего детского центра &laquo;СТАРТ&raquo; в Красноярске.</span>
+                          <svg  aria-hidden="true" width="20" height="20">
+                            <use xlink:href="#sp-icon-vk"></use>
+                          </svg>
+                      </a>
+                  </li>
+                  <li class="post-social__item post-social__item--fb">
+                          <a class="post-social__button" href="https://www.facebook.com/sharer.php?u=https://abakusstart.ru/uslugi.php" target="_blank" rel="nofollow">Фейсбук
+                              <span class="visually-hidden">Поделиться в facebook сайтом развивающего детского центра &laquo;СТАРТ&raquo; в Красноярске, в Советском районе.</span>
+                              <svg  aria-hidden="true" width="20" height="20">
+                                <use xlink:href="#sp-icon-facebook"></use>
+                              </svg>
+                          </a>
+                  </li>
+                  <li class="post-social__item post-social__item--tw">
+                          <a class="post-social__button" href="https://twitter.com/intent/tweet?=https://abakusstart.ru/uslugi.php" target="_blank" rel="nofollow">Твитер
+                              <span class="visually-hidden">Поделиться в twitter сайтом детского центра развития &laquo;СТАРТ&raquo; в Красноярске, в Советском районе.</span>
+                              <svg  aria-hidden="true" width="20" height="20">
+                                  <use xlink:href="#sp-icon-twitter"></use>
+                              </svg>
+                          </a>
+                  </li>
+                  <li class="post-social__item post-social__item--tel">
+                          <a class="post-social__button" href="https://telegram.me/share/url?url=https://abakusstart.ru/uslugi.php" target="_blank" rel="nofollow">Телеграм
+                              <span class="visually-hidden">Поделиться в telegram сайтом детского центра развития &laquo;СТАРТ&raquo; в Красноярске, в Советском районе.</span>
+                              <svg  aria-hidden="true" width="20" height="20">
+                                  <use xlink:href="#sp-icon-telegram"></use>
+                              </svg>
+                          </a>
+                  </li>
+                  <li class="post-social__item post-social__item--od">
+                          <a class="post-social__button" href="https://connect.ok.ru/dk?st.cmd=WidgetSharePreview&st.shareUrl=https://abakusstart.ru/uslugi.php" target="_blank" rel="nofollow">Одноклассники
+                              <span class="visually-hidden">Поделиться в ok сайтом детского центра развития &laquo;СТАРТ&raquo; в Красноярске, в Советском районе.</span>
+                              <svg  aria-hidden="true" width="20" height="20">
+                              <use xlink:href="#sp-icon-ok"></use>
+                              </svg>
+                          </a>
+                  </li>
+                  <li class="post-social__item post-social__item--pin">
+                          <a class="post-social__button" href="https://ru.pinterest.com/pin/create/button/?url=https://abakusstart.ru/uslugi.php" target="_blank" rel="nofollow">Pinterest
+                              <span class="visually-hidden">Поделиться в pinterest сайтом детского центра развития &laquo;СТАРТ&raquo; в Красноярске, в Советском районе.</span>
+                              <svg  aria-hidden="true" width="20" height="20">
+                              <use xlink:href="#sp-icon-pin"></use>
+                              </svg>
+                          </a>
+                  </li>
+              </ul>
+        
       </div>
-      <div><span class="visually-hidden">Адрес детского центра развития &laquo;СТАРТ&raquo; в Красноярске, в Советском районе.</span> 
-        ул. Мате Залки, д. 11, оф. 200
+    </section>
+  </main>
+
+    <footer class="page-footer">
+
+      <div class="adress">
+        <div class="adress__name"><span class="visually-hidden">Детский центр развития &laquo;СТАРТ&raquo; в Красноярске, в Советском районе.</span> 
+          Детский центр &laquo;СТАРТ&raquo;</div>
+      <address class="adress__adress">
+        <div><span class="visually-hidden">Адрес детского центра развития &laquo;СТАРТ&raquo; в Красноярске, в Советском районе.</span> 
+          г. Красноярск
+        </div>
+        <div><span class="visually-hidden">Адрес детского центра развития &laquo;СТАРТ&raquo; в Красноярске, в Советском районе.</span> 
+          ул. Мате Залки, д. 11, оф. 200
+        </div>
+      </address>
+        <p class=" adress__email">
+          <a class="adress__link" href="mailto:info@abakusstart.ru?subject=Вопрос по занятиям " target="_blank">info@abakusstart
+          <span class="visually-hidden">Электронная почта.</span>
+            <svg class="adress__link-svg" width="20" height="20" fill="#0033ff">
+              <use xlink:href="#sp-icon-mail"></use>
+            </svg>
+          </a>
+        </p>
       </div>
-    </address>
-      <p class=" adress__email">
-        <a class="adress__link" href="mailto:info@abakusstart.ru?subject=Вопрос по занятиям " target="_blank">info@abakusstart
-        <span class="visually-hidden">Электронная почта.</span>
-          <svg class="adress__link-svg" width="20" height="20" fill="#0033ff">
-            <use xlink:href="#sp-icon-mail"></use>
+
+      <div class="social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link" href="https://instagram.com/start.centr?igshid=2c5mk9f2v986">
+              <span class="visually-hidden">Инстаграм детского центра развития &laquo;СТАРТ&raquo; в Красноярске, в Советском районе.</span>
+              <svg class="social__link-svg social__link-svg--insta" width="18" height="18" fill="#fff">
+                <use xlink:href="#sp-icon-instagram"></use>
+              </svg></a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="#">
+              <span class="visually-hidden">Ютуб детского центра развития &laquo;СТАРТ&raquo; в Красноярске, в Советском районе.</span>
+              <svg class="social__link-svg social__link-svg--yt" width="24" height="18" fill="#fff">
+                <use xlink:href="#sp-icon-youtube"></use>
+              </svg></a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="#">
+              <span class="visually-hidden">Фейсбук детского центра развития &laquo;СТАРТ&raquo; в Красноярске, в Советском районе.</span>
+              <svg class="social__link-svg social__link-svg--fb" width="9" height="19" fill="#fff">
+                <use xlink:href="#sp-icon-facebook"></use>
+              </svg></a>
+          </li>
+        </ul>
+      </div>
+      <div class="copyright">
+        <b class="copyright__text">Разработано</b>
+        <a class="copyright__link" href="#">
+          <span class="visually-hidden">Ссылка на сайт дизайн-студии Mandarin.</span>
+          <svg class="copyright__link-svg" width="27" height="29" fill="#ff00ff">
+            <use xlink:href="#sp-logo-mandarin-studio"></use>
           </svg>
         </a>
-      </p>
-    </div>
-
-    <div class="social">
-      <ul class="social__list">
-        <li class="social__item">
-          <a class="social__link" href="https://instagram.com/start.centr?igshid=2c5mk9f2v986">
-            <span class="visually-hidden">Инстаграм детского центра развития &laquo;СТАРТ&raquo; в Красноярске, в Советском районе.</span>
-            <svg class="social__link-svg social__link-svg--insta" width="18" height="18" fill="#fff">
-              <use xlink:href="#sp-icon-instagram"></use>
-            </svg></a>
-        </li>
-        <li class="social__item">
-          <a class="social__link" href="#">
-            <span class="visually-hidden">Ютуб детского центра развития &laquo;СТАРТ&raquo; в Красноярске, в Советском районе.</span>
-            <svg class="social__link-svg social__link-svg--yt" width="24" height="18" fill="#fff">
-              <use xlink:href="#sp-icon-youtube"></use>
-            </svg></a>
-        </li>
-        <li class="social__item">
-          <a class="social__link" href="#">
-            <span class="visually-hidden">Фейсбук детского центра развития &laquo;СТАРТ&raquo; в Красноярске, в Советском районе.</span>
-            <svg class="social__link-svg social__link-svg--fb" width="9" height="19" fill="#fff">
-              <use xlink:href="#sp-icon-facebook"></use>
-            </svg></a>
-        </li>
-      </ul>
-    </div>
-    <div class="copyright">
-      <b class="copyright__text">Разработано</b>
-      <a class="copyright__link" href="#">
-        <span class="visually-hidden">Ссылка на сайт дизайн-студии Mandarin.</span>
-        <svg class="copyright__link-svg" width="27" height="29" fill="#ff00ff">
-          <use xlink:href="#sp-logo-mandarin-studio"></use>
-        </svg>
-      </a>
-      <div>
-        <span class="visually-hidden">Ссылка на сайт дизайн-студии Mandarin</span>
-        <a class="copyright__link-text" href="https://mandarinart.ru">Дизайн-студия Mandarin</a>
+        <div>
+          <span class="visually-hidden">Ссылка на сайт дизайн-студии Mandarin</span>
+          <a class="copyright__link-text" href="https://mandarinart.ru">Дизайн-студия Mandarin</a>
+        </div>
       </div>
-    </div>
-    <div class="page-footer__reserv reserv">
-      <span class="visually-hidden">Право ООО «Берег» на сайт детского центра развития &laquo;СТАРТ&raquo; в Красноярске, в Советском районе.</span>
-      <p class="reserv__text">Услуги предоставляет ООО &laquo;Берег&raquo;.<br> ИНН 2463100060&nbsp;| ОГРН 1162468062778. &copy;&nbsp;2018-2023</p>
-    </div>
-  </footer>
+      <div class="page-footer__reserv reserv">
+        <span class="visually-hidden">Право ООО «Берег» на сайт детского центра развития &laquo;СТАРТ&raquo; в Красноярске, в Советском районе.</span>
+        <p class="reserv__text">Услуги предоставляет ООО &laquo;Берег&raquo;.<br> ИНН 2463100060&nbsp;| ОГРН 1162468062778. &copy;&nbsp;2018-2023</p>
+      </div>
+    </footer>
   </div>
+
+  <!-- чат_telegram_viber_wp_tel start-->
+  <!-- toglle start-->
+  <div class="chat__btn-wrapper">
+    <button class="chat__btn-toggle chat__btn-toggle--open" type="button" title="телефон/чат"><span class="visually-hidden">Нажмите,чтобы позвонить, написать в чат детского центра «Старт»"</span>
+      <svg class="chat__btn-svg" fill="#24b7cf" width="40" height="40">
+        <use xlink:href="#sp-icon-messangers-chat_2"></use>
+      </svg>
+    </button>
+
+    <button class="chat__btn-toggle chat__btn-toggle--clouse __hide" type="button" title="закрыть чат"><span class="visually-hidden">Нажмите, чтобы закрыть чат детского центра «Старт»"</span>
+      <svg class="chat__btn-svg" fill="#D5D5D5" width="40" height="40">
+        <use xlink:href="#sp-icon-cross"></use>
+      </svg>
+    </button>
+  </div>
+  <!-- toglle end-->
+
+  <div class="chat">
+    <ul class="chat__list"> 
+  <!-- telega -->
+      <li class="chat__item">
+        <a class="chat__link" href="https://t.me/krasstart" target="_blank" title="Telegram центра">
+          <span class="visually-hidden">Telegram детского центра развития &laquo;СТАРТ&raquo; в Красноярске, в Северном.</span>
+          <svg class="chat__link-svg chat__link-svg--telegram" fill="#28a8e9" width="40" height="40">
+            <use xlink:href="#sp-icon-telegram-chat"></use>
+          </svg>
+        </a>
+      </li>
+<!-- viber -->
+        <li class="chat__item">
+          <a class="chat__link" href="#" target="_blank" title="Viber центра">
+            <span class="visually-hidden">Viber детского центра развития &laquo;СТАРТ&raquo; в Красноярске, в Северном.</span>
+            <svg class="chat__link-svg chat__link-svg--viber" fill="#7360f2" width="40" height="45">
+              <use xlink:href="#sp-icon-viber-chat"></use>
+            </svg>
+          </a>
+        </li>
+<!-- wp -->
+      <li class="chat__item">
+        <a class="chat__link" href="#" target="_blank" title="Whatsapp центра">
+          <span class="visually-hidden">Whatsapp детского центра развития &laquo;СТАРТ&raquo; в Красноярске, в Северном.</span>
+          <svg class="chat__link-svg chat__link-svg--whatsapp" fill="#4caf50" width="40" height="40">
+            <use xlink:href="#sp-icon-whatsapp-chat"></use>
+          </svg>
+        </a>
+      </li>
+<!-- telefon -->
+        <li class="chat__item">
+          <a class="chat__link" href="tel:+79080104854" title="Телефон центра">
+            <span class="visually-hidden">Телефон детского центра развития &laquo;СТАРТ&raquo; в Красноярске, в Северном.</span>
+              <svg class="chat__link-svg chat__link-svg--telefon" fill="#24b7cf" width="40" height="40">
+                <use xlink:href="#sp-icon-tel-chat"></use>
+              </svg>
+          </a>
+        </li>
+    </ul>
+  </div>
+  <!-- чат_telegram_viber_wp_tel end-->
+
+  <!-- вернуться наверх -->
     <a href="#home" title="Вернуться наверх" class="button-up button-up--hiden" >
-      <span class="visually-hidden">Вернуться в начало</span></a>
+      <span class="visually-hidden">Вернуться в начало</span>
+    </a>
 
 <!-- модальное окно - форма данных для telegram НАЧАЛО-->
 <div class="__modal__overlay">
@@ -917,6 +979,41 @@
 
 
   <script src="js/script.min.js"></script>
+  <!-- <script src="js/inner_page.min.js"></script> -->
+
+    <!-- chat -->
+  <script>
+  window.addEventListener('load', function(){ 
+    if(window.innerWidth <= 767){
+      var chat = document.querySelector ('.chat__list');
+      var chatTogle = document.querySelector ('.chat__btn-toggle--open');
+      var chatClouse = document.querySelector ('.chat__btn-toggle--clouse');
+
+      if(chatTogle){
+        chatTogle.addEventListener('click', function(){
+          chat.classList.add('chat__list--showed'); 
+          chatClouse.classList.add('__show')
+          chatClouse.classList.remove('__hide')
+          chatTogle.classList.add('__hide')
+  
+      }); 
+      chatClouse.addEventListener('click', function(){
+          chat.classList.remove('chat__list--showed'); 
+          chatClouse.classList.remove('__show')
+          chatClouse.classList.add('__hide')
+          chatTogle.classList.remove('__hide')
+      }); 
+        document.addEventListener("keydown", function (event) {
+          // console.log(ev.keyCode); не вывел в консоль почему-то????
+            if (event.code == "Escape") {
+              chat.classList.remove('chat__list--showed');
+            }
+        });
+      }
+    }
+  });
+
+  </script>
 
   <script>
     // маска телефона
@@ -984,7 +1081,7 @@
             }
         ]
     }
-</script>
+  </script>
 
 <!-- product разметка -->
 
