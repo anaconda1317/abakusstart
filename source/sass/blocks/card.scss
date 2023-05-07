@@ -18,6 +18,14 @@
   margin: 20px auto 30px;
 }
 
+// .card-list-container__item:nth-child(8) .card-item::after {
+//   background-color: unset;
+// }
+
+.card-list-container__item:last-child .card-item::after {
+  background-color: unset;
+}
+
 .card-item {
   position: relative;
   box-sizing: border-box;
@@ -46,7 +54,6 @@
   
   &::after {
     position: absolute;
-    // z-index: 3;
     content: "";
     width: 320px;
     height: 1px;
@@ -55,14 +62,6 @@
     left: -20px;
     
   }
-  
-  // &::nth-child(8)::after {
-  //   background-color: unset;
-  // }
-
-  // &:last-child::after {
-  //   background-color: unset;
-  // }
 
   // .card-list-container li + li::after {
   //   content: "";
@@ -95,6 +94,7 @@
 // .card-item:hover {
 //   transition: all 0.2s ease-in-out 0s;
 // }
+
 
 .card-item {
   transition: box-shadow 1s ease, background-color 0.3s ease, border-color 0.3s ease 0.2s;

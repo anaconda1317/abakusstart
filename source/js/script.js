@@ -272,42 +272,68 @@ var numbersSliderInputs = sliderInputs.length;
 sliderBtnttonNext.addEventListener("click", setNextSlide);
 sliderBtnttonPrev.addEventListener("click", setPrevSlide);
 
-function setNextSlide() {
-  var currentSlide = getCurrentSlide();
-  // Это надо коммент!!!!
-  var nextSlide;
-  if (currentSlide + 1 === numbersSliderInputs) {
-    nextSlide = 0;
-  } else {
-    nextSlide = currentSlide + 1;
+  function setNextSlide() {
+    var currentSlide = getCurrentSlide();
+    // Это надо коммент!!!!
+    var nextSlide;
+    if (currentSlide + 1 === numbersSliderInputs) {
+      nextSlide = 0;
+    } else {
+      nextSlide = currentSlide + 1;
+    }
+    sliderInputs[nextSlide].checked = true;
   }
-  sliderInputs[nextSlide].checked = true;
+
+  function setPrevSlide() {
+    var currentSlide = getCurrentSlide();
+    // индекс следующего слайда, который будем показывать
+    var nextSlide;
+    if (currentSlide === 0) {
+      // если первый слайд нашли индекс 0, то переходим на последний (3) numbersSliderInputs -все количестов -1 = 2 - индекс последнего слайда
+      nextSlide = numbersSliderInputs - 1;
+    } else {
+      // если это не последний слайд, например 2, то переходим на первый
+      nextSlide = currentSlide - 1;
+    }
+    sliderInputs[nextSlide].checked = true;
+  }
+  // Как получаем .checked???????????????мы же на input click, а не на button
+  function getCurrentSlide() {
+    for (var i = 0; i < numbersSliderInputs; i++) {
+      if (sliderInputs[i].checked) {
+        return i;
+      } 
+    }
+  }  
 }
 
-function setPrevSlide() {
-  var currentSlide = getCurrentSlide();
-  // индекс следующего слайда, который будем показывать
-  var nextSlide;
-  if (currentSlide === 0) {
-    // если первый слайд нашли индекс 0, то переходим на последний (3) numbersSliderInputs -все количестов -1 = 2 - индекс последнего слайда
-    nextSlide = numbersSliderInputs - 1;
-  } else {
-    // если это не последний слайд, например 2, то переходим на первый
-    nextSlide = currentSlide - 1;
-  }
-  sliderInputs[nextSlide].checked = true;
-}
-// Как получаем .checked???????????????мы же на input click, а не на button
-function getCurrentSlide() {
-  for (var i = 0; i < numbersSliderInputs; i++) {
-    if (sliderInputs[i].checked) {
-      return i;
-    } 
-  }
-}
+// chat
+window.addEventListener('load', function(){ 
+  if(window.innerWidth <= 767){
+    var chat = document.querySelector ('.chat__list');
+    var chatTogle = document.querySelector ('.chat__btn-toggle--open');
+    var chatClouse = document.querySelector ('.chat__btn-toggle--clouse');
 
+    if(chatTogle){
+      chatTogle.addEventListener('click', function(){
+        chat.classList.add('chat__list--showed'); 
+        chatClouse.classList.add('__show')
+        chatClouse.classList.remove('__hide')
+        chatTogle.classList.add('__hide')
 
- 
- 
-  
-}
+    }); 
+    chatClouse.addEventListener('click', function(){
+        chat.classList.remove('chat__list--showed'); 
+        chatClouse.classList.remove('__show')
+        chatClouse.classList.add('__hide')
+        chatTogle.classList.remove('__hide')
+    }); 
+      document.addEventListener("keydown", function (event) {
+        // console.log(ev.keyCode); не вывел в консоль почему-то????
+          if (event.code == "Escape") {
+            chat.classList.remove('chat__list--showed');
+          }
+      });
+    }
+  }
+});
