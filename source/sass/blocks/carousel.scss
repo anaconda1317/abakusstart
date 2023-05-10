@@ -1,7 +1,8 @@
 .carousel__wrapper {
   position: relative;
   width: auto;
-  height: 765px;
+  // height: 765px;
+  height: 770px;
   margin: 0 auto;
   overflow: hidden;
   // padding: 0;
@@ -32,7 +33,6 @@
   transform: translate(-50%, -50%);
 
   background-color: #fff;
-  // scroll-behavior: smooth;
 }
 
 .carousel__items-container {
@@ -45,7 +45,8 @@
   height: 100%;
   overflow: hidden;
   display: flex;
-  align-items: center;
+  // align-items: center;
+  align-items: flex-start;
 }
 
 .carousel__item {
@@ -55,13 +56,15 @@
   position: relative;
   animation: 0.5s ease-in-out;
   margin: 0 auto;
-  align-items: center;
+  // align-items: center;
+  align-items: flex-start;
   align-self: stretch;
   cursor: pointer;
 }
 
 .active,
 .next {
+  padding-top: 10px;
   display: flex;
 }
 

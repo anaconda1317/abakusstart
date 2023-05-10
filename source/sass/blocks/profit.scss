@@ -9,7 +9,8 @@
   padding-top: 10px;
 
   border-top: 1px solid #bcbec2;
-  // background-color: azure;
+  // border-top: 1px solid #42bbbf;
+  background-color: #fff;
   }
 
   .profit__wrapper {
@@ -29,7 +30,8 @@
   .profit__title {
     margin: 0 auto;
     font-weight: 700;
-    font-size: 23px;
+    // font-size: 23px;
+    font-size: 28px;
     line-height: 1.3em;
     text-align: center;   
     color: #202735;
@@ -107,6 +109,10 @@
     width: 430px;
   } 
 
+  .profit__title {
+    font-size: 25px;
+  }
+
   .profit__img {
     width: 348px;
     height: auto;
@@ -117,7 +123,11 @@
 
   .profit__container {  
     margin: 0 auto;
+    padding-top: unset;
     width: 700px;
+
+    background-color: #E7F7F7;
+    border-top: unset;
   }
 
   .profit__wrapper {
@@ -125,12 +135,14 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    // align-items: flex-start;
     margin: 0 auto;    
   } 
 
   .profit__list-column {
     width: 340px;
-    padding-top: 30px;
+    // padding-top: 30px;
+    padding-top: 12px;
     // padding-left: 30px;
   }
 
@@ -139,6 +151,10 @@
     padding: 10px 15px 18px;
     width: 310px;
   } 
+
+  .profit__title {
+    font-size: 23px;
+  }
 
   .profit__name {
     margin: 5px 0 5px 50px;
