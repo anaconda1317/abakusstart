@@ -179,6 +179,7 @@
 
     background-color: transparent;
     border: 0;
+    border-radius: 2px;
 }
 
 .post-social__button svg {
@@ -230,7 +231,7 @@
 
   }
 
-  @media (min-width: $desktop-width) {
+@media (min-width: $desktop-width) {
     .post-social__wrapper {
         display: flex;
         justify-content: space-between;

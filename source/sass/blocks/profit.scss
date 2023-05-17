@@ -1,5 +1,5 @@
 .profit {
-  padding-bottom: 65px;
+  padding-bottom: 75px;
   // background-color: azure;
   }
 
@@ -8,9 +8,10 @@
   width: 290px;
   padding-top: 10px;
 
-  border-top: 1px solid #bcbec2;
+  // border-top: 1px solid #bcbec2;
   // border-top: 1px solid #42bbbf;
-  background-color: #fff;
+  border-radius: 0 40px;
+  background-color: #e7f7f7;
   }
 
   .profit__wrapper {
@@ -98,19 +99,28 @@
 
 @media (min-width: $tablet-width) {
 
+  .profit {
+    padding-bottom: 65px;
+    }  
+
   .profit__container {  
     width: 500px;
     margin: 0 auto;
+
+  border-top: 1px solid #42bbbf;
+  border-radius: unset;
+  background-color: #fff;
   }
 
   .profit__list {
     margin: 0;
     padding: 30px 20px 18px;
-    width: 430px;
+    width: 490px;
   } 
 
   .profit__title {
-    font-size: 25px;
+    // font-size: 25px;
+    font-size: 28px;
   }
 
   .profit__img {
@@ -126,8 +136,10 @@
     padding-top: unset;
     width: 700px;
 
-    background-color: #E7F7F7;
     border-top: unset;
+    border: none;
+    border-radius: 0 40px;
+    background-color: #e7f7f7;
   }
 
   .profit__wrapper {

@@ -1,72 +1,79 @@
-.price {
-    position: relative;
-    margin: 0 0 37px 0;
-    background-color: #ffde03;
-    color: #252525;
-}
-
-  .price::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    bottom: -37px;
-    left: 0;
-    height: 37px;
-    background-image: url("../img/bg-triangle.svg");
-    // transform: rotate(180deg);
-}
-  .price__wrapper {
-    padding: 50px 20px 19px;
-    width: auto;
-}
-
-.price__table {
-    border-collapse: collapse;
-}
-
-.price__header {
-  position: relative;
-  display: block;
-  width: 280px;
-  margin-top: 0;
-  margin-bottom: 27px;
-  font-size: 30px;
-  line-height: 36px;
-  text-align: center;
-  text-transform: uppercase;
-
-  transition: color 0.1s linear;
-
-  &:hover {
-    cursor: pointer;
+  .price {
+      position: relative;
+      margin: 0 0 37px 0;
+      background-color: #ffde03;
+      color: #252525;
   }
-}
 
-.price__header::after {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  width: 0;
-  content: ".";
-  color: transparent;
-  background: #000000;
-  height: 1px;
-  transition: all 0.5s;
-}
+    .price::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: -37px;
+      left: 0;
+      height: 37px;
+      background-image: url("../img/bg-triangle.svg");
+      // transform: rotate(180deg);
+  }
+    .price__wrapper {
+      padding: 50px 20px 19px;
+      width: auto;
+  }
 
-.price__header:hover::after {
-  width: 100%;
-}
+  .price__table {
+      border-collapse: collapse;
+  }
+
+  .price__header {
+    position: relative;
+    display: block;
+    width: 280px;
+    margin-top: 0;
+    margin-bottom: 27px;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+    text-transform: uppercase;
+
+    transition: color 0.1s linear;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .price__header::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0;
+    content: ".";
+    color: transparent;
+    background: #000000;
+    height: 1px;
+    transition: all 0.5s;
+  }
+
+  .price__header:hover::after {
+    width: 100%;
+  }
 
 
-  .price__rub {
-    line-height: 5px;
+    .price__rub {
+      line-height: 5px;
+      width: 0.4em;
+      border-bottom: 1px solid #333333;
+      display: inline-block;
+  }
+
+  .price__rub--white {
+    line-height: 8px;
     width: 0.4em;
-    border-bottom: 1px solid #333333;
+    border-bottom: 2px solid $white;
     display: inline-block;
-}
+  }
 
   .price__table {
     display: block;

@@ -57,8 +57,9 @@
       display: block;
       position: absolute;
       top: 50%;
-      left: 0;
-      width: 15rem;
+      // left: 0;
+      left: 30px;
+      width: 13rem;
       height: 1px;
       content: '';
       background-color: #bebebe;
@@ -72,8 +73,9 @@
       display: block;
       position: absolute;
       top: 50%;
-      right: 0;
-      width: 15rem;
+      // right: 0;
+      right: 30px;
+      width: 13rem;
       height: 1px;
       content: '';
       background-color: #bebebe;

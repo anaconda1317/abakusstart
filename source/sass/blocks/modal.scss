@@ -224,17 +224,18 @@
 .modal__checkbox-text {
   font-size: 12px;
   color: #000000;
-  text-decoration: none;
+  text-decoration: underline;
+  transition: opacity .2s ease 0s; 
 }
 
 .modal__checkbox-text:hover,
 .modal__checkbox-text:focus {
-  color: #663d15;
+  opacity: .8;
+  text-decoration: none;
 }
 
-.modal__checkbox:hover,
-.modal__checkbox:focus {
-  color: #663d15;
+.modal__checkbox:active {
+  opacity: .6;
 }
 
 .modal__checkbox input[type="checkbox"] + .checkbox-indicator {
@@ -246,7 +247,9 @@
   height: 17px;
 
   border: 2px solid #000000;
+  outline: none;
 }
+
 
 .modal__checkbox input[type="checkbox"]:focus + .checkbox-indicator {
   border-color: #663d15;

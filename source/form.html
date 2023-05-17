@@ -694,18 +694,25 @@
 
     <script type="application/ld+json">
       {
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [{
-              "@type": "ListItem",
-              "position": 1,
-              "name": "form",
-              "item": "https://abakusstart.ru/form.php"
-              }
-          ]
+        "@context": "http://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement":
+        [
+          {"@type": "ListItem",
+          "position": 1,
+          "item":
+            {"@id": "https://abakusstart.ru/",
+            "name": "ГЛАВНАЯ"}
+          },
+          {"@type": "ListItem",
+          "position": 2,
+          "item":
+            {"@id": "https://abakusstart.ru/form.php",
+            "name": "ФОРМА ОТЗЫВА"}
+          }
+        ]
       }
    </script>
-
 <!-- скрипт_антиспам -->
   <script>
     document.addEventListener('DOMContentLoaded', ()=>{

@@ -140,17 +140,17 @@
     color: #bcbec2;
     text-decoration: none;
     // transition: opacity 0.3s ease;
-    transition: color .1s ease;
+    transition: color .2s ease, opacity .2s ease;
     cursor: pointer;
 
     &:hover,
     &:focus {
       color: #A8ABB0;
-    text-decoration: underline;
+      text-decoration: underline;
   }
 
     &:active {
-    opacity: 0.5;
+      opacity: 0.5;
   }
  }
 
