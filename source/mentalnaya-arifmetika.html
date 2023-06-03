@@ -20,7 +20,8 @@
   <meta property="og:title" content="Ментальная арифметика для детей в Красноярске | &laquo;СТАРТ&raquo;.">
   <meta property="og:description" content="Запишите ребенка на занятия по ментальной арифметике в детский центр &laquo;СТАРТ&raquo;! 
   Пробное занятие бесплатно! Стоимость урока от 900 руб." />
-  <meta property="og:type" content="website" />
+  <meta property="og:type" content="article" />
+  <!-- <meta property="og:type" content="website" /> -->
   <meta property="og:image" content="https://abakusstart.ru/img/start_center_abakusstart.png" />
   <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="968" />
@@ -141,8 +142,46 @@
                   </ul>
                 </div>
             </li>
-              <!-- finish sub-menu -->  
-            <li class="site-list__item"><a class="site-list__link" href="info.php">Новости и акции</a></li>
+              <!-- finish sub-menu --> 
+               
+            <!-- <li class="site-list__item"><a class="site-list__link" href="info.php">Новости и акции</a></li> -->
+
+            <!-- site-list__item with sub-menu_1 -->  
+            <li class="site-list__item"> 
+              <div class="site-list__item--has-children">
+                <a class="site-list__link" href="/info.php" aria-current="page" aria-haspopup="true" aria-expanded="false" role="menuitem">Новости и акции</a>
+                <span class="sub-menu__ikon-wrapper">
+                  <svg class="sub-menu__ikon" width="25.667" height="15" fill="#000000">
+                    <use xlink:href="#sp-icon-arrow_sub-menu"></use></svg>
+                </span>
+              </div>
+              <!-- start sub-menu_1-->
+                <div class="sub-menu__wrapper">
+                  <ul class="sub-menu" role="menu">
+                    <li class="sub-menu__item" style="animation-delay: 0.1s;">
+                      <a class="sub-menu__item-link" href="/info.php" role="menuitem">Новости
+                        <!-- ikon start abacus-->
+                          <svg class="sub-menu__item-link-svg" fill="#22BABB" width="47" height="40" viewBox="0 0 47 40">
+                            <use xlink:href="#sp-news_sub-menu_icon"></use>
+                          </svg>
+                        <!-- ikon finish -->
+                      </a>
+                    </li>
+                    <li class="sub-menu__item" style="animation-delay: 0.13s;">
+                      <a class="sub-menu__item-link" href="/info.php" role="menuitem">Акции
+                        <!-- ikon start robot-->
+                        <svg class="sub-menu__item-link-svg" fill="#FA7F08" width="47" height="40" viewBox="0 0 47 40">
+                          <use xlink:href="#sp-action_sub-menu_icon"></use>
+                        </svg>
+                        <!-- ikon finish -->
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+            </li>
+              <!-- finish sub-menu_1-->  
+
+
             <li class="site-list__item"><a class="site-list__link" href="info.php">Фото и видео</a></li>
           </ul>
         </div>
@@ -220,7 +259,7 @@
               </a>
               <div class="main-article__meta-row">
                 <div class="main-article__meta-col">
-                  <time class="main-article__meta main-article__meta--date" datetime="2023-04-26">26 апреля 2023</time>
+                  <time class="main-article__meta main-article__meta--date" pubdate datetime="2023-04-26" title="Aпрель 26, 2023">26 апреля 2023</time>
                 </div>
                 <div class="main-article__meta-col">
                   <span class="main-article__meta main-article__meta--read-time">7 мин</span>
@@ -228,7 +267,7 @@
 
               <!-- убрать на мобилке пока -->
                 <div class="main-article__meta-col">
-                  <address class="main-article__meta main-article__meta--author"><a href="#" class="main-article__meta-link" target="_blank" rel="noopener">Ксения Шевченко</a></address>
+                  <address class="main-article__meta main-article__meta--author"><a  rel="author" href="#" class="main-article__meta-link" target="_blank" rel="noopener">Ксения Шевченко</a></address>
                 </div>
               <!-- убрать на мобилке пока -->
 
@@ -683,7 +722,7 @@
                         </svg>
                         <span class="person-reviews__value">5</span>
                       </div>
-                      <time class="person-reviews__date" datetime="2023-04-04">06.05.2023</time>
+                      <time class="person-reviews__date" pubdate datetime="2023-04-04" title="Май 5, 2023">06.05.2023</time>
                     </div>
                   </div>
                 </div>
@@ -729,7 +768,7 @@
                         </svg>
                         <span class="person-reviews__value">5</span>
                       </div>
-                      <time class="person-reviews__date" datetime="2023-04-14">14.04.2023</time>
+                      <time class="person-reviews__date" pubdate datetime="2023-04-14" title="Апрель 14, 2023">14.04.2023</time>
                   </div>
                   </div>
                 </div>
@@ -775,7 +814,7 @@
                         </svg>
                         <span class="person-reviews__value">5</span>
                       </div>
-                      <time class="person-reviews__date" datetime="2023-04-17">17.04.2023</time>
+                      <time class="person-reviews__date" puddate datetime="2023-04-17" title="Апрель 17, 2023">17.04.2023</time>
                   </div>
                   </div>
                 </div>
@@ -821,7 +860,7 @@
                         </svg>
                         <span class="person-reviews__value">5</span>
                       </div>
-                      <time class="person-reviews__date" datetime="2023-03-27">27.03.2023</time>
+                      <time class="person-reviews__date" puddate datetime="2023-03-27" title="Март 27, 2023">27.03.2023</time>
                   </div>
                   </div>
                 </div>
@@ -867,7 +906,7 @@
                         </svg> -->
                         <span class="person-reviews__value">4</span>
                       </div>
-                      <time class="person-reviews__date" datetime="2023-04-27">09.05.2023</time>
+                      <time class="person-reviews__date" puddate datetime="2023-04-27" title="Май 9, 2023">09.05.2023</time>
                   </div>
                   </div>
                 </div>
@@ -938,6 +977,7 @@
         <!-- <h3 class="popular__title">Что еще почитать</h3> -->
         <ul class="popular__list">
 <!-- 1_карточка -->
+          <!-- <div class="popular__item">  </div> -->
           <li class="popular__item">
             <a class="popular__item-link" href="https://marbir.ru/istoriya-razvitiya-mentalnoj-arifmetiki/" target="_blank" rel="noopener" title="История развития ментальной арифметики." arial-label="Перейти к статье про историю развития ментальной арифметики.">
               <!-- <section> -->
@@ -1110,7 +1150,7 @@
         </div>
       </address>
         <p class=" adress__email">
-          <a class="adress__link" href="mailto:info@abakusstart.ru?subject=Вопрос по занятиям " target="_blank" rel="noopener" >info@abakusstart
+          <a class="adress__link" href="mailto:info@abakusstart.ru?subject=Вопрос по занятиям " target="_blank" rel="noopener">info@abakusstart
           <span class="visually-hidden">Электронная почта.</span>
             <svg class="adress__link-svg" width="20" height="20" fill="#0033ff">
               <use xlink:href="#sp-icon-mail"></use>
@@ -1168,13 +1208,15 @@
   <!-- чат_telegram_viber_wp_tel start-->
   <!-- toglle start-->
   <div class="chat__btn-wrapper">
-    <button class="chat__btn-toggle chat__btn-toggle--open" type="button" title="телефон/чат"><span class="visually-hidden">Нажмите,чтобы позвонить, написать в чат детского центра «Старт»"</span>
+    <button class="chat__btn-toggle chat__btn-toggle--open" type="button" title="телефон/чат">
+      <!-- <span class="visually-hidden">Нажмите,чтобы позвонить, написать в чат детского центра «Старт»"</span> -->
       <svg class="chat__btn-svg" fill="#24b7cf" width="40" height="40">
         <use xlink:href="#sp-icon-messangers-chat_2"></use>
       </svg>
     </button>
 
-    <button class="chat__btn-toggle chat__btn-toggle--clouse __hide" type="button" title="закрыть чат"><span class="visually-hidden">Нажмите, чтобы закрыть чат детского центра «Старт»"</span>
+    <button class="chat__btn-toggle chat__btn-toggle--clouse __hide" type="button" title="закрыть чат">
+      <!-- <span class="visually-hidden">Нажмите, чтобы закрыть чат детского центра «Старт»"</span> -->
       <svg class="chat__btn-svg" fill="#D5D5D5" width="40" height="40">
         <use xlink:href="#sp-icon-cross"></use>
       </svg>

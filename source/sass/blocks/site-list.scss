@@ -164,7 +164,9 @@
     color: transparent;
     background: $main-blue;
     height: 1px;
-    transition: all .5s;
+    // transition: all .5s;
+    transition: width .65s;
+    transition-delay: .75s;
   }
   
   .site-list__item .site-list__link:hover::after {
