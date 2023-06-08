@@ -62,7 +62,7 @@
     }
   }
 
-  .sub-menu__ikon-wrapper {
+  .sub-menu__ikon-wrapper,.sub-menu__ikon-wrapper--news {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -159,8 +159,12 @@
  .sub-menu__ikon-wrapper {
     // left: 0px;
     left: -15px;
-  }
+ }
 
+  .sub-menu__ikon-wrapper--news {
+      left: -10px;      
+  }
+ 
   .sub-menu__item-link-svg {
     left: 200px;
     width: 47px;
@@ -263,6 +267,10 @@
 
   .sub-menu__ikon-wrapper {
     left: 20px;
+  }
+
+  .sub-menu__ikon-wrapper--news {
+    left: 5px;
   }
 
   .sub-menu__ikon {

@@ -563,15 +563,13 @@
     <!-- чат_telegram_viber_wp_tel start-->
   <!-- toglle start-->
   <div class="chat__btn-wrapper">
-    <button class="chat__btn-toggle chat__btn-toggle--open" type="button" title="телефон/чат">
-      <!-- <span class="visually-hidden">Нажмите,чтобы позвонить, написать в чат детского центра «Старт»"</span> -->
+    <button class="chat__btn-toggle chat__btn-toggle--open" type="button" title="телефон/чат"><span class="visually-hidden">Нажмите,чтобы позвонить, написать в чат детского центра «Старт»"</span>
       <svg class="chat__btn-svg" fill="#24b7cf" width="40" height="40">
         <use xlink:href="#sp-icon-messangers-chat_2"></use>
       </svg>
     </button>
 
-    <button class="chat__btn-toggle chat__btn-toggle--clouse __hide" type="button" title="закрыть чат">
-      <!-- <span class="visually-hidden">Нажмите, чтобы закрыть чат детского центра «Старт»"</span> -->
+    <button class="chat__btn-toggle chat__btn-toggle--clouse __hide" type="button" title="закрыть чат"><span class="visually-hidden">Нажмите, чтобы закрыть чат детского центра «Старт»"</span>
       <svg class="chat__btn-svg" fill="#D5D5D5" width="40" height="40">
         <use xlink:href="#sp-icon-cross"></use>
       </svg>
@@ -760,42 +758,34 @@ maskPhone('.phone__mask');
     }
   </script>
 
-  <!-- chat -->
-  <!-- <script>
-    // chat
-      window.addEventListener('load', function(){ 
-        if(window.innerWidth <= 767){
-          var chat = document.querySelector ('.chat__list');
-          var chatTogle = document.querySelector ('.chat__btn-toggle--open');
-          var chatClouse = document.querySelector ('.chat__btn-toggle--clouse');
-    
-          if(chatTogle){
-            chatTogle.addEventListener('click', function(){
-              chat.classList.add('chat__list--showed'); 
-              chatClouse.classList.add('__show')
-              chatClouse.classList.remove('__hide')
-              chatTogle.classList.add('__hide')
-      
-          }); 
-          chatClouse.addEventListener('click', function(){
-              chat.classList.remove('chat__list--showed'); 
-              chatClouse.classList.remove('__show')
-              chatClouse.classList.add('__hide')
-              chatTogle.classList.remove('__hide')
-          }); 
-            document.addEventListener("keydown", function (event) {
-              // console.log(ev.keyCode); не вывел в консоль почему-то????
-                if (event.code == "Escape") {
-                  chat.classList.remove('chat__list--showed');
-                }
-            });
-          }
-        }
-      });
-    
-  </script> -->
+<!-- Сводная оценка разметка -->
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org/",
+    "@type": "AggregateRating",
+    "itemReviewed": {
+      "@type": "LocalBusiness",
+      "image": "https://abakusstart.ru/img/logo-abakusstart-desktop.svg",
+      "name": "Детский центр в Красноярске в Северном | &laquo;СТАРТ&raquo;.",
+      "priceRange": "500-2000RUB",
+      "telephone": "8 (908) 010-48-54",
+      "address" : {
+        "@type": "PostalAddress",
+        "streetAddress": "ул. Мате Залки, 11",
+        "addressLocality": "Красноярск, Советский район",
+        "addressRegion": "Красноярский край",
+        "postalCode": "660118",
+        "addressCountry": "RU"
+      }
+    },
+    "ratingValue": "5",
+    "bestRating": "5",
+    "ratingCount": "3"
+  }
+  </script>
+  
 
-  <!-- product разметка --> 
+
   <script src="js/script.min.js"></script>
 
 </body>

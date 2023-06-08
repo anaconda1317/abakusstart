@@ -147,10 +147,10 @@
             <!-- <li class="site-list__item"><a class="site-list__link" href="info.php">Новости и акции</a></li> -->
 
             <!-- site-list__item with sub-menu_1 -->  
-            <li class="site-list__item"> 
-              <div class="site-list__item--has-children">
-                <a class="site-list__link" href="/info.php" aria-current="page" aria-haspopup="true" aria-expanded="false" role="menuitem">Новости и акции</a>
-                <span class="sub-menu__ikon-wrapper">
+            <li class="site-list__item">
+              <div class="site-list__item site-list__item--has-children">
+                <a class="site-list__link site-list__link--news" href="#" aria-current="page" aria-haspopup="true" aria-expanded="false" role="menuitem">Новости и акции</a>
+                <span class="sub-menu__ikon-wrapper sub-menu__ikon-wrapper--news">
                   <svg class="sub-menu__ikon" width="25.667" height="15" fill="#000000">
                     <use xlink:href="#sp-icon-arrow_sub-menu"></use></svg>
                 </span>
@@ -160,7 +160,7 @@
                   <ul class="sub-menu" role="menu">
                     <li class="sub-menu__item" style="animation-delay: 0.1s;">
                       <a class="sub-menu__item-link" href="/info.php" role="menuitem">Новости
-                        <!-- ikon start abacus-->
+                        <!-- ikon start news-->
                           <svg class="sub-menu__item-link-svg" fill="#22BABB" width="47" height="40" viewBox="0 0 47 40">
                             <use xlink:href="#sp-news_sub-menu_icon"></use>
                           </svg>
@@ -169,7 +169,7 @@
                     </li>
                     <li class="sub-menu__item" style="animation-delay: 0.13s;">
                       <a class="sub-menu__item-link" href="/info.php" role="menuitem">Акции
-                        <!-- ikon start robot-->
+                        <!-- ikon start actions-->
                         <svg class="sub-menu__item-link-svg" fill="#FA7F08" width="47" height="40" viewBox="0 0 47 40">
                           <use xlink:href="#sp-action_sub-menu_icon"></use>
                         </svg>
@@ -489,35 +489,37 @@
               </li>
 
 <!-- какие навыки получит ребенок -->
-            <section class="profit">
-              <!-- <section class="profit" id="part-11"> -->
-              <h2 class="visually-hidden">Какие навыки получит ребенок на занятиях по ментальной арифметике | проверенные методики обучения ребенка.</h2>
-              <div class="profit__container">
-                <div class="profit__wrapper">
-                  <div class="profit__list-column">
-                    <h3 class="profit__title">Какие навыки получит ребенок</h3>
-                    <ol class="profit__list">
-                      <li class="profit__item"><span class="profit__name">Развитие памяти</span></li>
-                      <li class="profit__item"><span class="profit__name"> Быстрый счет  в уме</span></li>
-                      <li class="profit__item"><span class="profit__name">Концентрация внимания</span></li> 
-                      <li class="profit__item"><span class="profit__name">Мелкая моторика</span></li>
-                      <li class="profit__item"><span class="profit__name">Трудолюбие</span></li>
-                      <li class="profit__item"><span class="profit__name">Творческое мышление</span></li>                 
-                    </ol>
-                </div>
-                  <div class="profit__img-column">
-                    <picture>
-                      <source type="image/webp"
-                      srcset="img/mental_artical/mental-profit-mobile@1x.webp 1x, img/mental_artical/mental-profit-mobile@2x.webp 2x">
-        
-                    <img class="profit__img" src="img/mental_artical/mental-profit-mobile@1x.png" alt="Какие навыки получит ребенок на занятиях по ментальной арифметике" 
-                      srcset="img/mental_artical/mental-profit-mobile@1x.png 1x, img/mental_artical/mental-profit-mobile@2x.png 2x">
-                    </picture>
-                    <!-- <img class="profit__img profit__img--cropping-top-left" src="img/photo-2.jpg" width="343" width="216" alt="Ментальной арифметика Северный, МатеЗалки, 11"> -->
+              <li class="main-article__rules-item main-article__rules-item--profit">
+                <section class="profit">
+                  <!-- <section class="profit" id="part-11"> -->
+                  <h2 class="visually-hidden">Какие навыки получит ребенок на занятиях по ментальной арифметике | проверенные методики обучения ребенка.</h2>
+                  <div class="profit__container">
+                    <div class="profit__wrapper">
+                      <div class="profit__list-column">
+                        <h3 class="profit__title">Какие навыки получит ребенок</h3>
+                        <ol class="profit__list">
+                          <li class="profit__item"><span class="profit__name">Развитие памяти</span></li>
+                          <li class="profit__item"><span class="profit__name"> Быстрый счет  в уме</span></li>
+                          <li class="profit__item"><span class="profit__name">Концентрация внимания</span></li> 
+                          <li class="profit__item"><span class="profit__name">Мелкая моторика</span></li>
+                          <li class="profit__item"><span class="profit__name">Трудолюбие</span></li>
+                          <li class="profit__item"><span class="profit__name">Творческое мышление</span></li>                 
+                        </ol>
+                    </div>
+                      <div class="profit__img-column">
+                        <picture>
+                          <source type="image/webp"
+                          srcset="img/mental_artical/mental-profit-mobile@1x.webp 1x, img/mental_artical/mental-profit-mobile@2x.webp 2x">
+            
+                        <img class="profit__img" src="img/mental_artical/mental-profit-mobile@1x.png" alt="Какие навыки получит ребенок на занятиях по ментальной арифметике" 
+                          srcset="img/mental_artical/mental-profit-mobile@1x.png 1x, img/mental_artical/mental-profit-mobile@2x.png 2x">
+                        </picture>
+                        <!-- <img class="profit__img profit__img--cropping-top-left" src="img/photo-2.jpg" width="343" width="216" alt="Ментальной арифметика Северный, МатеЗалки, 11"> -->
+                      </div>
                   </div>
-              </div>
-            </div>
-            </section>
+                </div>
+                </section> 
+              </li>
 
 
 <!-- статьи секция 9-->
@@ -1209,14 +1211,14 @@
   <!-- toglle start-->
   <div class="chat__btn-wrapper">
     <button class="chat__btn-toggle chat__btn-toggle--open" type="button" title="телефон/чат">
-      <!-- <span class="visually-hidden">Нажмите,чтобы позвонить, написать в чат детского центра «Старт»"</span> -->
+      <span class="visually-hidden">Нажмите,чтобы позвонить, написать в чат детского центра «Старт»"</span>
       <svg class="chat__btn-svg" fill="#24b7cf" width="40" height="40">
         <use xlink:href="#sp-icon-messangers-chat_2"></use>
       </svg>
     </button>
 
     <button class="chat__btn-toggle chat__btn-toggle--clouse __hide" type="button" title="закрыть чат">
-      <!-- <span class="visually-hidden">Нажмите, чтобы закрыть чат детского центра «Старт»"</span> -->
+      <span class="visually-hidden">Нажмите, чтобы закрыть чат детского центра «Старт»"</span>
       <svg class="chat__btn-svg" fill="#D5D5D5" width="40" height="40">
         <use xlink:href="#sp-icon-cross"></use>
       </svg>
@@ -1537,7 +1539,7 @@
   }
 </script>
 
-<!-- хлебные крошки  их править с аАндреем - папка uslugi и в ней менталка уже-->
+<!-- хлебные крошки  их править с  Андреем - папка uslugi и в ней менталка уже-->
 
 <script type="application/ld+json">
   {
@@ -1560,6 +1562,33 @@
     ]
   }
 </script>
+
+<!-- Сводная оценка разметка -->
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org/",
+    "@type": "AggregateRating",
+    "itemReviewed": {
+      "@type": "LocalBusiness",
+      "image": "https://abakusstart.ru/img/logo-abakusstart-desktop.svg",
+      "name": "Детский центр в Красноярске в Северном | &laquo;СТАРТ&raquo;.",
+      "priceRange": "500-2000RUB",
+      "telephone": "8 (908) 010-48-54",
+      "address" : {
+        "@type": "PostalAddress",
+        "streetAddress": "ул. Мате Залки, 11",
+        "addressLocality": "Красноярск, Советский район",
+        "addressRegion": "Красноярский край",
+        "postalCode": "660118",
+        "addressCountry": "RU"
+      }
+    },
+    "ratingValue": "4,9",
+    "bestRating": "5",
+    "ratingCount": "5"
+  }
+</script>
+  
 
 </body>
 

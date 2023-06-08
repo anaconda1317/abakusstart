@@ -203,10 +203,19 @@
 
   .site-list__item--has-children {
     height: 100%;
+      
+    &:active svg { 
+      fill: $main-text-color;
+    }
   }
 
-  .site-list__item--has-children .site-list__link{
+  .site-list__item--has-children .site-list__link {
     padding-left: 0;
+  }
+  
+  .site-list__item--has-children .site-list__link--news {
+    margin-left: 30px;
+    word-spacing: -0.5px;
   }
 
   .site-list__item.__show_dropdown_sub .sub-menu__wrapper  {
@@ -258,6 +267,12 @@
     padding-top: 15px;
     display: block;
   }
+
+  .site-list__item--has-children .site-list__link--news {
+    margin-left: 0;
+    padding-left: 0;
+  }
+
 }
 
 
