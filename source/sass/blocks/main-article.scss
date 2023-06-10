@@ -234,13 +234,7 @@
     margin: 0 0 30px;
     color: #252525;
   }
-
-  .main-article__rules-item--profit {
-    counter-increment: unset;
-    margin: unset;
-    color: unset;
-  }
-
+  
   .main-article__rules-item::before {
     content: counter(rule-counter);
     position: absolute;

@@ -29,8 +29,12 @@
   }
 
   .chat__btn-toggle--open {
-    display: block;
+    // display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
+ 
 
   .chat__btn-toggle--clouse {
     display: block;
