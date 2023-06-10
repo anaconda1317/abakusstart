@@ -35,9 +35,15 @@
     justify-content: center;
   }
  
-
   .chat__btn-toggle--clouse {
-    display: block;
+      // display: block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .chat__btn-svg {
+    flex-shrink: 0;
   }
 
   .chat__btn-toggle--clouse.__hide {
@@ -47,6 +53,7 @@
   .chat__btn-toggle--open.__hide {
     display: none
   }
+  
 
   .chat {
     z-index: 99;
