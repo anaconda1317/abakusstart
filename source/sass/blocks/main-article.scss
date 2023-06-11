@@ -253,6 +253,7 @@
   }
 
   .main-article__rules-item--profit::before {
+    counter-increment: unset;
     display: none;
   }
 
