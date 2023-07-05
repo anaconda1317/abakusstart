@@ -252,11 +252,11 @@
     border-radius: 6px 0;
   }
 
-  .main-article__rules-item--profit::before {
-    counter-increment: unset;
-    display: none;
+  .main-article__rules-item--skip::before {
+    counter-increment: rule-counter -1; /* Пропустить один пункт */
+    content: '';
+    background-color: unset;
   }
-
 
   // .main-article__rules-item:nth-child(10)::before {
   //   width: 40px;
@@ -268,10 +268,6 @@
     height: 35px;
   }
 
-
-  // .main-article__rule {
-
-  // }
 
   .main-article__rules-title {
     margin: 0 0 15px 45px;
@@ -641,8 +637,6 @@
   }
   
   .main-article__rules-item::before {
-    content: counter(rule-counter);
-    position: absolute;
     width: 43px;
     height: 43px;
     font-size: 38px;
